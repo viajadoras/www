@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import heroMainImg from '../assets/images/hero-main.png';
+import AppStoreBadges from './AppStoreBadges.astro';
 ---
 <section class="relative min-h-[92vh] flex items-center overflow-hidden bg-neutral-50">
 
@@ -54,35 +55,7 @@ import heroMainImg from '../assets/images/hero-main.png';
         </div>
 
         <!-- Botões no desktop (dentro do bloco de texto) -->
-        <div class="hidden lg:flex flex-row gap-4 pt-4 items-center">
-          <a
-            href="https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
-          >
-            <img
-              src="/images/google-play-badge.svg"
-              alt="Disponível no Google Play"
-              class="h-20 w-auto"
-              loading="eager"
-            />
-          </a>
-
-          <a
-            href="https://apps.apple.com/br/app/viajadoras/id6755790482"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
-          >
-            <img
-              src="/images/app-store-badge.svg"
-              alt="Baixar na App Store"
-              class="h-20 w-auto"
-              loading="eager"
-            />
-          </a>
-        </div>
+        <AppStoreBadges class="hidden lg:flex flex-row gap-4 pt-4 items-center" imgClass="h-20 w-auto" />
       </div>
 
       <!-- Imagem - ordem 2 no mobile, ao lado no desktop -->
@@ -115,35 +88,7 @@ import heroMainImg from '../assets/images/hero-main.png';
       </div>
 
       <!-- Botões no mobile (após a imagem) -->
-      <div class="flex lg:hidden flex-row gap-3 items-center order-3 w-full justify-center">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
-        >
-          <img
-            src="/images/google-play-badge.svg"
-            alt="Disponível no Google Play"
-            class="w-36 sm:w-44 h-auto"
-            loading="eager"
-          />
-        </a>
-
-        <a
-          href="https://apps.apple.com/br/app/viajadoras/id6755790482"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
-        >
-          <img
-            src="/images/app-store-badge.svg"
-            alt="Baixar na App Store"
-            class="w-36 sm:w-44 h-auto"
-            loading="eager"
-          />
-        </a>
-      </div>
+      <AppStoreBadges class="flex lg:hidden flex-row gap-3 items-center order-3 w-full justify-center" imgClass="w-36 sm:w-44 h-auto" />
 
     </div>
   </div>

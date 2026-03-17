@@ -1,0 +1,41 @@
+---
+interface Props {
+  /** Tailwind classes for the container flex div */
+  class?: string;
+  /** Tailwind classes applied to each badge <img> */
+  imgClass?: string;
+}
+const {
+  class: className = 'flex flex-row gap-4 items-center',
+  imgClass = 'h-20 w-auto',
+} = Astro.props;
+---
+<div class={className}>
+  <a
+    href="https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
+  >
+    <img
+      src="/images/google-play-badge.svg"
+      alt="Disponível no Google Play"
+      class={imgClass}
+      loading="eager"
+    />
+  </a>
+
+  <a
+    href="https://apps.apple.com/br/app/viajadoras/id6755790482"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
+  >
+    <img
+      src="/images/app-store-badge.svg"
+      alt="Baixar na App Store"
+      class={imgClass}
+      loading="eager"
+    />
+  </a>
+</div>
