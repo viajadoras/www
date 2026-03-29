@@ -1,56 +1,37 @@
 ---
+import AppStoreBadges from './AppStoreBadges.astro';
+import { instagramUrl } from '../data/site';
 ---
-<section id="conectar" class="py-16 lg:py-20 bg-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-reveal">
-    <div class="relative overflow-hidden rounded-3xl bg-primary p-8 sm:p-12 lg:p-16 max-w-6xl mx-auto shadow-2xl shadow-primary/30">
-      <!-- Decorative Background -->
-      <div class="absolute inset-0 opacity-10">
-        <svg width="100%" height="100%">
-          <pattern id="cta-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1" fill="currentColor" class="text-white" />
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#cta-grid)" />
-        </svg>
-      </div>
-      
-      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-radial from-secondary-300/30 to-transparent blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-primary-800/30 to-transparent blur-3xl"></div>
 
+<section id="baixar" class="bg-white py-16 lg:py-20">
+  <div class="container mx-auto px-4 text-center sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] bg-primary p-8 shadow-2xl shadow-primary/20 sm:p-12 lg:p-14">
       <div class="relative z-10">
-        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-          Pronta para <br class="hidden sm:block" />
-          <span class="text-secondary-100">conhecer mulheres e viver mais?</span>
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-secondary-100">
+          Próximo passo
+        </p>
+        <h2 class="mt-4 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
+          Baixe o app e veja
+          <span class="text-secondary-100"> se ele faz sentido para você</span>
         </h2>
 
-        <p class="mx-auto mt-4 max-w-2xl text-lg sm:text-xl text-white/90 leading-relaxed font-light">
-          Baixe o app, entre em comunidades, converse com outras mulheres e comece a construir sua próxima experiência com mais confiança.
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/90">
+          Entre em comunidades, converse com mais calma e
+          encontre companhia para sair mais da rotina e viajar com mais confiança.
         </p>
 
-        <div class="mt-8 flex flex-row items-center justify-center gap-3 sm:gap-6">
+        <div class="mt-8 flex flex-col items-center gap-4">
+          <AppStoreBadges
+            class="flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-5"
+            imgClass="h-auto w-36 sm:w-44"
+          />
           <a
-            href="https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share"
+            href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
+            class="text-sm font-semibold text-white underline decoration-white/30 underline-offset-4 transition hover:text-secondary-100"
           >
-            <img
-              src="/images/google-play-badge.svg"
-              alt="Disponível no Google Play"
-              class="w-36 sm:w-44 lg:w-auto lg:h-20 h-auto"
-            />
-          </a>
-
-          <a
-            href="https://apps.apple.com/br/app/viajadoras/id6755790482"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
-          >
-            <img
-              src="/images/app-store-badge.svg"
-              alt="Baixar na App Store"
-              class="w-36 sm:w-44 lg:w-auto lg:h-20 h-auto"
-            />
+            Acompanhar @viajadorasbr no Instagram
           </a>
         </div>
       </div>

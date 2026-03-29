@@ -1,62 +1,38 @@
 ---
-const faqs = [
-  {
-    question: "Como funciona a verificação de usuárias?",
-    answer: "O Viajadoras trabalha com verificação e moderação para reduzir perfis falsos e fortalecer a confiança entre mulheres na comunidade."
-  },
-  {
-    question: "O app é só para mulheres viajando sozinhas?",
-    answer: "Não. O Viajadoras é para mulheres que viajam sozinhas, acompanhadas, a trabalho, a lazer ou que simplesmente querem conhecer outras mulheres e criar conexões antes de viajar."
-  },
-  {
-    question: "Posso usar se estou viajando com amigas?",
-    answer: "Sim. Mesmo viajando com amigas, você pode descobrir comunidades, trocar dicas, conhecer outras mulheres no destino e ampliar sua rede de apoio."
-  },
-  {
-    question: "Como encontro companheiras no meu destino?",
-    answer: "Você pode participar de comunidades, explorar perfis, conversar com outras viajadoras e se aproximar de mulheres com interesses, destinos ou momentos de vida parecidos."
-  },
-  {
-    question: "O app é gratuito?",
-    answer: "Sim. O app está disponível para Android e iPhone, e você também pode acompanhar novidades e conteúdo da comunidade no Instagram @viajadorasbr."
-  }
-];
+import { siteFaqs } from '../data/faqs';
 ---
 
-<section id="faq" class="relative overflow-hidden bg-gradient-to-b from-white via-coral-50/20 to-white dark:from-black dark:via-teal-950/10 dark:to-black py-24">
-  <!-- Decorative gradient blobs -->
-  <div class="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-teal-400/10 to-lavender-400/10 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-coral-400/10 to-peach-400/10 rounded-full blur-3xl pointer-events-none"></div>
-
+<section id="faq" class="bg-neutral-50 py-20 lg:py-24">
   <div class="container relative z-10">
     <div class="mx-auto max-w-3xl">
-      <!-- Header -->
-      <div class="text-center mb-16 faq-header scroll-reveal">
-        <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-600 via-lavender-600 to-coral-600 bg-clip-text text-transparent mb-4">
-          Perguntas Frequentes
+      <div class="mb-14 text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+          FAQ
+        </p>
+        <h2 class="mt-4 font-display text-4xl font-bold text-neutral-900 md:text-5xl">
+          Dúvidas comuns
         </h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400">
-          Tudo o que você precisa saber sobre a comunidade Viajadoras
+        <p class="mt-4 text-lg leading-relaxed text-neutral-600">
+          Respostas curtas para você entender rápido como o app funciona e se
+          ele faz sentido para o seu momento.
         </p>
       </div>
 
-      <!-- FAQ Accordion -->
       <div class="space-y-4">
-        {faqs.map((faq, index) => (
+        {siteFaqs.map((faq, index) => (
           <details
-            class="group faq-item overflow-hidden rounded-2xl border border-transparent transition-all duration-300 scroll-reveal"
+            class="faq-item group overflow-hidden rounded-[1.75rem] border border-neutral-200 bg-white shadow-sm transition-all duration-300"
             data-delay={index * 100}
           >
-            <summary class="flex cursor-pointer items-start justify-between gap-6 p-6 list-none select-none transition-all duration-300 hover:bg-white/60 dark:hover:bg-white/5">
-              <span class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+            <summary class="flex list-none cursor-pointer select-none items-start justify-between gap-6 p-6 transition-all duration-300 hover:bg-neutral-50">
+              <span class="pr-4 text-lg font-semibold text-neutral-900">
                 {faq.question}
               </span>
-              <div class="flex-shrink-0 relative w-8 h-8 mt-0.5">
-                <!-- Plus icon that rotates to X -->
+              <div class="relative mt-0.5 h-8 w-8 flex-shrink-0">
                 <div class="icon-plus absolute inset-0 flex items-center justify-center transition-all duration-300 group-open:rotate-45">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-7 h-7 text-teal-600 dark:text-teal-400"
+                    class="h-7 w-7 text-primary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -70,7 +46,7 @@ const faqs = [
 
             <div class="faq-content overflow-hidden">
               <div class="px-6 pb-6 pt-2">
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p class="leading-relaxed text-neutral-600">
                   {faq.answer}
                 </p>
               </div>
@@ -78,123 +54,25 @@ const faqs = [
           </details>
         ))}
       </div>
-
-      <!-- CTA Box -->
-      <div
-        class="mt-16 cta-box rounded-3xl p-8 text-center relative overflow-hidden group scroll-reveal"
-        data-delay="500"
-      >
-        <!-- Animated gradient background -->
-        <div class="absolute inset-0 bg-gradient-to-br from-teal-500 via-lavender-500 to-coral-500 opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute inset-0 bg-gradient-to-tr from-coral-400/50 via-transparent to-teal-400/50 animate-pulse-slow"></div>
-
-        <div class="relative z-10">
-          <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">
-            Ainda tem dúvidas?
-          </h3>
-          <p class="text-white/95 mb-6 text-lg">
-            Siga a gente no Instagram para saber mais sobre o app e fazer parte da comunidade
-          </p>
-          <a
-            href="https://instagram.com/viajadorasbr"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-semibold text-teal-600 transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-xl"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.509-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"/>
-            </svg>
-            Seguir @viajadorasbr
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Glassmorphism for FAQ items */
   .faq-item {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(23, 23, 23, 0.04);
   }
 
-  .dark .faq-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Gradient border on hover */
   .faq-item:hover {
-    border: 1px solid transparent;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-      linear-gradient(135deg,
-        rgba(20, 184, 166, 0.5) 0%,
-        rgba(167, 139, 250, 0.5) 50%,
-        rgba(251, 146, 120, 0.5) 100%
-      );
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    box-shadow:
-      0 8px 16px rgba(0, 0, 0, 0.08),
-      0 0 0 1px rgba(20, 184, 166, 0.1),
-      0 0 20px rgba(20, 184, 166, 0.15);
+    border-color: rgba(201, 105, 73, 0.28);
+    box-shadow: 0 14px 34px rgba(201, 105, 73, 0.09);
   }
 
-  .dark .faq-item:hover {
-    background-image:
-      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      linear-gradient(135deg,
-        rgba(20, 184, 166, 0.6) 0%,
-        rgba(167, 139, 250, 0.6) 50%,
-        rgba(251, 146, 120, 0.6) 100%
-      );
-    box-shadow:
-      0 8px 16px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(20, 184, 166, 0.2),
-      0 0 30px rgba(20, 184, 166, 0.2);
-  }
-
-  /* Open state - enhanced glow */
   .faq-item[open] {
-    border: 1px solid transparent;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-      linear-gradient(135deg,
-        rgba(20, 184, 166, 0.7) 0%,
-        rgba(167, 139, 250, 0.7) 50%,
-        rgba(251, 146, 120, 0.7) 100%
-      );
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    box-shadow:
-      0 12px 24px rgba(0, 0, 0, 0.12),
-      0 0 0 1px rgba(20, 184, 166, 0.2),
-      0 0 30px rgba(20, 184, 166, 0.25),
-      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    border-color: rgba(201, 105, 73, 0.35);
+    box-shadow: 0 18px 36px rgba(201, 105, 73, 0.12);
   }
 
-  .dark .faq-item[open] {
-    background-image:
-      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      linear-gradient(135deg,
-        rgba(20, 184, 166, 0.8) 0%,
-        rgba(167, 139, 250, 0.8) 50%,
-        rgba(251, 146, 120, 0.8) 100%
-      );
-    box-shadow:
-      0 12px 24px rgba(0, 0, 0, 0.5),
-      0 0 0 1px rgba(20, 184, 166, 0.3),
-      0 0 40px rgba(20, 184, 166, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-
-  /* Smooth expand/collapse animation */
   .faq-content {
     display: grid;
     grid-template-rows: 0fr;
@@ -209,7 +87,6 @@ const faqs = [
     overflow: hidden;
   }
 
-  /* Plus icon rotation */
   .icon-plus {
     transform-origin: center;
   }
@@ -220,51 +97,5 @@ const faqs = [
 
   .group[open] .icon-plus {
     transform: rotate(45deg);
-  }
-
-  .group:hover[open] .icon-plus {
-    transform: rotate(45deg) scale(1.1);
-  }
-
-  /* CTA Box glassmorphism */
-  .cta-box {
-    position: relative;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  /* Pulse animation for CTA background */
-  @keyframes pulse-slow {
-    0%, 100% {
-      opacity: 0.5;
-    }
-    50% {
-      opacity: 0.8;
-    }
-  }
-
-  .animate-pulse-slow {
-    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 640px) {
-    .faq-item summary {
-      padding: 1.25rem;
-    }
-
-    .faq-content > div {
-      padding: 0 1.25rem 1.25rem;
-    }
-
-    .icon-plus {
-      width: 1.75rem;
-      height: 1.75rem;
-    }
-
-    .icon-plus svg {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
   }
 </style>

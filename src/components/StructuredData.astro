@@ -1,4 +1,13 @@
 ---
+import {
+  appStoreUrl,
+  company,
+  instagramUrl,
+  playStoreUrl,
+  siteName,
+  siteOrigin,
+} from '../data/site';
+
 interface Props {
   type?: 'homepage' | 'page';
   title?: string;
@@ -7,34 +16,32 @@ interface Props {
 }
 
 const { type = 'page', title, description, url } = Astro.props;
-const siteOrigin = (Astro.site?.toString() || 'https://viajadoras.com').replace(/\/+$/, '');
-const siteUrl = `${siteOrigin}/`;
+const origin = (Astro.site?.toString() || siteOrigin).replace(/\/+$/, '');
+const siteUrl = `${origin}/`;
 const currentUrl = url || Astro.url.toString();
-const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share';
-const appStoreUrl = 'https://apps.apple.com/br/app/viajadoras/id6755790482';
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': `${siteOrigin}/#organization`,
-  name: 'Viajadoras',
-  legalName: 'GT TECNOLOGIA E SERVICOS LTDA',
+  '@id': `${origin}/#organization`,
+  name: siteName,
+  legalName: company.legalName,
   url: siteUrl,
   logo: {
     '@type': 'ImageObject',
-    url: `${siteOrigin}/logo.png`,
+    url: `${origin}/logo.png`,
     width: 512,
     height: 512
   },
-  image: `${siteOrigin}/og_1200x630.jpg`,
-  description: 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e viver experiências com mais confiança.',
+  image: `${origin}/og_1200x630.jpg`,
+  description: 'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Av. Portugal, 1148',
-    addressLocality: 'Goiânia',
-    addressRegion: 'GO',
-    postalCode: '74150-030',
-    addressCountry: 'BR'
+    streetAddress: company.streetAddress,
+    addressLocality: company.addressLocality,
+    addressRegion: company.addressRegion,
+    postalCode: company.postalCode,
+    addressCountry: company.addressCountry
   },
   contactPoint: {
     '@type': 'ContactPoint',
@@ -42,25 +49,25 @@ const organizationSchema = {
     availableLanguage: ['pt-BR']
   },
   sameAs: [
-    'https://instagram.com/viajadorasbr',
+    instagramUrl,
     playStoreUrl,
     appStoreUrl,
   ],
   founder: {
     '@type': 'Organization',
-    name: 'GT TECNOLOGIA E SERVICOS LTDA'
+    name: company.legalName
   }
 };
 
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': `${siteOrigin}/#website`,
+  '@id': `${origin}/#website`,
   url: siteUrl,
-  name: 'Viajadoras',
-  description: 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e viver experiências com mais confiança.',
+  name: siteName,
+  description: 'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
   publisher: {
-    '@id': `${siteOrigin}/#organization`
+    '@id': `${origin}/#organization`
   },
   inLanguage: 'pt-BR'
 };
@@ -69,7 +76,7 @@ const mobileAppSchemas = [
   {
     '@context': 'https://schema.org',
     '@type': 'MobileApplication',
-    name: 'Viajadoras',
+    name: siteName,
     operatingSystem: 'ANDROID',
     applicationCategory: 'TravelApplication',
     offers: {
@@ -77,15 +84,15 @@ const mobileAppSchemas = [
       price: '0',
       priceCurrency: 'BRL'
     },
-    description: 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e acessar uma rede de apoio entre viajantes.',
-    image: `${siteOrigin}/logo.png`,
-    screenshot: `${siteOrigin}/og_1200x630.jpg`,
+    description: 'Comunidade entre mulheres para participar de grupos e encontrar companhia para a cidade e para viagens.',
+    image: `${origin}/logo.png`,
+    screenshot: `${origin}/og_1200x630.jpg`,
     url: playStoreUrl,
   },
   {
     '@context': 'https://schema.org',
     '@type': 'MobileApplication',
-    name: 'Viajadoras',
+    name: siteName,
     operatingSystem: 'IOS',
     applicationCategory: 'TravelApplication',
     offers: {
@@ -93,9 +100,9 @@ const mobileAppSchemas = [
       price: '0',
       priceCurrency: 'BRL'
     },
-    description: 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e acessar uma rede de apoio entre viajantes.',
-    image: `${siteOrigin}/logo.png`,
-    screenshot: `${siteOrigin}/og_1200x630.jpg`,
+    description: 'Comunidade entre mulheres para participar de grupos e encontrar companhia para a cidade e para viagens.',
+    image: `${origin}/logo.png`,
+    screenshot: `${origin}/og_1200x630.jpg`,
     url: appStoreUrl,
   },
 ];
@@ -105,13 +112,13 @@ const webPageSchema = {
   '@type': 'WebPage',
   '@id': currentUrl,
   url: currentUrl,
-  name: title || 'Viajadoras - Toda mulher. Qualquer viagem.',
-  description: description || 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e viver experiências com mais confiança.',
+  name: title || 'Viajadoras - Comunidade entre mulheres para sair mais e viajar com mais confiança',
+  description: description || 'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
   isPartOf: {
-    '@id': `${siteOrigin}/#website`
+    '@id': `${origin}/#website`
   },
   about: {
-    '@id': `${siteOrigin}/#organization`
+    '@id': `${origin}/#organization`
   },
   inLanguage: 'pt-BR'
 };

@@ -1,234 +1,305 @@
 ---
 import Base from "../layouts/Base.astro";
----
-<Base title="Política de Privacidade - Viajadoras" description="Política de Privacidade da plataforma Viajadoras" lang="pt-BR">
-  <section class="py-16 lg:py-24 bg-neutral-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+import { company, contactEmail } from "../data/site";
 
+const updatedAt = "29 de março de 2026";
+const contactHref = `mailto:${contactEmail}`;
+---
+<Base
+  title="Política de Privacidade | Viajadoras"
+  description="Como a Viajadoras trata dados pessoais no site e no aplicativo."
+  lang="pt-BR"
+>
+  <section class="bg-neutral-50 py-16 lg:py-24">
+    <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <header class="mb-12">
-        <h1 class="text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">Política de Privacidade</h1>
-        <p class="text-neutral-500 text-sm">Última atualização: novembro de 2025</p>
+        <h1 class="mb-4 text-4xl font-bold text-neutral-900 lg:text-5xl">
+          Política de Privacidade
+        </h1>
+        <p class="text-sm text-neutral-500">Última atualização: {updatedAt}</p>
       </header>
 
-      <div class="space-y-10 text-neutral-700 leading-relaxed">
-
+      <div class="space-y-10 leading-relaxed text-neutral-700">
         <section>
           <p class="text-lg">
-            A Viajadoras valoriza sua privacidade e está comprometida com a proteção dos seus dados pessoais. Esta Política de Privacidade descreve como coletamos, usamos, compartilhamos e protegemos suas informações, em conformidade com a Lei Geral de Proteção de Dados (Lei 13.709/2018).
+            Esta política explica como a Viajadoras trata dados pessoais no site
+            <strong class="text-neutral-900"> viajadoras.com </strong> e no
+            aplicativo móvel. Ela foi escrita para refletir o produto como ele
+            existe hoje, de forma direta e sem prometer práticas que não
+            executamos.
           </p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">1. Controlador de Dados</h2>
-          <div class="bg-white border border-neutral-200 rounded-xl p-6">
-            <p class="font-medium text-neutral-900 mb-2">GT TECNOLOGIA E SERVIÇOS LTDA</p>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">1. Quem somos</h2>
+          <div class="rounded-xl border border-neutral-200 bg-white p-6">
+            <p class="mb-2 font-medium text-neutral-900">{company.legalName}</p>
             <ul class="space-y-1 text-sm">
-              <li><strong>CNPJ:</strong> 46.112.388/0001-13</li>
-              <li><strong>Endereço:</strong> Av. Portugal, 1148 - Setor Marista - Goiânia/GO - CEP 74150-030</li>
-              <li><strong>Contato:</strong> <a href="mailto:contato@viajadoras.com" class="text-primary hover:underline">contato@viajadoras.com</a></li>
+              <li><strong>CNPJ:</strong> {company.cnpj}</li>
+              <li>
+                <strong>Endereço:</strong> {company.streetAddress} - {company.addressLocality}/{company.addressRegion} - CEP {company.postalCode}
+              </li>
+              <li>
+                <strong>Contato:</strong>{' '}
+                <a href={contactHref} class="text-primary hover:underline">
+                  {contactEmail}
+                </a>
+              </li>
             </ul>
           </div>
+          <p class="mt-4">
+            Para fins da LGPD, a Viajadoras atua como controladora dos dados
+            pessoais tratados no site e no app.
+          </p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">2. Dados que Coletamos</h2>
-
-          <h3 class="text-xl font-semibold text-neutral-800 mb-3 mt-6">2.1 Dados de Cadastro</h3>
-          <ul class="space-y-2 ml-6 list-disc">
-            <li><strong class="text-neutral-900">Número de telefone:</strong> para autenticação e segurança da conta</li>
-            <li><strong class="text-neutral-900">Nome, sobrenome, apelido e nome preferido:</strong> para identificação e exibição no perfil</li>
-            <li><strong class="text-neutral-900">Foto de verificação:</strong> para validação de identidade (não exibida publicamente)</li>
-          </ul>
-
-          <h3 class="text-xl font-semibold text-neutral-800 mb-3 mt-6">2.2 Dados de Perfil</h3>
-          <ul class="space-y-2 ml-6 list-disc">
-            <li><strong class="text-neutral-900">Foto de perfil:</strong> opcional, exibida para outras usuárias</li>
-            <li><strong class="text-neutral-900">Biografia:</strong> opcional, com apresentação pessoal</li>
-            <li><strong class="text-neutral-900">Localização:</strong> cidade, estado e país</li>
-            <li><strong class="text-neutral-900">Idiomas:</strong> para facilitar conexões</li>
-          </ul>
-
-          <h3 class="text-xl font-semibold text-neutral-800 mb-3 mt-6">2.3 Dados de Confiança, Descoberta e Comunicação</h3>
-          <ul class="space-y-2 ml-6 list-disc">
-            <li><strong class="text-neutral-900">Status de verificação e moderação:</strong> informações usadas para manter a comunidade mais confiável</li>
-            <li><strong class="text-neutral-900">Dados de localização do dispositivo:</strong> quando a usuária autoriza recursos que dependem de geolocalização no app</li>
-            <li><strong class="text-neutral-900">Tokens de notificação:</strong> para envio de mensagens, alertas e atualizações relevantes da plataforma</li>
-          </ul>
-
-          <h3 class="text-xl font-semibold text-neutral-800 mb-3 mt-6">2.4 Dados Tecnicos</h3>
-          <ul class="space-y-2 ml-6 list-disc">
-            <li>Informações do dispositivo, como modelo e sistema operacional</li>
-            <li>Logs de acesso, como endereço IP, data e hora</li>
-            <li>Tokens de autenticação armazenados de forma segura</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">3. Finalidades e Base Legal</h2>
-          <div class="overflow-x-auto">
-            <table class="w-full text-sm border-collapse">
-              <thead>
-                <tr class="bg-neutral-100">
-                  <th class="text-left p-3 font-semibold text-neutral-900 border border-neutral-200">Finalidade</th>
-                  <th class="text-left p-3 font-semibold text-neutral-900 border border-neutral-200">Base Legal (LGPD)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="p-3 border border-neutral-200">Criar e gerenciar sua conta</td>
-                  <td class="p-3 border border-neutral-200">Execução de contrato (Art. 7, V)</td>
-                </tr>
-                <tr class="bg-neutral-50">
-                  <td class="p-3 border border-neutral-200">Verificar identidade</td>
-                  <td class="p-3 border border-neutral-200">Execução de contrato e legítimo interesse (Art. 7, V e IX)</td>
-                </tr>
-                <tr>
-                  <td class="p-3 border border-neutral-200">Descoberta, conexão entre usuárias e personalização da experiência</td>
-                  <td class="p-3 border border-neutral-200">Execução de contrato e legítimo interesse (Art. 7, V e IX)</td>
-                </tr>
-                <tr class="bg-neutral-50">
-                  <td class="p-3 border border-neutral-200">Recursos que dependem de geolocalização</td>
-                  <td class="p-3 border border-neutral-200">Consentimento específico (Art. 7, I)</td>
-                </tr>
-                <tr>
-                  <td class="p-3 border border-neutral-200">Conectar usuárias</td>
-                  <td class="p-3 border border-neutral-200">Execução de contrato (Art. 7, V)</td>
-                </tr>
-                <tr class="bg-neutral-50">
-                  <td class="p-3 border border-neutral-200">Investigar denúncias e prevenir fraudes</td>
-                  <td class="p-3 border border-neutral-200">Legítimo interesse (Art. 7, IX)</td>
-                </tr>
-              </tbody>
-            </table>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">2. O que esta política cobre</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-neutral-900">Site público</h3>
+              <p class="mt-3 text-sm leading-6 text-neutral-600">
+                O site institucional é usado para apresentar a marca, o produto
+                e os links de download. Hoje ele não tem formulário de cadastro
+                ou captação.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-neutral-900">Aplicativo</h3>
+              <p class="mt-3 text-sm leading-6 text-neutral-600">
+                O app reúne perfil, comunidades, conversa, verificação,
+                denúncias, notificações e outras funções ligadas à experiência
+                da comunidade.
+              </p>
+            </div>
           </div>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">4. Compartilhamento de Dados</h2>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">3. Dados que podemos tratar</h2>
 
-          <h3 class="text-xl font-semibold text-neutral-800 mb-3 mt-6">4.1 Com Terceiros</h3>
-          <ul class="space-y-2 ml-6 list-disc">
-            <li><strong class="text-neutral-900">Provedores de infraestrutura:</strong> hospedagem e armazenamento de dados</li>
-            <li><strong class="text-neutral-900">Provedores de SMS:</strong> envio de códigos de autenticação</li>
-            <li><strong class="text-neutral-900">Ferramentas de analytics:</strong> análise agregada de uso</li>
-          </ul>
+          <div class="space-y-6">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-neutral-900">3.1 Conta e autenticação</h3>
+              <ul class="mt-4 ml-6 list-disc space-y-2">
+                <li>e-mail e identificadores ligados ao método de login que você usar, como Google, Apple ou senha;</li>
+                <li>dados legados já existentes em contas mais antigas, quando aplicável;</li>
+                <li>status da conta, papel de acesso e sinais básicos de segurança.</li>
+              </ul>
+            </div>
 
-          <h3 class="text-xl font-semibold text-neutral-800 mb-3 mt-6">4.2 Entre Usuarios</h3>
-          <ul class="space-y-2 ml-6 list-disc">
-            <li><strong class="text-neutral-900">Dados públicos do perfil:</strong> nome, foto, cidade, idiomas e biografia, conforme configurado na plataforma</li>
-            <li><strong class="text-neutral-900">Informações de descoberta:</strong> dados necessários para que outras usuárias encontrem perfis, comunidades e conexões relevantes dentro do app</li>
-          </ul>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-neutral-900">3.2 Perfil e atividade no app</h3>
+              <ul class="mt-4 ml-6 list-disc space-y-2">
+                <li>nome de exibição, nome civil, apelido ou nome social, conforme os campos disponíveis;</li>
+                <li>foto de perfil, biografia, cidade, estado e outros dados de perfil que você escolher informar;</li>
+                <li>conteúdo publicado em comunidades, mensagens, comentários, eventos, viagens e outras interações internas.</li>
+              </ul>
+            </div>
 
-          <h3 class="text-xl font-semibold text-neutral-800 mb-3 mt-6">4.3 Por Obrigacao Legal</h3>
-          <p>Podemos divulgar dados quando exigido por lei, ordem judicial ou para proteger direitos, segurança ou propriedade.</p>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-neutral-900">3.3 Verificação, confiança e moderação</h3>
+              <ul class="mt-4 ml-6 list-disc space-y-2">
+                <li>selfie e, quando enviados, imagens de documento frente e verso para análise de verificação;</li>
+                <li>denúncias, bloqueios, histórico de moderação e registros necessários para investigar abuso, fraude ou violação de regras.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-neutral-900">3.4 Localização, notificações e dados técnicos</h3>
+              <ul class="mt-4 ml-6 list-disc space-y-2">
+                <li>localização aproximada ou precisa do dispositivo apenas quando você autoriza recursos que dependem disso;</li>
+                <li>identificadores de push e notificações para avisos do produto;</li>
+                <li>modelo do dispositivo, sistema operacional, IP, logs de acesso, versão do app e outros dados técnicos necessários para operação e segurança.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-neutral-900">3.5 Dados coletados no site</h3>
+              <ul class="mt-4 ml-6 list-disc space-y-2">
+                <li>métricas agregadas de navegação e origem de tráfego;</li>
+                <li>dados de medição e campanha coletados por ferramentas como Plausible e Google tag.</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">5. Protecao de Dados</h2>
-          <p class="mb-4">Adotamos medidas técnicas e organizacionais para proteger suas informações:</p>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">4. Para que usamos esses dados</h2>
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-5">
+              <h3 class="font-semibold text-neutral-900">Operar a conta e o produto</h3>
+              <p class="mt-2 text-sm leading-6 text-neutral-600">
+                Criar sessão, liberar recursos do app, manter perfil, comunidades, conversa e notificações.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-5">
+              <h3 class="font-semibold text-neutral-900">Construir confiança na comunidade</h3>
+              <p class="mt-2 text-sm leading-6 text-neutral-600">
+                Verificar identidade, moderar conteúdo, tratar denúncias, bloquear abuso e prevenir fraude.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-5">
+              <h3 class="font-semibold text-neutral-900">Habilitar recursos opcionais</h3>
+              <p class="mt-2 text-sm leading-6 text-neutral-600">
+                Usar localização, permissões do dispositivo e notificações quando isso for necessário e autorizado por você.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-5">
+              <h3 class="font-semibold text-neutral-900">Medir e melhorar o serviço</h3>
+              <p class="mt-2 text-sm leading-6 text-neutral-600">
+                Entender uso do site, desempenho do produto, estabilidade técnica e eficácia de campanhas.
+              </p>
+            </div>
+          </div>
+          <p class="mt-5">
+            As bases legais usadas variam conforme o caso e podem incluir
+            execução do contrato, legítimo interesse, cumprimento de obrigação
+            legal e consentimento ou permissão específica quando aplicável.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">5. O que outras usuárias podem ver</h2>
           <ul class="space-y-2 ml-6 list-disc">
-            <li><strong class="text-neutral-900">Criptografia:</strong> todas as comunicações utilizam HTTPS (TLS/SSL)</li>
-            <li><strong class="text-neutral-900">Armazenamento seguro:</strong> tokens em Keychain (iOS) e Keystore (Android)</li>
-            <li><strong class="text-neutral-900">Acesso restrito:</strong> apenas equipe autorizada acessa dados pessoais</li>
-            <li><strong class="text-neutral-900">Monitoramento:</strong> sistemas de detecção de atividades suspeitas</li>
-            <li><strong class="text-neutral-900">Backups:</strong> cópias de segurança com acesso controlado</li>
+            <li>dados públicos do perfil, como nome de exibição, avatar, cidade, estado e bio, conforme o funcionamento da plataforma;</li>
+            <li>conteúdos que você publicar em comunidades, comentários, eventos, viagens ou outras áreas sociais do app;</li>
+            <li>dados necessários para interação entre usuárias dentro do produto.</li>
+          </ul>
+          <p class="mt-4">
+            Imagens de verificação, documentos enviados para análise e dados
+            internos de moderação não são exibidos publicamente como parte do
+            perfil.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">6. Com quem podemos compartilhar</h2>
+          <ul class="space-y-2 ml-6 list-disc">
+            <li>provedores de infraestrutura, armazenamento, autenticação e envio de notificações necessários para operar o serviço;</li>
+            <li>ferramentas de medição e analytics usadas no site e em campanhas;</li>
+            <li>autoridades públicas, quando houver obrigação legal, ordem judicial ou necessidade de defesa de direitos.</li>
+          </ul>
+          <p class="mt-4">
+            Não tratamos seus dados como mercadoria. Quando houver
+            compartilhamento, ele deve estar ligado à operação, segurança,
+            suporte, medição ou exigência legal.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">7. Cookies e tecnologias semelhantes no site</h2>
+          <p class="mb-4">
+            O site usa scripts e tecnologias de medição para entender tráfego,
+            navegação e desempenho de campanha. Hoje isso inclui ferramentas
+            como Plausible e Google tag.
+          </p>
+          <ul class="space-y-2 ml-6 list-disc">
+            <li>você pode limitar cookies e scripts pelo navegador, mas isso pode reduzir parte da medição;</li>
+            <li>o site hoje não tem área logada nem formulário público de cadastro.</li>
           </ul>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">6. Retencao de Dados</h2>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">8. Segurança e retenção</h2>
+          <p class="mb-4">
+            Adotamos medidas técnicas e organizacionais compatíveis com o estágio
+            atual do produto, como uso de HTTPS, controle de acesso, armazenamento
+            seguro de credenciais e ambientes com acesso restrito.
+          </p>
           <ul class="space-y-2 ml-6 list-disc">
-            <li><strong class="text-neutral-900">Conta ativa:</strong> enquanto sua conta estiver ativa</li>
-            <li><strong class="text-neutral-900">Após exclusão:</strong> dados removidos em até 30 dias</li>
-            <li><strong class="text-neutral-900">Logs de segurança:</strong> até 6 meses após o evento</li>
-            <li><strong class="text-neutral-900">Obrigações legais:</strong> dados relacionados a investigações podem ser mantidos pelo prazo exigido pela legislação aplicável</li>
+            <li>mantemos dados enquanto a conta e os recursos relacionados estiverem ativos;</li>
+            <li>registros podem permanecer por mais tempo quando isso for necessário para segurança, moderação, prevenção a fraude, disputa ou obrigação legal;</li>
+            <li>pedidos de encerramento e eliminação são analisados caso a caso, respeitando o que a lei permite eliminar de fato.</li>
           </ul>
+          <p class="mt-4">
+            Nenhum sistema é absolutamente inviolável, mas trabalhamos para
+            reduzir risco e restringir acesso indevido.
+          </p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">7. Seus Direitos</h2>
-          <p class="mb-4">De acordo com a LGPD, você tem direito a:</p>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">9. Seus direitos</h2>
+          <p class="mb-4">
+            Nos termos da LGPD, você pode pedir confirmação do tratamento,
+            acesso, correção, anonimização, bloqueio, eliminação quando cabível,
+            portabilidade, informação sobre compartilhamentos e revisão de
+            consentimentos, entre outros direitos previstos em lei.
+          </p>
           <div class="grid gap-4 sm:grid-cols-2">
-            <div class="bg-white border border-neutral-200 rounded-xl p-4">
-              <h4 class="font-semibold text-neutral-900 mb-1">Acesso</h4>
-              <p class="text-sm">Confirmar e acessar seus dados pessoais</p>
+            <div class="rounded-xl border border-neutral-200 bg-white p-4">
+              <h4 class="mb-1 font-semibold text-neutral-900">Acesso</h4>
+              <p class="text-sm">Confirmar se tratamos dados e receber informações sobre eles.</p>
             </div>
-            <div class="bg-white border border-neutral-200 rounded-xl p-4">
-              <h4 class="font-semibold text-neutral-900 mb-1">Correção</h4>
-              <p class="text-sm">Corrigir dados incompletos ou incorretos</p>
+            <div class="rounded-xl border border-neutral-200 bg-white p-4">
+              <h4 class="mb-1 font-semibold text-neutral-900">Correção</h4>
+              <p class="text-sm">Corrigir dados incompletos, inexatos ou desatualizados.</p>
             </div>
-            <div class="bg-white border border-neutral-200 rounded-xl p-4">
-              <h4 class="font-semibold text-neutral-900 mb-1">Exclusão</h4>
-              <p class="text-sm">Solicitar eliminação de dados desnecessários</p>
+            <div class="rounded-xl border border-neutral-200 bg-white p-4">
+              <h4 class="mb-1 font-semibold text-neutral-900">Exclusão</h4>
+              <p class="text-sm">Solicitar eliminação quando isso for cabível pela lei e pelo contexto do tratamento.</p>
             </div>
-            <div class="bg-white border border-neutral-200 rounded-xl p-4">
-              <h4 class="font-semibold text-neutral-900 mb-1">Portabilidade</h4>
-              <p class="text-sm">Receber dados em formato estruturado</p>
+            <div class="rounded-xl border border-neutral-200 bg-white p-4">
+              <h4 class="mb-1 font-semibold text-neutral-900">Portabilidade</h4>
+              <p class="text-sm">Pedir portabilidade, quando aplicável.</p>
             </div>
-            <div class="bg-white border border-neutral-200 rounded-xl p-4">
-              <h4 class="font-semibold text-neutral-900 mb-1">Revogação</h4>
-              <p class="text-sm">Retirar consentimento a qualquer momento</p>
+            <div class="rounded-xl border border-neutral-200 bg-white p-4">
+              <h4 class="mb-1 font-semibold text-neutral-900">Revogação</h4>
+              <p class="text-sm">Retirar consentimentos e permissões concedidos a qualquer tempo.</p>
             </div>
-            <div class="bg-white border border-neutral-200 rounded-xl p-4">
-              <h4 class="font-semibold text-neutral-900 mb-1">Informação</h4>
-              <p class="text-sm">Saber com quem compartilhamos seus dados</p>
+            <div class="rounded-xl border border-neutral-200 bg-white p-4">
+              <h4 class="mb-1 font-semibold text-neutral-900">Informação</h4>
+              <p class="text-sm">Saber com quem compartilhamos dados e para quê.</p>
             </div>
           </div>
           <p class="mt-4">
-            Para exercer seus direitos, envie e-mail para <a href="mailto:contato@viajadoras.com" class="text-primary font-medium hover:underline">contato@viajadoras.com</a>. Responderemos em até 15 dias corridos.
+            Para exercer direitos ou fazer perguntas sobre privacidade, escreva
+            para{' '}
+            <a href={contactHref} class="text-primary font-medium hover:underline">
+              {contactEmail}
+            </a>
+            . Podemos pedir informações adicionais para confirmar sua identidade
+            antes de responder.
           </p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">8. Cookies</h2>
-          <p class="mb-3">
-            Utilizamos cookies para melhorar sua experiência no site. Cookies são pequenos arquivos armazenados no seu navegador.
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">10. Transferências internacionais, idade mínima e mudanças</h2>
+          <p class="mb-4">
+            Parte da infraestrutura pode envolver provedores com operação fora
+            do Brasil. Quando isso acontecer, buscamos utilizar parceiros e
+            medidas compatíveis com as exigências legais aplicáveis.
           </p>
-          <ul class="space-y-2 ml-6 list-disc">
-            <li><strong class="text-neutral-900">Cookies essenciais:</strong> necessários para o funcionamento do site</li>
-            <li><strong class="text-neutral-900">Cookies de analytics:</strong> análise anônima de uso do site</li>
-          </ul>
-          <p class="mt-3">
-            Você pode gerenciar cookies através das configurações do seu navegador.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">9. Transferencia Internacional</h2>
           <p>
-            Nossos serviços podem utilizar provedores com servidores localizados fora do Brasil. Garantimos que todos os parceiros oferecem níveis adequados de proteção de dados, conforme exigido pela LGPD.
+            A plataforma é destinada a maiores de 18 anos. Se identificarmos uso
+            indevido por menor de idade, poderemos restringir ou remover a conta.
+          </p>
+          <p class="mt-4">
+            Podemos atualizar esta política para refletir mudanças no produto,
+            na operação ou em exigências legais. A versão vigente ficará sempre
+            publicada nesta página com a data de atualização.
           </p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">10. Menores de Idade</h2>
+          <h2 class="mb-4 text-2xl font-bold text-neutral-900">11. Contato</h2>
           <p>
-            A plataforma Viajadoras é destinada exclusivamente para maiores de 18 anos. Não coletamos intencionalmente dados de menores. Se tomarmos conhecimento de coleta inadvertida, excluiremos as informações imediatamente.
+            Para dúvidas ou solicitações relacionadas a esta política, escreva
+            para{' '}
+            <a href={contactHref} class="text-primary font-medium hover:underline">
+              {contactEmail}
+            </a>
+            .
           </p>
         </section>
 
-        <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">11. Alterações nesta Política</h2>
-          <p>
-            Podemos atualizar esta Política periodicamente. Alterações significativas serão comunicadas por meio da plataforma ou por e-mail. A data da última atualização estará sempre indicada no início desta página.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">12. Contato</h2>
-          <p>
-            Para dúvidas ou solicitações sobre privacidade, entre em contato: <a href="mailto:contato@viajadoras.com" class="text-primary font-medium hover:underline">contato@viajadoras.com</a>
-          </p>
-        </section>
-
-        <hr class="border-neutral-200 my-10">
+        <hr class="my-10 border-neutral-200">
 
         <footer class="text-sm text-neutral-500">
-          <p class="font-medium text-neutral-700">GT TECNOLOGIA E SERVIÇOS LTDA</p>
-          <p>CNPJ: 46.112.388/0001-13</p>
-          <p>Av. Portugal, 1148 - Setor Marista - Goiânia/GO - CEP 74150-030</p>
+          <p class="font-medium text-neutral-700">{company.legalName}</p>
+          <p>CNPJ: {company.cnpj}</p>
+          <p>{company.streetAddress} - {company.addressLocality}/{company.addressRegion} - CEP {company.postalCode}</p>
         </footer>
-
       </div>
     </div>
   </section>

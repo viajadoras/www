@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import heroMainImg from '../assets/images/hero-main.png';
+import AppStoreBadges from './AppStoreBadges.astro';
+---
+
+<section class="relative overflow-hidden bg-neutral-50 py-12 lg:py-16">
+  <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12">
+    <div class="grid items-center gap-8 lg:grid-cols-[0.98fr_1.02fr] lg:gap-12">
+      <div class="max-w-xl">
+        <div class="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2">
+          <span class="h-2 w-2 rounded-full bg-primary"></span>
+          <span class="text-sm font-semibold text-neutral-600">
+            Comunidade entre mulheres
+          </span>
+        </div>
+
+        <h1 class="mt-6 max-w-[12ch] font-display text-[2.4rem] font-semibold leading-[1] tracking-[-0.025em] text-neutral-900 sm:text-[3rem] lg:text-[3.45rem]">
+          Companhia confiável para
+          <span class="text-primary"> sair mais da rotina.</span>
+        </h1>
+
+        <p class="mt-5 max-w-lg text-lg leading-relaxed text-neutral-600 sm:text-[1.15rem]">
+          Uma comunidade entre mulheres com grupos por interesse, conversa antes
+          do encontro e mais contexto para levar isso também para viagens.
+        </p>
+
+        <div class="mt-5 flex flex-wrap gap-3 text-sm text-neutral-600">
+          <span class="rounded-full border border-neutral-200 bg-white px-4 py-2">
+            Grupos por interesse
+          </span>
+          <span class="rounded-full border border-neutral-200 bg-white px-4 py-2">
+            Converse antes de marcar
+          </span>
+        </div>
+
+        <div class="mt-7 flex flex-col gap-4">
+          <AppStoreBadges
+            class="flex flex-row flex-wrap items-center gap-3"
+            imgClass="h-auto w-36 sm:w-44"
+          />
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="overflow-hidden rounded-[2.25rem] border border-white/60 bg-white shadow-soft">
+          <Image
+            src={heroMainImg}
+            alt="Grupo de mulheres juntas ao ar livre em um momento de lazer"
+            class="h-[340px] w-full object-cover object-[98%_top] sm:h-[390px] lg:h-[440px]"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

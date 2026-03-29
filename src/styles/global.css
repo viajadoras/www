@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 /* CLS Prevention */
@@ -28,7 +28,9 @@ body {
 }
 
 body {
-  @apply text-lg leading-relaxed tracking-wide text-neutral-700 font-body;
+  @apply text-neutral-700 font-body;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .container {

@@ -1,4 +1,6 @@
 ---
+import { appStoreUrl, playStoreUrl } from '../data/site';
+
 interface Props {
   /** Tailwind classes for the container flex div */
   class?: string;
@@ -12,7 +14,7 @@ const {
 ---
 <div class={className}>
   <a
-    href="https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share"
+    href={playStoreUrl}
     target="_blank"
     rel="noopener noreferrer"
     class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
@@ -26,7 +28,7 @@ const {
   </a>
 
   <a
-    href="https://apps.apple.com/br/app/viajadoras/id6755790482"
+    href={appStoreUrl}
     target="_blank"
     rel="noopener noreferrer"
     class="inline-block transition-transform duration-300 hover:scale-105 hover:-translate-y-1"

@@ -2,6 +2,7 @@
 import StructuredData from "../components/StructuredData.astro";
 import FAQSchema from "../components/FAQSchema.astro";
 import IconInstagram from "../components/IconInstagram.astro";
+import { company, instagramUrl } from "../data/site";
 
 interface BaseProps {
   title?: string;
@@ -13,10 +14,10 @@ interface BaseProps {
 }
 
 const props = Astro.props as BaseProps;
-const pageTitle = props.title ?? "Viajadoras | App de viagens para mulheres com companhia e rede de apoio";
+const pageTitle = props.title ?? "Viajadoras | Companhia confiável para sair mais da rotina";
 const pageDescription =
   props.description ??
-  "Conheça mulheres, encontre companhia para viajar e faça parte de uma comunidade feminina verificada para viver experiências e viagens com mais confiança.";
+  "Comunidade entre mulheres com grupos, conversa e mais contexto para sair mais na sua cidade e viajar com mais confiança.";
 const lang = props.lang ?? "pt-BR";
 const noindex = props.noindex ?? false;
 const isHomepage = Astro.url.pathname === '/';
@@ -36,7 +37,7 @@ const ogImageWidePath = `/og_1200x630.jpg?v=${OG_VERSION}`;
 const ogImageWide = (Astro.site ? new URL(ogImageWidePath, Astro.site).toString() : ogImageWidePath);
 const twitterImagePath = `/twitter_1200x600.jpg?v=${OG_VERSION}`;
 const twitterImage = (Astro.site ? new URL(twitterImagePath, Astro.site).toString() : twitterImagePath);
-const ogAlt = 'Grupo de mulheres viajando e sorrindo na praia — Viajadoras';
+const ogAlt = 'Mulheres compartilhando uma experiência juntas — Viajadoras';
 
 import "../styles/global.css";
 ---
@@ -52,8 +53,8 @@ import "../styles/global.css";
     <meta name="description" content={pageDescription} />
     <meta name="author" content="Viajadoras" />
     <meta name="robots" content={robotsContent} />
-    <meta name="theme-color" content="#FF7F50" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#C96949" />
+    <meta name="color-scheme" content="light" />
 
     <!-- Preconnect to external domains for better performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -62,7 +63,7 @@ import "../styles/global.css";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     <!-- Favicons -->
@@ -121,55 +122,45 @@ import "../styles/global.css";
     {isHomepage && <FAQSchema />}
   </head>
   <body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
-    <header class="sticky top-0 z-50 w-full bg-[#FFFBF8]/95 backdrop-blur-sm border-b-2 border-[#FF7F50]/10 shadow-sm">
+    <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-[#F4EBE3]/95 backdrop-blur-sm">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 sm:h-18 lg:h-20 items-center justify-between">
-          <a href="/" class="flex items-center gap-2.5 sm:gap-3 group">
-            <div class="relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-[#FF7F50] to-[#FADBC5] rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              <img src="/images/logo-128.webp" alt="Viajadoras" width="36" height="36" class="h-8 w-8 sm:h-9 sm:w-9 relative z-10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
+        <div class="flex h-16 items-center justify-between sm:h-[4.5rem]">
+          <a href="/" class="flex items-center gap-2.5 sm:gap-3">
+            <div class="relative flex h-11 w-11 items-center justify-center sm:h-12 sm:w-12">
+              <div class="absolute inset-0 rounded-full bg-[#DEC0AA] shadow-[0_8px_18px_rgba(23,23,23,0.08)]"></div>
+              <img src="/logo.png" alt="Viajadoras" width="44" height="44" class="relative z-10 h-10 w-10 object-contain [filter:drop-shadow(0_1px_1px_rgba(23,23,23,0.16))_drop-shadow(0_4px_12px_rgba(23,23,23,0.10))] sm:h-11 sm:w-11" />
             </div>
             <div class="flex flex-col">
-              <h2 class="font-display text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight">Viajadoras</h2>
-              <span class="hidden sm:block text-[10px] uppercase tracking-[0.15em] text-[#FF7F50] font-medium -mt-0.5">Toda mulher. Qualquer viagem.</span>
+              <h2 class="font-display text-[1.55rem] font-semibold text-neutral-900 tracking-tight sm:text-[1.75rem]">Viajadoras</h2>
             </div>
           </a>
           <nav class="hidden lg:flex items-center gap-1">
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="#como-funciona">
+            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#o-que-e">
               Como Funciona
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FF7F50] to-[#FADBC5] group-hover:w-full transition-all duration-300"></span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="#para-quem">
+            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#para-quem">
               Para Quem
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FF7F50] to-[#FADBC5] group-hover:w-full transition-all duration-300"></span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="#destinos">
-              Destinos
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FF7F50] to-[#FADBC5] group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="#faq">
+            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#faq">
               FAQ
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FF7F50] to-[#FADBC5] group-hover:w-full transition-all duration-300"></span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
           </nav>
           <div class="flex items-center gap-3 sm:gap-4">
             <a
-              href="https://instagram.com/viajadorasbr"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-[#FF7F50] rounded-full hover:bg-[#FF6B40] transition-all duration-300 hover:shadow-lg hover:shadow-[#FF7F50]/25 hover:-translate-y-0.5"
+              href="/#baixar"
+              class="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 sm:inline-flex"
             >
-              <IconInstagram class="w-4 h-4" />
-              <span class="hidden xl:inline">Instagram</span>
+              <span>Baixar o app</span>
             </a>
             <a
-              href="https://instagram.com/viajadorasbr"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="lg:hidden p-2 text-primary hover:bg-primary/10 rounded-full transition-colors"
-              aria-label="Instagram"
+              href="/#baixar"
+              class="rounded-full bg-primary px-3 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 lg:hidden"
+              aria-label="Baixar o app"
             >
-              <IconInstagram />
+              Baixar
             </a>
           </div>
         </div>
@@ -178,45 +169,48 @@ import "../styles/global.css";
     <main>
       <slot />
     </main>
-    <footer class="relative bg-neutral-900 text-neutral-100 py-16 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-mesh opacity-30"></div>
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+    <footer class="bg-neutral-900 py-16 text-neutral-100">
+      <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_0.8fr]">
           <div>
             <h3 class="text-lg font-bold text-white">Viajadoras</h3>
-            <p class="mt-2 text-sm text-neutral-400">Companhia, confiança e conexão para mulheres que viajam.</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-400">Grupos entre mulheres para sair mais da rotina e viajar com mais confiança.</p>
           </div>
           <div>
-            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Explore</h3>
+            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Site</h3>
             <nav class="mt-4 flex flex-col gap-2">
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="#como-funciona">Como Funciona</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="#para-quem">Para Quem</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="#destinos">Destinos</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="#manifesto">Manifesto</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#o-que-e">Como funciona</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#para-quem">Para quem</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#faq">FAQ</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#baixar">Baixar o app</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Guias</h3>
+            <nav class="mt-4 flex flex-col gap-2">
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viajar-sozinha-mulher">Viajar sozinha</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viagens-para-mulheres">Viagens para mulheres</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-para-viajar">Companhia para viajar</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-feminina-para-sair">Companhia feminina para sair</a>
             </nav>
           </div>
           <div>
-            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Legal</h3>
+            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Legal e redes</h3>
             <nav class="mt-4 flex flex-col gap-2">
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/termos">Termos de Uso</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/privacidade">Privacidade</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
             </nav>
-          </div>
-          <div>
-            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Redes Sociais</h3>
             <div class="mt-4">
-              <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-neutral-800 text-neutral-400 hover:bg-primary hover:text-white transition-all" href="https://instagram.com/viajadorasbr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <IconInstagram class="w-5 h-5" />
+              <a class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 text-neutral-400 transition-all hover:bg-primary hover:text-white" href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <IconInstagram class="h-5 w-5" />
               </a>
             </div>
           </div>
         </div>
         <div class="mt-12 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500">
           <p>© {new Date().getFullYear()} Viajadoras. Todos os direitos reservados.</p>
-          <p class="mt-2">GT TECNOLOGIA E SERVICOS LTDA · CNPJ 46.112.388/0001-13</p>
+          <p class="mt-2">{company.legalName} · CNPJ {company.cnpj}</p>
         </div>
       </div>
     </footer>

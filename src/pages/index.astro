@@ -1,63 +1,23 @@
 ---
 import Base from "../layouts/Base.astro";
-import Hero from "../components/Hero.astro";
-import FeatureCard from "../components/FeatureCard.astro";
-import Gallery from "../components/Gallery.astro";
-import ForWhom from "../components/ForWhom.astro";
-import Destinations from "../components/Destinations.astro";
-import Testimonials from "../components/Testimonials.astro";
-import ManifestoSection from "../components/ManifestoSection.astro";
+import Hero from "../components/hero-section.astro";
+import HowItWorks from "../components/how-it-works.astro";
+import UseCases from "../components/use-cases.astro";
 import FAQ from "../components/FAQ.astro";
 import CTASection from "../components/CTASection.astro";
 
-const title = 'Viajadoras | App de viagens para mulheres com companhia, comunidade e rede de apoio';
-const description = 'Conheça mulheres, encontre companhia para viajar e faça parte de uma comunidade feminina verificada para viver experiências e viagens com mais confiança.';
---- 
+const title =
+  "Viajadoras | Companhia confiável para sair mais da rotina";
+const description =
+  "Comunidade entre mulheres com grupos, conversa e mais contexto para sair mais na sua cidade e viajar com mais confiança.";
+---
+
 <Base {title} {description} lang="pt-BR">
   <Hero />
 
-  <section id="como-funciona" class="py-24 lg:py-32 bg-secondary-100">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-      <div class="mx-auto max-w-4xl text-center mb-16 sm:mb-20">
-        <h2 class="text-4xl font-bold text-neutral-900 sm:text-5xl lg:text-5xl leading-tight">
-          Como Viajadoras <span class="text-primary">Empodera Você</span>
-        </h2>
-        <p class="mt-6 text-lg text-neutral-600 sm:text-xl leading-relaxed">
-          Não é só sobre destino. É sobre conhecer outras mulheres, criar confiança e viajar com mais companhia, repertório e rede de apoio.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 xl:gap-12 max-w-[1400px] mx-auto">
-        <FeatureCard
-          title="Comunidade Verificada"
-          description="Conheça outras mulheres em um ambiente moderado e construído para fortalecer confiança antes, durante e depois da viagem."
-          icon="shield_person"
-          iconBgColor="bg-primary"
-        />
-        <FeatureCard
-          title="Companhia e Conexão"
-          description="Encontre companhia para viajar, faça novas amizades e troque referências com mulheres que vivem jornadas parecidas."
-          icon="diversity_2"
-          iconBgColor="bg-primary"
-        />
-        <FeatureCard
-          title="Experiências Reais"
-          description="Descubra destinos, comunidades e oportunidades de encontro com mais contexto local e menos improviso solitário."
-          icon="travel_explore"
-          iconBgColor="bg-primary"
-        />
-      </div>
-    </div>
-  </section>
+  <HowItWorks />
 
-  <Gallery />
-
-  <ForWhom />
-
-  <Destinations />
-
-  <Testimonials />
-
-  <ManifestoSection />
+  <UseCases />
 
   <FAQ />
 
