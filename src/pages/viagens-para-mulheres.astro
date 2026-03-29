@@ -1,0 +1,102 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title =
+  "Viagens para mulheres | app, comunidade e rede de apoio | Viajadoras";
+const description =
+  "Conheça o Viajadoras, app e comunidade de viagens para mulheres com companhia, rede de apoio e conexões reais em qualquer destino.";
+---
+
+<Base {title} {description} lang="pt-BR">
+  <section class="bg-neutral-50 py-16 lg:py-24">
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          Comunidade
+        </p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+          Viagens para mulheres pedem mais do que roteiro: pedem confiança,
+          afinidade e rede de apoio.
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-neutral-600">
+          Nem toda mulher viaja do mesmo jeito. Algumas querem companhia, outras
+          querem liberdade total, e muitas querem as duas coisas. O Viajadoras foi
+          pensado para esse cenário real.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <div class="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-neutral-200">
+          <h2 class="text-2xl font-bold text-neutral-900">
+            O que torna uma comunidade de viagens para mulheres realmente útil
+          </h2>
+          <div class="mt-6 space-y-5 text-neutral-700 leading-relaxed">
+            <p>
+              Utilidade vem de contexto. Não basta juntar pessoas em torno do tema
+              “viagem”. É preciso aproximar mulheres com intenções parecidas:
+              lazer, trabalho, networking, primeira viagem solo, viagem com
+              amigas, escapada de fim de semana ou mudança de cidade.
+            </p>
+            <p>
+              Também é preciso reduzir ruído. Segurança, reputação, identidade e
+              qualidade das conexões fazem diferença porque afetam a decisão de
+              sair de casa, marcar um encontro e confiar em alguém.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-neutral-200">
+          <h2 class="text-2xl font-bold text-neutral-900">
+            O que você encontra no Viajadoras
+          </h2>
+          <ul class="mt-6 space-y-3 text-neutral-700">
+            <li>Companhia feminina para viagens e encontros no destino.</li>
+            <li>Comunidades e conversas para criar confiança antes de viajar.</li>
+            <li>Troca de dicas, referências e contexto real entre mulheres.</li>
+            <li>Conexões com mulheres que viajam a lazer, trabalho e networking.</li>
+            <li>Rede de apoio pensada para realidade brasileira, não só turismo idealizado.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 rounded-[2rem] bg-neutral-900 p-8 text-neutral-100">
+        <h2 class="text-3xl font-bold">Para quais perfis isso faz sentido?</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl bg-white/10 p-6">
+            <h3 class="text-lg font-semibold">Quem vai viajar sozinha</h3>
+            <p class="mt-3 text-sm leading-6 text-neutral-300">
+              Para sair do medo do desconhecido sem abrir mão da autonomia.
+            </p>
+          </div>
+          <div class="rounded-3xl bg-white/10 p-6">
+            <h3 class="text-lg font-semibold">Quem viaja a trabalho</h3>
+            <p class="mt-3 text-sm leading-6 text-neutral-300">
+              Para transformar deslocamento em networking, companhia e segurança.
+            </p>
+          </div>
+          <div class="rounded-3xl bg-white/10 p-6">
+            <h3 class="text-lg font-semibold">Quem quer viajar acompanhada</h3>
+            <p class="mt-3 text-sm leading-6 text-neutral-300">
+              Para encontrar afinidade real antes da viagem e apoio durante ela.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col gap-3 sm:flex-row">
+        <a
+          href="/companhia-para-viajar"
+          class="rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#FF6B40]"
+        >
+          Ver como encontrar companhia
+        </a>
+        <a
+          href="/viajar-sozinha-mulher"
+          class="rounded-full border border-neutral-300 px-6 py-3 text-center text-sm font-semibold text-neutral-900 transition hover:bg-white"
+        >
+          Ler guia de viagem solo
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

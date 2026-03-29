@@ -7,11 +7,12 @@ import ForWhom from "../components/ForWhom.astro";
 import Destinations from "../components/Destinations.astro";
 import Testimonials from "../components/Testimonials.astro";
 import ManifestoSection from "../components/ManifestoSection.astro";
+import FAQ from "../components/FAQ.astro";
 import CTASection from "../components/CTASection.astro";
 
-const title = 'Viajadoras - Toda mulher. Qualquer viagem.';
-const description = 'Conexões reais, segurança verdadeira e liberdade total. Para qualquer mulher que viaja, do jeito que você quiser.';
----
+const title = 'Viajadoras | App de viagens para mulheres com companhia, comunidade e rede de apoio';
+const description = 'Conheça mulheres, encontre companhia para viajar e faça parte de uma comunidade feminina verificada para viver experiências e viagens com mais confiança.';
+--- 
 <Base {title} {description} lang="pt-BR">
   <Hero />
 
@@ -22,25 +23,25 @@ const description = 'Conexões reais, segurança verdadeira e liberdade total. P
           Como Viajadoras <span class="text-primary">Empodera Você</span>
         </h2>
         <p class="mt-6 text-lg text-neutral-600 sm:text-xl leading-relaxed">
-          Não é "só" um app de segurança. É a sua plataforma completa para viajar com confiança, comunidade e autenticidade.
+          Nao e so sobre destino. E sobre conhecer outras mulheres, criar confianca e viajar com mais companhia, repertorio e rede de apoio.
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 xl:gap-12 max-w-[1400px] mx-auto">
         <FeatureCard
-          title="Segurança Ativa"
-          description="Viaje tranquila com check-ins automáticos e uma rede de apoio geolocalizada, pronta para agir."
+          title="Comunidade Verificada"
+          description="Conheca outras mulheres em um ambiente moderado e construido para fortalecer confianca antes, durante e depois da viagem."
           icon="shield_person"
           iconBgColor="bg-primary"
         />
         <FeatureCard
-          title="Conexão Autêntica"
-          description="Encontre companheiras, faça amigas ou receba acolhimento de locais. Do jeito que você quiser."
+          title="Companhia e Conexao"
+          description="Encontre companhia para viajar, faca novas amizades e troque referencias com mulheres que vivem jornadas parecidas."
           icon="diversity_2"
           iconBgColor="bg-primary"
         />
         <FeatureCard
-          title="Descoberta de Experiências"
-          description="Acesse guias curados e recomendações reais para experiências além do óbvio turístico."
+          title="Experiencias Reais"
+          description="Descubra destinos, comunidades e oportunidades de encontro com mais contexto local e menos improviso solitario."
           icon="travel_explore"
           iconBgColor="bg-primary"
         />
@@ -57,6 +58,8 @@ const description = 'Conexões reais, segurança verdadeira e liberdade total. P
   <Testimonials />
 
   <ManifestoSection />
+
+  <FAQ />
 
   <CTASection />
 </Base>

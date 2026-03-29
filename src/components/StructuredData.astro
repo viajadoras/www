@@ -7,24 +7,27 @@ interface Props {
 }
 
 const { type = 'page', title, description, url } = Astro.props;
-const siteUrl = Astro.site?.toString() || 'https://viajadoras.com';
+const siteOrigin = (Astro.site?.toString() || 'https://viajadoras.com').replace(/\/+$/, '');
+const siteUrl = `${siteOrigin}/`;
 const currentUrl = url || Astro.url.toString();
+const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share';
+const appStoreUrl = 'https://apps.apple.com/br/app/viajadoras/id6755790482';
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': `${siteUrl}/#organization`,
+  '@id': `${siteOrigin}/#organization`,
   name: 'Viajadoras',
   legalName: 'GT TECNOLOGIA E SERVICOS LTDA',
   url: siteUrl,
   logo: {
     '@type': 'ImageObject',
-    url: `${siteUrl}/logo.png`,
+    url: `${siteOrigin}/logo.png`,
     width: 512,
     height: 512
   },
-  image: `${siteUrl}/og_1200x630.jpg`,
-  description: 'Companhia e segurança entre mulheres: conexões por viagem, check-ins e contatos de confiança.',
+  image: `${siteOrigin}/og_1200x630.jpg`,
+  description: 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e viver experiencias com mais confianca.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Av. Portugal, 1148',
@@ -39,7 +42,9 @@ const organizationSchema = {
     availableLanguage: ['pt-BR']
   },
   sameAs: [
-    'https://instagram.com/viajadorasbr'
+    'https://instagram.com/viajadorasbr',
+    playStoreUrl,
+    appStoreUrl,
   ],
   founder: {
     '@type': 'Organization',
@@ -50,36 +55,50 @@ const organizationSchema = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': `${siteUrl}/#website`,
+  '@id': `${siteOrigin}/#website`,
   url: siteUrl,
   name: 'Viajadoras',
-  description: 'Companhia e segurança entre mulheres: conexões por viagem, check-ins e contatos de confiança.',
+  description: 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e viver experiencias com mais confianca.',
   publisher: {
-    '@id': `${siteUrl}/#organization`
+    '@id': `${siteOrigin}/#organization`
   },
   inLanguage: 'pt-BR'
 };
 
-const mobileAppSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'MobileApplication',
-  name: 'Viajadoras',
-  operatingSystem: 'ANDROID',
-  applicationCategory: 'TravelApplication',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'BRL'
+const mobileAppSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'MobileApplication',
+    name: 'Viajadoras',
+    operatingSystem: 'ANDROID',
+    applicationCategory: 'TravelApplication',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'BRL'
+    },
+    description: 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e acessar uma rede de apoio entre viajantes.',
+    image: `${siteOrigin}/logo.png`,
+    screenshot: `${siteOrigin}/og_1200x630.jpg`,
+    url: playStoreUrl,
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    ratingCount: '1'
+  {
+    '@context': 'https://schema.org',
+    '@type': 'MobileApplication',
+    name: 'Viajadoras',
+    operatingSystem: 'IOS',
+    applicationCategory: 'TravelApplication',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'BRL'
+    },
+    description: 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e acessar uma rede de apoio entre viajantes.',
+    image: `${siteOrigin}/logo.png`,
+    screenshot: `${siteOrigin}/og_1200x630.jpg`,
+    url: appStoreUrl,
   },
-  description: 'Companhia e segurança entre mulheres viajantes. Check-ins, contatos de confiança e rede de apoio.',
-  image: `${siteUrl}/logo.png`,
-  screenshot: `${siteUrl}/og_1200x630.jpg`
-};
+];
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -87,18 +106,18 @@ const webPageSchema = {
   '@id': currentUrl,
   url: currentUrl,
   name: title || 'Viajadoras - Toda mulher. Qualquer viagem.',
-  description: description || 'Companhia e segurança entre mulheres: conexões por viagem, check-ins e contatos de confiança.',
+  description: description || 'Comunidade feminina para conhecer outras mulheres, encontrar companhia para viajar e viver experiencias com mais confianca.',
   isPartOf: {
-    '@id': `${siteUrl}/#website`
+    '@id': `${siteOrigin}/#website`
   },
   about: {
-    '@id': `${siteUrl}/#organization`
+    '@id': `${siteOrigin}/#organization`
   },
   inLanguage: 'pt-BR'
 };
 
 const schemas = type === 'homepage'
-  ? [organizationSchema, websiteSchema, mobileAppSchema, webPageSchema]
+  ? [organizationSchema, websiteSchema, ...mobileAppSchemas, webPageSchema]
   : [webPageSchema];
 ---
 

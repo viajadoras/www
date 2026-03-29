@@ -3,11 +3,31 @@ import StructuredData from "../components/StructuredData.astro";
 import FAQSchema from "../components/FAQSchema.astro";
 import IconInstagram from "../components/IconInstagram.astro";
 
-const props = Astro.props as Record<string, string>;
-const pageTitle = props.title ?? 'Viajadoras - Toda mulher. Qualquer viagem.';
-const pageDescription = props.description ?? 'Sua comunidade de viagens para mulheres. Encontre companhia, faça check-ins de segurança e conecte-se com mulheres viajantes em todo o Brasil.';
-const lang = 'pt-BR';
+interface BaseProps {
+  title?: string;
+  description?: string;
+  lang?: string;
+  noindex?: boolean;
+  structuredDataType?: "homepage" | "page";
+  ogImage?: string;
+}
+
+const props = Astro.props as BaseProps;
+const pageTitle = props.title ?? "Viajadoras | App de viagens para mulheres com companhia e rede de apoio";
+const pageDescription =
+  props.description ??
+  "Conheça mulheres, encontre companhia para viajar e faça parte de uma comunidade feminina verificada para viver experiências e viagens com mais confiança.";
+const lang = props.lang ?? "pt-BR";
+const noindex = props.noindex ?? false;
 const isHomepage = Astro.url.pathname === '/';
+const structuredDataType = props.structuredDataType ?? (isHomepage ? "homepage" : "page");
+const canonicalBase = Astro.site ?? Astro.url;
+const canonicalUrl = canonicalBase
+  ? new URL(Astro.url.pathname, canonicalBase).toString()
+  : "";
+const robotsContent = noindex
+  ? "noindex, nofollow, noarchive"
+  : "index, follow, max-image-preview:large";
 
 const OG_VERSION = '20251002';
 const ogPath = props.ogImage ?? `/og.jpg?v=${OG_VERSION}`;
@@ -17,7 +37,6 @@ const ogImageWide = (Astro.site ? new URL(ogImageWidePath, Astro.site).toString(
 const twitterImagePath = `/twitter_1200x600.jpg?v=${OG_VERSION}`;
 const twitterImage = (Astro.site ? new URL(twitterImagePath, Astro.site).toString() : twitterImagePath);
 const ogAlt = 'Grupo de mulheres viajando e sorrindo na praia — Viajadoras';
-const canonicalUrl = Astro.url ? Astro.url.toString() : (Astro.site ? Astro.site.toString() : '');
 
 import "../styles/global.css";
 ---
@@ -31,8 +50,8 @@ import "../styles/global.css";
     <title>{pageTitle}</title>
     <meta name="title" content={pageTitle} />
     <meta name="description" content={pageDescription} />
-    <meta name="keywords" content="viagens para mulheres, viajar sozinha, comunidade mulheres viajantes, segurança feminina viagem, encontrar companhia viagem, app viagens mulheres, mulheres que viajam, turismo feminino, viajadoras brasil, rede de apoio feminina" />
     <meta name="author" content="Viajadoras" />
+    <meta name="robots" content={robotsContent} />
     <meta name="theme-color" content="#FF7F50" />
     <meta name="color-scheme" content="light dark" />
 
@@ -94,7 +113,7 @@ import "../styles/global.css";
 
     <!-- Structured Data (Schema.org) -->
     <StructuredData
-      type={isHomepage ? 'homepage' : 'page'}
+      type={structuredDataType}
       title={pageTitle}
       description={pageDescription}
       url={canonicalUrl}
@@ -165,7 +184,7 @@ import "../styles/global.css";
         <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>
             <h3 class="text-lg font-bold text-white">Viajadoras</h3>
-            <p class="mt-2 text-sm text-neutral-400">Seguranca e conexao para mulheres que viajam.</p>
+            <p class="mt-2 text-sm text-neutral-400">Companhia, confianca e conexao para mulheres que viajam.</p>
           </div>
           <div>
             <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Explore</h3>
@@ -174,6 +193,9 @@ import "../styles/global.css";
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="#para-quem">Para Quem</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="#destinos">Destinos</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="#manifesto">Manifesto</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viajar-sozinha-mulher">Viajar sozinha</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viagens-para-mulheres">Viagens para mulheres</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-para-viajar">Companhia para viajar</a>
             </nav>
           </div>
           <div>
