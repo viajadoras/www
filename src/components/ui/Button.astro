@@ -7,32 +7,38 @@ interface Props {
   [key: string]: any;
 }
 
-const { 
-  variant = 'primary', 
-  size = 'md', 
-  href, 
-  class: className = '', 
-  ...rest 
+const {
+  variant = 'primary',
+  size = 'md',
+  href,
+  class: className = '',
+  ...rest
 } = Astro.props;
 
-const baseStyles = "group relative inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none overflow-hidden";
+const baseStyles =
+  'group relative inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none overflow-hidden';
 
 const variants = {
-  primary: "bg-primary text-white hover:bg-primary-600 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5",
-  secondary: "bg-white text-neutral-900 border-2 border-neutral-200 hover:border-primary hover:bg-neutral-50 hover:shadow-lg hover:-translate-y-0.5",
-  white: "bg-white text-primary hover:shadow-xl hover:shadow-black/10 hover:-translate-y-1",
-  "outline-white": "border-2 border-white/30 text-white hover:bg-white/10",
-  ghost: "text-neutral-600 hover:text-primary hover:bg-primary/5",
+  primary:
+    'bg-primary text-white hover:bg-primary-600 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5',
+  secondary:
+    'bg-white text-neutral-900 border-2 border-neutral-200 hover:border-primary hover:bg-neutral-50 hover:shadow-lg hover:-translate-y-0.5',
+  white:
+    'bg-white text-primary hover:shadow-xl hover:shadow-black/10 hover:-translate-y-1',
+  'outline-white': 'border-2 border-white/30 text-white hover:bg-white/10',
+  ghost: 'text-neutral-600 hover:text-primary hover:bg-primary/5',
 };
 
 const sizes = {
-  sm: "px-6 py-3 text-base",
-  md: "px-8 py-4 text-lg",
-  lg: "px-10 py-5 text-xl",
+  sm: 'px-6 py-3 text-base',
+  md: 'px-8 py-4 text-lg',
+  lg: 'px-10 py-5 text-xl',
 };
 
 const Component = href ? 'a' : 'button';
-const styles = [baseStyles, variants[variant], sizes[size], className].join(' ');
+const styles = [baseStyles, variants[variant], sizes[size], className].join(
+  ' ',
+);
 ---
 
 <Component href={href} class={styles} {...rest}>

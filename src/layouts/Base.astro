@@ -1,45 +1,51 @@
 ---
-import StructuredData from "../components/StructuredData.astro";
-import FAQSchema from "../components/FAQSchema.astro";
-import IconInstagram from "../components/IconInstagram.astro";
-import { company, instagramUrl } from "../data/site";
+import FAQSchema from '../components/FAQSchema.astro';
+import IconInstagram from '../components/IconInstagram.astro';
+import StructuredData from '../components/StructuredData.astro';
+import { company, instagramUrl } from '../data/site';
 
 interface BaseProps {
   title?: string;
   description?: string;
   lang?: string;
   noindex?: boolean;
-  structuredDataType?: "homepage" | "page";
+  structuredDataType?: 'homepage' | 'page';
   ogImage?: string;
 }
 
 const props = Astro.props as BaseProps;
-const pageTitle = props.title ?? "Viajadoras | Companhia confiável para sair mais da rotina";
+const pageTitle =
+  props.title ?? 'Viajadoras | Companhia confiável para sair mais da rotina';
 const pageDescription =
   props.description ??
-  "Comunidade entre mulheres com grupos, conversa e mais contexto para sair mais na sua cidade e viajar com mais confiança.";
-const lang = props.lang ?? "pt-BR";
+  'Comunidade entre mulheres com grupos, conversa e mais contexto para sair mais na sua cidade e viajar com mais confiança.';
+const lang = props.lang ?? 'pt-BR';
 const noindex = props.noindex ?? false;
 const isHomepage = Astro.url.pathname === '/';
-const structuredDataType = props.structuredDataType ?? (isHomepage ? "homepage" : "page");
+const structuredDataType =
+  props.structuredDataType ?? (isHomepage ? 'homepage' : 'page');
 const canonicalBase = Astro.site ?? Astro.url;
 const canonicalUrl = canonicalBase
   ? new URL(Astro.url.pathname, canonicalBase).toString()
-  : "";
+  : '';
 const robotsContent = noindex
-  ? "noindex, nofollow, noarchive"
-  : "index, follow, max-image-preview:large";
+  ? 'noindex, nofollow, noarchive'
+  : 'index, follow, max-image-preview:large';
 
 const OG_VERSION = '20251002';
 const ogPath = props.ogImage ?? `/og.jpg?v=${OG_VERSION}`;
-const ogImage = (Astro.site ? new URL(ogPath, Astro.site).toString() : ogPath);
+const ogImage = Astro.site ? new URL(ogPath, Astro.site).toString() : ogPath;
 const ogImageWidePath = `/og_1200x630.jpg?v=${OG_VERSION}`;
-const ogImageWide = (Astro.site ? new URL(ogImageWidePath, Astro.site).toString() : ogImageWidePath);
+const ogImageWide = Astro.site
+  ? new URL(ogImageWidePath, Astro.site).toString()
+  : ogImageWidePath;
 const twitterImagePath = `/twitter_1200x600.jpg?v=${OG_VERSION}`;
-const twitterImage = (Astro.site ? new URL(twitterImagePath, Astro.site).toString() : twitterImagePath);
+const twitterImage = Astro.site
+  ? new URL(twitterImagePath, Astro.site).toString()
+  : twitterImagePath;
 const ogAlt = 'Mulheres compartilhando uma experiência juntas — Viajadoras';
 
-import "../styles/global.css";
+import '../styles/global.css';
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -101,8 +107,8 @@ import "../styles/global.css";
     <meta name="twitter:url" content={canonicalUrl} />
 
     <!-- Google tag (gtag.js) - Google Ads -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-17592059630"></script>
-    <script defer>
+    <script is:inline defer src="https://www.googletagmanager.com/gtag/js?id=AW-17592059630"></script>
+    <script is:inline defer>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -110,7 +116,7 @@ import "../styles/global.css";
     </script>
 
     <!-- Plausible Analytics -->
-    <script defer data-domain="viajadoras.com" src="https://plausible.io/js/script.js"></script>
+    <script is:inline defer data-domain="viajadoras.com" src="https://plausible.io/js/script.js"></script>
 
     <!-- Structured Data (Schema.org) -->
     <StructuredData

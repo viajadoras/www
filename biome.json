@@ -1,0 +1,71 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "files": {
+    "includes": [
+      "astro.config.mjs",
+      "scripts/**/*.mjs",
+      "src/**/*.{astro,ts,css}",
+      "public/**/*.css",
+      "package.json",
+      "tsconfig.json"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80
+  },
+  "linter": {
+    "enabled": true,
+    "includes": [
+      "astro.config.mjs",
+      "scripts/**/*.mjs",
+      "src/**/*.ts",
+      "package.json"
+    ],
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedVariables": "error"
+      },
+      "style": {
+        "useImportType": "off",
+        "useNodejsImportProtocol": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noTsIgnore": "error"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    },
+    "linter": {
+      "enabled": false
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "always"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "includes": [
+      "astro.config.mjs",
+      "scripts/**/*.mjs",
+      "src/**/*.ts",
+      "package.json"
+    ],
+    "actions": { "source": { "recommended": true, "organizeImports": "on" } }
+  }
+}

@@ -31,32 +31,29 @@ const organizationSchema = {
     '@type': 'ImageObject',
     url: `${origin}/logo.png`,
     width: 512,
-    height: 512
+    height: 512,
   },
   image: `${origin}/og_1200x630.jpg`,
-  description: 'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
+  description:
+    'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: company.streetAddress,
     addressLocality: company.addressLocality,
     addressRegion: company.addressRegion,
     postalCode: company.postalCode,
-    addressCountry: company.addressCountry
+    addressCountry: company.addressCountry,
   },
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
-    availableLanguage: ['pt-BR']
+    availableLanguage: ['pt-BR'],
   },
-  sameAs: [
-    instagramUrl,
-    playStoreUrl,
-    appStoreUrl,
-  ],
+  sameAs: [instagramUrl, playStoreUrl, appStoreUrl],
   founder: {
     '@type': 'Organization',
-    name: company.legalName
-  }
+    name: company.legalName,
+  },
 };
 
 const websiteSchema = {
@@ -65,11 +62,12 @@ const websiteSchema = {
   '@id': `${origin}/#website`,
   url: siteUrl,
   name: siteName,
-  description: 'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
+  description:
+    'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
   publisher: {
-    '@id': `${origin}/#organization`
+    '@id': `${origin}/#organization`,
   },
-  inLanguage: 'pt-BR'
+  inLanguage: 'pt-BR',
 };
 
 const mobileAppSchemas = [
@@ -82,9 +80,10 @@ const mobileAppSchemas = [
     offers: {
       '@type': 'Offer',
       price: '0',
-      priceCurrency: 'BRL'
+      priceCurrency: 'BRL',
     },
-    description: 'Comunidade entre mulheres para participar de grupos e encontrar companhia para a cidade e para viagens.',
+    description:
+      'Comunidade entre mulheres para participar de grupos e encontrar companhia para a cidade e para viagens.',
     image: `${origin}/logo.png`,
     screenshot: `${origin}/og_1200x630.jpg`,
     url: playStoreUrl,
@@ -98,9 +97,10 @@ const mobileAppSchemas = [
     offers: {
       '@type': 'Offer',
       price: '0',
-      priceCurrency: 'BRL'
+      priceCurrency: 'BRL',
     },
-    description: 'Comunidade entre mulheres para participar de grupos e encontrar companhia para a cidade e para viagens.',
+    description:
+      'Comunidade entre mulheres para participar de grupos e encontrar companhia para a cidade e para viagens.',
     image: `${origin}/logo.png`,
     screenshot: `${origin}/og_1200x630.jpg`,
     url: appStoreUrl,
@@ -112,22 +112,31 @@ const webPageSchema = {
   '@type': 'WebPage',
   '@id': currentUrl,
   url: currentUrl,
-  name: title || 'Viajadoras - Comunidade entre mulheres para sair mais e viajar com mais confiança',
-  description: description || 'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
+  name:
+    title ||
+    'Viajadoras - Comunidade entre mulheres para sair mais e viajar com mais confiança',
+  description:
+    description ||
+    'Comunidade entre mulheres para sair mais da rotina e viajar com mais confiança.',
   isPartOf: {
-    '@id': `${origin}/#website`
+    '@id': `${origin}/#website`,
   },
   about: {
-    '@id': `${origin}/#organization`
+    '@id': `${origin}/#organization`,
   },
-  inLanguage: 'pt-BR'
+  inLanguage: 'pt-BR',
 };
 
-const schemas = type === 'homepage'
-  ? [organizationSchema, websiteSchema, ...mobileAppSchemas, webPageSchema]
-  : [webPageSchema];
+const schemas =
+  type === 'homepage'
+    ? [organizationSchema, websiteSchema, ...mobileAppSchemas, webPageSchema]
+    : [webPageSchema];
 ---
 
 {schemas.map(schema => (
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(schema)}
+  />
 ))}

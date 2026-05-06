@@ -10,7 +10,8 @@ export const siteFaqs: SiteFaq[] = [
       'Não. Muita gente entra para participar de comunidades, sair mais na própria cidade e só depois pensar em viagem.',
   },
   {
-    question: 'O que torna essa rede diferente de um grupo de WhatsApp ou Instagram?',
+    question:
+      'O que torna essa rede diferente de um grupo de WhatsApp ou Instagram?',
     answer:
       'Aqui você encontra comunidades, perfis e conversas em um espaço pensado para mulheres. Fica mais fácil entender com quem você está falando antes de marcar algo.',
   },
