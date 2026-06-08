@@ -30,3 +30,5 @@ pnpm-debug.log*
 
 # Claude Code
 .claude/
+.bg-shell/
+.cairn/worktrees/
