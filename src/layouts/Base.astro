@@ -15,10 +15,10 @@ interface BaseProps {
 
 const props = Astro.props as BaseProps;
 const pageTitle =
-  props.title ?? 'Viajadoras | Companhia confiável para sair mais da rotina';
+  props.title ?? 'Viajadoras | Companhia com mais contexto para sair da rotina';
 const pageDescription =
   props.description ??
-  'Comunidade entre mulheres com grupos, conversa e mais contexto para sair mais na sua cidade e viajar com mais confiança.';
+  'Comunidade entre mulheres com grupos, conversa e mais contexto para sair mais na sua cidade e levar essa rede para viagens.';
 const lang = props.lang ?? 'pt-BR';
 const noindex = props.noindex ?? false;
 const isHomepage = Astro.url.pathname === '/';
@@ -180,7 +180,7 @@ import '../styles/global.css';
         <div class="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_0.8fr]">
           <div>
             <h3 class="text-lg font-bold text-white">Viajadoras</h3>
-            <p class="mt-2 text-sm leading-6 text-neutral-400">Grupos entre mulheres para sair mais da rotina e viajar com mais confiança.</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-400">Grupos entre mulheres para sair mais da rotina e levar essa rede para viagens.</p>
           </div>
           <div>
             <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Site</h3>

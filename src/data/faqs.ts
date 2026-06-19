@@ -16,9 +16,9 @@ export const siteFaqs: SiteFaq[] = [
       'Aqui você encontra comunidades, perfis e conversas em um espaço pensado para mulheres. Fica mais fácil entender com quem você está falando antes de marcar algo.',
   },
   {
-    question: 'Como o app ajuda a construir confiança?',
+    question: 'Como o app ajuda a dar mais contexto?',
     answer:
-      'O app tem perfil, verificação, denúncias, bloqueio e moderação. Isso não elimina todo risco, mas ajuda a deixar a experiência mais confiável do que um grupo solto.',
+      'O app tem perfil, conversa, denúncias, bloqueio e moderação. Isso não elimina todo risco, mas ajuda a dar mais contexto do que um grupo solto.',
   },
   {
     question: 'Serve para quem quer sair mais na própria cidade?',
