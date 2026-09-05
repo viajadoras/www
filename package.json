@@ -17,21 +17,21 @@
     "astro:check": "astro check"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.1.4",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^5.6.0"
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^5.18.2"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.5",
-    "@biomejs/biome": "^2.4.14",
-    "@tailwindcss/typography": "^0.5.14",
-    "autoprefixer": "^10.5.0",
-    "baseline-browser-mapping": "^2.10.27",
-    "browserslist": "^4.28.2",
-    "caniuse-lite": "^1.0.30001791",
-    "postcss": "^8.4.41",
+    "@astrojs/check": "^0.9.10",
+    "@biomejs/biome": "^2.5.12",
+    "@tailwindcss/typography": "^0.5.20",
+    "autoprefixer": "^10.5.5",
+    "baseline-browser-mapping": "^2.11.21",
+    "browserslist": "^4.28.9",
+    "caniuse-lite": "^1.0.30001810",
+    "postcss": "^8.5.28",
     "tailwindcss": "3.4.19",
-    "typescript": "^5.6.2"
+    "typescript": "^5.9.3"
   },
   "overrides": {
     "autoprefixer": "^10.5.0",

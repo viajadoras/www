@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.12/schema.json",
   "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
   "files": {
     "includes": [
@@ -28,7 +28,7 @@
       "package.json"
     ],
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "correctness": {
         "noUnusedVariables": "error"
       },
@@ -66,6 +66,8 @@
       "src/**/*.ts",
       "package.json"
     ],
-    "actions": { "source": { "recommended": true, "organizeImports": "on" } }
+    "actions": {
+      "source": { "preset": "recommended", "organizeImports": "on" }
+    }
   }
 }
