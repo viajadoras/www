@@ -21,14 +21,14 @@ import { siteFaqs } from '../data/faqs';
       <div class="space-y-4">
         {siteFaqs.map((faq, index) => (
           <details
-            class="faq-item group overflow-hidden rounded-[1.75rem] border border-neutral-200 bg-white shadow-sm transition-all duration-300"
+            class="faq-item group overflow-hidden rounded-[1.75rem] border border-neutral-200 bg-white shadow-xs transition-all duration-300"
             data-delay={index * 100}
           >
             <summary class="flex list-none cursor-pointer select-none items-start justify-between gap-6 p-6 transition-all duration-300 hover:bg-neutral-50">
               <span class="pr-4 text-lg font-semibold text-neutral-900">
                 {faq.question}
               </span>
-              <div class="relative mt-0.5 h-8 w-8 flex-shrink-0">
+              <div class="relative mt-0.5 h-8 w-8 shrink-0">
                 <div class="icon-plus absolute inset-0 flex items-center justify-center transition-all duration-300 group-open:rotate-45">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

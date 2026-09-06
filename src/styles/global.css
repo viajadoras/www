@@ -1,20 +1,241 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  color-scheme: light;
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary-50: #fdf5f2;
+  --color-primary-100: #f8e7e0;
+  --color-primary-200: #f0d0c2;
+  --color-primary-300: #e4af9a;
+  --color-primary-400: #d6896b;
+  --color-primary-500: #c96949;
+  --color-primary-600: #b25739;
+  --color-primary-700: #91432b;
+  --color-primary-800: #753522;
+  --color-primary-900: #562718;
+  --color-primary: #c96949;
+
+  --color-secondary-50: #fcf8f5;
+  --color-secondary-100: #f7f0ea;
+  --color-secondary-200: #eedfd3;
+  --color-secondary-300: #e3c9b8;
+  --color-secondary-400: #d8b39d;
+  --color-secondary-500: #efdccf;
+  --color-secondary-600: #d8bdaa;
+  --color-secondary-700: #c19f89;
+  --color-secondary-800: #a98570;
+  --color-secondary-900: #8d6a59;
+  --color-secondary: #efdccf;
+
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success: #16a34a;
+
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning: #d97706;
+
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error: #dc2626;
+
+  --color-coral-50: #fdf5f2;
+  --color-coral-100: #f8e7e0;
+  --color-coral-200: #f0d0c2;
+  --color-coral-300: #e4af9a;
+  --color-coral-400: #d6896b;
+  --color-coral-500: #c96949;
+  --color-coral-600: #b25739;
+  --color-coral-700: #91432b;
+  --color-coral-800: #753522;
+  --color-coral-900: #562718;
+
+  --color-peach-50: #fcf8f5;
+  --color-peach-100: #f7f0ea;
+  --color-peach-200: #eedfd3;
+  --color-peach-300: #e3c9b8;
+  --color-peach-400: #d8b39d;
+  --color-peach-500: #efdccf;
+  --color-peach-600: #d8bdaa;
+  --color-peach-700: #c19f89;
+  --color-peach-800: #a98570;
+  --color-peach-900: #8d6a59;
+
+  --color-teal-50: #eff8f6;
+  --color-teal-100: #d8efeb;
+  --color-teal-200: #b4ddd6;
+  --color-teal-300: #84c1b8;
+  --color-teal-400: #56a499;
+  --color-teal-500: #2f7a74;
+  --color-teal-600: #25655f;
+  --color-teal-700: #1e524d;
+  --color-teal-800: #173f3b;
+  --color-teal-900: #112e2c;
+
+  --color-lavender-50: #f6f1f5;
+  --color-lavender-100: #ebdde8;
+  --color-lavender-200: #d7c1d1;
+  --color-lavender-300: #bfa0b5;
+  --color-lavender-400: #a27d94;
+  --color-lavender-500: #8a657b;
+  --color-lavender-600: #744f66;
+  --color-lavender-700: #5c3e51;
+  --color-lavender-800: #472f3f;
+  --color-lavender-900: #33212d;
+
+  --color-text-main: #171717;
+  --color-text-light: #525252;
+
+  --font-display: Fraunces, serif;
+  --font-sans: Manrope, system-ui, sans-serif;
+  --font-body: Manrope, system-ui, sans-serif;
+
+  --text-display-lg: 5.5rem;
+  --text-display-lg--line-height: 1;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display: 4.5rem;
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.02em;
+  --text-display-sm: 3.5rem;
+  --text-display-sm--line-height: 1.1;
+  --text-display-sm--letter-spacing: -0.01em;
+
+  --radius: 1.25rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 2.5rem;
+  --radius-3xl: 3rem;
+  --radius-full: 9999px;
+
+  --shadow-soft: 0 20px 60px -15px rgba(201, 105, 73, 0.15);
+  --shadow-soft-lg: 0 30px 80px -20px rgba(201, 105, 73, 0.2);
+  --shadow-glow: 0 0 60px -10px rgba(138, 101, 123, 0.35);
+  --shadow-primary: 0 20px 60px -15px rgba(201, 105, 73, 0.25);
+  --shadow-secondary: 0 20px 60px -15px rgba(239, 220, 207, 0.25);
+
+  --animate-fade-in: fadeIn 0.6s ease-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-slide-in: slideIn 0.6s ease-out;
+  --animate-scale-in: scaleIn 0.5s ease-out;
+  --animate-shimmer: shimmer 2s infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-gradient: gradient 8s ease infinite;
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-mesh:
+    radial-gradient(at 27% 37%, hsla(14, 54%, 54%, 0.16) 0px, transparent 50%),
+    radial-gradient(at 97% 21%, hsla(165, 45%, 39%, 0.14) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(28, 40%, 78%, 0.18) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(14, 54%, 62%, 0.14) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(14, 54%, 54%, 0.12) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(328, 18%, 47%, 0.12) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(28, 40%, 78%, 0.18) 0px, transparent 50%);
+
+  --backdrop-blur-xs: 2px;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes shimmer {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes gradient {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
 }
 
-/* CLS Prevention */
-img,
-video,
-iframe {
-  max-width: 100%;
-  height: auto;
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 }
 
-/* Ensure smooth font loading */
+@layer utilities {
+  :root {
+    color-scheme: light;
+  }
+
+  /* CLS Prevention */
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ensure smooth font loading */
+}
 @layer base {
   html {
     font-display: swap;
@@ -33,7 +254,7 @@ body {
   line-height: 1.65;
 }
 
-.container {
+@utility container {
   @apply mx-auto max-w-7xl px-4;
 }
 
