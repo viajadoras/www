@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import { appStoreUrl, playStoreUrl } from '../data/site';
+---
+<Base title="Seu convite | Viajadoras" noindex={true}>
+  <main class="mx-auto max-w-xl px-6 py-16 text-center">
+    <h1 class="text-3xl font-bold">Você tem companhia para o próximo passo</h1>
+    <p id="invite-message" class="mt-6">Abra seu convite no app para conhecer a comunidade. Os detalhes ficam disponíveis conforme sua conta e participação no grupo.</p>
+    <a id="open-invite" class="mt-8 inline-block rounded-full bg-[#af402f] px-8 py-4 font-semibold text-white" hidden>Abrir convite no app</a>
+    <p class="mt-8">Ainda não tem o app? Instale, depois volte a esta página e toque em “Abrir convite no app”.</p>
+    <div class="mt-6 flex flex-wrap justify-center gap-6">
+      <a class="underline" href={appStoreUrl}>Baixar para iPhone</a>
+      <a class="underline" href={playStoreUrl}>Baixar para Android</a>
+    </div>
+    <p class="mt-8 text-sm">A entrada inclui uma análise de selfie. Seu convite será guardado no aparelho por até 7 dias depois de abri-lo no app.</p>
+  </main>
+</Base>
+<script>
+  const query = new URLSearchParams(window.location.search);
+  const group = query.get('grupo');
+  const event = query.get('encontro');
+  const identifier = /^[a-zA-Z0-9_-]{1,64}$/;
+  const button = document.querySelector<HTMLAnchorElement>('#open-invite');
+  if (group && identifier.test(group) && (!event || identifier.test(event)) && button) {
+    const params = new URLSearchParams({ grupo: group });
+    if (event) params.set('encontro', event);
+    button.href = `viajadoras:///convite?${params}`;
+    button.hidden = false;
+  } else {
+    const message = document.querySelector('#invite-message');
+    if (message) message.textContent = 'Este convite está incompleto. Peça à sua amiga para compartilhar novamente pelo app.';
+  }
+</script>

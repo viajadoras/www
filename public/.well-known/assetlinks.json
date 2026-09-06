@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.viajadoras.app",
+      "sha256_cert_fingerprints": [
+        "EE:6E:F4:A3:57:DE:FC:06:45:74:BC:A7:5A:EF:67:32:04:70:76:EB:36:21:A4:9B:D2:38:F7:A5:05:FA:72:0A"
+      ]
+    }
+  }
+]
