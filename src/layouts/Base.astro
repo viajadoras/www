@@ -11,6 +11,7 @@ interface BaseProps {
   noindex?: boolean;
   structuredDataType?: 'homepage' | 'page';
   ogImage?: string;
+  ogType?: 'website' | 'article';
 }
 
 const props = Astro.props as BaseProps;
@@ -80,7 +81,7 @@ import '../styles/global.css';
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={props.ogType ?? 'website'} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Viajadoras" />
     <meta property="og:locale" content="pt_BR" />
@@ -126,6 +127,7 @@ import '../styles/global.css';
       url={canonicalUrl}
     />
     {isHomepage && <FAQSchema />}
+    <slot name="head" />
   </head>
   <body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
     <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-[#F4EBE3]/95 backdrop-blur-sm">
@@ -137,7 +139,7 @@ import '../styles/global.css';
               <img src="/logo.png" alt="Viajadoras" width="44" height="44" class="relative z-10 h-10 w-10 object-contain filter-[drop-shadow(0_1px_1px_rgba(23,23,23,0.16))_drop-shadow(0_4px_12px_rgba(23,23,23,0.10))] sm:h-11 sm:w-11" />
             </div>
             <div class="flex flex-col">
-              <h2 class="font-display text-[1.55rem] font-semibold text-neutral-900 tracking-tight sm:text-[1.75rem]">Viajadoras</h2>
+              <h2 class="font-display text-xl font-semibold text-neutral-900 tracking-tight sm:text-[1.75rem]">Viajadoras</h2>
             </div>
           </a>
           <nav class="hidden lg:flex items-center gap-1">
@@ -154,7 +156,8 @@ import '../styles/global.css';
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
           </nav>
-          <div class="flex items-center gap-3 sm:gap-4">
+          <div class="flex items-center gap-1 sm:gap-4">
+            <a href="/blog/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Blog</a>
             <a
               href="/#baixar"
               class="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 sm:inline-flex"
@@ -188,6 +191,7 @@ import '../styles/global.css';
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#o-que-e">Como funciona</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#para-quem">Para quem</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#faq">FAQ</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/blog/">Blog</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#baixar">Baixar o app</a>
             </nav>
           </div>
