@@ -1,0 +1,55 @@
+---
+import { contactEmail } from '../data/site';
+import Base from '../layouts/Base.astro';
+
+const contactHref = `mailto:${contactEmail}`;
+const deletionHref = `mailto:${contactEmail}?subject=${encodeURIComponent('Excluir minha conta Viajadoras')}`;
+---
+<Base title="Ajuda para usar o app | Viajadoras" description="Como entrar na Viajadoras, acompanhar a verificação, abrir convites, bloquear, denunciar e pedir ajuda ou exclusão da conta.">
+  <section class="mx-auto max-w-3xl px-6 py-12 sm:py-16">
+    <p class="text-sm font-semibold uppercase tracking-wider text-primary-700">Central de ajuda</p>
+    <h1 class="mt-3 font-display text-4xl font-semibold text-neutral-900">Como podemos ajudar?</h1>
+    <p class="mt-4 text-lg leading-8 text-neutral-700">Encontre o próximo passo para continuar no app ou falar com a equipe.</p>
+    <nav aria-label="Assuntos da ajuda" class="my-8 flex flex-wrap gap-3 text-sm font-semibold">
+      <a href="#entrada" class="rounded-full border border-primary-200 bg-white px-4 py-3 text-primary-800">Entrada e selfie</a>
+      <a href="#convites" class="rounded-full border border-primary-200 bg-white px-4 py-3 text-primary-800">Convites</a>
+      <a href="#protecao" class="rounded-full border border-primary-200 bg-white px-4 py-3 text-primary-800">Bloquear e denunciar</a>
+      <a href="#excluir-conta" class="rounded-full border border-primary-200 bg-white px-4 py-3 text-primary-800">Excluir conta</a>
+      <a href="#contato" class="rounded-full border border-primary-200 bg-white px-4 py-3 text-primary-800">Falar com a equipe</a>
+    </nav>
+    <div class="space-y-10 text-base leading-7 text-neutral-700">
+      <section id="entrada" class="scroll-mt-24">
+        <h2 class="mb-4 text-2xl font-bold text-neutral-900">Entrada e verificação</h2>
+        <p>Entre com sua conta, preencha os dados pedidos e envie uma selfie pelo app. A Viajadoras é destinada a mulheres maiores de 18 anos.</p>
+        <p class="mt-3">Depois do envio, a equipe analisa a selfie. Você pode fechar o app e voltar para consultar o andamento. Se for necessário reenviar, leia o motivo apresentado e tire outra foto com boa iluminação e o rosto visível.</p>
+        <p class="mt-3">A análise de selfie ajuda a cuidar da entrada na comunidade. Ela não é uma consulta de antecedentes nem uma garantia sobre o comportamento de outra pessoa.</p>
+        <p class="mt-3">A câmera não abriu? Confira a permissão da câmera nas configurações do celular. Se continuar sem conseguir, <a href="#contato" class="font-semibold text-primary-700 underline">fale com a equipe</a>. Não envie senha ou selfie por e-mail.</p>
+      </section>
+      <section id="convites" class="scroll-mt-24">
+        <h2 class="mb-4 text-2xl font-bold text-neutral-900">Recebi um convite</h2>
+        <p>Abra o link e toque em “Abrir convite no app”. Se ainda não instalou, baixe o app e depois abra novamente o link recebido.</p>
+        <p class="mt-3">O convite aberto no app fica guardado naquele aparelho por até sete dias enquanto você conclui a entrada. O acesso aos detalhes depende da sua conta e da participação na comunidade.</p>
+        <p class="mt-3">Se o link estiver incompleto, peça à pessoa que o enviou para compartilhar novamente pelo app. Se a comunidade estiver indisponível, confirme com ela antes de tentar outro convite.</p>
+      </section>
+      <section id="protecao" class="scroll-mt-24">
+        <h2 class="mb-4 text-2xl font-bold text-neutral-900">Bloquear e denunciar</h2>
+        <p>Na conversa, abra “Mais opções”, no topo da tela. Escolha “Bloquear” para interromper o contato direto ou “Denunciar” para enviar uma situação à moderação.</p>
+        <p class="mt-3">Ao denunciar, descreva o que aconteceu e confira a confirmação de envio. Bloquear e denunciar são ações diferentes: se quiser que a equipe analise uma situação, envie também a denúncia.</p>
+        <p class="mt-3">Não compartilhe senha, documentos ou endereço residencial em uma conversa. Se precisar complementar uma denúncia ou não conseguir usar o recurso, entre em contato com a equipe.</p>
+      </section>
+      <section id="excluir-conta" class="scroll-mt-24">
+        <h2 class="mb-4 text-2xl font-bold text-neutral-900">Excluir minha conta</h2>
+        <p>No app, abra Perfil → Configurações → Excluir minha conta. Leia as consequências e confirme somente se quiser encerrar o acesso. Desinstalar o app não exclui a conta.</p>
+        <p class="mt-3">Sem acesso ao app? Envie o pedido pelo e-mail usado na sua conta. A equipe pode pedir informações para confirmar que a conta é sua; nunca envie sua senha.</p>
+        <a href={deletionHref} class="mt-4 inline-flex rounded-full bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">Pedir exclusão por e-mail</a>
+        <p class="mt-3 text-sm">O tratamento e a retenção dos dados seguem a <a href="/privacidade" class="font-semibold text-primary-700 underline">Política de Privacidade</a>. Registros podem ser mantidos quando necessários para segurança, moderação ou obrigações legais.</p>
+      </section>
+      <section id="contato" class="scroll-mt-24 rounded-2xl border border-primary-200 bg-primary-50 p-6">
+        <h2 class="mb-4 text-2xl font-bold text-neutral-900">Fale com a equipe</h2>
+        <a href={contactHref} class="break-all font-semibold text-primary-700 underline">{contactEmail}</a>
+        <p class="mt-3">Conte em qual tela o problema ocorreu, o que você tentou fazer e se usa iPhone ou Android. Se enviar uma captura de tela, esconda dados pessoais de outras pessoas.</p>
+        <p class="mt-3 text-sm">O atendimento é feito pela equipe. Esta central não é um serviço de emergência.</p>
+      </section>
+    </div>
+  </section>
+</Base>

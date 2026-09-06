@@ -157,10 +157,11 @@ import '../styles/global.css';
             </a>
           </nav>
           <div class="flex items-center gap-1 sm:gap-4">
-            <a href="/blog/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Blog</a>
+            <a href="/ajuda" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Ajuda</a>
+            <a href="/blog/" class="hidden rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700 sm:block">Blog</a>
             <a
               href="/#baixar"
-              class="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 sm:inline-flex"
+              class="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 lg:inline-flex"
             >
               <span>Baixar o app</span>
             </a>
@@ -192,6 +193,7 @@ import '../styles/global.css';
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#para-quem">Para quem</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#faq">FAQ</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/blog/">Blog</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda">Central de ajuda</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#baixar">Baixar o app</a>
             </nav>
           </div>
@@ -209,6 +211,7 @@ import '../styles/global.css';
             <nav class="mt-4 flex flex-col gap-2">
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/termos">Termos de Uso</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/privacidade">Privacidade</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda#excluir-conta">Excluir minha conta</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
             </nav>
             <div class="mt-4">
@@ -225,6 +228,17 @@ import '../styles/global.css';
       </div>
     </footer>
     <script>
+      import { recordStoreClick, storeClick } from '../scripts/product-links';
+
+      document.addEventListener('click', (event) => {
+        if (event.defaultPrevented || !(event.target instanceof Element)) return;
+        if (!['viajadoras.com', 'www.viajadoras.com'].includes(window.location.hostname)) return;
+        const link = event.target.closest<HTMLAnchorElement>('a[href]');
+        if (!link) return;
+        const click = storeClick(link.href, window.location.pathname);
+        if (click) void recordStoreClick(click);
+      });
+
       // Global Scroll Reveal Observer (unified — handles .scroll-reveal + optional data-delay)
       function initScrollReveal() {
         const observer = new IntersectionObserver((entries, obs) => {
