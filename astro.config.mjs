@@ -7,7 +7,12 @@ const SITE = 'https://viajadoras.com';
 
 export default defineConfig({
   site: SITE,
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) =>
+        new URL(page).pathname.replace(/\/$/, '') !== '/convite',
+    }),
+  ],
   vite: { plugins: [tailwind()] },
   i18n: {
     defaultLocale: 'pt-br',
