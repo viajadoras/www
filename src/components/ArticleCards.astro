@@ -35,7 +35,7 @@ const posts = Object.values(
           <a href={`${url?.replace(/\/$/, '')}/`} class="underline-offset-4 hover:underline">{frontmatter.title}</a>
         </Heading>
         <p class="mt-4 grow text-neutral-600">{frontmatter.description}</p>
-        {frontmatter.tool && <p class="mt-5 text-sm font-semibold text-lavender-700">{frontmatter.tool === 'split' ? 'Calculadora interativa ↗' : 'Convite para preencher ↗'}</p>}
+        {frontmatter.tool && <p class="mt-5 text-sm font-semibold text-lavender-700">{frontmatter.tool === 'split' ? 'Caderno de despesas ↗' : 'Convite para preencher ↗'}</p>}
         <p class="mt-6 text-sm text-neutral-600">Equipe Viajadoras</p>
       </div>
     </article>

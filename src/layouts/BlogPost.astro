@@ -2,6 +2,7 @@
 import AppStoreBadges from '../components/AppStoreBadges.astro';
 import Base from './Base.astro';
 import BlogTool from '../components/BlogTool.astro';
+import TripLedger from '../components/TripLedger.astro';
 import ArticleCards from '../components/ArticleCards.astro';
 import '../styles/blog.css';
 
@@ -102,18 +103,18 @@ const breadcrumb = {
         <h1>{title}</h1>
         <p class="story-description">{description}</p>
         <p class="story-meta"><span>Equipe Viajadoras</span><time datetime={date}>{displayDate}</time><span>{minutes} min de leitura</span></p>
-        {tool && <a class="story-jump" href="#ferramenta">{tool === 'split' ? 'Experimentar a calculadora' : 'Montar meu convite'} <span aria-hidden="true">&nbsp;↓</span></a>}
+        {tool && <a class="story-jump" href="#ferramenta">{tool === 'split' ? 'Organizar as despesas' : 'Montar meu convite'} <span aria-hidden="true">&nbsp;↓</span></a>}
       </header>
       <img src={image} alt={imageAlt} width="1200" height="630" class="story-cover" fetchpriority="high" />
     </div>
     <div class="story-body">
       <nav class="story-toc" aria-label="Neste artigo"><details open><summary>Neste artigo</summary><ul>
-        {tool && <li><a href="#ferramenta">{tool === 'split' ? 'Calculadora de despesas' : 'Convite para preencher'}</a></li>}
+        {tool && <li><a href="#ferramenta">{tool === 'split' ? 'Caderno de despesas' : 'Convite para preencher'}</a></li>}
         {headings.map(h => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
       </ul></details></nav>
       <div class="story-main">
         {summary && <aside class="story-summary" aria-label="Pontos principais"><h2>Para levar com você</h2><ul>{summary.map(item => <li>{item}</li>)}</ul></aside>}
-        {tool && <BlogTool type={tool} />}
+        {tool === 'split' ? <TripLedger /> : tool === 'invite' ? <BlogTool /> : null}
         <div class="prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-a:text-primary-700 prose-a:underline-offset-4 prose-blockquote:font-normal prose-blockquote:not-italic story-copy"><slot /></div>
         <aside id="baixar" aria-label="Conheça a comunidade" class="mt-12 rounded-3xl bg-secondary-100 p-6 sm:p-8">
           <h2 class="font-display text-2xl font-semibold">Leve a conversa para a comunidade</h2>

@@ -1,0 +1,60 @@
+---
+import '../styles/trip-ledger.css';
+---
+<section id="ferramenta" class="trip-ledger" aria-labelledby="ledger-title" data-ledger>
+  <header class="ledger-header">
+    <p class="tool-label">Caderno de viagem · sem cadastro</p>
+    <h2 id="ledger-title">As contas da viagem, no mesmo lugar.</h2>
+    <p>Registre os gastos e veja quem precisa acertar quanto com quem. Cada despesa é dividida só entre as pessoas que você escolher.</p>
+    <button type="button" class="ledger-text-button" data-example>Ver o exemplo do artigo</button>
+    <p data-example-note hidden>Você está explorando valores fictícios. <button type="button" class="ledger-text-button" data-start>Começar minha viagem</button></p>
+  </header>
+  <div class="ledger-content">
+    <section aria-labelledby="people-title">
+      <h3 id="people-title">1. Quem vai com você?</h3>
+      <ul class="ledger-people" data-people></ul>
+      <form data-person-form class="ledger-person-form">
+        <label>Nome da participante<input name="person" maxlength="40" placeholder="Ex.: Ana" required autocomplete="off" /></label>
+        <button class="ledger-secondary" type="submit">Adicionar pessoa</button>
+      </form>
+      <p class="ledger-help">Adicione de 2 a 20 pessoas. Use nomes diferentes para conseguir distingui-las.</p>
+    </section>
+    <section aria-labelledby="entry-title">
+      <h3 id="entry-title">2. Anote o que já foi pago</h3>
+      <p class="ledger-help" data-setup>Adicione pelo menos duas pessoas para registrar a primeira despesa.</p>
+      <form data-entry-form hidden>
+        <div class="ledger-fields">
+          <label>Tipo de registro<select name="kind"><option value="expense">Despesa da viagem</option><option value="transfer">Acerto já feito entre vocês</option></select></label>
+          <label>Descrição<input name="description" maxlength="100" placeholder="Ex.: hospedagem" required /></label>
+          <label>Valor pago (R$)<input name="amount" inputmode="decimal" placeholder="Ex.: 600,00" required aria-describedby="ledger-amount-help" /></label>
+          <label><span data-payer-label>Quem pagou?</span><select name="payer"></select></label>
+        </div>
+        <p id="ledger-amount-help" class="ledger-help">Use vírgula nos centavos, como 1.250,50. Registre apenas valores já pagos, em reais.</p>
+        <fieldset data-split><legend>Quem participa desta despesa?</legend><div class="ledger-checks" data-participants></div><p class="ledger-help">Divisão igual entre as selecionadas. Desmarque quem não participou.</p></fieldset>
+        <label data-recipient-label hidden>Quem recebeu o acerto?<select name="recipient"></select></label>
+        <div class="ledger-actions"><button class="ledger-primary" type="submit" data-entry-submit>Adicionar despesa</button><button class="ledger-text-button" type="button" data-cancel hidden>Cancelar edição</button></div>
+      </form>
+    </section>
+    <p role="status" aria-live="polite" class="ledger-status" data-status></p>
+    <section aria-labelledby="record-title">
+      <div class="ledger-section-heading"><h3 id="record-title">Seu registro</h3><p><span>Total de despesas</span><strong data-total>R$ 0,00</strong></p></div>
+      <p data-empty class="ledger-empty">As despesas aparecem aqui. Você poderá editar os valores e conferir cada divisão antes de acertar.</p>
+      <div class="ledger-records" data-records></div>
+      <button type="button" class="ledger-text-button" data-undo hidden>Desfazer exclusão</button>
+    </section>
+    <section class="ledger-settlement" aria-labelledby="settlement-title" hidden data-summary>
+      <h3 id="settlement-title">3. Como fechar as contas</h3>
+      <ul data-transfers></ul>
+      <details><summary>Conferir o saldo de cada pessoa</summary><div class="ledger-table-wrap" tabindex="0" role="region" aria-label="Saldos por pessoa"><table><thead><tr><th scope="col">Pessoa</th><th scope="col">Pagou em despesas</th><th scope="col">Sua parte</th><th scope="col">Saldo atual</th></tr></thead><tbody data-balances></tbody></table></div></details>
+      <p class="ledger-help">Sugestão baseada no registro acima, incluindo acertos já feitos. Confiram os valores antes de transferir. Centavos restantes são distribuídos na ordem das participantes.</p>
+      <div class="ledger-actions"><button class="ledger-primary" type="button" data-copy-summary>Copiar resumo</button><button class="ledger-secondary" type="button" data-download>Baixar planilha (.csv)</button></div>
+      <p class="ledger-help">O arquivo abre no Excel ou Google Planilhas e contém despesas, saldos e a sugestão de acerto.</p>
+    </section>
+    <footer class="ledger-footer"><label class="ledger-save"><input type="checkbox" data-save /> Lembrar esta viagem neste navegador</label><p class="ledger-help">Os dados ficam somente neste aparelho se você marcar a opção. Não há sincronização com outras pessoas. Desmarcar apaga a cópia salva, mas mantém a viagem aberta nesta página.</p><p class="ledger-help" data-save-status role="status"></p></footer>
+  </div>
+  <noscript>Este caderno precisa de JavaScript. A tabela e o exemplo completo do artigo continuam disponíveis abaixo.</noscript>
+</section>
+<script>
+  import { initLedger } from '../scripts/trip-ledger-ui';
+  document.querySelectorAll<HTMLElement>('[data-ledger]').forEach(initLedger);
+</script>

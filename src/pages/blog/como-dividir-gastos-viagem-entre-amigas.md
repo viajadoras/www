@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: 'Como dividir os gastos de uma viagem entre amigas'
 seoTitle: 'Dividir gastos de viagem entre amigas'
-description: 'Um modelo simples para separar despesas individuais e compartilhadas, registrar quem pagou e acertar os valores sem surpresa.'
+description: 'Organize despesas de viagem entre amigas: registre quem pagou, escolha quem divide cada gasto e veja os acertos em um caderno com planilha para baixar.'
 category: 'Planejamento de viagem'
 date: '2026-09-07'
 image: '/images/blog/como-dividir-gastos-viagem-entre-amigas.jpg'
@@ -36,7 +36,9 @@ Se uma pessoa vai adiantar o dinheiro, registrem a data combinada para o acerto.
 
 ## Usem um registro que todas consigam consultar
 
-Uma nota compartilhada ou uma planilha simples já resolve o básico. Escolham um formato que o grupo realmente consiga atualizar durante a viagem.
+O [caderno de despesas acima](#ferramenta) registra quem pagou, divide cada gasto entre as participantes escolhidas e sugere os acertos. Você pode editar ou excluir um registro, anotar transferências já feitas e baixar uma planilha com os valores. A opção de lembrar a viagem guarda os dados somente neste navegador, sem sincronização com o grupo.
+
+Uma nota compartilhada ou uma planilha simples também resolve o básico. Escolham um formato que o grupo realmente consiga atualizar durante a viagem.
 
 | Despesa | Valor total | Quem pagou | Quem participa da divisão | Forma de dividir | Situação |
 |---|---:|---|---|---|---|
