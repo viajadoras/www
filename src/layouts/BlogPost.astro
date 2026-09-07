@@ -1,4 +1,5 @@
 ---
+import AppStoreBadges from '../components/AppStoreBadges.astro';
 import Base from './Base.astro';
 
 interface Props {
@@ -7,10 +8,23 @@ interface Props {
     description: string;
     category: string;
     date: string;
+    updated?: string;
+    seoTitle: string;
+    image: string;
+    imageAlt: string;
   };
 }
 
-const { title, description, category, date } = Astro.props.frontmatter;
+const {
+  title,
+  description,
+  category,
+  date,
+  updated,
+  seoTitle,
+  image,
+  imageAlt,
+} = Astro.props.frontmatter;
 const url = new URL(Astro.url.pathname, Astro.site).toString();
 const displayDate = new Intl.DateTimeFormat('pt-BR', {
   dateStyle: 'long',
@@ -22,7 +36,8 @@ const schema = {
   headline: title,
   description,
   datePublished: date,
-  dateModified: date,
+  dateModified: updated ?? date,
+  image: [new URL(image, Astro.site).toString()],
   inLanguage: 'pt-BR',
   mainEntityOfPage: url,
   url,
@@ -37,12 +52,33 @@ const schema = {
     url: new URL('/', Astro.site).toString(),
   },
 };
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Início',
+      item: new URL('/', Astro.site).toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Blog',
+      item: new URL('/blog/', Astro.site).toString(),
+    },
+    { '@type': 'ListItem', position: 3, name: title, item: url },
+  ],
+};
 ---
 
-<Base title={`${title} | Blog Viajadoras`} {description} ogType="article">
+<Base title={`${seoTitle} | Viajadoras`} {description} ogType="article" ogImage={image} ogImageAlt={imageAlt} downloadHref="#baixar">
   <Fragment slot="head">
     <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
-    <meta property="article:published_time" content={date} />
+    <meta property="article:published_time" content={schema.datePublished} />
+    <meta property="article:modified_time" content={schema.dateModified} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
   </Fragment>
   <article class="mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-20">
     <nav aria-label="Localização" class="mb-8 text-sm text-neutral-600">
@@ -56,13 +92,14 @@ const schema = {
       <p class="mt-5 text-lg leading-relaxed text-neutral-600">{description}</p>
       <p class="mt-6 text-sm text-neutral-600">Equipe Viajadoras · <time datetime={date}>{displayDate}</time></p>
     </header>
+    <img src={image} alt={imageAlt} width="1200" height="630" class="mb-10 h-auto w-full rounded-2xl" fetchpriority="high" />
     <div class="prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-a:text-primary-700 prose-a:underline-offset-4 prose-blockquote:border-primary-300 prose-blockquote:font-normal prose-blockquote:not-italic">
       <slot />
     </div>
-    <aside aria-label="Conheça a comunidade" class="mt-12 rounded-3xl bg-secondary-100 p-6 sm:p-8">
+    <aside id="baixar" aria-label="Conheça a comunidade" class="mt-12 rounded-3xl bg-secondary-100 p-6 sm:p-8">
       <h2 class="font-display text-2xl font-semibold">Leve a conversa para a comunidade</h2>
       <p class="mt-3 text-neutral-700">No Viajadoras, você pode conhecer grupos de mulheres e conversar sobre companhia na sua cidade ou em viagens. A disponibilidade de grupos e encontros depende de cada região.</p>
-      <a href="/#baixar" class="mt-5 inline-flex rounded-full bg-primary-700 px-6 py-3 font-semibold text-white hover:bg-primary-800">Conhecer e baixar o app</a>
+      <AppStoreBadges class="mt-6 flex flex-wrap gap-4" imgClass="h-auto w-36" />
     </aside>
     <a href="/blog/" class="mt-8 inline-block py-3 text-primary-700 underline underline-offset-4">Ver todos os artigos</a>
   </article>

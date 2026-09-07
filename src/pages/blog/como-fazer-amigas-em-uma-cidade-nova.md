@@ -4,6 +4,10 @@ title: 'Como fazer amigas em uma cidade nova: do interesse em comum ao convite'
 description: 'Um roteiro com atividades recorrentes, perguntas para começar a conversa e um modelo de convite simples, sem pressão para criar intimidade.'
 category: Amizades na cidade
 date: '2026-09-06'
+updated: '2026-09-07'
+seoTitle: 'Como fazer amigas em uma cidade nova'
+image: '/images/blog/como-fazer-amigas-em-uma-cidade-nova.jpg'
+imageAlt: 'Duas xícaras e um convite para conhecer novas amigas na cidade.'
 ---
 
 Chegar a uma cidade sem uma rede próxima pode deixar até um passeio simples difícil de combinar. Um ponto de partida é escolher uma atividade que você já gostaria de fazer e procurar outras mulheres interessadas nela.

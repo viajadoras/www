@@ -4,6 +4,10 @@ title: 'Vai viajar com outra mulher? Um checklist para combinar antes de reserva
 description: 'Perguntas sobre orçamento, hospedagem, rotina e desistência para conversar com uma possível companhia antes de assumir gastos.'
 category: Companhia para viajar
 date: '2026-09-06'
+updated: '2026-09-07'
+seoTitle: 'Checklist para viajar com outra mulher'
+image: '/images/blog/checklist-antes-de-viajar-com-outra-mulher.jpg'
+imageAlt: 'Uma lista de combinados antes de viajar: orçamento, hospedagem e autonomia.'
 ---
 
 Antes de comprar uma passagem ou dividir uma reserva, vale descobrir como cada uma imagina a viagem. Gostar do mesmo destino é um começo; horários, dinheiro e convivência também entram na escolha.

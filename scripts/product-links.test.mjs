@@ -78,6 +78,36 @@ test('envia contrato first-party sem credenciais nem referrer', async () => {
   });
 });
 
+test('preserva a origem pública no caminho até a home sem coletar parâmetros pessoais', () => {
+  const href = 'https://apps.apple.com/br/app/viajadoras/id6755790482';
+  expect(
+    storeClick(
+      href,
+      '/',
+      '?origem=%2Fblog%2Fcomo-fazer-amigas-em-uma-cidade-nova%2F&utm_source=instagram',
+    ),
+  ).toEqual({
+    platform: 'ios',
+    source: '/blog/como-fazer-amigas-em-uma-cidade-nova',
+  });
+  expect(storeClick(href, '/blog/artigo/', '?origem=/ajuda')).toEqual({
+    platform: 'ios',
+    source: '/blog/artigo',
+  });
+  for (const search of [
+    '?origem=https://evil.example',
+    '?origem=/blog/private?email=a',
+    '?origem=/blog/../private',
+    '?origem=/ajuda&origem=/blog',
+    '?origem=/users/abc',
+  ]) {
+    expect(storeClick(href, '/', search)).toEqual({
+      platform: 'ios',
+      source: '/',
+    });
+  }
+});
+
 test('falha de medição é explícita e não propaga para a navegação', async () => {
   const warnings = [];
   console.warn = (message) => warnings.push(message);

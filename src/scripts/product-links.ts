@@ -17,7 +17,7 @@ export function inviteAppLink(search: string): string | null {
   return `viajadoras:///convite?${params}`;
 }
 
-export function storeClick(href: string, pathname: string) {
+export function storeClick(href: string, pathname: string, search = '') {
   let url: URL;
   try {
     url = new URL(href);
@@ -40,7 +40,30 @@ export function storeClick(href: string, pathname: string) {
   } else {
     return null;
   }
-  return { platform, source: pathname.replace(/\/$/, '') || '/' };
+  let source = pathname.replace(/\/$/, '') || '/';
+  if (source === '/') {
+    const params = new URLSearchParams(search);
+    const origin = params.get('origem')?.replace(/\/$/, '');
+    const publicPages = new Set([
+      '/blog',
+      '/convite',
+      '/ajuda',
+      '/termos',
+      '/privacidade',
+      '/viajar-sozinha-mulher',
+      '/viagens-para-mulheres',
+      '/companhia-para-viajar',
+      '/companhia-feminina-para-sair',
+    ]);
+    if (
+      params.getAll('origem').length === 1 &&
+      origin &&
+      (publicPages.has(origin) || /^\/blog\/[a-z0-9-]{1,150}$/.test(origin))
+    ) {
+      source = origin;
+    }
+  }
+  return { platform, source };
 }
 
 export async function recordStoreClick(click: {

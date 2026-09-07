@@ -12,11 +12,13 @@ interface BaseProps {
   structuredDataType?: 'homepage' | 'page';
   ogImage?: string;
   ogType?: 'website' | 'article';
+  ogImageAlt?: string;
+  downloadHref?: string;
 }
 
 const props = Astro.props as BaseProps;
 const pageTitle =
-  props.title ?? 'Viajadoras | Companhia com mais contexto para sair da rotina';
+  props.title ?? 'Viajadoras | Companhia feminina para sair e viajar';
 const pageDescription =
   props.description ??
   'Comunidade entre mulheres com grupos, conversa e mais contexto para sair mais na sua cidade e levar essa rede para viagens.';
@@ -33,18 +35,17 @@ const robotsContent = noindex
   ? 'noindex, nofollow, noarchive'
   : 'index, follow, max-image-preview:large';
 
+const downloadHref =
+  props.downloadHref ??
+  (isHomepage
+    ? '/#baixar'
+    : `/?origem=${encodeURIComponent(Astro.url.pathname)}#baixar`);
 const OG_VERSION = '20251002';
-const ogPath = props.ogImage ?? `/og.jpg?v=${OG_VERSION}`;
-const ogImage = Astro.site ? new URL(ogPath, Astro.site).toString() : ogPath;
-const ogImageWidePath = `/og_1200x630.jpg?v=${OG_VERSION}`;
-const ogImageWide = Astro.site
-  ? new URL(ogImageWidePath, Astro.site).toString()
-  : ogImageWidePath;
-const twitterImagePath = `/twitter_1200x600.jpg?v=${OG_VERSION}`;
-const twitterImage = Astro.site
-  ? new URL(twitterImagePath, Astro.site).toString()
-  : twitterImagePath;
-const ogAlt = 'Mulheres compartilhando uma experiência juntas — Viajadoras';
+const ogPath = props.ogImage ?? `/og_1200x630.jpg?v=${OG_VERSION}`;
+const ogImage = new URL(ogPath, canonicalBase).toString();
+const ogAlt =
+  props.ogImageAlt ??
+  'Mulheres compartilhando uma experiência juntas — Viajadoras';
 
 import '../styles/global.css';
 ---
@@ -53,6 +54,8 @@ import '../styles/global.css';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {isHomepage && <meta name="msvalidate.01" content="559EEB0BFC81A0A64DFA43686A4D3816" />}
 
     <!-- Primary Meta Tags -->
     <title>{pageTitle}</title>
@@ -85,16 +88,8 @@ import '../styles/global.css';
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Viajadoras" />
     <meta property="og:locale" content="pt_BR" />
-    <!-- Square image (fallback) -->
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:secure_url" content={ogImage} />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1024" />
-    <meta property="og:image:height" content="1024" />
-    <meta property="og:image:alt" content={ogAlt} />
-    <!-- Wide image (recommended for Facebook/LinkedIn) -->
-    <meta property="og:image" content={ogImageWide} />
-    <meta property="og:image:secure_url" content={ogImageWide} />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -102,7 +97,7 @@ import '../styles/global.css';
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
-    <meta name="twitter:image" content={twitterImage} />
+    <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={ogAlt} />
     <meta name="twitter:site" content="@viajadorasbr" />
     <meta name="twitter:url" content={canonicalUrl} />
@@ -133,13 +128,13 @@ import '../styles/global.css';
     <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-[#F4EBE3]/95 backdrop-blur-sm">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between sm:h-18">
-          <a href="/" class="flex items-center gap-2.5 sm:gap-3">
+          <a href="/" class="flex items-center gap-2 sm:gap-3">
             <div class="relative flex h-11 w-11 items-center justify-center sm:h-12 sm:w-12">
               <div class="absolute inset-0 rounded-full bg-[#DEC0AA] shadow-[0_8px_18px_rgba(23,23,23,0.08)]"></div>
-              <img src="/logo.png" alt="Viajadoras" width="44" height="44" class="relative z-10 h-10 w-10 object-contain filter-[drop-shadow(0_1px_1px_rgba(23,23,23,0.16))_drop-shadow(0_4px_12px_rgba(23,23,23,0.10))] sm:h-11 sm:w-11" />
+              <img src="/images/logo-96.webp" alt="Viajadoras" width="96" height="130" class="relative z-10 h-10 w-10 object-contain filter-[drop-shadow(0_1px_1px_rgba(23,23,23,0.16))_drop-shadow(0_4px_12px_rgba(23,23,23,0.10))] sm:h-11 sm:w-11" />
             </div>
             <div class="flex flex-col">
-              <h2 class="font-display text-xl font-semibold text-neutral-900 tracking-tight sm:text-[1.75rem]">Viajadoras</h2>
+              <h2 class="font-display text-base font-semibold text-neutral-900 tracking-tight sm:text-[1.75rem]">Viajadoras</h2>
             </div>
           </a>
           <nav class="hidden lg:flex items-center gap-1">
@@ -158,16 +153,16 @@ import '../styles/global.css';
           </nav>
           <div class="flex items-center gap-1 sm:gap-4">
             <a href="/ajuda" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Ajuda</a>
-            <a href="/blog/" class="hidden rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700 sm:block">Blog</a>
+            <a href="/blog/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Blog</a>
             <a
-              href="/#baixar"
+              href={downloadHref}
               class="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 lg:inline-flex"
             >
               <span>Baixar o app</span>
             </a>
             <a
-              href="/#baixar"
-              class="rounded-full bg-primary px-3 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 lg:hidden"
+              href={downloadHref}
+              class="rounded-full bg-primary px-2 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 lg:hidden"
               aria-label="Baixar o app"
             >
               Baixar
@@ -194,7 +189,7 @@ import '../styles/global.css';
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#faq">FAQ</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/blog/">Blog</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda">Central de ajuda</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#baixar">Baixar o app</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href={downloadHref}>Baixar o app</a>
             </nav>
           </div>
           <div>
@@ -235,7 +230,7 @@ import '../styles/global.css';
         if (!['viajadoras.com', 'www.viajadoras.com'].includes(window.location.hostname)) return;
         const link = event.target.closest<HTMLAnchorElement>('a[href]');
         if (!link) return;
-        const click = storeClick(link.href, window.location.pathname);
+        const click = storeClick(link.href, window.location.pathname, window.location.search);
         if (click) void recordStoreClick(click);
       });
 

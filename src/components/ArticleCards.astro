@@ -1,0 +1,33 @@
+---
+import type { MarkdownInstance } from 'astro';
+const { heading = 'h2' } = Astro.props as { heading?: 'h2' | 'h3' };
+const Heading = heading;
+interface Article {
+  title: string;
+  description: string;
+  category: string;
+  date: string;
+  image: string;
+  imageAlt: string;
+}
+const posts = Object.values(
+  import.meta.glob<MarkdownInstance<Article>>('../pages/blog/*.md', {
+    eager: true,
+  }),
+).sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date));
+---
+<div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+  {posts.map(({ frontmatter, url }) => (
+    <article class="flex flex-col overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+      <img src={frontmatter.image} alt={frontmatter.imageAlt} width="1200" height="630" loading="lazy" class="h-auto w-full" />
+      <div class="flex grow flex-col p-6">
+        <p class="text-sm font-semibold text-primary-700">{frontmatter.category}</p>
+        <Heading class="mt-4 font-display text-2xl font-semibold leading-snug">
+          <a href={`${url?.replace(/\/$/, '')}/`} class="underline-offset-4 hover:underline">{frontmatter.title}</a>
+        </Heading>
+        <p class="mt-4 grow text-neutral-600">{frontmatter.description}</p>
+        <p class="mt-6 text-sm text-neutral-600">Equipe Viajadoras</p>
+      </div>
+    </article>
+  ))}
+</div>

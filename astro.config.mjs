@@ -10,7 +10,26 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
-        new URL(page).pathname.replace(/\/$/, '') !== '/convite',
+        !['/convite', '/404'].includes(
+          new URL(page).pathname.replace(/\/$/, ''),
+        ),
+      // Datas de alterações editoriais significativas; não atualizar a cada build.
+      serialize: (item) => {
+        const path = new URL(item.url).pathname;
+        if (
+          path === '/' ||
+          path.startsWith('/blog/') ||
+          [
+            '/companhia-para-viajar/',
+            '/viagens-para-mulheres/',
+            '/companhia-feminina-para-sair/',
+            '/viajar-sozinha-mulher/',
+          ].includes(path)
+        ) {
+          item.lastmod = new Date('2026-09-07T00:00:00-03:00');
+        }
+        return item;
+      },
     }),
   ],
   vite: { plugins: [tailwind()] },

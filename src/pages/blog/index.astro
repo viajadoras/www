@@ -1,17 +1,6 @@
 ---
-import type { MarkdownInstance } from 'astro';
+import ArticleCards from '../../components/ArticleCards.astro';
 import Base from '../../layouts/Base.astro';
-
-interface Article {
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-}
-
-const posts = Object.values(
-  import.meta.glob<MarkdownInstance<Article>>('./*.md', { eager: true }),
-).sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date));
 ---
 
 <Base title="Blog Viajadoras | Amizades, encontros e companhia para viajar" description="Checklists, perguntas e ideias práticas para conhecer outras mulheres, combinar viagens e organizar encontros de grupo.">
@@ -21,18 +10,7 @@ const posts = Object.values(
       <h1 class="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">Da primeira conversa ao próximo encontro.</h1>
       <p class="mt-6 text-lg leading-relaxed text-neutral-600">Ferramentas práticas para fazer novas amizades, combinar expectativas e tirar um passeio ou uma viagem do papel. Comece pelo que faz sentido para você agora.</p>
     </div>
-    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {posts.map(({ frontmatter, url }) => (
-        <article class="flex flex-col rounded-3xl border border-neutral-200 bg-white p-7">
-          <p class="text-sm font-semibold text-primary-700">{frontmatter.category}</p>
-          <h2 class="mt-4 font-display text-2xl font-semibold leading-snug">
-            <a href={url} class="underline-offset-4 hover:underline">{frontmatter.title}</a>
-          </h2>
-          <p class="mt-4 grow text-neutral-600">{frontmatter.description}</p>
-          <p class="mt-6 text-sm text-neutral-600">Equipe Viajadoras</p>
-        </article>
-      ))}
-    </div>
+    <ArticleCards />
     <aside class="mt-12 max-w-3xl border-t border-neutral-200 pt-8">
       <h2 class="font-display text-2xl font-semibold">Está começando a procurar companhia?</h2>
       <p class="mt-4 text-neutral-700">Conheça também os guias de <a href="/companhia-para-viajar" class="text-primary-700 underline underline-offset-4">companhia para viajar</a> e <a href="/companhia-feminina-para-sair" class="text-primary-700 underline underline-offset-4">companhia feminina para sair</a>.</p>

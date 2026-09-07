@@ -1,98 +1,49 @@
 ---
 import Base from '../layouts/Base.astro';
-
-const title =
-  'Viagens para mulheres | companhia e contexto entre mulheres | Viajadoras';
+const title = 'Viagens para mulheres: escolha o formato | Viajadoras';
 const description =
-  'Conheça o Viajadoras, comunidade entre mulheres para sair mais, conversar antes e levar essa rede para viagens.';
+  'Viagem solo, companhia independente ou grupo organizado? Compare os formatos e veja o que combinar antes de escolher sua próxima viagem.';
 ---
-
-<Base {title} {description} lang="pt-BR">
-  <section class="bg-neutral-50 py-16 lg:py-24">
-    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-          Para entender a proposta
-        </p>
-        <h1 class="mt-4 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
-          Viagens para mulheres ficam melhores quando existe conversa antes do embarque.
-        </h1>
-        <p class="mt-6 text-lg leading-relaxed text-neutral-600">
-          O Viajadoras não é pacote nem grupo genérico. É uma comunidade entre
-          mulheres para conversar antes e levar essa rede para viagens.
-        </p>
+<Base {title} {description}>
+  <article class="container max-w-5xl py-14 sm:py-20">
+    <p class="text-sm font-semibold uppercase tracking-wider text-primary-700">Planeje do seu jeito</p>
+    <h1 class="mt-4 max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-5xl">Viagens para mulheres: qual formato combina com você?</h1>
+    <p class="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-600">Você pode viajar sozinha, combinar parte do roteiro com outra mulher ou contratar uma viagem organizada. A escolha depende da autonomia que deseja, do apoio de que precisa e do que cabe no seu orçamento.</p>
+    <section class="mt-12 grid gap-6 md:grid-cols-3" aria-label="Formas de viajar">
+      <div class="rounded-3xl border border-neutral-200 bg-white p-6">
+        <h2 class="font-display text-2xl font-semibold">Viagem solo</h2>
+        <p class="mt-4 leading-relaxed text-neutral-700">Você decide o roteiro e cuida das próprias reservas. Pode conhecer outras pessoas pelo caminho sem assumir uma agenda compartilhada.</p>
+        <p class="mt-4 leading-relaxed text-neutral-700"><strong>Antes de escolher:</strong> confira chegada, transporte, hospedagem e como resolver mudanças por conta própria.</p>
+        <a href="/viajar-sozinha-mulher/" class="mt-5 inline-block text-primary-700 underline">Como começar a viajar sozinha</a>
       </div>
-
-      <div class="mt-12 grid gap-6 md:grid-cols-2">
-        <div class="rounded-[2rem] bg-white p-8 shadow-xs ring-1 ring-neutral-200">
-          <h2 class="text-2xl font-bold text-neutral-900">
-            O que torna uma comunidade de viagens para mulheres realmente útil
-          </h2>
-          <div class="mt-6 space-y-5 leading-relaxed text-neutral-700">
-            <p>
-              Não basta falar de viagem. É preciso aproximar mulheres com
-              estilos, momentos de vida e vontade parecidos para que a companhia
-              faça sentido.
-            </p>
-            <p>
-              Também é preciso reduzir ruído. Moderação, conversa e comunidades fazem diferença
-              porque mudam a qualidade da conversa antes mesmo da decisão de viajar.
-            </p>
-          </div>
-        </div>
-
-        <div class="rounded-[2rem] bg-white p-8 shadow-xs ring-1 ring-neutral-200">
-          <h2 class="text-2xl font-bold text-neutral-900">
-            O que você encontra no Viajadoras
-          </h2>
-          <ul class="mt-6 space-y-3 text-neutral-700">
-            <li>Rede feminina para participar de grupos e conversar com outras mulheres.</li>
-            <li>Comunidades e conversa para conhecer melhor antes de qualquer encontro ou viagem.</li>
-            <li>Um app que também serve para a cidade, não só para turismo.</li>
-            <li>Companhia com mais contexto para experiências, apoio pontual e viagens mais leves.</li>
-            <li>Uma proposta mais próxima da realidade brasileira do que do turismo idealizado.</li>
-          </ul>
-        </div>
+      <div class="rounded-3xl border border-neutral-200 bg-white p-6">
+        <h2 class="font-display text-2xl font-semibold">Companhia independente</h2>
+        <p class="mt-4 leading-relaxed text-neutral-700">Vocês combinam o que querem compartilhar: a viagem inteira, um passeio ou um jantar. Cada uma mantém a responsabilidade por suas reservas.</p>
+        <p class="mt-4 leading-relaxed text-neutral-700"><strong>Antes de escolher:</strong> conversem sobre orçamento, privacidade, ritmo e o que acontece se uma desistir.</p>
+        <a href="/companhia-para-viajar/" class="mt-5 inline-block text-primary-700 underline">Como procurar companhia</a>
       </div>
-
-      <div class="mt-12 rounded-[2rem] bg-neutral-900 p-8 text-neutral-100">
-        <h2 class="text-3xl font-bold">Quando isso costuma fazer mais sentido?</h2>
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
-          <div class="rounded-3xl bg-white/10 p-6">
-            <h3 class="text-lg font-semibold">Recomeço social</h3>
-            <p class="mt-3 text-sm leading-6 text-neutral-300">
-              Para quem quer voltar a viver mais e não depender sempre das mesmas pessoas.
-            </p>
-          </div>
-          <div class="rounded-3xl bg-white/10 p-6">
-            <h3 class="text-lg font-semibold">Primeira viagem solo</h3>
-            <p class="mt-3 text-sm leading-6 text-neutral-300">
-              Para quem busca autonomia com mais referência, conversa e troca antes de partir.
-            </p>
-          </div>
-          <div class="rounded-3xl bg-white/10 p-6">
-            <h3 class="text-lg font-semibold">Destino já em mente</h3>
-            <p class="mt-3 text-sm leading-6 text-neutral-300">
-              Para quando a viagem já existe, mas ainda falta companhia que faça sentido de verdade.
-            </p>
-          </div>
-        </div>
+      <div class="rounded-3xl border border-neutral-200 bg-white p-6">
+        <h2 class="font-display text-2xl font-semibold">Grupo organizado</h2>
+        <p class="mt-4 leading-relaxed text-neutral-700">Uma organizadora ou agência oferece uma programação. Os serviços incluídos variam: leia a proposta e confira quem responde por cada parte.</p>
+        <p class="mt-4 leading-relaxed text-neutral-700"><strong>Antes de escolher:</strong> confirme preço total, tamanho do grupo, atividades opcionais, suporte e condições de cancelamento com quem vende a viagem.</p>
       </div>
-
-      <div class="mt-12 flex flex-col gap-3 sm:flex-row">
-        <a
-          href="/companhia-feminina-para-sair"
-          class="rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-primary-600"
-        >
-          Ver porta de entrada local
-        </a>
-        <a
-          href="/companhia-para-viajar"
-          class="rounded-full border border-neutral-300 px-6 py-3 text-center text-sm font-semibold text-neutral-900 transition hover:bg-white"
-        >
-          Entender companhia para viajar
-        </a>
+    </section>
+    <section class="mt-12 max-w-3xl">
+      <h2 class="font-display text-3xl font-semibold">Três perguntas para decidir</h2>
+      <ol class="mt-6 list-decimal space-y-4 pl-6 leading-relaxed text-neutral-700">
+        <li><strong>Quero decidir meu dia ou seguir uma programação?</strong> Pense em horários, tempo livre e disposição para negociar mudanças.</li>
+        <li><strong>Quero compartilhar companhia ou também despesas?</strong> É possível fazer passeios juntas e dormir em acomodações separadas.</li>
+        <li><strong>De quem vou precisar se o plano mudar?</strong> Identifique os contatos das suas reservas e o suporte efetivamente contratado.</li>
+      </ol>
+      <p class="mt-6 leading-relaxed text-neutral-700">Por exemplo: se você já reservou uma viagem solo, encontrar outra mulher para visitar um museu não exige mudar o resto do roteiro. Se prefere alguém organizando os deslocamentos, avalie uma oferta que descreva esse serviço claramente.</p>
+    </section>
+    <aside class="mt-12 rounded-3xl bg-secondary-100 p-7 sm:p-10">
+      <h2 class="font-display text-3xl font-semibold">Onde o Viajadoras entra nessa escolha</h2>
+      <p class="mt-5 max-w-3xl leading-relaxed text-neutral-700">O Viajadoras é uma comunidade para mulheres encontrarem grupos e conversarem sobre interesses em comum. O app não vende pacotes de viagem. Você pode começar por atividades na própria cidade e, quando fizer sentido, conversar sobre um destino. A disponibilidade de grupos e encontros varia por região.</p>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a href="/companhia-feminina-para-sair/" class="rounded-full bg-primary-700 px-6 py-3 font-semibold text-white">Começar pela minha cidade</a>
+        <a href="/blog/checklist-antes-de-viajar-com-outra-mulher/" class="px-2 py-3 text-primary-700 underline">Checklist antes de reservar</a>
       </div>
-    </div>
-  </section>
+    </aside>
+  </article>
 </Base>

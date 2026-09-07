@@ -4,6 +4,10 @@ title: 'Como organizar o primeiro encontro de um grupo de mulheres'
 description: 'Um roteiro para definir uma proposta simples, publicar as informações necessárias, confirmar presenças e lidar com mudanças no encontro.'
 category: Encontros de grupo
 date: '2026-09-06'
+updated: '2026-09-07'
+seoTitle: 'Primeiro encontro de um grupo de mulheres'
+image: '/images/blog/como-organizar-primeiro-encontro-de-grupo.jpg'
+imageAlt: 'Um calendário, um ponto de encontro e os combinados de um grupo.'
 ---
 
 O primeiro encontro de um grupo precisa de uma proposta que as participantes consigam entender e decidir se querem acompanhar. Comece com uma atividade simples, em vez de tentar preencher um dia inteiro.
