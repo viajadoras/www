@@ -1,0 +1,85 @@
+---
+const { type } = Astro.props as { type: 'split' | 'invite' };
+---
+<section id="ferramenta" class="blog-tool" aria-labelledby="tool-title" data-blog-tool={type}>
+  <div class="tool-intro">
+    <p class="tool-label">Experimente no seu plano</p>
+    <h2 id="tool-title">{type === 'split' ? 'Quanto fica para cada uma?' : 'Monte um convite do seu jeito'}</h2>
+    <p>{type === 'split' ? 'Simule uma despesa dividida igualmente. Gastos de quem não participou ficam fora desta conta.' : 'Escolha uma proposta pequena e deixe espaço para a outra pessoa decidir.'}</p>
+  </div>
+  {type === 'split' ? (
+    <form data-tool-form novalidate>
+      <div class="tool-fields">
+        <label>Valor total (R$)<input name="amount" type="text" inputmode="decimal" value="600,00" maxlength="10" required aria-describedby="amount-help" /></label>
+        <label>Pessoas na divisão<select name="people">{Array.from({ length: 19 }, (_, i) => i + 2).map(n => <option value={n} selected={n === 3}>{n} pessoas</option>)}</select></label>
+      </div>
+      <p id="amount-help" class="tool-hint">Exemplo: 600,00. Digite o valor sem pontos de milhar.</p>
+      <button class="tool-button" type="submit">Calcular divisão</button>
+      <div class="tool-result" aria-live="polite" aria-atomic="true"><p data-tool-result><strong>R$ 200,00</strong><span>para cada uma das 3 pessoas</span></p></div>
+    </form>
+  ) : (
+    <form data-tool-form novalidate>
+      <div class="tool-fields">
+        <label>O que fazer?<input name="activity" value="tomar um café" maxlength="120" required /></label>
+        <label>Em qual lugar público?<input name="place" placeholder="um café na região central" maxlength="120" required /></label>
+        <label>Quando?<input name="when" placeholder="no sábado, às 16h" maxlength="120" required /></label>
+        <label>Por quanto tempo?<select name="duration"><option>30 minutos</option><option selected>1 hora</option><option>2 horas</option></select></label>
+      </div>
+      <button class="tool-button" type="submit">Montar convite</button>
+      <div class="tool-result" aria-live="polite" aria-atomic="true"><p data-tool-result>Preencha o lugar e o horário para preparar seu convite.</p></div>
+      <button class="tool-copy" type="button" data-copy hidden>Copiar convite</button>
+      <p data-copy-status class="tool-hint" role="status"></p>
+    </form>
+  )}
+  <p class="tool-hint">Você pode usar esta ferramenta sem cadastro. O que preencher aqui não é enviado nem salvo.</p>
+  <noscript><p>Ative o JavaScript para usar a ferramenta. O guia abaixo inclui um exemplo que você pode adaptar sem ela.</p></noscript>
+</section>
+<script>
+  import { invitation, splitExpense } from '../scripts/blog-tools';
+  const money = (cents: number) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100);
+  document.querySelectorAll<HTMLElement>('[data-blog-tool]').forEach(tool => {
+    const form = tool.querySelector<HTMLFormElement>('form');
+    const result = tool.querySelector<HTMLElement>('[data-tool-result]');
+    if (!form || !result) return;
+    const copy = tool.querySelector<HTMLButtonElement>('[data-copy]');
+    const status = tool.querySelector<HTMLElement>('[data-copy-status]');
+    let textToCopy = '';
+    form.addEventListener('input', () => {
+      if (copy) copy.hidden = true;
+      if (status) status.textContent = '';
+      textToCopy = '';
+      result.textContent = tool.dataset.blogTool === 'split' ? 'Clique em Calcular divisão para atualizar o resultado.' : 'Clique em Montar convite para atualizar o texto.';
+    });
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const get = (name: string) => String(data.get(name) ?? '');
+      if (tool.dataset.blogTool === 'split') {
+        const split = splitExpense(get('amount'), Number(get('people')));
+        if (!split) {
+          result.textContent = 'Digite um valor entre R$ 0,00 e R$ 1.000.000,00, com até duas casas decimais, e escolha de 2 a 20 pessoas.';
+          return;
+        }
+        const strong = document.createElement('strong');
+        const detail = document.createElement('span');
+        strong.textContent = money(split.baseCents);
+        detail.textContent = split.extraPeople === 0 ? `para cada uma das ${split.people} pessoas` : `${split.people - split.extraPeople} × ${money(split.baseCents)} + ${split.extraPeople} × ${money(split.baseCents + 1)}. Assim, os centavos fecham o total.`;
+        result.replaceChildren(strong, detail);
+      } else {
+        const message = invitation(get('activity'), get('place'), get('when'), get('duration'));
+        result.textContent = message ?? 'Preencha a atividade, o lugar e o horário para montar o convite.';
+        textToCopy = message ?? '';
+        if (copy) copy.hidden = !message;
+      }
+    });
+    copy?.addEventListener('click', async () => {
+      if (!textToCopy) return;
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        if (status) status.textContent = 'Convite copiado. Revise os detalhes antes de enviar.';
+      } catch {
+        if (status) status.textContent = 'Selecione e copie o texto do convite acima.';
+      }
+    });
+  });
+</script>

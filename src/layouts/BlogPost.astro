@@ -1,8 +1,13 @@
 ---
 import AppStoreBadges from '../components/AppStoreBadges.astro';
 import Base from './Base.astro';
+import BlogTool from '../components/BlogTool.astro';
+import ArticleCards from '../components/ArticleCards.astro';
+import '../styles/blog.css';
 
 interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+  rawContent: () => string;
   frontmatter: {
     title: string;
     description: string;
@@ -12,6 +17,8 @@ interface Props {
     seoTitle: string;
     image: string;
     imageAlt: string;
+    tool?: 'split' | 'invite';
+    summary?: string[];
   };
 }
 
@@ -24,7 +31,14 @@ const {
   seoTitle,
   image,
   imageAlt,
+  tool,
+  summary,
 } = Astro.props.frontmatter;
+const headings = Astro.props.headings.filter((h) => h.depth === 2);
+const minutes = Math.max(
+  1,
+  Math.ceil(Astro.props.rawContent().split(/\s+/).length / 200),
+);
 const url = new URL(Astro.url.pathname, Astro.site).toString();
 const displayDate = new Intl.DateTimeFormat('pt-BR', {
   dateStyle: 'long',
@@ -80,27 +94,35 @@ const breadcrumb = {
     <meta property="article:modified_time" content={schema.dateModified} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
   </Fragment>
-  <article class="mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-20">
-    <nav aria-label="Localização" class="mb-8 text-sm text-neutral-600">
-      <a href="/" class="underline underline-offset-4">Início</a>
-      <span aria-hidden="true" class="mx-2">/</span>
-      <a href="/blog/" class="underline underline-offset-4">Blog</a>
-    </nav>
-    <header class="mb-10 border-b border-neutral-200 pb-8">
-      <p class="text-sm font-semibold uppercase tracking-wider text-primary-700">{category}</p>
-      <h1 class="mt-4 font-display text-3xl font-semibold leading-tight text-neutral-900 sm:text-5xl">{title}</h1>
-      <p class="mt-5 text-lg leading-relaxed text-neutral-600">{description}</p>
-      <p class="mt-6 text-sm text-neutral-600">Equipe Viajadoras · <time datetime={date}>{displayDate}</time></p>
-    </header>
-    <img src={image} alt={imageAlt} width="1200" height="630" class="mb-10 h-auto w-full rounded-2xl" fetchpriority="high" />
-    <div class="prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-a:text-primary-700 prose-a:underline-offset-4 prose-blockquote:border-primary-300 prose-blockquote:font-normal prose-blockquote:not-italic">
-      <slot />
+  <article class="story">
+    <nav aria-label="Localização" class="story-breadcrumb"><a href="/">Início</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a></nav>
+    <div class="story-hero">
+      <header>
+        <p class="story-category">{category}</p>
+        <h1>{title}</h1>
+        <p class="story-description">{description}</p>
+        <p class="story-meta"><span>Equipe Viajadoras</span><time datetime={date}>{displayDate}</time><span>{minutes} min de leitura</span></p>
+        {tool && <a class="story-jump" href="#ferramenta">{tool === 'split' ? 'Experimentar a calculadora' : 'Montar meu convite'} <span aria-hidden="true">&nbsp;↓</span></a>}
+      </header>
+      <img src={image} alt={imageAlt} width="1200" height="630" class="story-cover" fetchpriority="high" />
     </div>
-    <aside id="baixar" aria-label="Conheça a comunidade" class="mt-12 rounded-3xl bg-secondary-100 p-6 sm:p-8">
-      <h2 class="font-display text-2xl font-semibold">Leve a conversa para a comunidade</h2>
-      <p class="mt-3 text-neutral-700">No Viajadoras, você pode conhecer grupos de mulheres e conversar sobre companhia na sua cidade ou em viagens. A disponibilidade de grupos e encontros depende de cada região.</p>
-      <AppStoreBadges class="mt-6 flex flex-wrap gap-4" imgClass="h-auto w-36" />
-    </aside>
+    <div class="story-body">
+      <nav class="story-toc" aria-label="Neste artigo"><details open><summary>Neste artigo</summary><ul>
+        {tool && <li><a href="#ferramenta">{tool === 'split' ? 'Calculadora de despesas' : 'Convite para preencher'}</a></li>}
+        {headings.map(h => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+      </ul></details></nav>
+      <div class="story-main">
+        {summary && <aside class="story-summary" aria-label="Pontos principais"><h2>Para levar com você</h2><ul>{summary.map(item => <li>{item}</li>)}</ul></aside>}
+        {tool && <BlogTool type={tool} />}
+        <div class="prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-a:text-primary-700 prose-a:underline-offset-4 prose-blockquote:font-normal prose-blockquote:not-italic story-copy"><slot /></div>
+        <aside id="baixar" aria-label="Conheça a comunidade" class="mt-12 rounded-3xl bg-secondary-100 p-6 sm:p-8">
+          <h2 class="font-display text-2xl font-semibold">Leve a conversa para a comunidade</h2>
+          <p class="mt-3 text-neutral-700">No Viajadoras, você pode conhecer grupos de mulheres e conversar sobre companhia na sua cidade ou em viagens. A disponibilidade de grupos e encontros depende de cada região.</p>
+          <AppStoreBadges class="mt-6 flex flex-wrap gap-4" imgClass="h-auto w-36" />
+        </aside>
+      </div>
+    </div>
+    <aside class="story-related" aria-label="Mais leituras"><h2>Continue a conversa</h2><ArticleCards heading="h3" exclude={Astro.url.pathname} limit={2} /></aside>
     <a href="/blog/" class="mt-8 inline-block py-3 text-primary-700 underline underline-offset-4">Ver todos os artigos</a>
   </article>
 </Base>

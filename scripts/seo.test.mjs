@@ -7,7 +7,7 @@ const html = (path) => readFile(new URL(path, dist), 'utf8');
 test('sitemap preserva só páginas públicas, com canonical único e metadados', async () => {
   const sitemap = await html('sitemap-0.xml');
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  expect(urls.length).toBe(12);
+  expect(urls.length).toBe(14);
   expect(new Set(urls).size).toBe(urls.length);
   expect(urls.some((u) => /convite|404|obrigada/.test(u))).toBe(false);
   for (const url of urls) {
@@ -44,7 +44,14 @@ test('cada artigo tem capa própria, breadcrumb e acesso direto às duas lojas',
       ),
     ].map((m) => JSON.parse(m[1]));
     const article = schemas.find((s) => s['@type'] === 'BlogPosting');
-    expect(article.datePublished).toBe('2026-09-06');
+    expect(article.datePublished).toBe(
+      [
+        'como-dividir-gastos-viagem-entre-amigas',
+        'combinar-passeios-amigas-rotinas-diferentes',
+      ].includes(folder.name)
+        ? '2026-09-07'
+        : '2026-09-06',
+    );
     expect(article.dateModified >= article.datePublished).toBe(true);
     expect(article.image.length).toBe(1);
     images.add(article.image[0]);
@@ -57,5 +64,5 @@ test('cada artigo tem capa própria, breadcrumb e acesso direto às duas lojas',
     );
     expect(page).toContain(`property="og:image" content="${article.image[0]}"`);
   }
-  expect(images.size).toBe(3);
+  expect(images.size).toBe(5);
 });

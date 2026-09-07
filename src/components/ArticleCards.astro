@@ -1,6 +1,11 @@
 ---
 import type { MarkdownInstance } from 'astro';
-const { heading = 'h2' } = Astro.props as { heading?: 'h2' | 'h3' };
+const {
+  heading = 'h2',
+  limit,
+  exclude,
+} = Astro.props as { heading?: 'h2' | 'h3'; limit?: number; exclude?: string };
+const normalized = (url?: string) => url?.replace(/\/$/, '');
 const Heading = heading;
 interface Article {
   title: string;
@@ -9,14 +14,18 @@ interface Article {
   date: string;
   image: string;
   imageAlt: string;
+  tool?: string;
 }
 const posts = Object.values(
   import.meta.glob<MarkdownInstance<Article>>('../pages/blog/*.md', {
     eager: true,
   }),
-).sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date));
+)
+  .filter((p) => !exclude || normalized(p.url) !== normalized(exclude))
+  .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date))
+  .slice(0, limit);
 ---
-<div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+<div class:list={["article-grid mt-8 grid gap-6 md:grid-cols-2", limit !== 2 && "lg:grid-cols-3"]}>
   {posts.map(({ frontmatter, url }) => (
     <article class="flex flex-col overflow-hidden rounded-3xl border border-neutral-200 bg-white">
       <img src={frontmatter.image} alt={frontmatter.imageAlt} width="1200" height="630" loading="lazy" class="h-auto w-full" />
@@ -26,6 +35,7 @@ const posts = Object.values(
           <a href={`${url?.replace(/\/$/, '')}/`} class="underline-offset-4 hover:underline">{frontmatter.title}</a>
         </Heading>
         <p class="mt-4 grow text-neutral-600">{frontmatter.description}</p>
+        {frontmatter.tool && <p class="mt-5 text-sm font-semibold text-lavender-700">{frontmatter.tool === 'split' ? 'Calculadora interativa ↗' : 'Convite para preencher ↗'}</p>}
         <p class="mt-6 text-sm text-neutral-600">Equipe Viajadoras</p>
       </div>
     </article>
