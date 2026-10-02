@@ -227,10 +227,16 @@ import '../styles/global.css';
             </div>
           </div>
         </div>
-        <a href={funding.finepUrl} target="_blank" rel="noopener noreferrer" class="mt-12 flex flex-col gap-1 rounded-2xl border border-neutral-700 px-5 py-4 text-sm text-neutral-300 transition-colors hover:border-primary hover:text-white sm:flex-row sm:items-center sm:justify-between">
-          <span>Projeto apoiado pelo programa {funding.program}: {funding.sponsors}.</span>
-          <span class="font-semibold text-white">Conheça a Finep →</span>
-        </a>
+        <div class="mt-12 flex flex-col gap-5 rounded-2xl bg-white px-6 py-5 text-sm text-neutral-700 md:flex-row md:items-center md:justify-between">
+          <p class="max-w-sm">Projeto apoiado pelo programa {funding.program}: {funding.sponsors}.</p>
+          <div class="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <img src="/images/apoio/centelha-go.png" alt="Centelha Goiás" width="310" height="88" loading="lazy" class="h-8 w-auto" />
+            <img src="/images/apoio/fapeg.png" alt="FAPEG, Fundação de Amparo à Pesquisa do Estado de Goiás" width="331" height="121" loading="lazy" class="h-10 w-auto" />
+            <a href={funding.finepUrl} target="_blank" rel="noopener noreferrer" class="rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">
+              <img src="/images/apoio/finep.png" alt="Finep, Inovação e Pesquisa. Abre o portal da Finep" width="275" height="170" loading="lazy" class="h-12 w-auto" />
+            </a>
+          </div>
+        </div>
         <div class="mt-8 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-400">
           <p>© {new Date().getFullYear()} Viajadoras. Todos os direitos reservados.</p>
           <p class="mt-2">{company.legalName} · CNPJ {company.cnpj} · {company.addressLocality} – {company.addressRegion}</p>

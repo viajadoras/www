@@ -88,6 +88,7 @@ test('site identifica a empresa oficial sem expor endereço residencial', async 
     const page = await html(path);
     expect(page).toContain('67.102.571/0001-08');
     expect(page).toContain('https://www.finep.gov.br/');
+    expect(page).toContain('/images/apoio/finep.png');
     expect(page).not.toMatch(
       /GT TECNOLOGIA|46\.112\.388|Pedro Paulo|74663|74\.663/,
     );
