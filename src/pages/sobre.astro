@@ -5,27 +5,27 @@ import Base from '../layouts/Base.astro';
 
 const title = 'Sobre a Viajadoras: quem somos e dados da empresa';
 const description =
-  'Conheça a Viajadoras, app gratuito de comunidade entre mulheres feito em Goiânia. Veja o que o app oferece, quem faz, quem apoia e os dados oficiais da empresa.';
+  'Conheça a Viajadoras, app gratuito só para mulheres, feito em Goiânia, com rolês na cidade e companhia para viajar. Veja quem fundou, quem apoia e os dados da empresa.';
 const foundingDate = new Date(
   `${company.foundingDate}T12:00:00-03:00`,
 ).toLocaleDateString('pt-BR');
 
 const features = [
   [
-    'Grupos por interesse',
-    'Comunidades por tema, cidade e momento de vida para começar com mais afinidade.',
+    'Rolês com data e lugar',
+    'Trilha, show, café, bate-volta: escolha um rolê na sua cidade ou crie o seu.',
   ],
   [
-    'Conversa antes de marcar',
-    'Você troca ideia com calma e decide se faz sentido sair ou viajar junto.',
+    'Conversa antes de ir',
+    'Cada rolê tem conversa para combinar os detalhes e chegar conhecendo quem vai.',
   ],
   [
-    'Entrada com selfie',
-    'A equipe analisa uma selfie antes de liberar a conta, para cuidar de quem entra.',
+    'Companhia para viajar',
+    'Encontre mulheres indo para o mesmo destino ou monte seu plano de viagem.',
   ],
   [
-    'Denúncia, bloqueio e moderação',
-    'Ferramentas e uma equipe para agir quando algo não vai bem.',
+    'Só mulheres, com selfie verificada',
+    'A equipe analisa a selfie de quem entra e modera denúncias e bloqueios.',
   ],
 ];
 
@@ -46,13 +46,13 @@ const companyData = [
       <div class="max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">Sobre nós</p>
         <h1 class="mt-4 font-display text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
-          Uma rede entre mulheres para sair mais e viajar com companhia.
+          Para mulheres com espírito viajante.
         </h1>
         <p class="mt-6 text-lg leading-relaxed text-neutral-700">
-          A Viajadoras é um aplicativo gratuito, para Android e iPhone, onde
-          mulheres maiores de 18 anos encontram grupos, conversam e combinam
-          programas na própria cidade e em viagens. Nasceu em Goiânia para
-          diminuir a solidão de quem quer fazer coisas e não tem com quem ir.
+          A Viajadoras é um app gratuito, só para mulheres, para encontrar
+          rolês com data e lugar na sua cidade e companhia para viajar. Nasceu
+          em Goiânia de uma vontade simples: que nenhuma mulher deixe de viver
+          algo por falta de companhia.
         </p>
         <AppStoreBadges class="mt-8 flex flex-row flex-wrap items-center gap-3" imgClass="h-auto w-36 sm:w-44" />
       </div>

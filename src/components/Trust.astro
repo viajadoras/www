@@ -1,0 +1,57 @@
+---
+import { funding } from '../data/site';
+
+const items = [
+  {
+    title: 'Só mulheres',
+    description: 'A comunidade é de mulheres maiores de 18 anos. Ponto.',
+  },
+  {
+    title: 'Selfie verificada pela equipe',
+    description:
+      'Antes de entrar, cada selfie é analisada por uma pessoa da equipe.',
+  },
+  {
+    title: 'Denúncia e bloqueio',
+    description:
+      'Algo te incomodou na conversa? Bloqueie ou denuncie em dois toques.',
+  },
+  {
+    title: 'Moderação de verdade',
+    description:
+      'A equipe analisa cada denúncia e pode suspender quem desrespeita as regras.',
+  },
+];
+---
+
+<section id="confianca" class="bg-neutral-900 py-16 text-white lg:py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-primary-300">
+          Confiança
+        </p>
+        <h2 class="mt-4 font-display text-4xl font-semibold leading-tight sm:text-[3.2rem]">
+          Um espaço só de mulheres.
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed text-neutral-300">
+          Sair com gente nova pede confiança. Por isso cuidamos de quem entra e
+          de como a comunidade convive. Nenhum app elimina todo risco: no
+          primeiro encontro, prefira lugares públicos e avise alguém.
+        </p>
+        <p class="mt-6 text-sm text-neutral-400">
+          Projeto selecionado no {funding.program}, com apoio da FAPEG e da Finep.
+        </p>
+      </div>
+
+      <ul class="grid gap-4 sm:grid-cols-2">
+        {items.map((item) => (
+          <li class="rounded-[2rem] bg-white/5 p-6 ring-1 ring-white/10">
+            <h3 class="text-xl font-semibold">{item.title}</h3>
+            <p class="mt-2 leading-relaxed text-neutral-300">{item.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -94,3 +94,13 @@ test('site identifica a empresa oficial sem expor endereço residencial', async 
     );
   }
 });
+
+test('home comunica rolês, viagem e confiança com FAQ estruturado', async () => {
+  const home = await html('index.html');
+  expect(home).toMatch(/<h1[^>]*>[\s\S]*espírito viajante/);
+  for (const id of ['como-funciona', 'roles', 'confianca', 'faq', 'baixar']) {
+    expect(home).toContain(`id="${id}"`);
+  }
+  expect(home).toContain('Selfie verificada pela equipe');
+  expect(home).toContain('"@type":"FAQPage"');
+});

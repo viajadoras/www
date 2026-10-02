@@ -2,39 +2,41 @@
 import { Image } from 'astro:assets';
 import heroMainImg from '../assets/images/hero-main.png';
 import AppStoreBadges from './AppStoreBadges.astro';
+
+const proofs = ['Só mulheres', 'Selfie verificada pela equipe', 'Gratuito'];
 ---
 
 <section class="relative overflow-hidden bg-neutral-50 py-12 lg:py-16">
   <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12">
     <div class="grid items-center gap-8 lg:grid-cols-[0.98fr_1.02fr] lg:gap-12">
       <div class="max-w-xl">
-        <div class="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2">
-          <span class="h-2 w-2 rounded-full bg-primary"></span>
-          <span class="text-sm font-semibold text-neutral-600">
-            Comunidade entre mulheres
-          </span>
-        </div>
-
-        <h1 class="mt-6 max-w-[12ch] font-display text-[2.4rem] font-semibold leading-none tracking-tight text-neutral-900 sm:text-[3rem] lg:text-[3.45rem]">
-          Companhia com mais contexto para
-          <span class="text-primary"> sair mais da rotina.</span>
-        </h1>
-
-        <p class="mt-5 max-w-lg text-lg leading-relaxed text-neutral-600 sm:text-[1.15rem]">
-          Uma comunidade entre mulheres com grupos por interesse, conversa antes
-          do encontro e mais contexto para levar isso também para viagens.
+        <p class="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2 text-sm font-semibold text-neutral-700">
+          <span class="h-2 w-2 rounded-full bg-primary" aria-hidden="true"></span>
+          Rolês e viagens com outras mulheres
         </p>
 
-        <div class="mt-5 flex flex-wrap gap-3 text-sm text-neutral-600">
-          <span class="rounded-full border border-neutral-200 bg-white px-4 py-2">
-            Grupos por interesse
-          </span>
-          <span class="rounded-full border border-neutral-200 bg-white px-4 py-2">
-            Converse antes de marcar
-          </span>
-        </div>
+        <h1 class="mt-6 font-display text-[2.4rem] font-semibold leading-none tracking-tight text-neutral-900 sm:text-[3rem] lg:text-[3.45rem]">
+          Seu espírito viajante
+          <span class="text-primary-700"> não precisa esperar as férias.</span>
+        </h1>
 
-        <div class="mt-7 flex flex-col gap-4">
+        <p class="mt-5 max-w-lg text-lg leading-relaxed text-neutral-700 sm:text-[1.15rem]">
+          Rolês e aventuras com outras mulheres na sua cidade e companhia para a
+          próxima viagem.
+        </p>
+
+        <ul class="mt-5 flex flex-wrap gap-3 text-sm font-semibold text-neutral-800">
+          {proofs.map((proof) => (
+            <li class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2">
+              <svg class="h-4 w-4 text-teal-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd" />
+              </svg>
+              {proof}
+            </li>
+          ))}
+        </ul>
+
+        <div class="mt-7">
           <AppStoreBadges
             class="flex flex-row flex-wrap items-center gap-3"
             imgClass="h-auto w-36 sm:w-44"
@@ -46,8 +48,8 @@ import AppStoreBadges from './AppStoreBadges.astro';
         <div class="overflow-hidden rounded-[2.25rem] border border-white/60 bg-white shadow-soft">
           <Image
             src={heroMainImg}
-            alt="Grupo de mulheres juntas ao ar livre em um momento de lazer"
-            class="h-[340px] w-full object-cover object-[98%_top] sm:h-[390px] lg:h-[440px]"
+            alt="Grupo de amigas sorrindo juntas em um mirante com vista para a cidade e o mar"
+            class="h-[340px] w-full object-cover object-[98%_top] sm:h-[390px] lg:h-[460px]"
             loading="eager"
           />
         </div>

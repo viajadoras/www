@@ -5,34 +5,32 @@ export type SiteFaq = {
 
 export const siteFaqs: SiteFaq[] = [
   {
-    question: 'Preciso ter uma viagem marcada para usar o Viajadoras?',
+    question: 'O que é a Viajadoras?',
     answer:
-      'Não. Muita gente entra para participar de comunidades, sair mais na própria cidade e só depois pensar em viagem.',
+      'Um app gratuito só para mulheres. Você encontra rolês com data e lugar na sua cidade, conversa antes com quem vai e acha companhia para viajar.',
   },
   {
-    question:
-      'O que torna essa rede diferente de um grupo de WhatsApp ou Instagram?',
+    question: 'Preciso ter uma viagem marcada para usar?',
     answer:
-      'Aqui você encontra comunidades, perfis e conversas em um espaço pensado para mulheres. Fica mais fácil entender com quem você está falando antes de marcar algo.',
+      'Não. A maioria começa pelos rolês da cidade, como um café, uma trilha ou um show. A viagem vem quando bater a vontade.',
   },
   {
-    question: 'Como o app ajuda a dar mais contexto?',
+    question: 'Como vocês cuidam de quem entra?',
     answer:
-      'O app tem perfil, conversa, denúncias, bloqueio e moderação. Isso não elimina todo risco, mas ajuda a dar mais contexto do que um grupo solto.',
+      'A comunidade é só de mulheres maiores de 18 anos, e cada selfie de entrada é analisada pela equipe. No app você bloqueia e denuncia, e a moderação analisa cada denúncia. Nenhum app elimina todo risco: no primeiro encontro, prefira lugares públicos e avise alguém.',
   },
   {
-    question: 'Serve para quem quer sair mais na própria cidade?',
+    question: 'Tem rolê na minha cidade?',
     answer:
-      'Sim. Esse é um dos usos mais importantes hoje. Tem gente que chega para encontrar companhia para um café, um evento, um treino ou um passeio antes mesmo de pensar em viajar.',
+      'Estamos começando por Goiânia, onde a Viajadoras está organizando encontros oficiais. Em outras cidades, você pode criar o primeiro rolê e chamar suas amigas para o app.',
   },
   {
-    question: 'Serve para primeira viagem solo ou para encontrar companhia?',
+    question: 'Serve para quem quer viajar sozinha?',
     answer:
-      'Sim. O app ajuda tanto quem quer dar o primeiro passo com mais calma quanto quem já tem destino em mente e quer conversar antes de combinar uma viagem.',
+      'Sim. Você pode encontrar mulheres indo para o mesmo destino, combinar passeios por lá ou montar seu plano de viagem e ver quem embarca junto.',
   },
   {
-    question: 'O Viajadoras é gratuito?',
-    answer:
-      'Sim. O app está disponível para Android e iPhone. Você também pode acompanhar a Viajadoras no Instagram.',
+    question: 'É gratuito?',
+    answer: 'Sim. O app é gratuito e está disponível para Android e iPhone.',
   },
 ];

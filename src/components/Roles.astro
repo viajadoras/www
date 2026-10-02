@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import beach from '../assets/images/gallery/gallery-4.png';
+import trail from '../assets/images/gallery/gallery-6.png';
+import city from '../assets/images/manifesto-friends.png';
+
+const kinds = [
+  {
+    image: city,
+    alt: 'Amigas rindo juntas em uma mesa ao ar livre',
+    title: 'Na sua cidade',
+    description: 'Café, barzinho, show, feira, aula experimental, cinema.',
+  },
+  {
+    image: trail,
+    alt: 'Grupo de mulheres com mochilas fazendo trilha na mata',
+    title: 'Aventuras',
+    description:
+      'Trilha, cachoeira, pedal, corrida, bate-volta no fim de semana.',
+  },
+  {
+    image: beach,
+    alt: 'Amigas tirando selfie juntas na praia',
+    title: 'Viagens',
+    description:
+      'Do feriado prolongado à viagem dos sonhos, com quem tem o seu ritmo.',
+  },
+];
+---
+
+<section id="roles" class="bg-white py-16 lg:py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-primary-700">
+        Rolês
+      </p>
+      <h2 class="mt-4 font-display text-4xl font-semibold leading-tight text-neutral-900 sm:text-[3.2rem]">
+        Toda semana tem um motivo para sair.
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed text-neutral-700">
+        Viajar não é só pegar avião. É topar o novo, e isso dá para fazer já
+        neste fim de semana.
+      </p>
+    </div>
+
+    <ul class="mt-10 grid gap-6 md:grid-cols-3">
+      {kinds.map((kind) => (
+        <li class="overflow-hidden rounded-[2rem] bg-neutral-50 ring-1 ring-neutral-200">
+          <Image src={kind.image} alt={kind.alt} widths={[400, 800]} sizes="(min-width: 768px) 33vw, 100vw" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-neutral-900">{kind.title}</h3>
+            <p class="mt-2 leading-relaxed text-neutral-700">{kind.description}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <div class="mt-8 flex flex-col gap-2 rounded-[2rem] bg-secondary-100 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+      <p class="text-lg font-semibold text-neutral-900">Começando por Goiânia</p>
+      <p class="max-w-2xl text-neutral-700">
+        Estamos organizando os encontros oficiais da Viajadoras em Goiânia. Mora
+        em outra cidade? Crie o primeiro rolê e chame suas amigas.
+      </p>
+    </div>
+  </div>
+</section>

@@ -36,7 +36,7 @@ const organizationSchema = {
   },
   image: `${origin}/og_1200x630.jpg`,
   description:
-    'Comunidade entre mulheres para sair mais da rotina e levar essa rede para viagens.',
+    'App gratuito só para mulheres com rolês na cidade e companhia para viajar.',
   taxID: company.taxID,
   foundingDate: company.foundingDate,
   email: contactEmail,
@@ -67,7 +67,7 @@ const websiteSchema = {
   url: siteUrl,
   name: siteName,
   description:
-    'Comunidade entre mulheres para sair mais da rotina e levar essa rede para viagens.',
+    'App gratuito só para mulheres com rolês na cidade e companhia para viajar.',
   publisher: {
     '@id': `${origin}/#organization`,
   },
@@ -87,7 +87,7 @@ const mobileAppSchemas = [
       priceCurrency: 'BRL',
     },
     description:
-      'Comunidade entre mulheres para participar de grupos e encontrar companhia para a cidade e para viagens.',
+      'App gratuito só para mulheres: rolês com data e lugar na sua cidade e companhia para viajar, com selfie verificada pela equipe.',
     image: `${origin}/logo.png`,
     screenshot: `${origin}/og_1200x630.jpg`,
     url: playStoreUrl,
@@ -104,7 +104,7 @@ const mobileAppSchemas = [
       priceCurrency: 'BRL',
     },
     description:
-      'Comunidade entre mulheres para participar de grupos e encontrar companhia para a cidade e para viagens.',
+      'App gratuito só para mulheres: rolês com data e lugar na sua cidade e companhia para viajar, com selfie verificada pela equipe.',
     image: `${origin}/logo.png`,
     screenshot: `${origin}/og_1200x630.jpg`,
     url: appStoreUrl,
@@ -116,12 +116,10 @@ const webPageSchema = {
   '@type': type === 'about' ? 'AboutPage' : 'WebPage',
   '@id': currentUrl,
   url: currentUrl,
-  name:
-    title ||
-    'Viajadoras - Comunidade entre mulheres para sair mais e levar essa rede para viagens',
+  name: title || 'Viajadoras | Rolês e viagens com outras mulheres',
   description:
     description ||
-    'Comunidade entre mulheres para sair mais da rotina e levar essa rede para viagens.',
+    'App gratuito só para mulheres com rolês na cidade e companhia para viajar.',
   isPartOf: {
     '@id': `${origin}/#website`,
   },

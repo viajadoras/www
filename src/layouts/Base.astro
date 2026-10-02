@@ -18,10 +18,10 @@ interface BaseProps {
 
 const props = Astro.props as BaseProps;
 const pageTitle =
-  props.title ?? 'Viajadoras | Companhia feminina para sair e viajar';
+  props.title ?? 'Viajadoras | Rolês e viagens com outras mulheres';
 const pageDescription =
   props.description ??
-  'Comunidade entre mulheres com grupos, conversa e mais contexto para sair mais na sua cidade e levar essa rede para viagens.';
+  'App gratuito só para mulheres: encontre rolês com data e lugar na sua cidade, converse antes e ache companhia para viajar. Selfie verificada pela equipe.';
 const lang = props.lang ?? 'pt-BR';
 const noindex = props.noindex ?? false;
 const isHomepage = Astro.url.pathname === '/';
@@ -43,9 +43,7 @@ const downloadHref =
 const OG_VERSION = '20251002';
 const ogPath = props.ogImage ?? `/og_1200x630.jpg?v=${OG_VERSION}`;
 const ogImage = new URL(ogPath, canonicalBase).toString();
-const ogAlt =
-  props.ogImageAlt ??
-  'Mulheres compartilhando uma experiência juntas — Viajadoras';
+const ogAlt = props.ogImageAlt ?? 'Amigas juntas em um rolê — Viajadoras';
 
 import '../styles/global.css';
 ---
@@ -142,16 +140,16 @@ import '../styles/global.css';
             </div>
           </a>
           <nav class="hidden lg:flex items-center gap-1" aria-label="Principal">
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#o-que-e">
-              Como Funciona
+            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#como-funciona">
+              Como funciona
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#para-quem">
-              Para Quem
+            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#roles">
+              Rolês
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#faq">
-              FAQ
+            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#confianca">
+              Confiança
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
             <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/sobre">
@@ -187,15 +185,15 @@ import '../styles/global.css';
         <div class="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_0.8fr]">
           <div>
             <p class="text-lg font-bold text-white">Viajadoras</p>
-            <p class="mt-2 text-sm leading-6 text-neutral-400">Grupos entre mulheres para sair mais da rotina e levar essa rede para viagens.</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-400">Rolês e viagens com outras mulheres. Só mulheres, com selfie verificada pela equipe.</p>
             <p class="mt-4 text-sm leading-6 text-neutral-400">App gratuito para Android e iPhone, feito em {company.addressLocality} – {company.addressRegion}.</p>
             <a class="mt-2 inline-block text-sm text-neutral-300 underline-offset-4 hover:text-primary hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
           <div>
             <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Site</h2>
             <nav class="mt-4 flex flex-col gap-2">
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#o-que-e">Como funciona</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#para-quem">Para quem</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#como-funciona">Como funciona</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#confianca">Confiança</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#faq">FAQ</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/sobre">Sobre nós</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/blog/">Blog</a>
