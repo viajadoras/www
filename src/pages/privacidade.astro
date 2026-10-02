@@ -2,7 +2,7 @@
 import { company, contactEmail } from '../data/site';
 import Base from '../layouts/Base.astro';
 
-const updatedAt = '6 de setembro de 2026';
+const updatedAt = '2 de outubro de 2026';
 const contactHref = `mailto:${contactEmail}`;
 ---
 <Base
@@ -37,7 +37,7 @@ const contactHref = `mailto:${contactEmail}`;
             <ul class="space-y-1 text-sm">
               <li><strong>CNPJ:</strong> {company.cnpj}</li>
               <li>
-                <strong>Endereço:</strong> {company.streetAddress} - {company.addressLocality}/{company.addressRegion} - CEP {company.postalCode}
+                <strong>Sede:</strong> {company.addressLocality} – {company.addressRegion}
               </li>
               <li>
                 <strong>Contato:</strong>{' '}
@@ -299,7 +299,7 @@ const contactHref = `mailto:${contactEmail}`;
         <footer class="text-sm text-neutral-500">
           <p class="font-medium text-neutral-700">{company.legalName}</p>
           <p>CNPJ: {company.cnpj}</p>
-          <p>{company.streetAddress} - {company.addressLocality}/{company.addressRegion} - CEP {company.postalCode}</p>
+          <p>{company.addressLocality} – {company.addressRegion}</p>
         </footer>
       </div>
     </div>

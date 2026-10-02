@@ -7,7 +7,7 @@ const html = (path) => readFile(new URL(path, dist), 'utf8');
 test('sitemap preserva só páginas públicas, com canonical único e metadados', async () => {
   const sitemap = await html('sitemap-0.xml');
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  expect(urls.length).toBe(14);
+  expect(urls.length).toBe(15);
   expect(new Set(urls).size).toBe(urls.length);
   expect(urls.some((u) => /convite|404|obrigada/.test(u))).toBe(false);
   for (const url of urls) {
@@ -65,4 +65,31 @@ test('cada artigo tem capa própria, breadcrumb e acesso direto às duas lojas',
     expect(page).toContain(`property="og:image" content="${article.image[0]}"`);
   }
   expect(images.size).toBe(5);
+});
+
+test('site identifica a empresa oficial sem expor endereço residencial', async () => {
+  const about = await html('sobre/index.html');
+  const schemas = [
+    ...about.matchAll(
+      /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g,
+    ),
+  ].map((m) => JSON.parse(m[1]));
+  const organization = schemas.find((s) => s['@type'] === 'Organization');
+  expect(organization.legalName).toBe('VIAJADORAS INOVA SIMPLES (I.S.)');
+  expect(organization.taxID).toBe('67102571000108');
+  expect(organization.address.streetAddress).toBeUndefined();
+  expect(schemas.some((s) => s['@type'] === 'AboutPage')).toBe(true);
+  for (const path of [
+    'index.html',
+    'sobre/index.html',
+    'privacidade/index.html',
+    'termos/index.html',
+  ]) {
+    const page = await html(path);
+    expect(page).toContain('67.102.571/0001-08');
+    expect(page).toContain('https://www.finep.gov.br/');
+    expect(page).not.toMatch(
+      /GT TECNOLOGIA|46\.112\.388|Pedro Paulo|74663|74\.663/,
+    );
+  }
 });

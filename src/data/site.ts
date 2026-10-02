@@ -8,11 +8,24 @@ export const appStoreUrl =
 export const contactEmail = 'contato@viajadoras.com';
 
 export const company = {
-  legalName: 'GT TECNOLOGIA E SERVICOS LTDA',
-  cnpj: '46.112.388/0001-13',
-  streetAddress: 'Av. Portugal, 1148',
+  legalName: 'VIAJADORAS INOVA SIMPLES (I.S.)',
+  cnpj: '67.102.571/0001-08',
+  taxID: '67102571000108',
+  legalForm: 'Empresa Simples de Inovação',
+  activity:
+    'Portais, provedores de conteúdo e outros serviços de informação na internet',
+  foundingDate: '2026-06-01',
   addressLocality: 'Goiânia',
   addressRegion: 'GO',
-  postalCode: '74150-030',
   addressCountry: 'BR',
+  founders: [
+    { name: 'Ana Luiza', jobTitle: 'CEO' },
+    { name: 'Guilherme Tavares', jobTitle: 'CTO' },
+  ],
+};
+
+export const funding = {
+  program: 'Centelha 3 Goiás',
+  sponsors: 'FAPEG, Finep e MCTI, com recursos do FNDCT',
+  finepUrl: 'https://www.finep.gov.br/',
 };

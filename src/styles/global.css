@@ -258,19 +258,6 @@ body {
   @apply mx-auto max-w-7xl px-4;
 }
 
-/* Screen reader only - for accessibility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
 /* Utilities migrated from animations.css */
 .scroll-reveal {
   opacity: 0;

@@ -2,14 +2,14 @@
 import FAQSchema from '../components/FAQSchema.astro';
 import IconInstagram from '../components/IconInstagram.astro';
 import StructuredData from '../components/StructuredData.astro';
-import { company, instagramUrl } from '../data/site';
+import { company, contactEmail, funding, instagramUrl } from '../data/site';
 
 interface BaseProps {
   title?: string;
   description?: string;
   lang?: string;
   noindex?: boolean;
-  structuredDataType?: 'homepage' | 'page';
+  structuredDataType?: 'homepage' | 'about' | 'page';
   ogImage?: string;
   ogType?: 'website' | 'article';
   ogImageAlt?: string;
@@ -74,7 +74,6 @@ import '../styles/global.css';
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="/logo.png" />
@@ -129,19 +128,20 @@ import '../styles/global.css';
     <slot name="head" />
   </head>
   <body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
+    <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-neutral-900 focus:shadow-lg">Pular para o conteúdo</a>
     <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-[#F4EBE3]/95 backdrop-blur-sm">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between sm:h-18">
-          <a href="/" class="flex items-center gap-2 sm:gap-3">
+          <a href="/" class="flex items-center gap-2 sm:gap-3" aria-label="Viajadoras, página inicial">
             <div class="relative flex h-11 w-11 items-center justify-center sm:h-12 sm:w-12">
               <div class="absolute inset-0 rounded-full bg-[#DEC0AA] shadow-[0_8px_18px_rgba(23,23,23,0.08)]"></div>
-              <img src="/images/logo-96.webp" alt="Viajadoras" width="96" height="130" class="relative z-10 h-10 w-10 object-contain filter-[drop-shadow(0_1px_1px_rgba(23,23,23,0.16))_drop-shadow(0_4px_12px_rgba(23,23,23,0.10))] sm:h-11 sm:w-11" />
+              <img src="/images/logo-96.webp" alt="" width="96" height="130" class="relative z-10 h-10 w-10 object-contain filter-[drop-shadow(0_1px_1px_rgba(23,23,23,0.16))_drop-shadow(0_4px_12px_rgba(23,23,23,0.10))] sm:h-11 sm:w-11" />
             </div>
             <div class="flex flex-col">
-              <h2 class="font-display text-base font-semibold text-neutral-900 tracking-tight sm:text-[1.75rem]">Viajadoras</h2>
+              <span class="font-display text-base font-semibold text-neutral-900 tracking-tight sm:text-[1.75rem]">Viajadoras</span>
             </div>
           </a>
-          <nav class="hidden lg:flex items-center gap-1">
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Principal">
             <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#o-que-e">
               Como Funciona
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
@@ -152,6 +152,10 @@ import '../styles/global.css';
             </a>
             <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#faq">
               FAQ
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/sobre">
+              Sobre nós
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
           </nav>
@@ -175,29 +179,32 @@ import '../styles/global.css';
         </div>
       </div>
     </header>
-    <main>
+    <main id="conteudo">
       <slot />
     </main>
     <footer class="bg-neutral-900 py-16 text-neutral-100">
       <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_0.8fr]">
           <div>
-            <h3 class="text-lg font-bold text-white">Viajadoras</h3>
+            <p class="text-lg font-bold text-white">Viajadoras</p>
             <p class="mt-2 text-sm leading-6 text-neutral-400">Grupos entre mulheres para sair mais da rotina e levar essa rede para viagens.</p>
+            <p class="mt-4 text-sm leading-6 text-neutral-400">App gratuito para Android e iPhone, feito em {company.addressLocality} – {company.addressRegion}.</p>
+            <a class="mt-2 inline-block text-sm text-neutral-300 underline-offset-4 hover:text-primary hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
           <div>
-            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Site</h3>
+            <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Site</h2>
             <nav class="mt-4 flex flex-col gap-2">
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#o-que-e">Como funciona</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#para-quem">Para quem</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#faq">FAQ</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/sobre">Sobre nós</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/blog/">Blog</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda">Central de ajuda</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href={downloadHref}>Baixar o app</a>
             </nav>
           </div>
           <div>
-            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Guias</h3>
+            <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Guias</h2>
             <nav class="mt-4 flex flex-col gap-2">
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viajar-sozinha-mulher">Viajar sozinha</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viagens-para-mulheres">Viagens para mulheres</a>
@@ -206,7 +213,7 @@ import '../styles/global.css';
             </nav>
           </div>
           <div>
-            <h3 class="font-semibold uppercase tracking-wider text-white text-sm">Legal e redes</h3>
+            <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Legal e redes</h2>
             <nav class="mt-4 flex flex-col gap-2">
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/termos">Termos de Uso</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/privacidade">Privacidade</a>
@@ -220,9 +227,13 @@ import '../styles/global.css';
             </div>
           </div>
         </div>
-        <div class="mt-12 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500">
+        <a href={funding.finepUrl} target="_blank" rel="noopener noreferrer" class="mt-12 flex flex-col gap-1 rounded-2xl border border-neutral-700 px-5 py-4 text-sm text-neutral-300 transition-colors hover:border-primary hover:text-white sm:flex-row sm:items-center sm:justify-between">
+          <span>Projeto apoiado pelo programa {funding.program}: {funding.sponsors}.</span>
+          <span class="font-semibold text-white">Conheça a Finep →</span>
+        </a>
+        <div class="mt-8 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-400">
           <p>© {new Date().getFullYear()} Viajadoras. Todos os direitos reservados.</p>
-          <p class="mt-2">{company.legalName} · CNPJ {company.cnpj}</p>
+          <p class="mt-2">{company.legalName} · CNPJ {company.cnpj} · {company.addressLocality} – {company.addressRegion}</p>
         </div>
       </div>
     </footer>

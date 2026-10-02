@@ -2,6 +2,7 @@
 import {
   appStoreUrl,
   company,
+  contactEmail,
   instagramUrl,
   playStoreUrl,
   siteName,
@@ -9,7 +10,7 @@ import {
 } from '../data/site';
 
 interface Props {
-  type?: 'homepage' | 'page';
+  type?: 'homepage' | 'about' | 'page';
   title?: string;
   description?: string;
   url?: string;
@@ -36,24 +37,27 @@ const organizationSchema = {
   image: `${origin}/og_1200x630.jpg`,
   description:
     'Comunidade entre mulheres para sair mais da rotina e levar essa rede para viagens.',
+  taxID: company.taxID,
+  foundingDate: company.foundingDate,
+  email: contactEmail,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: company.streetAddress,
     addressLocality: company.addressLocality,
     addressRegion: company.addressRegion,
-    postalCode: company.postalCode,
     addressCountry: company.addressCountry,
   },
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
+    email: contactEmail,
+    url: `${origin}/ajuda`,
     availableLanguage: ['pt-BR'],
   },
   sameAs: [instagramUrl, playStoreUrl, appStoreUrl],
-  founder: {
-    '@type': 'Organization',
-    name: company.legalName,
-  },
+  founder: company.founders.map((founder) => ({
+    '@type': 'Person',
+    ...founder,
+  })),
 };
 
 const websiteSchema = {
@@ -109,7 +113,7 @@ const mobileAppSchemas = [
 
 const webPageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
+  '@type': type === 'about' ? 'AboutPage' : 'WebPage',
   '@id': currentUrl,
   url: currentUrl,
   name:
@@ -130,7 +134,9 @@ const webPageSchema = {
 const schemas =
   type === 'homepage'
     ? [organizationSchema, websiteSchema, ...mobileAppSchemas, webPageSchema]
-    : [webPageSchema];
+    : type === 'about'
+      ? [organizationSchema, webPageSchema]
+      : [webPageSchema];
 ---
 
 {schemas.map(schema => (

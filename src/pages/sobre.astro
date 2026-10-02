@@ -1,0 +1,112 @@
+---
+import AppStoreBadges from '../components/AppStoreBadges.astro';
+import { company, contactEmail, funding } from '../data/site';
+import Base from '../layouts/Base.astro';
+
+const title = 'Sobre a Viajadoras: quem somos e dados da empresa';
+const description =
+  'Conheça a Viajadoras, app gratuito de comunidade entre mulheres feito em Goiânia. Veja o que o app oferece, quem faz, quem apoia e os dados oficiais da empresa.';
+const foundingDate = new Date(
+  `${company.foundingDate}T12:00:00-03:00`,
+).toLocaleDateString('pt-BR');
+
+const features = [
+  [
+    'Grupos por interesse',
+    'Comunidades por tema, cidade e momento de vida para começar com mais afinidade.',
+  ],
+  [
+    'Conversa antes de marcar',
+    'Você troca ideia com calma e decide se faz sentido sair ou viajar junto.',
+  ],
+  [
+    'Entrada com selfie',
+    'A equipe analisa uma selfie antes de liberar a conta, para cuidar de quem entra.',
+  ],
+  [
+    'Denúncia, bloqueio e moderação',
+    'Ferramentas e uma equipe para agir quando algo não vai bem.',
+  ],
+];
+
+const companyData = [
+  ['Nome', 'Viajadoras'],
+  ['Razão social', company.legalName],
+  ['CNPJ', company.cnpj],
+  ['Natureza jurídica', company.legalForm],
+  ['Atividade', company.activity],
+  ['Início das atividades', foundingDate],
+  ['Sede', `${company.addressLocality} – ${company.addressRegion}, Brasil`],
+];
+---
+
+<Base {title} {description} lang="pt-BR" structuredDataType="about">
+  <section class="bg-neutral-50 py-16 lg:py-24">
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">Sobre nós</p>
+        <h1 class="mt-4 font-display text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
+          Uma rede entre mulheres para sair mais e viajar com companhia.
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-neutral-700">
+          A Viajadoras é um aplicativo gratuito, para Android e iPhone, onde
+          mulheres maiores de 18 anos encontram grupos, conversam e combinam
+          programas na própria cidade e em viagens. Nasceu em Goiânia para
+          diminuir a solidão de quem quer fazer coisas e não tem com quem ir.
+        </p>
+        <AppStoreBadges class="mt-8 flex flex-row flex-wrap items-center gap-3" imgClass="h-auto w-36 sm:w-44" />
+      </div>
+
+      <section class="mt-16" aria-labelledby="o-que-oferece">
+        <h2 id="o-que-oferece" class="text-2xl font-bold text-neutral-900">O que o app oferece</h2>
+        <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+          {features.map(([name, text]) => (
+            <li class="rounded-3xl bg-white p-6 ring-1 ring-neutral-200">
+              <h3 class="text-lg font-semibold text-neutral-900">{name}</h3>
+              <p class="mt-2 leading-relaxed text-neutral-700">{text}</p>
+            </li>
+          ))}
+        </ul>
+        <p class="mt-6 text-neutral-700">
+          A Viajadoras não é agência de viagens nem vende pacotes. O app é
+          gratuito para as usuárias. Saiba mais na <a href="/ajuda" class="font-semibold text-primary-700 underline">central de ajuda</a>.
+        </p>
+      </section>
+
+      <div class="mt-16 grid gap-8 lg:grid-cols-2">
+        <section class="rounded-[2rem] bg-white p-8 ring-1 ring-neutral-200" aria-labelledby="quem-faz">
+          <h2 id="quem-faz" class="text-2xl font-bold text-neutral-900">Quem fundou</h2>
+          <ul class="mt-6 space-y-3 text-neutral-700">
+            {company.founders.map((founder) => (
+              <li><strong class="text-neutral-900">{founder.name}</strong> · {founder.jobTitle}</li>
+            ))}
+          </ul>
+          <p class="mt-6 text-neutral-700">
+            Fale com a equipe em <a href={`mailto:${contactEmail}`} class="font-semibold text-primary-700 underline">{contactEmail}</a>.
+          </p>
+        </section>
+
+        <section class="rounded-[2rem] bg-secondary-100 p-8" aria-labelledby="apoio">
+          <h2 id="apoio" class="text-2xl font-bold text-neutral-900">Quem apoia</h2>
+          <p class="mt-6 leading-relaxed text-neutral-700">
+            O projeto “Viajadoras – Vai Segura!” foi selecionado no programa{' '}
+            {funding.program} e recebe apoio financeiro da {funding.sponsors}.
+          </p>
+          <a href={funding.finepUrl} target="_blank" rel="noopener noreferrer" class="mt-6 inline-block rounded-full border border-primary-700 px-5 py-2 font-semibold text-primary-800 hover:bg-primary-50">Conheça a Finep</a>
+        </section>
+      </div>
+
+      <section class="mt-16" aria-labelledby="dados-empresa">
+        <h2 id="dados-empresa" class="text-2xl font-bold text-neutral-900">Dados da empresa</h2>
+        <dl class="mt-6 divide-y divide-neutral-200 rounded-[2rem] bg-white px-8 ring-1 ring-neutral-200">
+          {companyData.map(([label, value]) => (
+            <div class="grid gap-1 py-4 sm:grid-cols-[14rem_1fr]">
+              <dt class="font-semibold text-neutral-900">{label}</dt>
+              <dd class="text-neutral-700">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    </div>
+  </section>
+</Base>
