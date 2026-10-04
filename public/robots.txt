@@ -1,25 +1,4 @@
-# Viajadoras - robots.txt
-# https://viajadoras.com/robots.txt
-
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://viajadoras.com/sitemap-index.xml
-
-# Disallow admin or private paths (if any in future)
-# Disallow: /admin/
-# Disallow: /api/
-
-# Allow common crawlers
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# Crawl delay (optional, only if needed)
-# Crawl-delay: 1

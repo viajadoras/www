@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: 'Como organizar o primeiro encontro de um grupo de mulheres'
 description: 'Um roteiro para definir uma proposta simples, publicar as informações necessárias, confirmar presenças e lidar com mudanças no encontro.'
-category: Encontros de grupo
+category: Rolês na cidade
 date: '2026-09-06'
 updated: '2026-09-07'
 seoTitle: 'Primeiro encontro de um grupo de mulheres'
@@ -67,3 +67,5 @@ Antes de fotografar, pergunte quem quer aparecer. A autorização para uma foto 
 Depois do encontro, pergunte: “O que você manteria e o que mudaria em uma próxima vez?”. Use as respostas para decidir se vale repetir a atividade, mudar o horário ou tentar outra proposta.
 
 Você não precisa transformar cada encontro em um evento maior. A continuidade pode começar com uma combinação simples. Para ajudar quem está chegando à cidade, compartilhe também o roteiro de [como fazer novas amigas](/blog/como-fazer-amigas-em-uma-cidade-nova/).
+
+Quando o grupo estiver entrosado, a próxima proposta pode ser uma viagem curta. Veja o [checklist antes de viajar com outra mulher](/blog/checklist-antes-de-viajar-com-outra-mulher/) e o guia de [companhia para viajar](/companhia-para-viajar/).

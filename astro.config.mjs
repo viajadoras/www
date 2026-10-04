@@ -26,7 +26,7 @@ export default defineConfig({
             '/viajar-sozinha-mulher/',
           ].includes(path)
         ) {
-          item.lastmod = new Date('2026-09-07T00:00:00-03:00');
+          item.lastmod = new Date('2026-10-04T00:00:00-03:00');
         }
         return item;
       },

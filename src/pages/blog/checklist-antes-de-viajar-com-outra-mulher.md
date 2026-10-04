@@ -69,6 +69,8 @@ O resumo organiza a conversa; ele não substitui as condições de cada reserva.
 
 ## Um próximo passo pequeno
 
-Antes de uma viagem longa, vocês podem combinar um passeio curto. Observe se conseguem decidir juntas, respeitar limites e avisar quando o plano muda. Para começar a busca, veja o guia de [companhia para viajar](/companhia-para-viajar). Se preferir manter parte do roteiro independente, leia também sobre [viajar sozinha](/viajar-sozinha-mulher).
+Antes de uma viagem longa, vocês podem combinar um passeio curto. Observe se conseguem decidir juntas, respeitar limites e avisar quando o plano muda. Para começar a busca, veja o guia de [companhia para viajar](/companhia-para-viajar/). Se preferir manter parte do roteiro independente, leia também sobre [viajar sozinha](/viajar-sozinha-mulher/).
 
 Para organizar os valores, veja [como dividir os gastos de uma viagem entre amigas](/blog/como-dividir-gastos-viagem-entre-amigas/) e use o caderno de despesas para registrar pagamentos e conferir os acertos.
+
+Se esta será sua primeira viagem sozinha, leia também [como se preparar para a primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/) e as [dicas para viajar a trabalho sozinha](/blog/viagem-a-trabalho-sozinha-dicas/).
