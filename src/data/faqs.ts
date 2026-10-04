@@ -7,12 +7,12 @@ export const siteFaqs: SiteFaq[] = [
   {
     question: 'O que é a Viajadoras?',
     answer:
-      'Um app gratuito só para mulheres. Você encontra rolês com data e lugar na sua cidade, conversa antes com quem vai e acha companhia para viajar.',
+      'Um app gratuito só para mulheres que gostam de viajar. Você pede dica para quem já foi, acha companhia no destino e encontra rolês com data e lugar na sua cidade.',
   },
   {
     question: 'Preciso ter uma viagem marcada para usar?',
     answer:
-      'Não. A maioria começa pelos rolês da cidade, como um café, uma trilha ou um show. A viagem vem quando bater a vontade.',
+      'Não. Dá para pedir dicas antes de decidir, e os rolês da cidade, como um café, uma trilha ou um show, mantêm a turma junta até a próxima viagem.',
   },
   {
     question: 'Como vocês cuidam de quem entra?',
@@ -22,7 +22,7 @@ export const siteFaqs: SiteFaq[] = [
   {
     question: 'Tem rolê na minha cidade?',
     answer:
-      'Estamos começando por Goiânia, onde a Viajadoras está organizando encontros oficiais. Em outras cidades, você pode criar o primeiro rolê e chamar suas amigas para o app.',
+      'Estamos começando por Goiânia, onde a Viajadoras prepara o primeiro encontro presencial. Em outras cidades, você pode criar o primeiro rolê e chamar suas amigas para o app.',
   },
   {
     question: 'Serve para quem quer viajar sozinha?',
