@@ -18,7 +18,7 @@ interface BaseProps {
 
 const props = Astro.props as BaseProps;
 const pageTitle =
-  props.title ?? 'Viajadoras | Rolês e viagens com outras mulheres';
+  props.title ?? 'Viajadoras | Viaje sozinha sem ficar sozinha';
 const pageDescription =
   props.description ??
   'App gratuito só para mulheres: encontre rolês com data e lugar na sua cidade, converse antes e ache companhia para viajar. Selfie verificada pela equipe.';
@@ -185,7 +185,7 @@ import '../styles/global.css';
         <div class="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_0.8fr]">
           <div>
             <p class="text-lg font-bold text-white">Viajadoras</p>
-            <p class="mt-2 text-sm leading-6 text-neutral-400">Rolês e viagens com outras mulheres. Só mulheres, com selfie verificada pela equipe.</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-400">Viagens e rolês só de mulheres. Dica de quem já foi, companhia no destino e selfie verificada pela equipe.</p>
             <p class="mt-4 text-sm leading-6 text-neutral-400">App gratuito para Android e iPhone, feito em {company.addressLocality} – {company.addressRegion}.</p>
             <a class="mt-2 inline-block text-sm text-neutral-300 underline-offset-4 hover:text-primary hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
