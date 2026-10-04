@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: 'Como combinar passeios quando suas amigas têm rotinas diferentes'
 seoTitle: 'Passeios com amigas de rotinas diferentes'
 description: 'Ideias para fazer convites mais fáceis de responder, escolher programas curtos e abrir espaço para novas companhias sem cobrar disponibilidade.'
-category: 'Amizades no dia a dia'
+category: Rolês na cidade
 date: '2026-09-07'
 image: '/images/blog/combinar-passeios-amigas-rotinas-diferentes.jpg'
 imageAlt: 'Calendário e xícara ilustrados para um encontro que cabe na rotina'

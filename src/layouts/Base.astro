@@ -17,8 +17,7 @@ interface BaseProps {
 }
 
 const props = Astro.props as BaseProps;
-const pageTitle =
-  props.title ?? 'Viajadoras | Viaje sozinha sem ficar sozinha';
+const pageTitle = props.title ?? 'Viajadoras | Viaje sozinha sem ficar sozinha';
 const pageDescription =
   props.description ??
   'App gratuito só para mulheres: encontre rolês com data e lugar na sua cidade, converse antes e ache companhia para viajar. Selfie verificada pela equipe.';
@@ -43,7 +42,7 @@ const downloadHref =
 const OG_VERSION = '20251002';
 const ogPath = props.ogImage ?? `/og_1200x630.jpg?v=${OG_VERSION}`;
 const ogImage = new URL(ogPath, canonicalBase).toString();
-const ogAlt = props.ogImageAlt ?? 'Amigas juntas em um rolê — Viajadoras';
+const ogAlt = props.ogImageAlt ?? 'Amigas juntas em um rolê, Viajadoras';
 
 import '../styles/global.css';
 ---
@@ -57,7 +56,6 @@ import '../styles/global.css';
 
     <!-- Primary Meta Tags -->
     <title>{pageTitle}</title>
-    <meta name="title" content={pageTitle} />
     <meta name="description" content={pageDescription} />
     <meta name="author" content="Viajadoras" />
     <meta name="robots" content={robotsContent} />
@@ -152,13 +150,13 @@ import '../styles/global.css';
               Confiança
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/sobre">
+            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/sobre/">
               Sobre nós
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </a>
           </nav>
           <div class="flex items-center gap-1 sm:gap-4">
-            <a href="/ajuda" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Ajuda</a>
+            <a href="/ajuda/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Ajuda</a>
             <a href="/blog/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Blog</a>
             <a
               href={downloadHref}
@@ -195,27 +193,27 @@ import '../styles/global.css';
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#como-funciona">Como funciona</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#confianca">Confiança</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#faq">FAQ</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/sobre">Sobre nós</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/sobre/">Sobre nós</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/blog/">Blog</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda">Central de ajuda</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda/">Central de ajuda</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href={downloadHref}>Baixar o app</a>
             </nav>
           </div>
           <div>
             <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Guias</h2>
             <nav class="mt-4 flex flex-col gap-2">
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viajar-sozinha-mulher">Viajar sozinha</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viagens-para-mulheres">Viagens para mulheres</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-para-viajar">Companhia para viajar</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-feminina-para-sair">Companhia feminina para sair</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viajar-sozinha-mulher/">Viajar sozinha</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viagens-para-mulheres/">Viagens para mulheres</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-para-viajar/">Companhia para viajar</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-feminina-para-sair/">Companhia feminina para sair</a>
             </nav>
           </div>
           <div>
             <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Legal e redes</h2>
             <nav class="mt-4 flex flex-col gap-2">
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/termos">Termos de Uso</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/privacidade">Privacidade</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda#excluir-conta">Excluir minha conta</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/termos/">Termos de Uso</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/privacidade/">Privacidade</a>
+              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda/#excluir-conta">Excluir minha conta</a>
               <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
             </nav>
             <div class="mt-4">

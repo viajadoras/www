@@ -71,3 +71,5 @@ Se houver imprevisto, atualizem o registro com o que foi devolvido, o que contin
 Para preparar o restante da conversa, use o [checklist antes de viajar com outra mulher](/blog/checklist-antes-de-viajar-com-outra-mulher/). Se ainda estiver procurando companhia, veja [como encontrar outras mulheres para viajar](/companhia-para-viajar/).
 
 No Viajadoras, você pode começar pela conversa e pelos interesses em comum. A organização das despesas deve ser combinada pelas participantes; este roteiro não apresenta uma função de pagamentos do aplicativo.
+
+Se esta será sua primeira viagem sozinha, leia também [como se preparar para a primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/) e as [dicas para viajar a trabalho sozinha](/blog/viagem-a-trabalho-sozinha-dicas/).
