@@ -10,9 +10,9 @@ export const siteFaqs: SiteFaq[] = [
       'Um app gratuito só para mulheres que gostam de viajar. Você pede dica para quem já foi, acha companhia no destino e encontra rolês com data e lugar na sua cidade.',
   },
   {
-    question: 'Preciso ter uma viagem marcada para usar?',
+    question: 'Serve para quem quer viajar sozinha?',
     answer:
-      'Não. Dá para pedir dicas antes de decidir, e os rolês da cidade, como um café, uma trilha ou um show, mantêm a turma junta até a próxima viagem.',
+      'Sim. Você pode encontrar mulheres indo para o mesmo destino, combinar passeios por lá ou montar seu plano de viagem e ver quem embarca junto.',
   },
   {
     question: 'Como vocês cuidam de quem entra?',
@@ -20,14 +20,14 @@ export const siteFaqs: SiteFaq[] = [
       'A comunidade é só de mulheres maiores de 18 anos, e cada selfie de entrada é analisada pela equipe. No app você bloqueia e denuncia, e a moderação analisa cada denúncia. Nenhum app elimina todo risco: no primeiro encontro, prefira lugares públicos e avise alguém.',
   },
   {
+    question: 'Preciso ter uma viagem marcada para usar?',
+    answer:
+      'Não. Dá para pedir dicas antes de decidir, e os rolês da cidade, como um café, uma trilha ou um show, mantêm a turma junta até a próxima viagem.',
+  },
+  {
     question: 'Tem rolê na minha cidade?',
     answer:
       'Estamos começando por Goiânia, onde a Viajadoras prepara o primeiro encontro presencial. Em outras cidades, você pode criar o primeiro rolê e chamar suas amigas para o app.',
-  },
-  {
-    question: 'Serve para quem quer viajar sozinha?',
-    answer:
-      'Sim. Você pode encontrar mulheres indo para o mesmo destino, combinar passeios por lá ou montar seu plano de viagem e ver quem embarca junto.',
   },
   {
     question: 'É gratuito?',
