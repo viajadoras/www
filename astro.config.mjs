@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
-        !['/convite', '/404'].includes(
+        !['/convite', '/acompanhar', '/404'].includes(
           new URL(page).pathname.replace(/\/$/, ''),
         ),
       // Datas de alterações editoriais significativas; não atualizar a cada build.
