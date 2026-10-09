@@ -5,8 +5,8 @@ description: 'Descubra formatos de viagens para mulheres no Brasil conforme o mo
 category: Planejamento de viagem
 date: '2026-10-09'
 seoTitle: 'Viagens para mulheres no Brasil: ideias por perfil'
-image: '/images/blog/primeira-viagem-sozinha-mulher.jpg'
-imageAlt: 'Mapa do Brasil com marcações e itens de planejamento para uma viagem de mulheres.'
+image: '/images/blog/viagens-para-mulheres-brasil-ideias-de-roteiro.jpg'
+imageAlt: 'Mapa estilizado com rota pontilhada e marcador de destino, ilustrando roteiros pelo Brasil.'
 ---
 
 Quando se fala em viagens para mulheres, muita gente pensa em um tipo só de roteiro. Na prática, o motivo da viagem muda tudo: quem quer descansar não precisa do mesmo plano de quem quer trilha ou festival. Esta página organiza ideias por motivo, para você escolher o formato antes de escolher o destino.

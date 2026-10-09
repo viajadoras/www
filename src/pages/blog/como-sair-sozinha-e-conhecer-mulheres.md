@@ -5,8 +5,8 @@ description: 'Quer companhia para sair e conhecer mulheres novas? Veja onde ir s
 category: Rolês na cidade
 date: '2026-10-09'
 seoTitle: 'Como sair sozinha e conhecer mulheres novas'
-image: '/images/blog/combinar-passeios-amigas-rotinas-diferentes.jpg'
-imageAlt: 'Agenda com horários diferentes sendo ajustados para combinar um passeio entre amigas.'
+image: '/images/blog/como-sair-sozinha-e-conhecer-mulheres.jpg'
+imageAlt: 'Bússola simples apontando o caminho, ilustrando o primeiro passo para sair sozinha.'
 ---
 
 Muita gente procura "mulheres companhia" no Google querendo uma coisa bem simples: gente para dividir um café, uma exposição ou um fim de tarde. Amizade, conversa e programa. Se é isso que você procura, uma estratégia que funciona é sair sozinha, de propósito, para lugares onde conhecer gente é natural.

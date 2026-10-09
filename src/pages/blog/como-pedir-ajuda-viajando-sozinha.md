@@ -6,8 +6,8 @@ category: Viajar sozinha
 date: '2026-10-09'
 updated: '2026-10-09'
 seoTitle: 'Como pedir ajuda viajando sozinha'
-image: '/images/blog/primeira-viagem-sozinha-mulher.jpg'
-imageAlt: 'Mala e mapa dobrado ao lado de um marcador de destino, ilustrando o preparo para imprevistos em viagem sozinha.'
+image: '/images/blog/como-pedir-ajuda-viajando-sozinha.jpg'
+imageAlt: 'Celular com símbolo de mais e ondas de sinal, ilustrando como pedir ajuda em viagem.'
 ---
 
 A maioria das viagens corre bem. Mas quem viaja sozinha costuma ter um medo específico: e se alguma coisa der errado e eu estiver sem ninguém? A resposta honesta é que imprevisto acontece, com ou sem companhia, e que dá para se preparar para ele sem viver com medo.

@@ -5,8 +5,8 @@ description: 'Quer montar um grupo para viajar? Veja como definir proposta, tama
 category: Planejamento de viagem
 date: '2026-10-09'
 seoTitle: 'Grupo para viajar: como montar um grupo de mulheres'
-image: '/images/blog/como-dividir-gastos-viagem-entre-amigas.jpg'
-imageAlt: 'Planilha simples de divisão de gastos usada para organizar a viagem de um grupo de mulheres.'
+image: '/images/blog/grupo-de-viagem-para-mulheres-como-montar.jpg'
+imageAlt: 'Mesa com lista de combinados e quatro pontos ligados, ilustrando um grupo de viagem.'
 ---
 
 Um grupo de viagem pode ser a melhor ideia ou a pior, e a diferença quase sempre está na organização. Grupo que nasce de "vamos todas!" costuma morrer em duas semanas de mensagens sem resposta. Já o grupo com proposta clara, regras simples e decisões combinadas vira viagem.

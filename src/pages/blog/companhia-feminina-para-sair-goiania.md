@@ -5,8 +5,8 @@ description: 'Quer sair e não tem com quem? Tipos de rolê, como combinar e cui
 category: Rolês na cidade
 date: '2026-10-09'
 seoTitle: 'Companhia feminina para sair em Goiânia'
-image: '/images/blog/como-fazer-amigas-em-uma-cidade-nova.jpg'
-imageAlt: 'Duas xícaras sobre a mesa, simbolizando um café combinado entre mulheres em Goiânia.'
+image: '/images/blog/companhia-feminina-para-sair-goiania.jpg'
+imageAlt: 'Prédios de uma cidade com um marcador de localização, ilustrando rolês em Goiânia.'
 ---
 
 Sabe aquele fim de semana em que você quer sair, tem vontade de ir a algum lugar e ninguém está livre? Acontece com quem acabou de se mudar, com quem as amigas mudaram de rotina e com quem simplesmente quer conhecer gente nova. Procurar companhia feminina para sair é um pedido comum, e dá para resolver sem drama.

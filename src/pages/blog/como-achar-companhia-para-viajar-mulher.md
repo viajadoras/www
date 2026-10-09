@@ -5,8 +5,8 @@ description: 'Procurando companhia para viajar? Veja como definir o roteiro, esc
 category: Companhia para viajar
 date: '2026-10-09'
 seoTitle: 'Como achar companhia para viajar sendo mulher'
-image: '/images/blog/checklist-antes-de-viajar-com-outra-mulher.jpg'
-imageAlt: 'Lista de verificação com itens para combinar antes de viajar com outra mulher.'
+image: '/images/blog/como-achar-companhia-para-viajar-mulher.jpg'
+imageAlt: 'Duas amigas lado a lado sob um caminho pontilhado, ilustrando companhia para viajar.'
 ---
 
 Você tem a vontade, tem o destino na cabeça e falta uma coisa: com quem ir. Quem procura companhia para viajar costuma esbarrar em um ciclo conhecido. As amigas topam "um dia", mas não têm data. Quando alguém tem data, não tem dinheiro. Quando tem os dois, o destino é outro.
