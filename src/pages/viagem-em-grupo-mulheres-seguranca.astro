@@ -1,0 +1,177 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Viagem em grupo mulheres: combinados práticos de cuidado';
+const description =
+  'Vai viajar em grupo com outras mulheres? Veja combinados práticos antes, durante e depois da viagem: hospedagem, transporte, avisos, dinheiro e saída.';
+const eyebrow = 'Viagem em grupo';
+const h1 =
+  'Viagem em grupo para mulheres: combinados práticos para viajar com mais cuidado';
+const intro =
+  'Viajar em grupo é ótimo: divide custo, ideia e história para contar. Também tem seu risco, e o maior deles não costuma ser o destino, é o grupo ir sem ter combinado o básico. Este guia reúne orientações práticas para antes, durante e depois da viagem. Nenhuma delas elimina risco, mas todas ajudam você a manter o controle das suas decisões.';
+const ctaTitle = 'Comece conversando com mulheres que querem viajar';
+
+const sections = [
+  {
+    h: 'Antes: conheça o grupo e alinhe expectativas',
+    p: [
+      `A maior parte dos problemas de viagem em grupo nasce de expectativas não ditas. Uma quer acordar cedo, outra quer dormir até tarde; uma quer economizar, outra quer experiências. Por isso a conversa antes vale mais do que qualquer reserva.`,
+      `Se o grupo vem de um aplicativo ou comunidade, converse algumas vezes, de preferência com vídeo, e se possível encontre as pessoas em um programa curto na cidade. Isso ajuda a sentir a convivência, mas não comprova identidade nem garante segurança. Mantenha autonomia: você decide suas reservas e pode desistir antes de pagar.`,
+    ],
+    list: [
+      `Ritmo: madrugar ou não, passeio cheio ou dia livre.`,
+      `Orçamento: teto por pessoa e o que cada uma topa gastar em passeios.`,
+      `Convivência: quarto compartilhado ou individual, barulho, horário de dormir.`,
+      `Saída: o que acontece se alguém quiser fazer um programa separada ou voltar antes.`,
+    ],
+  },
+  {
+    h: 'Antes: reservas, dinheiro e documentos',
+    p: [
+      `Prefira que cada uma faça e pague as próprias reservas, ou que o pagamento coletivo tenha registro claro de quem pagou o quê. Confira quem oferece o serviço, o valor total e as condições de cancelamento antes de qualquer pagamento. Desconfie de pedidos de adiantamento por Pix para quem você não conhece.`,
+      `Cada uma deve guardar os próprios documentos e ter acesso às informações da hospedagem e dos transportes, sem depender de uma única pessoa que "cuida de tudo". Para dividir despesas sem confusão, veja <a href="/blog/como-dividir-gastos-viagem-entre-amigas/" class="text-primary-700 underline underline-offset-4">como dividir os gastos entre amigas</a>.`,
+    ],
+  },
+  {
+    h: 'Antes: monte uma rede de contatos fora do grupo',
+    p: [
+      `Passe o roteiro geral para uma pessoa de confiança que não vai viajar: destino, hospedagem, datas de ida e volta e quem está no grupo. Combine como e quando você dará notícia. E salve na mão, fora do celular também, o contato dessa pessoa e dos serviços que você contratou.`,
+      `Dentro do grupo, troque telefones de todas, defina um ponto de encontro caso alguém se perca e combine o que fazer se o sinal falhar. Parece detalhe, mas é nesses momentos que o combinado faz diferença. Para saber o que fazer se algo sair do previsto, leia <a href="/blog/como-pedir-ajuda-viajando-sozinha/" class="text-primary-700 underline underline-offset-4">como pedir ajuda em viagem</a>.`,
+    ],
+  },
+  {
+    h: 'Durante: decisões do dia a dia',
+    p: [
+      `Com a viagem em andamento, o que mais ajuda é manter combinados simples e revisá-los quando o plano mudar.`,
+    ],
+    list: [
+      `<strong>Chegada:</strong> chegue com a hospedagem confirmada e, se possível, ainda com luz do dia. Evite improvisar o destino da primeira noite.`,
+      `<strong>Transporte:</strong> use serviços formais, confira dados do veículo e do motorista pelo aplicativo e compartilhe a corrida com alguém.`,
+      `<strong>Programas:</strong> combine o roteiro do dia pela manhã e avise se o plano mudar. Quem for fazer algo separada diz onde vai e quando volta.`,
+      `<strong>Bebida e noite:</strong> cada uma decide o seu limite, e o grupo respeita. Fiquem de olho umas nas outras, sem controlar.`,
+      `<strong>Pertences:</strong> cada uma cuida de seus documentos, dinheiro e celular, sem concentrar tudo em uma bolsa só.`,
+      `<strong>Voz própria:</strong> ninguém precisa ir a um programa que não quer. Dizer "hoje eu fico" também é combinado.`,
+    ],
+  },
+  {
+    h: 'Durante: quando o grupo não está se entendendo',
+    p: [
+      `Atrito acontece, mesmo entre amigas antigas. O mais saudável é falar cedo, de forma específica e sem acusar: "Percebi que estamos atrasando os passeios, podemos ajustar os horários?". Uma conversa curta no meio do dia resolve mais do que um silêncio que cresce até o último dia.`,
+      `Se a convivência ficar insustentável, ou se algo no comportamento de alguém te deixar insegura, você pode se afastar, mudar de hospedagem ou encerrar a viagem antes. Ter um plano B de volta, mesmo que nunca use, tira muito do peso dessa decisão. Para lidar com agendas diferentes, veja <a href="/blog/combinar-passeios-amigas-rotinas-diferentes/" class="text-primary-700 underline underline-offset-4">como combinar passeios entre amigas com rotinas diferentes</a>.`,
+    ],
+  },
+  {
+    h: 'Depois e o que o Viajadoras oferece',
+    p: [
+      `Ao voltar, conversem sobre o que funcionou e o que não funcionou. É a melhor maneira de a próxima viagem ser melhor, e de saber se vale repetir com o mesmo grupo.`,
+      `O Viajadoras é um aplicativo gratuito, só para mulheres, com selfie verificada pela equipe, onde você encontra grupos por destino, interesse e cidade para conversar antes de combinar qualquer coisa. É um filtro de entrada, e não uma garantia de segurança. Para começar a busca, veja <a href="/companhia-para-viajar/" class="text-primary-700 underline underline-offset-4">companhia para viajar</a>, <a href="/grupo-para-viajar/" class="text-primary-700 underline underline-offset-4">grupos para viajar</a> e <a href="/viagens-para-mulheres/" class="text-primary-700 underline underline-offset-4">viagens para mulheres</a>. Se a ideia for ir só, leia <a href="/viajar-sozinha-mulher/" class="text-primary-700 underline underline-offset-4">viajar sozinha</a>.`,
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: 'Viajar em grupo só com mulheres é mais seguro?',
+    answer:
+      'Nenhuma viagem é livre de risco, com ou sem grupo. Viajar acompanhada pode facilitar algumas decisões práticas, e combinar contatos, transporte, reservas e avisos ajuda a manter o controle. Não existe garantia.',
+  },
+  {
+    question: 'Quantas pessoas é bom ter em um grupo de viagem?',
+    answer:
+      'Não há número certo. Grupos menores costumam decidir mais rápido e se conhecer melhor antes; grupos grandes exigem mais organização. Comece pequeno, principalmente se é a primeira vez viajando junto.',
+  },
+  {
+    question: 'Como viajar em grupo com quem acabei de conhecer?',
+    answer:
+      'Converse antes por mensagem e vídeo, encontre as pessoas em um programa curto se puder, alinhe orçamento e ritmo, faça suas próprias reservas e avise alguém de confiança sobre o roteiro. Isso ajuda a alinhar expectativas, mas não comprova identidade.',
+  },
+  {
+    question: 'O que combinar antes de dividir uma hospedagem?',
+    answer:
+      'Tipo de quarto, banheiro, horário de dormir, barulho, espaço para ficar sozinha, forma de pagamento e condições de cancelamento. Se uma preferir quarto individual, calculem os dois cenários antes de decidir.',
+  },
+  {
+    question: 'O Viajadoras organiza a viagem do grupo?',
+    answer:
+      'Não. O Viajadoras é um aplicativo gratuito para mulheres se conhecerem em grupos e conversarem antes de combinar. A organização e as reservas ficam com as participantes.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
+---
+
+<Base {title} {description} lang="pt-BR">
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(faqSchema)}
+  />
+  <section class="bg-neutral-50 py-16 lg:py-24">
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          {eyebrow}
+        </p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+          {h1}
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-neutral-600">{intro}</p>
+      </div>
+
+      <div class="mt-12 space-y-8">
+        {sections.map((s) => (
+          <article class="rounded-[2rem] bg-white p-8 shadow-xs ring-1 ring-neutral-200">
+            <h2 class="text-2xl font-bold text-neutral-900">{s.h}</h2>
+            <div class="mt-6 space-y-5 leading-relaxed text-neutral-700">
+              {s.p.map((t) => (<p set:html={t} />))}
+              {s.list && (
+                <ul class="list-disc space-y-3 pl-6">
+                  {s.list.map((t) => (<li set:html={t} />))}
+                </ul>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-12 rounded-[2rem] bg-white p-8 shadow-xs ring-1 ring-neutral-200">
+        <h2 class="text-2xl font-bold text-neutral-900">Perguntas frequentes</h2>
+        <div class="mt-6 space-y-6">
+          {faqs.map((f) => (
+            <div>
+              <h3 class="text-lg font-semibold text-neutral-900">{f.question}</h3>
+              <p class="mt-2 leading-relaxed text-neutral-700">{f.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-12 rounded-[2rem] border border-neutral-200 bg-white p-8">
+        <h2 class="text-2xl font-bold text-neutral-900">{ctaTitle}</h2>
+        <p class="mt-3 text-neutral-700">O app é gratuito para usuárias. Só mulheres entram, com selfie verificada pela equipe.</p>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share"
+            class="rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-primary-600"
+          >
+            Baixar no Google Play
+          </a>
+          <a
+            href="https://apps.apple.com/br/app/viajadoras/id6755790482"
+            class="rounded-full border border-neutral-300 px-6 py-3 text-center text-sm font-semibold text-neutral-900 transition hover:bg-neutral-50"
+          >
+            Baixar na App Store
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

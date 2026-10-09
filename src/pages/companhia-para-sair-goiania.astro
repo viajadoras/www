@@ -1,0 +1,177 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Companhia para sair em Goiânia: rolês só com mulheres';
+const description =
+  'Quer sair em Goiânia e não tem com quem? Veja como achar companhia para sair, ideias de rolê, como chegar sem graça e o que combinar antes do encontro.';
+const eyebrow = 'Rolês em Goiânia';
+const h1 = 'Companhia para sair em Goiânia: como achar gente para topar o rolê';
+const intro =
+  'Tem fim de semana que a cidade está cheia de coisa acontecendo e você fica em casa porque ninguém topou. Em Goiânia, isso é mais comum do que parece: gente que mudou para estudar ou trabalhar, amigas com agendas diferentes, vontade de conhecer lugar novo sem ir sozinha. Este guia mostra como transformar a vontade de sair em programa marcado, com quem tem a mesma vontade.';
+const ctaTitle = 'Ache rolês com data e lugar em Goiânia';
+
+const sections = [
+  {
+    h: 'Por que é difícil achar companhia para sair',
+    p: [
+      `O problema raramente é falta de vontade. É falta de alguém no mesmo horário, com o mesmo interesse e a mesma disposição de combinar de verdade. "A gente marca" vira "fica para outro dia", e o outro dia não chega.`,
+      `Rolê com data e lugar resolve boa parte disso. Quando já existe um dia, um horário e um endereço, a decisão de ir passa a ser simples: topo ou não topo. Sem negociar agenda de cinco pessoas e sem depender de uma única amiga para tudo.`,
+    ],
+  },
+  {
+    h: 'Ideias de rolê em Goiânia para chamar alguém',
+    p: [
+      `Não vamos listar endereços nem horários, porque eles mudam. O que vale é pensar em tipos de programa e escolher o que combina com seu humor naquela semana.`,
+    ],
+    list: [
+      `<strong>Café ou lanche em uma tarde livre:</strong> é o programa mais leve para conhecer alguém, porque termina quando a conversa terminar.`,
+      `<strong>Parque e caminhada:</strong> bom para quem gosta de conversar andando e não quer ficar sentada o tempo todo.`,
+      `<strong>Feira, mercado e comida de rua:</strong> tem movimento, assunto de sobra e dá para sair quando quiser.`,
+      `<strong>Show, teatro ou cinema:</strong> o programa tem hora marcada, o que ajuda quem tem dificuldade de combinar. Só confirme data e ingresso direto nos canais oficiais.`,
+      `<strong>Bar ou restaurante com a turma:</strong> melhor depois de já ter trocado algumas mensagens com o grupo.`,
+      `<strong>Atividade em grupo:</strong> oficina, aula aberta, clube de leitura ou esporte. Ter algo para fazer tira a pressão de ficar só conversando.`,
+    ],
+  },
+  {
+    h: 'Como chamar alguém sem pressão',
+    p: [
+      `Convite curto e concreto costuma funcionar melhor do que um aberto demais. Em vez de "vamos sair qualquer dia?", tente algo como: "Vou tomar um café no sábado à tarde, no centro. Quer ir? Se não der, sem problema."`,
+      `Deixar a saída fácil também ajuda: ofereça um programa com começo e fim, sem obrigar a ficar a noite toda. E se a pessoa disser não, tudo bem. Convite recusado quase nunca é recusa de você, é agenda mesmo.`,
+      `Se você ainda não conhece ninguém na cidade, vale ler como <a href="/blog/como-fazer-amigas-em-uma-cidade-nova/" class="text-primary-700 underline underline-offset-4">fazer amigas em uma cidade nova</a>, com perguntas para puxar conversa e um roteiro de convite.`,
+    ],
+  },
+  {
+    h: 'Antes de sair com quem você acabou de conhecer',
+    p: [
+      `Sair com gente nova é ótimo, e dá para fazer isso com algum cuidado prático sem estragar o clima. Nenhuma dessas medidas elimina risco, mas elas ajudam você a manter o controle da noite.`,
+    ],
+    list: [
+      `Converse antes por mensagem ou vídeo, para chegar sabendo um pouco de quem vai.`,
+      `Prefira um primeiro encontro em lugar público e com movimento, à luz do dia se possível.`,
+      `Avise uma pessoa de confiança onde você vai e com quem, e combine um horário para dar notícia.`,
+      `Cuide do seu transporte de ida e volta, sem depender de carona de quem você mal conhece.`,
+      `Não compartilhe endereço de casa, documentos ou dados financeiros.`,
+      `Se algo incomodar, vá embora. Você não deve explicação.`,
+    ],
+  },
+  {
+    h: 'Como o Viajadoras ajuda quem quer sair em Goiânia',
+    p: [
+      `O Viajadoras é um aplicativo gratuito, só para mulheres, com selfie verificada pela equipe. Goiânia é onde estamos começando, então é aqui que a ideia de rolê com data e lugar aparece primeiro. Você vê o que está marcado, entra na conversa do grupo antes do dia e chega já conhecendo quem vai. Se não houver nada que te interesse, dá para abrir um grupo e chamar outras mulheres.`,
+      `A quantidade de rolês e de pessoas depende de quem está no app em cada momento, e não dá para prometer que sempre haverá algo na data que você quer. O que o app oferece é um espaço com filtro de entrada para as conversas, não uma garantia sobre cada pessoa.`,
+      `Quer ver o panorama completo? A página de <a href="/companhia-feminina-para-sair/" class="text-primary-700 underline underline-offset-4">companhia feminina para sair</a> explica como funcionam os rolês e o próximo passo.`,
+    ],
+  },
+  {
+    h: 'Do rolê na cidade para a viagem',
+    p: [
+      `Quem sai junto algumas vezes aprende muito sobre a outra: se chega no horário, se avisa quando muda o plano, se divide a conta de forma tranquila. É um bom ensaio para uma viagem. Quando a vontade bater, veja como <a href="/companhia-para-viajar/" class="text-primary-700 underline underline-offset-4">encontrar companhia para viajar</a>, ou, se quiser ir por conta própria, o guia de <a href="/viajar-sozinha-mulher/" class="text-primary-700 underline underline-offset-4">viajar sozinha</a>. Também pode começar por um <a href="/blog/como-organizar-primeiro-encontro-de-grupo/" class="text-primary-700 underline underline-offset-4">primeiro encontro de grupo</a> bem organizado.`,
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: 'Como achar companhia para sair em Goiânia?',
+    answer:
+      'Comece por um programa com data e lugar e chame quem tem interesse parecido. No Viajadoras, você encontra rolês e grupos só de mulheres, com selfie verificada pela equipe, e conversa antes do dia. A quantidade de rolês depende de quem está no app.',
+  },
+  {
+    question: 'Preciso conhecer alguém para ir a um rolê?',
+    answer:
+      'Não. A ideia do rolê marcado é justamente permitir que você chegue sem conhecer ninguém, mas já tendo conversado com o grupo antes. Prefira lugares públicos e avise alguém de confiança sobre seus planos.',
+  },
+  {
+    question: 'O Viajadoras funciona só em Goiânia?',
+    answer:
+      'Goiânia é onde estamos em destaque, e o app também serve para quem quer viajar para qualquer lugar do Brasil. Em outras cidades, os rolês dependem das mulheres que estão no app, e você pode abrir um grupo para chamar outras.',
+  },
+  {
+    question: 'É seguro sair com pessoas que conheci pela internet?',
+    answer:
+      'Nenhum encontro tem risco zero. Converse antes, marque em local público, avise alguém de confiança, cuide do seu transporte e saia se algo incomodar. A verificação por selfie é um filtro de entrada no app, e não uma garantia sobre cada pessoa.',
+  },
+  {
+    question: 'O app é pago?',
+    answer: 'Não. O Viajadoras é gratuito para usuárias.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
+---
+
+<Base {title} {description} lang="pt-BR">
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(faqSchema)}
+  />
+  <section class="bg-neutral-50 py-16 lg:py-24">
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          {eyebrow}
+        </p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+          {h1}
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-neutral-600">{intro}</p>
+      </div>
+
+      <div class="mt-12 space-y-8">
+        {sections.map((s) => (
+          <article class="rounded-[2rem] bg-white p-8 shadow-xs ring-1 ring-neutral-200">
+            <h2 class="text-2xl font-bold text-neutral-900">{s.h}</h2>
+            <div class="mt-6 space-y-5 leading-relaxed text-neutral-700">
+              {s.p.map((t) => (<p set:html={t} />))}
+              {s.list && (
+                <ul class="list-disc space-y-3 pl-6">
+                  {s.list.map((t) => (<li set:html={t} />))}
+                </ul>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-12 rounded-[2rem] bg-white p-8 shadow-xs ring-1 ring-neutral-200">
+        <h2 class="text-2xl font-bold text-neutral-900">Perguntas frequentes</h2>
+        <div class="mt-6 space-y-6">
+          {faqs.map((f) => (
+            <div>
+              <h3 class="text-lg font-semibold text-neutral-900">{f.question}</h3>
+              <p class="mt-2 leading-relaxed text-neutral-700">{f.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-12 rounded-[2rem] border border-neutral-200 bg-white p-8">
+        <h2 class="text-2xl font-bold text-neutral-900">{ctaTitle}</h2>
+        <p class="mt-3 text-neutral-700">O app é gratuito para usuárias. Só mulheres entram, com selfie verificada pela equipe.</p>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.viajadoras.app&pcampaignid=web_share"
+            class="rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-primary-600"
+          >
+            Baixar no Google Play
+          </a>
+          <a
+            href="https://apps.apple.com/br/app/viajadoras/id6755790482"
+            class="rounded-full border border-neutral-300 px-6 py-3 text-center text-sm font-semibold text-neutral-900 transition hover:bg-neutral-50"
+          >
+            Baixar na App Store
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
