@@ -55,6 +55,30 @@ const covers = [
     lines: ['Tudo certo antes', 'de sair de casa.'],
     art: `<rect x="810" y="250" width="270" height="200" rx="28" fill="${W}"/><path d="M900 250v-30a25 25 0 0 1 25-25h40a25 25 0 0 1 25 25v30" fill="none" stroke="${B}" stroke-width="13"/><path d="M850 250v200m190-200v200" stroke="${D}" stroke-width="12"/><rect x="1060" y="170" width="105" height="140" rx="12" fill="${B}" transform="rotate(10 1110 240)"/><circle cx="1112" cy="225" r="22" fill="none" stroke="${D}" stroke-width="7" transform="rotate(10 1110 240)"/><path d="M1085 275h55m-55 20h40" stroke="${D}" stroke-width="7" stroke-linecap="round" transform="rotate(10 1110 240)"/><path d="M890 350l25 25 50-60" fill="none" stroke="${B}" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>`,
   },
+  {
+    slug: 'o-que-fazer-em-goiania-sozinha',
+    label: 'GOIÂNIA SOZINHA',
+    lines: ['Um roteiro para', 'cada humor do dia.'],
+    art: `<rect x="810" y="200" width="330" height="260" rx="24" fill="${W}"/><path d="M810 290l110-0 90-60 130 110" fill="none" stroke="${D}" stroke-width="10" stroke-linejoin="round"/><path d="M850 420q80-120 150-60t110-110" fill="none" stroke="${B}" stroke-width="8" stroke-dasharray="4 18" stroke-linecap="round"/><circle cx="850" cy="420" r="14" fill="${A}"/><path d="M1110 220a28 28 0 0 1 28 28c0 24-28 46-28 46s-28-22-28-46a28 28 0 0 1 28-28z" fill="${A}"/><circle cx="1110" cy="248" r="9" fill="${W}"/>`,
+  },
+  {
+    slug: 'chapada-dos-veadeiros-sozinha-ou-em-grupo',
+    label: 'CHAPADA DOS VEADEIROS',
+    lines: ['Natureza para ir', 'sozinha ou em grupo.'],
+    art: `<path d="M780 440l130-210 90 120 60-80 100 170z" fill="${W}"/><path d="M910 230l-35 55 35-12 25 22z" fill="${D}"/><path d="M1000 350v90" stroke="${A}" stroke-width="22" stroke-linecap="round"/><path d="M980 440q20 20 40 0" fill="none" stroke="${B}" stroke-width="8"/><circle cx="1090" cy="200" r="38" fill="${A}"/><path d="M830 470q120 30 260 0" fill="none" stroke="${B}" stroke-width="10" stroke-linecap="round"/>`,
+  },
+  {
+    slug: 'pesquisa-mulheres-deixam-de-viajar-sozinhas-seguranca',
+    label: 'O QUE A PESQUISA MOSTRA',
+    lines: ['Segurança pesa', 'na hora de viajar.'],
+    art: `<rect x="810" y="170" width="300" height="290" rx="28" fill="${W}"/><rect x="850" y="330" width="40" height="90" rx="8" fill="${D}"/><rect x="920" y="270" width="40" height="150" rx="8" fill="${A}"/><rect x="990" y="220" width="40" height="200" rx="8" fill="${B}"/><path d="M840 430h210" stroke="${B}" stroke-width="8" stroke-linecap="round"/><path d="M1120 150a30 30 0 0 1 30 30c0 26-30 50-30 50s-30-24-30-50a30 30 0 0 1 30-30z" fill="${A}"/><circle cx="1120" cy="180" r="10" fill="${W}"/>`,
+  },
+  {
+    slug: 'roles-em-goiania-para-fazer-amigas',
+    label: 'ROLÊS EM GRUPO',
+    lines: ['Mesmo rolê, mesmas', 'pessoas, de novo.'],
+    art: `<ellipse cx="960" cy="360" rx="130" ry="70" fill="${W}"/><circle cx="840" cy="250" r="34" fill="${A}"/><circle cx="960" cy="210" r="34" fill="${B}"/><circle cx="1080" cy="250" r="34" fill="${A}"/><circle cx="880" cy="450" r="30" fill="${D}"/><circle cx="1040" cy="450" r="30" fill="${D}"/><path d="M1110 150h90v50h-30l-15 20-5-20h-40z" fill="${W}"/><path d="M1125 172h60" stroke="${A}" stroke-width="6" stroke-linecap="round"/>`,
+  },
 ];
 for (const { slug, label, lines, art } of covers) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f4ebe3"/><circle cx="995" cy="315" r="285" fill="#dec0aa"/><text x="70" y="105" font-family="Georgia,serif" font-size="30" fill="#332a25">Viajadoras</text><text x="70" y="235" font-family="Arial,sans-serif" font-size="19" font-weight="bold" letter-spacing="3" fill="#825134">${label}</text>${lines.map((l, i) => `<text x="70" y="${315 + i * 65}" font-family="Georgia,serif" font-size="43" fill="#332a25">${l}</text>`).join('')}<text x="70" y="535" font-family="Arial,sans-serif" font-size="21" fill="#825134">viajadoras.com/blog</text>${art}</svg>`;

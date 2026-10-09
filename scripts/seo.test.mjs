@@ -13,12 +13,16 @@ const newPosts = [
   'roteiro-de-fim-de-semana-sozinha-brasil',
   'como-pedir-ajuda-viajando-sozinha',
   'mala-e-documentos-viagem-mulher-checklist',
+  'o-que-fazer-em-goiania-sozinha',
+  'chapada-dos-veadeiros-sozinha-ou-em-grupo',
+  'pesquisa-mulheres-deixam-de-viajar-sozinhas-seguranca',
+  'roles-em-goiania-para-fazer-amigas',
 ];
 
 test('sitemap preserva só páginas públicas, com canonical único e metadados', async () => {
   const sitemap = await html('sitemap-0.xml');
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  expect(urls.length).toBe(28);
+  expect(urls.length).toBe(32);
   expect(new Set(urls).size).toBe(urls.length);
   expect(urls.some((u) => /convite|404|obrigada/.test(u))).toBe(false);
   for (const url of urls) {
