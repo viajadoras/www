@@ -4,10 +4,21 @@ import { readdir, readFile } from 'node:fs/promises';
 const dist = new URL('../dist/', import.meta.url);
 const html = (path) => readFile(new URL(path, dist), 'utf8');
 
+const newPosts = [
+  'companhia-feminina-para-sair-goiania',
+  'como-achar-companhia-para-viajar-mulher',
+  'como-sair-sozinha-e-conhecer-mulheres',
+  'grupo-de-viagem-para-mulheres-como-montar',
+  'viagens-para-mulheres-brasil-ideias-de-roteiro',
+  'roteiro-de-fim-de-semana-sozinha-brasil',
+  'como-pedir-ajuda-viajando-sozinha',
+  'mala-e-documentos-viagem-mulher-checklist',
+];
+
 test('sitemap preserva só páginas públicas, com canonical único e metadados', async () => {
   const sitemap = await html('sitemap-0.xml');
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  expect(urls.length).toBe(17);
+  expect(urls.length).toBe(28);
   expect(new Set(urls).size).toBe(urls.length);
   expect(urls.some((u) => /convite|404|obrigada/.test(u))).toBe(false);
   for (const url of urls) {
@@ -45,17 +56,19 @@ test('cada artigo tem capa própria, breadcrumb e acesso direto às duas lojas',
     ].map((m) => JSON.parse(m[1]));
     const article = schemas.find((s) => s['@type'] === 'BlogPosting');
     expect(article.datePublished).toBe(
-      [
-        'primeira-viagem-sozinha-mulher',
-        'viagem-a-trabalho-sozinha-dicas',
-      ].includes(folder.name)
-        ? '2026-10-04'
+      newPosts.includes(folder.name)
+        ? '2026-10-09'
         : [
-              'como-dividir-gastos-viagem-entre-amigas',
-              'combinar-passeios-amigas-rotinas-diferentes',
+              'primeira-viagem-sozinha-mulher',
+              'viagem-a-trabalho-sozinha-dicas',
             ].includes(folder.name)
-          ? '2026-09-07'
-          : '2026-09-06',
+          ? '2026-10-04'
+          : [
+                'como-dividir-gastos-viagem-entre-amigas',
+                'combinar-passeios-amigas-rotinas-diferentes',
+              ].includes(folder.name)
+            ? '2026-09-07'
+            : '2026-09-06',
     );
     expect(article.dateModified >= article.datePublished).toBe(true);
     expect(article.image.length).toBe(1);
