@@ -66,7 +66,7 @@ import '../styles/global.css';
 
     <!-- Preconnect to external domains for better performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://plausible.io" />
+    <link rel="preconnect" href="https://us-assets.i.posthog.com" crossorigin />
 
     <Font cssVariable="--face-fraunces" preload />
     <Font cssVariable="--face-manrope" preload />
@@ -108,11 +108,16 @@ import '../styles/global.css';
       gtag('config', 'AW-17592059630');
     </script>
 
-    <!-- Plausible Analytics -->
-    <script is:inline async src="https://plausible.io/js/pa-AneWwDMiqdsQZ1ShDurPK.js"></script>
+    <!-- PostHog: persistence em memória, sem cookies nem armazenamento local -->
     <script is:inline>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init();
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      if (['viajadoras.com', 'www.viajadoras.com'].includes(location.hostname)) {
+        posthog.init('phc_ySR9dHZgiEv7nQ9QHLyqGnmYpjSu9kezRWBu8b5QGhXs', {
+          api_host: 'https://us.i.posthog.com',
+          person_profiles: 'identified_only',
+          persistence: 'memory',
+        });
+      }
     </script>
 
     <!-- Structured Data (Schema.org) -->
@@ -247,10 +252,9 @@ import '../styles/global.css';
 
       declare global {
         interface Window {
-          plausible?: (
-            event: string,
-            options?: { props: Record<string, string> },
-          ) => void;
+          posthog?: {
+            capture: (event: string, properties?: Record<string, string>) => void;
+          };
         }
       }
 
@@ -262,10 +266,10 @@ import '../styles/global.css';
         const click = storeClick(link.href, window.location.pathname, window.location.search);
         if (!click) return;
         void recordStoreClick(click);
-        // Plausible, sem cookies nem dados pessoais. Goal a criar no painel: "Store Click"
-        // (custom props: store, origem). O Google Ads não recebe o evento: não há consentimento.
-        window.plausible?.('Store Click', {
-          props: { store: click.platform === 'ios' ? 'app' : 'play', origem: click.source },
+        // PostHog, sem cookies nem dados pessoais. O Google Ads não recebe o evento: não há consentimento.
+        window.posthog?.capture('store_click', {
+          store: click.platform === 'ios' ? 'app' : 'play',
+          origem: click.source,
         });
       });
 
