@@ -1,4 +1,5 @@
 ---
+import { Font } from 'astro:assets';
 import FAQSchema from '../components/FAQSchema.astro';
 import IconInstagram from '../components/IconInstagram.astro';
 import StructuredData from '../components/StructuredData.astro';
@@ -66,11 +67,9 @@ import '../styles/global.css';
     <!-- Preconnect to external domains for better performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://plausible.io" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <Font cssVariable="--face-fraunces" preload />
+    <Font cssVariable="--face-manrope" preload />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="/logo.png" />
@@ -78,6 +77,7 @@ import '../styles/global.css';
     <link rel="manifest" href="/manifest.json" />
 
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="application/rss+xml" title="Blog Viajadoras" href="/rss.xml" />
     {!noindex && <link rel="alternate" hreflang={lang} href={canonicalUrl} />}
     {!noindex && <link rel="alternate" hreflang="x-default" href={canonicalUrl} />}
     <meta property="og:title" content={pageTitle} />
@@ -163,13 +163,13 @@ import '../styles/global.css';
             <a href="/blog/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Blog</a>
             <a
               href={downloadHref}
-              class="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 lg:inline-flex"
+              class="hidden rounded-full bg-primary-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-800 lg:inline-flex"
             >
               <span>Baixar o app</span>
             </a>
             <a
               href={downloadHref}
-              class="rounded-full bg-primary px-2 py-2 text-sm font-semibold text-white transition hover:bg-primary-600 lg:hidden"
+              class="rounded-full bg-primary-700 px-2 py-2 text-sm font-semibold text-white transition hover:bg-primary-800 lg:hidden"
               aria-label="Baixar o app"
             >
               Baixar
@@ -245,13 +245,28 @@ import '../styles/global.css';
     <script>
       import { recordStoreClick, storeClick } from '../scripts/product-links';
 
+      declare global {
+        interface Window {
+          plausible?: (
+            event: string,
+            options?: { props: Record<string, string> },
+          ) => void;
+        }
+      }
+
       document.addEventListener('click', (event) => {
         if (event.defaultPrevented || !(event.target instanceof Element)) return;
         if (!['viajadoras.com', 'www.viajadoras.com'].includes(window.location.hostname)) return;
         const link = event.target.closest<HTMLAnchorElement>('a[href]');
         if (!link) return;
         const click = storeClick(link.href, window.location.pathname, window.location.search);
-        if (click) void recordStoreClick(click);
+        if (!click) return;
+        void recordStoreClick(click);
+        // Plausible, sem cookies nem dados pessoais. Goal a criar no painel: "Store Click"
+        // (custom props: store, origem). O Google Ads não recebe o evento: não há consentimento.
+        window.plausible?.('Store Click', {
+          props: { store: click.platform === 'ios' ? 'app' : 'play', origem: click.source },
+        });
       });
 
       // Global Scroll Reveal Observer (unified — handles .scroll-reveal + optional data-delay)

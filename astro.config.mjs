@@ -1,6 +1,6 @@
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@tailwindcss/vite';
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 
 // Domínio público do site
 const SITE = 'https://viajadoras.com';
@@ -32,6 +32,28 @@ export default defineConfig({
       },
     }),
   ],
+  // Fontes self-hosted no build (sem pedido a fonts.googleapis.com).
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: 'Fraunces',
+      cssVariable: '--face-fraunces',
+      weights: [500, 600, 700],
+      styles: ['normal'],
+      subsets: ['latin'],
+      fallbacks: ['serif'],
+    },
+    {
+      provider: fontProviders.google(),
+      name: 'Manrope',
+      cssVariable: '--face-manrope',
+      weights: [400, 500, 600, 700],
+      styles: ['normal'],
+      subsets: ['latin'],
+      fallbacks: ['system-ui', 'sans-serif'],
+    },
+  ],
+  build: { inlineStylesheets: 'always' },
   vite: { plugins: [tailwind()] },
   i18n: {
     defaultLocale: 'pt-br',

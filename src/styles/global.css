@@ -97,9 +97,9 @@
   --color-text-main: #171717;
   --color-text-light: #525252;
 
-  --font-display: Fraunces, serif;
-  --font-sans: Manrope, system-ui, sans-serif;
-  --font-body: Manrope, system-ui, sans-serif;
+  --font-display: var(--face-fraunces);
+  --font-sans: var(--face-manrope);
+  --font-body: var(--face-manrope);
 
   --text-display-lg: 5.5rem;
   --text-display-lg--line-height: 1;
@@ -233,12 +233,9 @@
     max-width: 100%;
     height: auto;
   }
-
-  /* Ensure smooth font loading */
 }
 @layer base {
   html {
-    font-display: swap;
     scroll-behavior: smooth;
   }
 }

@@ -1,0 +1,24 @@
+# Viajadoras
+
+> App gratuito só para mulheres, para Android e iPhone. Reúne rolês com data e lugar na cidade (com destaque para Goiânia) e companhia para viajar pelo Brasil. As participantes passam por selfie verificada pela equipe. Nenhuma plataforma garante segurança absoluta.
+
+## Páginas principais
+
+- [Início](https://viajadoras.com/): o que é o app e como baixar
+- [Viajar sozinha sendo mulher](https://viajadoras.com/viajar-sozinha-mulher/)
+- [Viagens para mulheres](https://viajadoras.com/viagens-para-mulheres/)
+- [Companhia para viajar](https://viajadoras.com/companhia-para-viajar/)
+- [Companhia feminina para sair](https://viajadoras.com/companhia-feminina-para-sair/)
+- [Viagem em grupo, mulheres e segurança](https://viajadoras.com/viagem-em-grupo-mulheres-seguranca/)
+- [Sobre a Viajadoras](https://viajadoras.com/sobre/)
+- [Central de ajuda](https://viajadoras.com/ajuda/)
+
+## Blog
+
+- [Blog: guias, checklists e ferramentas](https://viajadoras.com/blog/)
+- [Feed RSS](https://viajadoras.com/rss.xml)
+
+## Legal
+
+- [Termos de uso](https://viajadoras.com/termos/)
+- [Privacidade](https://viajadoras.com/privacidade/)
