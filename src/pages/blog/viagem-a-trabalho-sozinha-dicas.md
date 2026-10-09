@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Viagem a trabalho sozinha: dicas para congresso, evento e tempo livre'
-description: 'Como escolher hospedagem perto do evento, voltar à noite com mais atenção, aproveitar a cidade no tempo livre e achar companhia no destino em viagem a trabalho sozinha.'
+description: 'Viagem a trabalho sozinha: escolha hospedagem perto do evento, volte à noite com atenção, aproveite o tempo livre e ache companhia no destino.'
 category: Viajar sozinha
 date: '2026-10-04'
 updated: '2026-10-04'
@@ -63,7 +63,7 @@ Viagem a trabalho também é viagem. Se sobrar uma manhã ou um fim de tarde:
 - cheque o horário de funcionamento antes de ir, para não perder o deslocamento;
 - guarde uma margem de uma hora antes de compromissos do dia seguinte.
 
-Quem fica um fim de semana a mais ganha tempo para a cidade sem pressa. Se for esse o caso, o roteiro pode seguir o que já vale para quem [viaja sozinha](/viajar-sozinha-mulher).
+Quem fica um fim de semana a mais ganha tempo para a cidade sem pressa. Se for esse o caso, o roteiro pode seguir o que já vale para quem [viaja sozinha](/viajar-sozinha-mulher/).
 
 ## Achar companhia no destino sem depender do evento
 
@@ -73,7 +73,7 @@ Nem toda viagem a trabalho tem colega para jantar. Algumas formas de ter companh
 - **Mulheres da cidade:** pergunte o que fazer e onde ir a quem mora lá. Isso vale mais do que blog de turismo.
 - **Atividades em grupo:** passeio guiado, caminhada ou aula aberta têm horário marcado e um ponto de encontro.
 
-Na Viajadoras você pode pedir dica a mulheres que já estiveram na cidade e ver quem mais está indo para o mesmo destino. O app é só para mulheres, e a equipe verifica a selfie no cadastro. A disponibilidade de companhia depende de quem está no app em cada lugar e data, então vale tratar como um complemento. Mais sobre isso em [companhia para viajar](/companhia-para-viajar). Se você mora em Goiânia, também há rolês na cidade por lá.
+Na Viajadoras você pode pedir dica a mulheres que já estiveram na cidade e ver quem mais está indo para o mesmo destino. O app é só para mulheres, e a equipe verifica a selfie no cadastro. A disponibilidade de companhia depende de quem está no app em cada lugar e data, então vale tratar como um complemento. Mais sobre isso em [companhia para viajar](/companhia-para-viajar/). Se você mora em Goiânia, também há rolês na cidade por lá.
 
 ## Perguntas frequentes
 

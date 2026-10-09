@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Como dividir os gastos de uma viagem entre amigas'
-seoTitle: 'Dividir gastos de viagem entre amigas'
-description: 'Organize despesas de viagem entre amigas: registre quem pagou, escolha quem divide cada gasto e veja os acertos em um caderno com planilha para baixar.'
+seoTitle: 'Como dividir gastos de viagem entre amigas'
+description: 'Veja como dividir gastos de viagem entre amigas: o que é coletivo, quem paga o quê e como fechar as contas sem climão. Caderno de despesas com planilha.'
 category: 'Planejamento de viagem'
 date: '2026-09-07'
 image: '/images/blog/como-dividir-gastos-viagem-entre-amigas.jpg'

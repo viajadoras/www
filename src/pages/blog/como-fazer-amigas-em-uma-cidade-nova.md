@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Como fazer amigas em uma cidade nova: do interesse em comum ao convite'
-description: 'Chegou em uma cidade nova e quer sair com alguém? Um roteiro com rolês recorrentes, perguntas para começar a conversa e um convite simples, sem pressão.'
+description: 'Chegou em uma cidade nova e quer sair com alguém? Roteiro com rolês recorrentes, perguntas para puxar conversa e um convite simples.'
 category: Rolês na cidade
 date: '2026-09-06'
 updated: '2026-09-07'

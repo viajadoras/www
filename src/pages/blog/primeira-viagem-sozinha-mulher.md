@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Primeira viagem sozinha: como se preparar e reduzir a insegurança'
-description: 'Escolha de destino e hospedagem, chegada, transporte, quem avisar e quais canais oficiais guardar para sua primeira viagem sozinha, com dados do Ministério do Turismo.'
+description: 'Primeira viagem sozinha: escolha destino e hospedagem, planeje chegada e transporte, saiba quem avisar e guarde os canais oficiais. Com dados do MTur.'
 category: Viajar sozinha
 date: '2026-10-04'
 updated: '2026-10-04'
@@ -87,7 +87,7 @@ Passa um pouco, e tudo bem. Algumas formas de baixar a tensão:
 - comece com uma viagem de um ou dois dias;
 - escolha um programa em grupo no meio do roteiro, como um passeio guiado ou uma caminhada, para ter companhia sem abrir mão da viagem.
 
-Se, no destino, você quiser companhia para um programa específico, veja como [encontrar companhia para viajar](/companhia-para-viajar). E se quiser a visão geral da proposta, a página sobre [viajar sozinha](/viajar-sozinha-mulher) resume como a Viajadoras entra nisso.
+Se, no destino, você quiser companhia para um programa específico, veja como [encontrar companhia para viajar](/companhia-para-viajar/). E se quiser a visão geral da proposta, a página sobre [viajar sozinha](/viajar-sozinha-mulher/) resume como a Viajadoras entra nisso.
 
 ## Perguntas frequentes
 

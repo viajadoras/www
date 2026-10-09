@@ -17,7 +17,8 @@ interface BaseProps {
 }
 
 const props = Astro.props as BaseProps;
-const pageTitle = props.title ?? 'Viajadoras | Viaje sozinha sem ficar sozinha';
+const pageTitle =
+  props.title ?? 'Viajadoras | Companhia feminina para viajar e sair';
 const pageDescription =
   props.description ??
   'App gratuito só para mulheres: encontre rolês com data e lugar na sua cidade, converse antes e ache companhia para viajar. Selfie verificada pela equipe.';
@@ -27,9 +28,8 @@ const isHomepage = Astro.url.pathname === '/';
 const structuredDataType =
   props.structuredDataType ?? (isHomepage ? 'homepage' : 'page');
 const canonicalBase = Astro.site ?? Astro.url;
-const canonicalUrl = canonicalBase
-  ? new URL(Astro.url.pathname, canonicalBase).toString()
-  : '';
+const canonicalPath = Astro.url.pathname.replace(/\/?$/, '/');
+const canonicalUrl = new URL(canonicalPath, canonicalBase).toString();
 const robotsContent = noindex
   ? 'noindex, nofollow, noarchive'
   : 'index, follow, max-image-preview:large';
@@ -42,6 +42,7 @@ const downloadHref =
 const OG_VERSION = '20251002';
 const ogPath = props.ogImage ?? `/og_1200x630.jpg?v=${OG_VERSION}`;
 const ogImage = new URL(ogPath, canonicalBase).toString();
+const ogImageType = /\.png(\?|$)/.test(ogPath) ? 'image/png' : 'image/jpeg';
 const ogAlt = props.ogImageAlt ?? 'Amigas juntas em um rolê, Viajadoras';
 
 import '../styles/global.css';
@@ -77,6 +78,8 @@ import '../styles/global.css';
     <link rel="manifest" href="/manifest.json" />
 
     <link rel="canonical" href={canonicalUrl} />
+    {!noindex && <link rel="alternate" hreflang={lang} href={canonicalUrl} />}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={canonicalUrl} />}
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content={props.ogType ?? 'website'} />
@@ -85,7 +88,7 @@ import '../styles/global.css';
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:secure_url" content={ogImage} />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content={ogImageType} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={ogAlt} />
@@ -95,7 +98,6 @@ import '../styles/global.css';
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={ogAlt} />
     <meta name="twitter:site" content="@viajadorasbr" />
-    <meta name="twitter:url" content={canonicalUrl} />
 
     <!-- Google tag (gtag.js) - Google Ads -->
     <script is:inline defer src="https://www.googletagmanager.com/gtag/js?id=AW-17592059630"></script>
@@ -119,6 +121,7 @@ import '../styles/global.css';
       title={pageTitle}
       description={pageDescription}
       url={canonicalUrl}
+      path={canonicalPath}
     />
     {isHomepage && <FAQSchema />}
     <slot name="head" />

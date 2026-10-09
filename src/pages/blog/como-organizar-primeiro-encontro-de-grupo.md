@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Como organizar o primeiro encontro de um grupo de mulheres'
-description: 'Um roteiro para definir uma proposta simples, publicar as informações necessárias, confirmar presenças e lidar com mudanças no encontro.'
+description: 'Roteiro para organizar o primeiro encontro de um grupo de mulheres: escolha uma proposta simples, divulgue o essencial e confirme as presenças.'
 category: Rolês na cidade
 date: '2026-09-06'
 updated: '2026-09-07'
-seoTitle: 'Primeiro encontro de um grupo de mulheres'
+seoTitle: 'Como organizar o primeiro encontro de grupo'
 image: '/images/blog/como-organizar-primeiro-encontro-de-grupo.jpg'
 imageAlt: 'Um calendário, um ponto de encontro e os combinados de um grupo.'
 ---
