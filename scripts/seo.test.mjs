@@ -82,7 +82,7 @@ test('cada artigo tem capa própria, breadcrumb e acesso direto às duas lojas',
     );
     expect(page).toContain(`property="og:image" content="${article.image[0]}"`);
   }
-  expect(images.size).toBe(7);
+  expect(images.size).toBe(folders.length);
 });
 
 test('site identifica a empresa oficial sem expor endereço residencial', async () => {
