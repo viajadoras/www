@@ -1,0 +1,89 @@
+---
+import AppStoreBadges from '../components/AppStoreBadges.astro';
+import Base from '../layouts/Base.astro';
+
+const maplibreVersion = '5.24.0';
+const cdn = `https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/${maplibreVersion}`;
+---
+<Base
+  title="Acompanhar localização | Viajadoras"
+  description="Acompanhe a localização que uma amiga compartilhou com você."
+  noindex={true}
+  noTracking={true}
+>
+  <Fragment slot="head">
+    <meta name="referrer" content="no-referrer" />
+    <link
+      rel="stylesheet"
+      href={`${cdn}/maplibre-gl.min.css`}
+      integrity="sha512-KIMsMWIdnoG9OwZa+oaIafmbDonqck1UCmq+/zcUi2aaZ97N9QE6TqpTM+n36EO40HGh64hU/375zxtjx7WTyQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      is:inline
+      defer
+      src={`${cdn}/maplibre-gl.min.js`}
+      integrity="sha512-hoXlvOdSmh58mppUyZHZsscHkR/yXl6zLpTMTNwA6IZ61DpeaCNjosRu1WJ2DeIpkfW5MsJJ9H89zjV4IBGqRw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </Fragment>
+
+  <section class="mx-auto w-full max-w-2xl px-4 py-6 sm:px-6 sm:py-10">
+    <div id="state-loading" role="status" class="rounded-2xl bg-white p-6 text-center shadow-sm">
+      <p class="font-semibold text-neutral-800">Carregando o mapa...</p>
+    </div>
+
+    <div id="state-invalid" hidden class="rounded-2xl bg-white p-6 text-center shadow-sm">
+      <h1 class="font-display text-2xl font-semibold text-neutral-900">Este link não está mais ativo</h1>
+      <p class="mt-3 text-neutral-700">Ele pode ter sido desligado ou ter expirado. Se precisar, peça para ela te mandar um novo.</p>
+    </div>
+
+    <div id="state-error" hidden class="rounded-2xl bg-white p-6 text-center shadow-sm">
+      <h1 id="error-title" class="font-display text-2xl font-semibold text-neutral-900">Não deu para carregar agora</h1>
+      <p id="error-text" class="mt-3 text-neutral-700">Confira sua conexão e tente de novo.</p>
+      <button id="retry" type="button" class="mt-5 min-h-12 rounded-full bg-primary-700 px-8 py-3 font-semibold text-white hover:bg-primary-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Tentar de novo</button>
+    </div>
+
+    <div id="state-content" hidden>
+      <div class="flex items-center gap-2">
+        <span class="rounded-full bg-primary-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary-800">Em teste</span>
+      </div>
+      <h1 id="title" class="mt-3 font-display text-2xl font-semibold leading-tight text-neutral-900 sm:text-3xl"></h1>
+
+      <div class="mt-4 overflow-hidden rounded-2xl border border-primary-100 bg-white shadow-sm">
+        <div id="map" class="h-[55vh] min-h-72 w-full bg-secondary-100" role="img" aria-label="Mapa com o caminho percorrido"></div>
+        <p class="px-3 py-2 text-xs text-neutral-600">
+          Mapa:
+          <a class="underline" href="https://openfreemap.org" target="_blank" rel="noopener noreferrer">OpenFreeMap</a>
+          · © <a class="underline" href="https://openmaptiles.org/" target="_blank" rel="noopener noreferrer">OpenMapTiles</a>
+          · dados © <a class="underline" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">colaboradores do OpenStreetMap</a>
+        </p>
+      </div>
+
+      <div aria-live="polite" class="mt-4 space-y-2">
+        <p id="last-point" class="font-semibold text-neutral-900"></p>
+        <p id="ends-at" class="text-neutral-700"></p>
+        <p id="stale" hidden class="rounded-xl bg-warning-500/15 px-4 py-3 font-medium text-neutral-900"></p>
+        <p id="ended" hidden class="rounded-xl bg-secondary-200 px-4 py-3 font-semibold text-neutral-900">O compartilhamento terminou</p>
+        <p id="offline" hidden class="rounded-xl bg-secondary-200 px-4 py-3 text-neutral-900">Sem conexão agora. Vamos tentar de novo em instantes.</p>
+      </div>
+
+      <section id="checkins-box" hidden class="mt-6">
+        <h2 class="font-display text-xl font-semibold text-neutral-900">Cheguei bem</h2>
+        <ol id="checkins" class="mt-3 space-y-3"></ol>
+      </section>
+    </div>
+
+    <aside class="mt-10 rounded-2xl bg-primary-50 p-5 text-center">
+      <p class="font-display text-xl font-semibold text-neutral-900">Viaja também? Conheça o Viajadoras</p>
+      <p class="mt-2 text-sm text-neutral-700">App gratuito só para mulheres: rolês com data e lugar na sua cidade e companhia para viajar.</p>
+      <AppStoreBadges class="mt-4 flex flex-row flex-wrap items-center justify-center gap-4" imgClass="h-14 w-auto" />
+    </aside>
+  </section>
+</Base>
+
+<script>
+  import '../scripts/acompanhar';
+</script>

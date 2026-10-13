@@ -10,6 +10,7 @@ interface BaseProps {
   description?: string;
   lang?: string;
   noindex?: boolean;
+  noTracking?: boolean;
   structuredDataType?: 'homepage' | 'about' | 'page';
   ogImage?: string;
   ogType?: 'website' | 'article';
@@ -25,6 +26,7 @@ const pageDescription =
   'App gratuito só para mulheres: encontre rolês com data e lugar na sua cidade, converse antes e ache companhia para viajar. Selfie verificada pela equipe.';
 const lang = props.lang ?? 'pt-BR';
 const noindex = props.noindex ?? false;
+const noTracking = props.noTracking ?? false;
 const isHomepage = Astro.url.pathname === '/';
 const structuredDataType =
   props.structuredDataType ?? (isHomepage ? 'homepage' : 'page');
@@ -65,8 +67,12 @@ import '../styles/global.css';
     <meta name="color-scheme" content="light" />
 
     <!-- Preconnect to external domains for better performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://us-assets.i.posthog.com" crossorigin />
+    {!noTracking && (
+      <Fragment>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://us-assets.i.posthog.com" crossorigin />
+      </Fragment>
+    )}
 
     <Font cssVariable="--face-fraunces" preload />
     <Font cssVariable="--face-manrope" preload />
@@ -99,6 +105,8 @@ import '../styles/global.css';
     <meta name="twitter:image:alt" content={ogAlt} />
     <meta name="twitter:site" content="@viajadorasbr" />
 
+    {!noTracking && (
+      <Fragment>
     <!-- Google tag (gtag.js) - Google Ads -->
     <script is:inline defer src="https://www.googletagmanager.com/gtag/js?id=AW-17592059630"></script>
     <script is:inline defer>
@@ -121,6 +129,8 @@ import '../styles/global.css';
         });
       }
     </script>
+      </Fragment>
+    )}
 
     <!-- Structured Data (Schema.org) -->
     <StructuredData
@@ -263,6 +273,7 @@ import '../styles/global.css';
       document.addEventListener('click', (event) => {
         if (event.defaultPrevented || !(event.target instanceof Element)) return;
         if (!['viajadoras.com', 'www.viajadoras.com'].includes(window.location.hostname)) return;
+        if (window.location.pathname.startsWith('/acompanhar')) return;
         const link = event.target.closest<HTMLAnchorElement>('a[href]');
         if (!link) return;
         const click = storeClick(link.href, window.location.pathname, window.location.search);

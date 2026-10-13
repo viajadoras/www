@@ -2,7 +2,7 @@
 import { company, contactEmail } from '../data/site';
 import Base from '../layouts/Base.astro';
 
-const updatedAt = '2 de outubro de 2026';
+const updatedAt = '5 de outubro de 2026';
 const contactHref = `mailto:${contactEmail}`;
 ---
 <Base
@@ -114,6 +114,7 @@ const contactHref = `mailto:${contactEmail}`;
               <h3 class="text-xl font-semibold text-neutral-900">3.4 Localização, notificações e dados técnicos</h3>
               <ul class="mt-4 ml-6 list-disc space-y-2">
                 <li>localização aproximada ou precisa do dispositivo apenas quando você autoriza recursos que dependem disso;</li>
+                <li>no compartilhamento de localização (em teste), que só funciona se você ligar: os pontos do seu trajeto, a precisão de cada ponto, os horários, o nome que você mostra e as mensagens de "Cheguei bem" que você enviar;</li>
                 <li>identificadores de push e notificações para avisos do produto;</li>
                 <li>modelo do dispositivo, sistema operacional, IP, logs de acesso, versão do app e outros dados técnicos necessários para operação e segurança.</li>
               </ul>
@@ -173,6 +174,17 @@ const contactHref = `mailto:${contactEmail}`;
             <li>dados necessários para interação entre usuárias dentro do produto.</li>
           </ul>
           <p class="mt-4">
+            Compartilhamento de localização (em teste): é opcional e só começa
+            quando você liga. Dura no máximo 8 horas e você pode parar a
+            qualquer momento. Quem tiver o link vê sua localização precisa,
+            inclusive onde você está hospedada, até o compartilhamento terminar.
+            O link pode ser desligado por você e deixa de funcionar na hora.
+            Os pontos são apagados 48 horas depois do fim do compartilhamento.
+            Quem acompanha não precisa criar conta e não recebe cookies. O
+            endereço IP dessa pessoa é processado apenas para limitar o número
+            de requisições.
+          </p>
+          <p class="mt-4">
             Imagens de verificação, documentos enviados para análise e dados
             internos de moderação não são exibidos publicamente como parte do
             perfil.
@@ -184,6 +196,7 @@ const contactHref = `mailto:${contactEmail}`;
           <ul class="space-y-2 ml-6 list-disc">
             <li>provedores de infraestrutura, armazenamento, autenticação e envio de notificações necessários para operar o serviço;</li>
             <li>ferramentas de medição e analytics usadas no site e em campanhas;</li>
+            <li>quem receber o link de compartilhamento de localização que você criar, nas condições descritas na seção 5;</li>
             <li>autoridades públicas, quando houver obrigação legal, ordem judicial ou necessidade de defesa de direitos.</li>
           </ul>
           <p class="mt-4">
