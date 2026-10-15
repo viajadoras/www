@@ -1,4 +1,4 @@
-const API = 'https://api.viajadoras.com/api/v1/public/location-shares/';
+const API = 'https://api.viajadoras.com/api/v1/public/location-shares';
 const POLL_MS = 30_000;
 const STALE_MIN = 25;
 const STYLE = 'https://tiles.openfreemap.org/styles/positron';
@@ -59,11 +59,11 @@ type Result =
 async function load(): Promise<Result> {
   if (!token) return { kind: 'invalid' };
   try {
-    const res = await fetch(API + encodeURIComponent(token), {
+    const res = await fetch(API, {
       credentials: 'omit',
       referrerPolicy: 'no-referrer',
       cache: 'no-store',
-      headers: { Accept: 'application/json' },
+      headers: { Accept: 'application/json', 'X-Share-Read-Token': token },
     });
     if (res.status === 404) return { kind: 'invalid' };
     if (res.status === 429) return { kind: 'rate' };
