@@ -2,7 +2,7 @@
 import { company, contactEmail } from '../data/site';
 import Base from '../layouts/Base.astro';
 
-const updatedAt = '2 de outubro de 2026';
+const updatedAt = '15 de outubro de 2026';
 const contactHref = `mailto:${contactEmail}`;
 ---
 <Base
@@ -85,6 +85,19 @@ const contactHref = `mailto:${contactEmail}`;
             para operar a plataforma e não transfere a titularidade do seu
             conteúdo.
           </p>
+          <div class="mt-4 rounded-lg border-l-4 border-neutral-900 bg-white p-4">
+            <p class="mb-2 font-semibold text-neutral-900">Uso da sua foto de perfil dentro do app</p>
+            <p>
+              Ao aceitar estes termos, você autoriza que sua foto de perfil
+              apareça para outras usuárias verificadas dentro do aplicativo,
+              inclusive na descoberta de viajadoras e nos cartões que convidam
+              amigas para a comunidade. A foto não sai do app: não usamos sua
+              imagem em anúncios, redes sociais, site ou mensagens enviadas a
+              pessoas de fora. A selfie de verificação nunca é exibida. Você
+              pode retirar essa autorização a qualquer momento removendo a foto
+              do perfil ou escrevendo para <a class="underline" href={contactHref}>{contactEmail}</a>.
+            </p>
+          </div>
         </section>
 
         <section>
