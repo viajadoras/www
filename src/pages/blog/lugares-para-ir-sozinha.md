@@ -16,7 +16,7 @@ summary:
 
 "Para onde eu vou sozinha?" é uma pergunta mais comum do que parece. Quase todo mundo já ficou com a tarde livre, vontade de sair e nenhuma amiga disponível. A boa notícia: a lista de lugares para ir sozinha é enorme, e a maioria dos programas fica melhor do que você imagina.
 
-Aqui você vai ver ideias organizadas pelo tipo de programa, jeitos de se sentir à vontade, quando vale levar companhia e como o app ajuda a achar rolê com data e lugar. Não vou listar endereço, horário nem preço, porque isso muda de cidade para cidade e de semana para semana. Quando algo depende de confirmação, eu aviso.
+Aqui você vai ver ideias organizadas pelo tipo de programa, uma tabela para comparar tempo, gasto e quanto você interage com os outros, um kit para sair, um modelo de saída de três horas, mensagens prontas para convidar alguém e como o app ajuda a achar rolê com data e lugar. Não vou listar endereço, horário nem preço, porque isso muda de cidade para cidade e de semana para semana. Quando algo depende de confirmação, eu aviso.
 
 ## Como escolher o primeiro programa
 
@@ -27,6 +27,26 @@ Quem está começando costuma acertar com programas que têm três coisas:
 - **Movimento de gente.** Lugar com público ao redor deixa o ambiente mais confortável, principalmente nas primeiras vezes.
 
 Depois você vai aumentando a dose: um jantar, um show, uma viagem curta.
+
+<figure class="story-figure"><img src="/images/blog/lugares-para-ir-sozinha-programas.svg" alt="Quatro cartões com ícones de cinema, quadro de museu, xícara de café sobre livros e uma árvore de parque, cada um com uma linha de começo e fim." width="1200" height="630" loading="lazy"><figcaption>Cinema, museu, café com livro e parque: quatro programas que têm começo e fim combinados.</figcaption></figure>
+
+### Os programas lado a lado
+
+A tabela é uma orientação minha, não preço nem regra. "Gasto" compara um programa com o outro (o valor real depende da cidade), e "tempo" é uma sugestão para a primeira vez.
+
+| Programa | Tempo sugerido | Gasto | Quanto você interage |
+| --- | --- | --- | --- |
+| Cinema | O tempo do filme | Baixo a médio | Quase nada |
+| Museu ou exposição | 1h a 2h | Baixo a médio | Pouco |
+| Parque ou jardim | 1h a 2h | Baixo | Pouco |
+| Café com livro | 1h a 1h30 | Baixo | Pouco |
+| Almoço sozinha | 1h | Médio | Pouco |
+| Livraria ou biblioteca | 1h | Baixo | Pouco |
+| Aula avulsa ou oficina | Duração da aula | Médio | Média a alta |
+| Clube de leitura ou cineclube | Duração do encontro | Baixo a médio | Alta |
+| Corrida, caminhada ou pedal em grupo | Duração do grupo | Baixo | Média |
+| Show ou teatro | Duração do espetáculo | Médio a alto | Pouco |
+| Trilha guiada | Meio dia ou mais | Médio a alto | Média |
 
 ## Programas por tipo
 
@@ -59,6 +79,21 @@ Show e espetáculo são ótimos sozinha, porque a atenção está no palco. Algu
 - **Trilha guiada ou passeio com grupo.** É um jeito de ter companhia sem precisar combinar com ninguém. Para contratar guia, confira se o profissional está no [Cadastur](https://cadastur.turismo.gov.br/), o cadastro oficial do Ministério do Turismo. Segundo o ministério, no caso dos guias o sistema indica que o profissional tem a capacitação, com crachá e certificado oficial ([Ministério do Turismo](https://www.gov.br/turismo/pt-br/assuntos/noticias/cadastur-reforca-seguranca-do-consumidor-na-hora-de-planejar-viagens)).
 - **Trilha longa ou isolada**: não é para começar sozinha. Vá com guia ou com mais gente.
 
+<div class="story-callout story-callout--alert"><strong>Trilha</strong><p>Se o percurso é longo, isolado ou você não conhece o lugar, a regra é guia credenciado ou mais gente. Avise alguém do horário de saída e de volta antes de entrar.</p></div>
+
+## Um modelo de saída de três horas
+
+Para quem nunca fez, um roteiro simples ajuda a não travar na hora. É um modelo, ajuste ao programa que você escolheu.
+
+| Quando | O que fazer |
+| --- | --- |
+| Antes de sair | Escolha o programa, defina a hora de ir embora e como volta. Mande uma linha para alguém: "vou a tal lugar, volto às tantas". |
+| Chegada | Chegue sem pressa, escolha o seu lugar (corredor, balcão, perto da janela) e deixe o celular fora da mesa. |
+| Primeira hora | Fique no programa. Se estiver desconfortável, respire e use a âncora: livro, caderno, fone. |
+| Meio | Se está bom, estique um pouco. Se não, vá embora: é permitido. |
+| Saída | Volte pelo caminho combinado. |
+| Depois | Mande uma foto ou uma frase para uma amiga e anote o que gostou e o que foi estranho. |
+
 ## Como se sentir à vontade
 
 Ninguém está prestando tanta atenção em você quanto você imagina. Mesmo assim, o desconforto existe, e alguns truques ajudam:
@@ -72,15 +107,32 @@ Ninguém está prestando tanta atenção em você quanto você imagina. Mesmo as
 
 Se o seu objetivo, além do programa, é conhecer gente, o guia de [como sair sozinha e conhecer mulheres](/blog/como-sair-sozinha-e-conhecer-mulheres/) mostra como puxar assunto e transformar conversa em convite.
 
+## Kit para sair sozinha
+
+<figure class="story-figure"><img src="/images/blog/lugares-para-ir-sozinha-kit.svg" alt="Bolsa de ombro cercada por um livro, uma garrafa, um celular com bateria e fones de ouvido." width="1200" height="630" loading="lazy"><figcaption>Uma bolsa com o básico: algo para fazer, água, celular carregado e fone.</figcaption></figure>
+
+Salve ou imprima, e confira antes de sair:
+
+<ul class="story-checklist">
+<li>Uma âncora: livro, caderno ou fone de ouvido.</li>
+<li>Celular com bateria cheia e, se possível, carregador portátil.</li>
+<li>Água e um lanche leve.</li>
+<li>Documento, cartão e um pouco de dinheiro em lugares diferentes da bolsa.</li>
+<li>Endereço do lugar e caminho de volta já combinados, principalmente à noite.</li>
+<li>Uma pessoa de confiança avisada de onde você está e de que horas pretende voltar.</li>
+<li>190 e Ligue 180 salvos no celular.</li>
+</ul>
+
 ## Cuidados práticos, sem paranoia
 
 Nada disso é garantia, e ninguém precisa viver desconfiada. Ajuda:
 
 - avisar uma pessoa de confiança onde você vai estar e a que horas pretende voltar;
-- decidir antes como vai chegar e como vai voltar, principalmente à noite;
+- decidir antes como vai chegar e como vai voltar, principalmente à noite. Em carro de aplicativo, o guia do Ministério das Mulheres orienta conferir placa, modelo e identificação do motorista antes de entrar e compartilhar a rota com alguém de confiança;
 - não deixar bolsa e celular sobre a mesa;
+- em bar, restaurante e casa de show, olhar se há informação sobre canais de emergência e medidas contra assédio, e procurar a equipe do local se algo incomodar ([Ministério das Mulheres](https://www.gov.br/mulheres/pt-br/central-de-conteudos/noticias/2026/setembro-defeso-eleitoral/dia-mundial-do-turismo-guia-reune-orientacoes-para-mulheres-que-viajam-sozinhas));
 - sair de qualquer lugar que pareça estranho, sem precisar de justificativa;
-- em emergência, ligar 190. Para orientação sobre violência contra a mulher, o Ligue 180 funciona 24 horas ([Ministério das Mulheres](https://www.gov.br/mulheres/pt-br/ligue180)).
+- em emergência, ligar 190. Para orientação sobre violência contra a mulher, o Ligue 180 funciona 24 horas e também atende pelo WhatsApp, no (61) 9610-0180 ([Ministério das Mulheres](https://www.gov.br/mulheres/pt-br/ligue180)).
 
 Se você está pensando em ir para outra cidade, o texto sobre [como pedir ajuda viajando sozinha](/blog/como-pedir-ajuda-viajando-sozinha/) vale a leitura, e muita coisa serve para a sua própria cidade.
 
@@ -94,6 +146,24 @@ Ir sozinha é ótimo, e ir acompanhada também. Alguns programas pedem alguém:
 - **Dias em que você não está a fim de ficar sozinha com os pensamentos.** Acontece, e não precisa de justificativa.
 
 Companhia não precisa ser amiga antiga. Pode ser alguém que você conheceu numa aula ou num rolê, ou uma mulher que também queria sair e não tinha com quem.
+
+### Mensagens prontas para convidar
+
+Para uma amiga ou conhecida, sem pressão:
+
+> Vou ao [programa] no [dia], às [hora]. Topa ir junto? Se não der, tudo bem, eu vou assim mesmo e te conto depois.
+
+Para alguém que você conheceu numa aula ou num rolê:
+
+> Adorei a aula de hoje! Tem um café aqui perto, quer ir depois da próxima? Sem compromisso, uma horinha.
+
+Para uma mulher que você conheceu no app:
+
+> Oi! Vi que você também vai ao [rolê] no [dia]. Quer a gente se encontrar na entrada, às [hora]? Fica num lugar público e movimentado, e cada uma volta do jeito que preferir.
+
+Para a pessoa de confiança, antes de sair:
+
+> Vou ao [lugar], saio de lá por volta das [hora]. Te mando mensagem quando estiver voltando.
 
 ## Como o Viajadoras ajuda
 
@@ -117,8 +187,11 @@ Escolha um programa pequeno e marque no calendário: cinema numa tarde de dia ú
 
 **Preciso pagar para ter companhia?** Não. No Viajadoras, o uso do app é gratuito para as usuárias.
 
+**Quanto tempo ficar na primeira vez?** Uma hora e meia costuma bastar. Se estiver bom, você estica; se não, vai embora sem culpa.
+
 ## Fontes
 
 - Ministério do Turismo, [Cadastur reforça segurança do consumidor na hora de planejar viagens](https://www.gov.br/turismo/pt-br/assuntos/noticias/cadastur-reforca-seguranca-do-consumidor-na-hora-de-planejar-viagens), 16/03/2026.
+- Ministério das Mulheres, [Guia reúne orientações para mulheres que viajam sozinhas](https://www.gov.br/mulheres/pt-br/central-de-conteudos/noticias/2026/setembro-defeso-eleitoral/dia-mundial-do-turismo-guia-reune-orientacoes-para-mulheres-que-viajam-sozinhas).
 - Ministério das Mulheres, [Ligue 180](https://www.gov.br/mulheres/pt-br/ligue180).
 - Ministério do Turismo, [Cadastur](https://cadastur.turismo.gov.br/).

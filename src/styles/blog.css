@@ -275,7 +275,127 @@
 .tool-copy[hidden] {
   display: none;
 }
+/* Blocos visuais para usar em HTML dentro dos posts em Markdown. */
+.story-copy .story-callout {
+  background: #fbf3ec;
+  border: 1px solid #ecd6c4;
+  border-radius: 0.9rem;
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+.story-copy .story-callout--alert {
+  background: #fdf0f0;
+  border-color: #efc9c9;
+}
+.story-copy .story-callout > strong:first-child {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a4a33;
+  margin-bottom: 0.35rem;
+}
+.story-copy .story-callout--alert > strong:first-child {
+  color: #a63842;
+}
+.story-copy .story-callout :is(p, ul) {
+  margin: 0.4rem 0 0;
+}
+.story-copy .story-cards {
+  display: grid;
+  gap: 1rem;
+  margin: 1.75rem 0;
+  padding: 0;
+  list-style: none;
+}
+.story-copy .story-card {
+  background: #fff;
+  border: 1px solid #e7d8e2;
+  border-radius: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  margin: 0;
+}
+.story-copy .story-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--story-ink);
+  margin: 0 0 0.2rem;
+}
+.story-copy .story-card .story-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--story-accent);
+  background: #f6f1f5;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  margin-bottom: 0.6rem;
+}
+.story-copy .story-card dl {
+  display: grid;
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.story-copy .story-card dt {
+  margin: 0.7rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--story-accent);
+}
+.story-copy .story-card dd {
+  margin: 0.1rem 0 0;
+  padding: 0;
+  color: #404040;
+}
+.story-copy .story-checklist {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+.story-copy .story-checklist li {
+  position: relative;
+  padding-left: 2rem;
+}
+.story-copy .story-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 2px solid #9e4f36;
+  border-radius: 0.3rem;
+}
+.story-copy .story-figure {
+  margin: 2rem 0;
+}
+.story-copy .story-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.9rem;
+}
+.story-copy .story-figure figcaption {
+  font-size: 0.85rem;
+  color: #6b5a64;
+  margin-top: 0.5rem;
+}
+@media (max-width: 599px) {
+  .story-copy table {
+    font-size: 0.8rem;
+  }
+  .story-copy :is(th, td) {
+    min-width: 0;
+    padding: 0.6rem 0.5rem;
+  }
+}
 @media (min-width: 600px) {
+  .story-copy .story-cards {
+    grid-template-columns: 1fr 1fr;
+  }
   .tool-fields {
     grid-template-columns: 1fr 1fr;
   }

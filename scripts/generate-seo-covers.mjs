@@ -105,3 +105,64 @@ for (const { slug, label, lines, art } of covers) {
     .jpeg({ quality: 80, progressive: true, mozjpeg: true })
     .toFile(new URL(`${slug}.jpg`, output).pathname);
 }
+
+const panel = (x, y, w, h) =>
+  `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="32" fill="${W}"/>`;
+const inline = [
+  {
+    name: 'lugares-para-ir-sozinha-programas',
+    art: [0, 1, 2, 3]
+      .map((i) => panel(55 + i * 280, 130, 250, 370))
+      .join('')
+      .concat(
+        // cinema
+        `<rect x="105" y="215" width="150" height="100" rx="12" fill="${B}"/><rect x="117" y="227" width="126" height="76" rx="6" fill="${D}"/><path d="M165 245l34 20-34 20z" fill="${W}"/><path d="M125 350a22 22 0 0 1 44 0v10h-44zm66 0a22 22 0 0 1 44 0v10h-44z" fill="${A}"/>`,
+        // museu
+        `<rect x="395" y="205" width="130" height="110" rx="10" fill="${B}"/><rect x="407" y="217" width="106" height="86" rx="4" fill="${D}"/><circle cx="487" cy="243" r="12" fill="${W}"/><path d="M407 303l40-44 30 28 14-14 22 30z" fill="${A}"/><rect x="545" y="240" width="28" height="36" rx="4" fill="${A}" transform="translate(-60 20)"/><path d="M400 360h120m-100 0v40m80-40v40" stroke="${B}" stroke-width="10" stroke-linecap="round"/>`,
+        // cafe e livro
+        `<path d="M675 290h95v34a47 47 0 0 1-95 0z" fill="${A}"/><path d="M770 300a22 22 0 0 1 0 40" fill="none" stroke="${A}" stroke-width="10" stroke-linecap="round"/><path d="M705 265q10-18 0-34m30 34q10-18 0-34" fill="none" stroke="${D}" stroke-width="8" stroke-linecap="round"/><rect x="660" y="385" width="140" height="20" rx="5" fill="${B}"/><rect x="672" y="365" width="116" height="20" rx="5" fill="${D}"/>`,
+        // parque
+        `<rect x="1008" y="300" width="24" height="90" rx="8" fill="${B}"/><circle cx="1020" cy="270" r="52" fill="${A}"/><circle cx="982" cy="300" r="34" fill="${A}"/><circle cx="1058" cy="300" r="34" fill="${A}"/><path d="M945 410q75 20 150 0" fill="none" stroke="${D}" stroke-width="10" stroke-linecap="round" stroke-dasharray="4 18"/>`,
+        // hora de comecar e de acabar
+        [0, 1, 2, 3]
+          .map(
+            (i) =>
+              `<path d="M${105 + i * 280} 455h150" stroke="${D}" stroke-width="8" stroke-linecap="round"/><circle cx="${105 + i * 280}" cy="455" r="10" fill="${B}"/><circle cx="${255 + i * 280}" cy="455" r="10" fill="${B}"/>`,
+          )
+          .join(''),
+      ),
+  },
+  {
+    name: 'lugares-para-ir-sozinha-kit',
+    art: `<path d="M470 300h260l30 230H440z" fill="${B}"/><path d="M530 300v-30a70 70 0 0 1 140 0v30" fill="none" stroke="${B}" stroke-width="16" stroke-linecap="round"/><path d="M455 380h290" stroke="${D}" stroke-width="10"/><rect x="540" y="400" width="120" height="60" rx="10" fill="${A}"/><circle cx="600" cy="430" r="12" fill="${W}"/><rect x="300" y="190" width="110" height="140" rx="10" fill="${A}" transform="rotate(-10 355 260)"/><path d="M325 215l60-10m-54 36l60-10" stroke="${W}" stroke-width="8" stroke-linecap="round" transform="rotate(-10 355 260)"/><rect x="800" y="180" width="90" height="170" rx="18" fill="${W}" transform="rotate(8 845 265)"/><rect x="812" y="200" width="66" height="120" rx="6" fill="${D}" transform="rotate(8 845 265)"/><rect x="835" y="190" width="20" height="10" rx="3" fill="${B}" transform="rotate(8 845 265)"/><rect x="846" y="330" width="46" height="14" rx="4" fill="${A}" transform="rotate(8 845 265)"/><path d="M930 400a60 60 0 0 1 120 0" fill="none" stroke="${B}" stroke-width="14" stroke-linecap="round"/><rect x="915" y="395" width="30" height="55" rx="12" fill="${A}"/><rect x="1035" y="395" width="30" height="55" rx="12" fill="${A}"/><rect x="1000" y="130" width="46" height="120" rx="14" fill="${D}" transform="rotate(10 1023 190)"/><rect x="1009" y="115" width="28" height="22" rx="6" fill="${A}" transform="rotate(10 1023 190)"/>`,
+  },
+  {
+    name: 'grupos-de-viagem-para-quem-vai-sozinha-antes-de-pagar',
+    art: `${panel(60, 150, 320, 330)}${panel(440, 150, 320, 330)}${panel(820, 150, 320, 330)}<rect x="150" y="205" width="140" height="190" rx="14" fill="${D}"/><path d="M180 250h80m-80 34h80m-80 34h50" stroke="${W}" stroke-width="10" stroke-linecap="round"/><circle cx="270" cy="375" r="34" fill="${A}"/><path d="M254 375l12 12 22-26" fill="none" stroke="${W}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M600 215l80 26v70c0 50-38 82-80 100-42-18-80-50-80-100v-70z" fill="${B}"/><path d="M565 320l26 26 48-56" fill="none" stroke="${W}" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><rect x="870" y="260" width="220" height="140" rx="20" fill="${B}"/><path d="M870 300h220" stroke="${D}" stroke-width="22"/><path d="M900 365h70" stroke="${D}" stroke-width="10" stroke-linecap="round"/><rect x="1030" y="345" width="38" height="30" rx="6" fill="${A}"/><rect x="915" y="195" width="90" height="62" rx="8" fill="${A}"/><path d="M935 215h12m14 0h12m14 0h12m-52 24h12m14 0h12m14 0h12" stroke="${W}" stroke-width="8" stroke-linecap="round"/><path d="M396 315h28m-10-10l10 10-10 10m346-10h28m-10-10l10 10-10 10" fill="none" stroke="${B}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>`,
+  },
+  {
+    name: 'destinos-para-primeira-viagem-sozinha-brasil-mapa',
+    art: `<g transform="translate(-928 -166) scale(1.6)"><path d="M880 170l120-10 60 70-20 90 40 70-70 70-70-30-60 20-50-90 20-100z" fill="${W}" stroke="${D}" stroke-width="5" stroke-linejoin="round"/>${[
+      [960, 415],
+      [880, 412],
+      [885, 350],
+      [1025, 372],
+      [975, 298],
+    ]
+      .map(
+        ([x, y], i) =>
+          `<circle cx="${x}" cy="${y}" r="15" fill="${i % 2 ? B : A}"/><text x="${x}" y="${y + 5.5}" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="${W}">${i + 1}</text>`,
+      )
+      .join(
+        '',
+      )}</g><circle cx="190" cy="170" r="70" fill="${D}"/><path d="M190 75v-25m0 215v25m-115-140h-25m230 0h25" stroke="${A}" stroke-width="10" stroke-linecap="round" transform="translate(0 0)"/><rect x="930" y="320" width="190" height="140" rx="24" fill="${B}"/><path d="M990 320v-22a35 35 0 0 1 35 -35h0a35 35 0 0 1 35 35v22" fill="none" stroke="${B}" stroke-width="12"/><path d="M930 372h190" stroke="${D}" stroke-width="10"/><circle cx="1025" cy="372" r="14" fill="${A}"/>`,
+  },
+  {
+    name: 'destinos-para-primeira-viagem-sozinha-brasil-chegada',
+    art: `<circle cx="260" cy="170" r="64" fill="${A}"/><path d="M260 70v-28m0 256v-28m-100-100h-28m256 0h28m-198-70l-20-20m196 0l20-20" stroke="${A}" stroke-width="10" stroke-linecap="round" transform="translate(0 0)"/><rect x="0" y="470" width="1200" height="160" fill="${D}"/><rect x="100" y="330" width="320" height="130" rx="28" fill="${B}"/><rect x="130" y="355" width="70" height="50" rx="8" fill="${W}"/><rect x="220" y="355" width="70" height="50" rx="8" fill="${W}"/><rect x="310" y="355" width="70" height="50" rx="8" fill="${W}"/><circle cx="175" cy="465" r="30" fill="${D}" stroke="${B}" stroke-width="14"/><circle cx="355" cy="465" r="30" fill="${D}" stroke="${B}" stroke-width="14"/><rect x="760" y="250" width="280" height="220" rx="16" fill="${W}"/><path d="M740 255l160-80 160 80z" fill="${A}"/><rect x="800" y="300" width="60" height="60" rx="8" fill="${D}"/><rect x="940" y="300" width="60" height="60" rx="8" fill="${D}"/><rect x="870" y="370" width="60" height="100" rx="10" fill="${B}"/><circle cx="830" cy="330" r="8" fill="${A}"/><path d="M470 500q130 30 260-10" fill="none" stroke="${B}" stroke-width="9" stroke-linecap="round" stroke-dasharray="4 20"/><path d="M900 120a30 30 0 0 1 30 30c0 26-30 50-30 50s-30-24-30-50a30 30 0 0 1 30-30z" fill="${B}" transform="translate(0 -20)"/><circle cx="900" cy="130" r="10" fill="${W}"/>`,
+  },
+];
+for (const { name, art } of inline) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img"><rect width="1200" height="630" fill="#f4ebe3"/><circle cx="600" cy="315" r="285" fill="#dec0aa" opacity=".45"/>${art}</svg>`;
+  await writeFile(new URL(`${name}.svg`, output), svg);
+}
