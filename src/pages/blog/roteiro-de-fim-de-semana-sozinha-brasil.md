@@ -36,7 +36,7 @@ Pense em logística antes de pensar em foto bonita. Para um fim de semana, a via
 - **Plano B de clima:** chuva muda tudo em cidade de natureza. Tenha uma opção coberta.
 - **Informação oficial:** confirme funcionamento de atrações e horários nos canais do próprio local, porque redes sociais ficam desatualizadas.
 
-Para a primeira viagem completa, vale ler também como [se preparar para a primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/).
+Para a primeira viagem completa, vale ler também como [se preparar para a primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/) e ver [destinos para a primeira viagem sozinha no Brasil](/blog/destinos-para-primeira-viagem-sozinha-brasil/).
 
 ## Um esqueleto de sexta a domingo
 

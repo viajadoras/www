@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Como achar companhia para viajar sendo mulher: 6 passos'
-description: 'Procurando companhia para viajar? Veja como definir o roteiro, escolher o tipo de parceira, conversar antes e testar a convivência com uma viagem curta.'
+description: 'Quer companhia para viajar e não sabe por onde começar? 6 passos para achar uma parceira de viagem com o seu ritmo: onde procurar, o que perguntar e como testar.'
 category: Companhia para viajar
 date: '2026-10-09'
-seoTitle: 'Como achar companhia para viajar sendo mulher'
+seoTitle: 'Como achar uma parceira de viagem: 6 passos'
 image: '/images/blog/como-achar-companhia-para-viajar-mulher.jpg'
 imageAlt: 'Duas amigas lado a lado sob um caminho pontilhado, ilustrando companhia para viajar.'
 ---
@@ -33,7 +33,7 @@ Inclua destino (ou opções), período aproximado, ritmo e tipo de hospedagem. D
 ## 3. Procure em mais de um lugar
 
 - **Amigas e conhecidas:** avise que está procurando. Às vezes a pessoa certa é amiga de uma amiga.
-- **Grupos de interesse:** quem faz trilha, mergulho, fotografia ou gastronomia costuma topar viajar pelo mesmo motivo.
+- **Grupos de interesse:** quem faz trilha, mergulho, fotografia ou gastronomia costuma topar viajar pelo mesmo motivo. Em grupos abertos, vale saber [como avaliar um grupo de viagem antes de pagar](/blog/grupos-de-viagem-para-quem-vai-sozinha/).
 - **Atividades recorrentes na sua cidade:** conviver antes de viajar mostra muito sobre o jeito de cada uma.
 - **Apps para mulheres:** o Viajadoras é gratuito e conecta mulheres que querem viajar pelo Brasil e sair na cidade. As participantes são só mulheres e fazem selfie verificada pela equipe, o que filtra o acesso, mas não substitui o seu cuidado na conversa e na decisão.
 

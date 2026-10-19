@@ -1,5 +1,6 @@
 import { afterEach, expect, test } from 'bun:test';
 import {
+  deviceStoreUrl,
   inviteAppLink,
   recordStoreClick,
   storeClick,
@@ -121,4 +122,14 @@ test('falha de medição é explícita e não propaga para a navegação', async
     'Não foi possível medir o clique na loja.',
     'A medição do clique na loja não foi aceita.',
   ]);
+});
+
+test('baixar abre a loja do aparelho e mantém as opções no computador', () => {
+  const android = 'Mozilla/5.0 (Linux; Android 14; Pixel 8) Mobile';
+  const iphone = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)';
+  const mac = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)';
+  expect(deviceStoreUrl(android)).toContain('play.google.com');
+  expect(deviceStoreUrl(iphone)).toContain('apps.apple.com');
+  expect(deviceStoreUrl(mac, 5)).toContain('apps.apple.com');
+  expect(deviceStoreUrl(mac)).toBeNull();
 });

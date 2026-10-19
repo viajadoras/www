@@ -5,7 +5,7 @@ description: 'Primeira viagem sozinha: escolha destino e hospedagem, planeje che
 category: Viajar sozinha
 date: '2026-10-04'
 updated: '2026-10-04'
-seoTitle: 'Primeira viagem sozinha: dicas para mulheres'
+seoTitle: 'Primeira viagem sozinha: guia passo a passo'
 image: '/images/blog/primeira-viagem-sozinha-mulher.jpg'
 imageAlt: 'Mala e mapa dobrado ao lado de um marcador de destino, ilustrando o preparo de uma primeira viagem sozinha.'
 ---
@@ -23,7 +23,7 @@ Na primeira vez, escolha pela facilidade.
 - **Distância razoável de casa:** se for preciso voltar antes, a volta é simples.
 - **Roteiro com folga:** dois programas por dia e tempo vazio. Cansaço aumenta a insegurança.
 
-Pesquise o destino antes: bairros mais indicados para ficar, como é o deslocamento do aeroporto ou da rodoviária e o que fecha cedo. O guia do Ministério do Turismo recomenda justamente pesquisar o destino, planejar os deslocamentos e verificar as condições da hospedagem ([Ministério das Mulheres](https://www.gov.br/mulheres/pt-br/central-de-conteudos/noticias/2026/setembro-defeso-eleitoral/dia-mundial-do-turismo-guia-reune-orientacoes-para-mulheres-que-viajam-sozinhas)).
+Se ainda não sabe para onde ir, veja [destinos para a primeira viagem sozinha no Brasil](/blog/destinos-para-primeira-viagem-sozinha-brasil/). Pesquise o destino antes: bairros mais indicados para ficar, como é o deslocamento do aeroporto ou da rodoviária e o que fecha cedo. O guia do Ministério do Turismo recomenda justamente pesquisar o destino, planejar os deslocamentos e verificar as condições da hospedagem ([Ministério das Mulheres](https://www.gov.br/mulheres/pt-br/central-de-conteudos/noticias/2026/setembro-defeso-eleitoral/dia-mundial-do-turismo-guia-reune-orientacoes-para-mulheres-que-viajam-sozinhas)).
 
 ## Hospedagem: o que conferir antes de reservar
 

@@ -72,7 +72,7 @@ Se você quer entender como funcionam os rolês, veja [companhia para sair em Go
 
 ## Como escolher por onde começar
 
-Se é a primeira vez que você sai sozinha pela cidade, comece pelo mais simples: um parque no fim da tarde, com movimento, ou um museu de dia. Programas com início e fim claros ajudam, porque você sabe quando vai embora. Depois, vá aumentando a dose: um mercado, uma feira grande, uma mesa para uma pessoa num lugar novo. Não existe ordem certa, e repetir o seu lugar favorito também vale. O importante é que o passeio seja seu, no seu ritmo, e que você possa encerrar quando quiser.
+Se é a primeira vez que você sai sozinha pela cidade, comece pelo mais simples (para ideias que servem em qualquer cidade, veja [lugares para ir sozinha](/blog/lugares-para-ir-sozinha/)): um parque no fim da tarde, com movimento, ou um museu de dia. Programas com início e fim claros ajudam, porque você sabe quando vai embora. Depois, vá aumentando a dose: um mercado, uma feira grande, uma mesa para uma pessoa num lugar novo. Não existe ordem certa, e repetir o seu lugar favorito também vale. O importante é que o passeio seja seu, no seu ritmo, e que você possa encerrar quando quiser.
 
 ## Perguntas rápidas
 

@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Como sair sozinha e conhecer mulheres para fazer amizade'
-description: 'Quer companhia para sair e conhecer mulheres novas? Veja onde ir sozinha, como puxar assunto e como transformar a conversa em um rolê combinado.'
+description: 'Quer sair sozinha e voltar com amigas novas? Lugares que facilitam a conversa, jeitos de puxar assunto sem forçar e como virar o papo em um rolê marcado.'
 category: Rolês na cidade
 date: '2026-10-09'
-seoTitle: 'Como sair sozinha e conhecer mulheres novas'
+seoTitle: 'Como sair sozinha e fazer novas amigas'
 image: '/images/blog/como-sair-sozinha-e-conhecer-mulheres.jpg'
 imageAlt: 'Bússola simples apontando o caminho, ilustrando o primeiro passo para sair sozinha.'
 ---
@@ -17,7 +17,7 @@ Parece contraditório, mas sair sozinha costuma abrir mais portas do que esperar
 
 Quando você está com uma amiga, as duas ficam conversando entre si. Sozinha, você fica mais aberta a trocar uma frase com quem está ao lado. Também não precisa adaptar o horário a ninguém, então sai mais vezes. E repetir o mesmo lugar faz você virar rosto conhecido.
 
-Não precisa ser corajosa o tempo todo. Comece com programas de duas horas.
+Não precisa ser corajosa o tempo todo. Comece com programas de duas horas. Se falta ideia de aonde ir, o guia de [lugares para ir sozinha](/blog/lugares-para-ir-sozinha/) separa programas por tipo.
 
 ## Lugares onde puxar assunto é fácil
 

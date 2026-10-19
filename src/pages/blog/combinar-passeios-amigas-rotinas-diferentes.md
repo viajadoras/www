@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Como combinar passeios quando suas amigas têm rotinas diferentes'
-seoTitle: 'Combinar passeios com amigas ocupadas'
-description: 'Amigas com rotinas diferentes? Monte um convite com lugar, horário e duração que dê para responder rápido, e abra espaço para novas companhias.'
+seoTitle: 'Amigas sem tempo? Como marcar um rolê que acontece'
+description: 'Grupo de amigas que nunca consegue marcar nada? Um convite com data, lugar e duração que dá para responder em segundos, e o que fazer quando ninguém pode.'
 category: Rolês na cidade
 date: '2026-09-07'
 image: '/images/blog/combinar-passeios-amigas-rotinas-diferentes.jpg'

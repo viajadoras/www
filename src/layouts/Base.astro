@@ -180,12 +180,14 @@ import '../styles/global.css';
             <a href="/blog/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Blog</a>
             <a
               href={downloadHref}
+              data-download
               class="hidden rounded-full bg-primary-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-800 lg:inline-flex"
             >
               <span>Baixar o app</span>
             </a>
             <a
               href={downloadHref}
+              data-download
               class="rounded-full bg-primary-700 px-2 py-2 text-sm font-semibold text-white transition hover:bg-primary-800 lg:hidden"
               aria-label="Baixar o app"
             >
@@ -260,7 +262,7 @@ import '../styles/global.css';
       </div>
     </footer>
     <script>
-      import { recordStoreClick, storeClick } from '../scripts/product-links';
+      import { deviceStoreUrl, recordStoreClick, storeClick } from '../scripts/product-links';
 
       declare global {
         interface Window {
@@ -268,6 +270,13 @@ import '../styles/global.css';
             capture: (event: string, properties?: Record<string, string>) => void;
           };
         }
+      }
+
+      const storeUrl = deviceStoreUrl(navigator.userAgent, navigator.maxTouchPoints);
+      if (storeUrl) {
+        document.querySelectorAll<HTMLAnchorElement>('a[data-download]').forEach((link) => {
+          link.href = storeUrl;
+        });
       }
 
       document.addEventListener('click', (event) => {

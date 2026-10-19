@@ -1,3 +1,5 @@
+import { appStoreUrl, playStoreUrl } from '../data/site';
+
 export function inviteAppLink(search: string): string | null {
   const query = new URLSearchParams(search);
   const group = query.get('grupo');
@@ -88,4 +90,16 @@ export async function recordStoreClick(click: {
   } catch {
     console.warn('Não foi possível medir o clique na loja.');
   }
+}
+
+// "Baixar" vai direto à loja do aparelho; em computador continua nas opções da página.
+export function deviceStoreUrl(
+  userAgent: string,
+  maxTouchPoints = 0,
+): string | null {
+  if (/android/i.test(userAgent)) return playStoreUrl;
+  if (/iphone|ipad|ipod/i.test(userAgent)) return appStoreUrl;
+  // iPadOS se apresenta como Mac, mas tem tela de toque.
+  if (/macintosh/i.test(userAgent) && maxTouchPoints > 1) return appStoreUrl;
+  return null;
 }

@@ -79,6 +79,24 @@ const covers = [
     lines: ['Mesmo rolê, mesmas', 'pessoas, de novo.'],
     art: `<ellipse cx="960" cy="360" rx="130" ry="70" fill="${W}"/><circle cx="840" cy="250" r="34" fill="${A}"/><circle cx="960" cy="210" r="34" fill="${B}"/><circle cx="1080" cy="250" r="34" fill="${A}"/><circle cx="880" cy="450" r="30" fill="${D}"/><circle cx="1040" cy="450" r="30" fill="${D}"/><path d="M1110 150h90v50h-30l-15 20-5-20h-40z" fill="${W}"/><path d="M1125 172h60" stroke="${A}" stroke-width="6" stroke-linecap="round"/>`,
   },
+  {
+    slug: 'lugares-para-ir-sozinha',
+    label: 'LUGARES PARA IR SOZINHA',
+    lines: ['Um programa pequeno,', 'só seu.'],
+    art: `<path d="M850 350h250" stroke="${B}" stroke-width="12" stroke-linecap="round"/><path d="M880 350v100m190-100v100" stroke="${B}" stroke-width="12" stroke-linecap="round"/><rect x="890" y="318" width="90" height="32" rx="6" fill="${A}"/><path d="M935 318v32" stroke="${W}" stroke-width="5"/><path d="M1000 290h80v30a40 40 0 0 1-80 0z" fill="${W}"/><path d="M1080 300a22 22 0 0 1 0 38" fill="none" stroke="${W}" stroke-width="10" stroke-linecap="round"/><path d="M1025 270q10-18 0-36m30 36q10-18 0-36" fill="none" stroke="${D}" stroke-width="8" stroke-linecap="round"/><path d="M1130 170a32 32 0 0 1 32 32c0 28-32 54-32 54s-32-26-32-54a32 32 0 0 1 32-32z" fill="${A}"/><circle cx="1130" cy="202" r="11" fill="${W}"/>`,
+  },
+  {
+    slug: 'grupos-de-viagem-para-quem-vai-sozinha',
+    label: 'GRUPOS DE VIAGEM',
+    lines: ['Confira tudo', 'antes de pagar.'],
+    art: `<path d="M810 200h250a30 30 0 0 1 30 30v110a30 30 0 0 1-30 30h-170l-60 50v-50a30 30 0 0 1-30-30V230a30 30 0 0 1 30-30z" fill="${W}"/><rect x="850" y="250" width="170" height="14" rx="7" fill="${D}"/><rect x="850" y="285" width="120" height="14" rx="7" fill="${D}"/><rect x="850" y="320" width="150" height="14" rx="7" fill="${D}"/><circle cx="1090" cy="200" r="52" fill="${A}"/><path d="M1090 172v36" stroke="${W}" stroke-width="12" stroke-linecap="round"/><circle cx="1090" cy="228" r="7" fill="${W}"/><rect x="1020" y="380" width="130" height="90" rx="16" fill="${B}"/><path d="M1020 410h130" stroke="${D}" stroke-width="12"/><path d="M1040 445h40" stroke="${D}" stroke-width="8" stroke-linecap="round"/>`,
+  },
+  {
+    slug: 'destinos-para-primeira-viagem-sozinha-brasil',
+    label: 'PRIMEIRA VIAGEM SOZINHA',
+    lines: ['Um destino fácil', 'para começar.'],
+    art: `<path d="M880 170l120-10 60 70-20 90 40 70-70 70-70-30-60 20-50-90 20-100z" fill="${W}"/><path d="M880 170l120-10 60 70-20 90 40 70-70 70-70-30-60 20-50-90 20-100z" fill="none" stroke="${D}" stroke-width="8" stroke-linejoin="round"/><path d="M850 400l60-60 70 30 50-90 60 20" fill="none" stroke="${B}" stroke-width="8" stroke-dasharray="4 18" stroke-linecap="round"/><circle cx="850" cy="400" r="12" fill="${A}"/><circle cx="910" cy="340" r="12" fill="${A}"/><circle cx="980" cy="370" r="12" fill="${A}"/><circle cx="1030" cy="280" r="12" fill="${A}"/><path d="M1090 160a30 30 0 0 1 30 30c0 26-30 50-30 50s-30-24-30-50a30 30 0 0 1 30-30z" fill="${B}"/><circle cx="1090" cy="190" r="10" fill="${W}"/>`,
+  },
 ];
 for (const { slug, label, lines, art } of covers) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f4ebe3"/><circle cx="995" cy="315" r="285" fill="#dec0aa"/><text x="70" y="105" font-family="Georgia,serif" font-size="30" fill="#332a25">Viajadoras</text><text x="70" y="235" font-family="Arial,sans-serif" font-size="19" font-weight="bold" letter-spacing="3" fill="#825134">${label}</text>${lines.map((l, i) => `<text x="70" y="${315 + i * 65}" font-family="Georgia,serif" font-size="43" fill="#332a25">${l}</text>`).join('')}<text x="70" y="535" font-family="Arial,sans-serif" font-size="21" fill="#825134">viajadoras.com/blog</text>${art}</svg>`;

@@ -75,7 +75,7 @@ Grupos de WhatsApp de viagens são úteis para trocar dica, e também são terre
 - **Mensagens privadas** logo após você entrar no grupo, oferecendo "vaga especial".
 - **Falta de endereço, nome completo e referências reais.**
 
-Boas práticas: confirme a reserva diretamente com o hotel ou a companhia, pague por meios que permitam contestação, prefira fazer reservas em seu nome e converse com mais de uma pessoa antes de depositar qualquer valor. Se algo parecer pressa demais, é um sinal para esperar. Nenhum cuidado elimina todo o risco, mas reduz bastante.
+Boas práticas: confirme a reserva diretamente com o hotel ou a companhia, pague por meios que permitam contestação, prefira fazer reservas em seu nome e converse com mais de uma pessoa antes de depositar qualquer valor. Se algo parecer pressa demais, é um sinal para esperar. Nenhum cuidado elimina todo o risco, mas reduz bastante. Há mais perguntas para fazer antes de pagar em [grupos de viagem para quem vai sozinha](/blog/grupos-de-viagem-para-quem-vai-sozinha/).
 
 ## Como achar pessoas para o grupo
 

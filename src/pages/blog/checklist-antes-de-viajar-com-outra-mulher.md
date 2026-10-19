@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Vai viajar com outra mulher? Um checklist para combinar antes de reservar'
-description: 'Vai viajar com outra mulher? Converse antes sobre orçamento, hospedagem, rotina e desistência, e só reserve depois de alinhar tudo. Checklist pronto.'
+description: 'Vai viajar com uma amiga ou com alguém que conheceu há pouco? Checklist do que combinar antes de reservar: orçamento, quarto, rotina, imprevistos e desistência.'
 category: Companhia para viajar
 date: '2026-09-06'
 updated: '2026-09-07'
-seoTitle: 'Checklist para viajar com outra mulher'
+seoTitle: 'Viajar com uma amiga: checklist antes de reservar'
 image: '/images/blog/checklist-antes-de-viajar-com-outra-mulher.jpg'
 imageAlt: 'Uma lista de combinados antes de viajar: orçamento, hospedagem e autonomia.'
 ---
