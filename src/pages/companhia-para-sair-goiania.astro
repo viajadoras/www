@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import GuideLinks from '../components/GuideLinks.astro';
 
 const title = 'Companhia para sair em Goiânia: rolês só com mulheres';
 const description =
@@ -59,7 +60,7 @@ const sections = [
     p: [
       `O Viajadoras é um aplicativo gratuito, só para mulheres, com selfie verificada pela equipe. Goiânia é onde estamos começando, então é aqui que a ideia de rolê com data e lugar aparece primeiro. Você vê o que está marcado, entra na conversa do grupo antes do dia e chega já conhecendo quem vai. Se não houver nada que te interesse, dá para abrir um grupo e chamar outras mulheres.`,
       `A quantidade de rolês e de pessoas depende de quem está no app em cada momento, e não dá para prometer que sempre haverá algo na data que você quer. O que o app oferece é um espaço com filtro de entrada para as conversas, não uma garantia sobre cada pessoa.`,
-      `Quer ver o panorama completo? A página de <a href="/companhia-feminina-para-sair/" class="text-primary-700 underline underline-offset-4">companhia feminina para sair</a> explica como funcionam os rolês e o próximo passo.`,
+      `O <a href="/blog/amigas-para-sair-goiania/" class="text-primary-700 underline underline-offset-4">guia de amigas para sair em Goiânia</a> traz tipos de rolê, como combinar e cuidados práticos.`,
     ],
   },
   {
@@ -153,6 +154,11 @@ const faqSchema = {
           ))}
         </div>
       </div>
+
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold text-neutral-900">Mais ideias de rolê no blog</h2>
+        <GuideLinks categories={['Rolês na cidade']} class="mt-6" />
+      </section>
 
       <div class="mt-12 rounded-[2rem] border border-neutral-200 bg-white p-8">
         <h2 class="text-2xl font-bold text-neutral-900">{ctaTitle}</h2>

@@ -36,7 +36,7 @@ Nem todo "grupo de viagem" é a mesma coisa. Separar ajuda a saber o que cobrar.
 - **Comunidades ligadas a uma atividade:** trilha, corrida, fotografia, mergulho, yoga. Quem tem o mesmo ritmo costuma ter o mesmo jeito de viajar.
 - **Grupos por destino**, para perguntar a quem foi há pouco tempo. Use para informação, não para fechar pacote.
 - **Apps só para mulheres.** O Viajadoras é gratuito, só tem mulheres e a equipe verifica a selfie no cadastro. Dá para achar companhia para viajar pelo Brasil e conversar antes de combinar. A verificação é uma camada de entrada, não garantia de como será a convivência.
-- **Rolês na cidade antes da viagem.** Conviver um dia mostra muita coisa sobre ritmo e jeito. Veja [companhia feminina para sair](/companhia-feminina-para-sair/).
+- **Rolês na cidade antes da viagem.** Conviver um dia mostra muita coisa sobre ritmo e jeito. Veja [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/).
 
 Para um passo a passo de como definir o que você procura e testar a convivência, o texto [como achar companhia para viajar sendo mulher](/blog/como-achar-companhia-para-viajar-mulher/) detalha seis passos. Também há a página de [grupo para viajar](/grupo-para-viajar/), que explica como a Viajadoras entra nessa busca.
 

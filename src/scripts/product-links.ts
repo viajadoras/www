@@ -55,7 +55,10 @@ export function storeClick(href: string, pathname: string, search = '') {
       '/viajar-sozinha-mulher',
       '/viagens-para-mulheres',
       '/companhia-para-viajar',
-      '/companhia-feminina-para-sair',
+      '/companhia-para-sair-goiania',
+      '/grupo-para-viajar',
+      '/viagem-em-grupo-mulheres-seguranca',
+      '/sobre',
     ]);
     if (
       params.getAll('origem').length === 1 &&

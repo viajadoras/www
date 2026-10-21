@@ -1,15 +1,16 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: 'Companhia feminina para sair em Goiânia: por onde começar'
-description: 'Quer sair e não tem com quem? Tipos de rolê, como combinar e cuidados práticos para achar companhia feminina para sair em Goiânia.'
+title: 'Amigas para sair em Goiânia: onde encontrar e como combinar o rolê'
+description: 'Não tem amigas para sair em Goiânia? Tipos de rolê, onde encontrar outras mulheres que também querem sair, como combinar e cuidados práticos.'
 category: Rolês na cidade
 date: '2026-10-09'
-seoTitle: 'Companhia feminina para sair em Goiânia'
-image: '/images/blog/companhia-feminina-para-sair-goiania.jpg'
+seoTitle: 'Amigas para sair em Goiânia: onde encontrar'
+updated: '2026-10-21'
+image: '/images/blog/amigas-para-sair-goiania.jpg'
 imageAlt: 'Prédios de uma cidade com um marcador de localização, ilustrando rolês em Goiânia.'
 ---
 
-Sabe aquele fim de semana em que você quer sair, tem vontade de ir a algum lugar e ninguém está livre? Acontece com quem acabou de se mudar, com quem as amigas mudaram de rotina e com quem simplesmente quer conhecer gente nova. Procurar companhia feminina para sair é um pedido comum, e dá para resolver sem drama.
+Sabe aquele fim de semana em que você quer sair, tem vontade de ir a algum lugar e ninguém está livre? Acontece com quem acabou de se mudar, com quem as amigas mudaram de rotina e com quem simplesmente quer conhecer gente nova. Não ter amigas para sair é mais comum do que parece, e dá para resolver sem drama.
 
 Este guia é para Goiânia, mas vale para qualquer cidade. A ideia é sair do "a gente combina qualquer dia" e chegar a um rolê com data, lugar e horário.
 
@@ -38,7 +39,7 @@ Convidar alguém que mal conhece dá um friozinho. Algumas formas de deixar leve
 
 Se o primeiro rolê for bom, proponha o próximo na hora, já com data. Se não rolou química, tudo bem: foi um café, não um compromisso.
 
-## Onde encontrar mulheres para sair em Goiânia
+## Onde encontrar amigas para sair em Goiânia
 
 Existem caminhos que funcionam e que não exigem nada além de aparecer:
 
@@ -82,4 +83,4 @@ Quem sai com frequência costuma ter mais vontade de viajar também. Quando isso
 
 ## Quer um lugar para achar esse rolê?
 
-O Viajadoras é gratuito e reúne mulheres que querem sair, com rolês com data e lugar em Goiânia e viagens pelo Brasil. Veja como funciona em [companhia feminina para sair](/companhia-feminina-para-sair/) e baixe o app para achar a sua próxima companhia de café, parque ou show.
+O Viajadoras é gratuito e reúne mulheres que querem sair, com rolês com data e lugar em Goiânia e viagens pelo Brasil. Veja como funciona em [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/) e baixe o app para achar a sua próxima companhia de café, parque ou show.

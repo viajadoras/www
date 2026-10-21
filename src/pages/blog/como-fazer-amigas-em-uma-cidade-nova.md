@@ -58,10 +58,10 @@ Avise se precisar cancelar ou se atrasar. Se a outra pessoa não responder à co
 
 Se o encontro foi agradável, diga o que gostaria de repetir. Por exemplo: “Gostei do passeio. Se você quiser, podemos combinar outra exposição no mês que vem”. Observe se o interesse em manter contato é recíproco.
 
-Para explorar formas de começar, veja o guia de [companhia feminina para sair](/companhia-feminina-para-sair/). Se a ideia virar uma atividade com mais pessoas, use o roteiro para [organizar o primeiro encontro de um grupo](/blog/como-organizar-primeiro-encontro-de-grupo/).
+Para explorar formas de começar, veja o guia de [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/). Se a ideia virar uma atividade com mais pessoas, use o roteiro para [organizar o primeiro encontro de um grupo](/blog/como-organizar-primeiro-encontro-de-grupo/).
 
 Quando os horários não coincidem, veja [como combinar passeios com amigas de rotinas diferentes](/blog/combinar-passeios-amigas-rotinas-diferentes/) e monte um convite para adaptar.
 
 ## Do rolê na cidade à viagem
 
-Quem já tem com quem sair costuma ter mais facilidade para combinar um fim de semana fora. Se a vontade é viajar, veja o guia para [viajar sozinha sendo mulher](/viajar-sozinha-mulher/) e o roteiro da [primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/). Para achar rolês com data e lugar em Goiânia, comece por [companhia feminina para sair](/companhia-feminina-para-sair/).
+Quem já tem com quem sair costuma ter mais facilidade para combinar um fim de semana fora. Se a vontade é viajar, veja o guia para [viajar sozinha sendo mulher](/viajar-sozinha-mulher/) e o roteiro da [primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/). Para achar rolês com data e lugar em Goiânia, comece por [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/).

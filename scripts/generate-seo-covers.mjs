@@ -8,7 +8,7 @@ const W = '#fffaf5',
   A = '#ac7755';
 const covers = [
   {
-    slug: 'companhia-feminina-para-sair-goiania',
+    slug: 'amigas-para-sair-goiania',
     label: 'ROLÊS EM GOIÂNIA',
     lines: ['Sair acompanhada', 'é mais leve.'],
     art: `<path d="M800 440V300h60v-50h70v70h50v-40h60v160z" fill="${W}"/><path d="M820 340h30m-30 40h30m-30 40h30m110-120h30m-30 40h30m-30 40h30m50-20h20m-20 40h20" stroke="${D}" stroke-width="10" stroke-linecap="round"/><path d="M965 180a34 34 0 0 1 34 34c0 28-34 56-34 56s-34-28-34-56a34 34 0 0 1 34-34z" fill="${A}"/><circle cx="965" cy="212" r="11" fill="${W}"/><path d="M780 440h330" stroke="${B}" stroke-width="12" stroke-linecap="round"/>`,
@@ -20,7 +20,7 @@ const covers = [
     art: `<path d="M810 420a190 190 0 0 1 370 0" fill="none" stroke="${D}" stroke-width="12" stroke-dasharray="4 26" stroke-linecap="round"/><circle cx="880" cy="300" r="55" fill="${W}"/><circle cx="1010" cy="300" r="55" fill="${W}"/><circle cx="880" cy="285" r="20" fill="${A}"/><circle cx="1010" cy="285" r="20" fill="${A}"/><path d="M845 335a38 30 0 0 1 70 0m60 0a38 30 0 0 1 70 0" fill="${A}"/><path d="M935 400l-14-14a22 22 0 0 1 31-31l3 3 3-3a22 22 0 0 1 31 31z" fill="${B}" transform="translate(-10 -10)"/>`,
   },
   {
-    slug: 'como-sair-sozinha-e-conhecer-mulheres',
+    slug: 'como-sair-sozinha-e-fazer-amigas',
     label: 'SAIR SOZINHA',
     lines: ['Um primeiro passo,', 'sem pressa.'],
     art: `<circle cx="995" cy="300" r="120" fill="${W}"/><path d="M995 205l24 95-24 95-24-95z" fill="${A}"/><path d="M995 205l24 95h-48z" fill="${B}"/><circle cx="995" cy="300" r="10" fill="${W}"/><circle cx="995" cy="300" r="148" fill="none" stroke="${B}" stroke-width="10"/><path d="M855 450q140 40 280 0" fill="none" stroke="${D}" stroke-width="12" stroke-linecap="round"/><circle cx="1130" cy="190" r="16" fill="${D}"/><circle cx="860" cy="180" r="12" fill="${D}"/>`,

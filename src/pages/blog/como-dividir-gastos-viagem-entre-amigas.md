@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: 'Como dividir os gastos de uma viagem entre amigas'
-seoTitle: 'Dividir gastos de viagem entre amigas: calculadora'
+title: 'Como dividir os gastos de uma viagem entre amigas, com calculadora'
+seoTitle: 'Dividir gastos de viagem: calculadora grátis, sem app'
 description: 'Calculadora grátis para dividir gastos de viagem entre amigas: anote quem pagou, veja quem deve a quem e baixe a planilha. Mais o que combinar antes.'
 category: 'Planejamento de viagem'
 date: '2026-09-07'
@@ -72,4 +72,4 @@ Para preparar o restante da conversa, use o [checklist antes de viajar com outra
 
 No Viajadoras, você pode começar pela conversa e pelos interesses em comum. A organização das despesas deve ser combinada pelas participantes; este roteiro não apresenta uma função de pagamentos do aplicativo.
 
-Se esta será sua primeira viagem sozinha, leia também [como se preparar para a primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/) e as [dicas para viajar a trabalho sozinha](/blog/viagem-a-trabalho-sozinha-dicas/).
+Se esta será sua primeira viagem sozinha, leia também [como se preparar para a primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/) e as [dicas para viajar a trabalho sozinha](/blog/viagem-a-trabalho-sozinha-dicas/). Vai com um grupo maior? Veja [como montar um grupo de viagem só de mulheres](/blog/grupo-de-viagem-para-mulheres-como-montar/), o que perguntar em [grupos de viagem para quem vai sozinha](/blog/grupos-de-viagem-para-quem-vai-sozinha/) e o [checklist de mala e documentos](/blog/mala-e-documentos-viagem-mulher-checklist/).

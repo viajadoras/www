@@ -68,7 +68,7 @@ Para mais passos práticos, o guia sobre [como pedir ajuda viajando sozinha](/bl
 
 Sair sozinha é ótimo, mas às vezes você quer dividir o café ou o show. O Viajadoras é um app gratuito só para mulheres, com perfis passando por selfie verificada pela equipe, e tem rolês com data e lugar em Goiânia. A verificação é um filtro de entrada, não uma garantia de como cada encontro vai ser, então os cuidados acima continuam valendo.
 
-Se você quer entender como funcionam os rolês, veja [companhia para sair em Goiânia](/companhia-para-sair-goiania/) e [companhia feminina para sair](/companhia-feminina-para-sair/). Para montar o convite, o post sobre [companhia feminina para sair em Goiânia](/blog/companhia-feminina-para-sair-goiania/) traz modelos de mensagem. E se a vontade for viajar, [viajar sozinha sendo mulher](/viajar-sozinha-mulher/) é o ponto de partida.
+Se você quer entender como funcionam os rolês, veja [companhia para sair em Goiânia](/companhia-para-sair-goiania/). Para montar o convite, o post sobre [amigas para sair em Goiânia](/blog/amigas-para-sair-goiania/) traz modelos de mensagem. E se a vontade for viajar, [viajar sozinha sendo mulher](/viajar-sozinha-mulher/) é o ponto de partida. Saindo de Goiânia, a [Chapada dos Veadeiros](/blog/chapada-dos-veadeiros-sozinha-ou-em-grupo/) é o destino mais perto para um primeiro fim de semana fora, e o guia de [roteiro de fim de semana sozinha](/blog/roteiro-de-fim-de-semana-sozinha-brasil/) ajuda a montar o seu.
 
 ## Como escolher por onde começar
 

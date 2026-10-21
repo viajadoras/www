@@ -1,9 +1,26 @@
+import { readdirSync, readFileSync } from 'node:fs';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@tailwindcss/vite';
 import { defineConfig, fontProviders } from 'astro/config';
 
 // Domínio público do site
 const SITE = 'https://viajadoras.com';
+
+// lastmod de cada post vem do frontmatter (updated, senão date), para o Google confiar na data.
+const blogDir = new URL('./src/pages/blog/', import.meta.url);
+const postDates = Object.fromEntries(
+  readdirSync(blogDir)
+    .filter((f) => f.endsWith('.md'))
+    .map((f) => {
+      const text = readFileSync(new URL(f, blogDir), 'utf8');
+      const field = (k) =>
+        text.match(new RegExp(`^${k}: '([\\d-]+)'`, 'm'))?.[1];
+      return [
+        `/blog/${f.replace(/\.md$/, '')}/`,
+        field('updated') ?? field('date'),
+      ];
+    }),
+);
 
 export default defineConfig({
   site: SITE,
@@ -16,17 +33,21 @@ export default defineConfig({
       // Datas de alterações editoriais significativas; não atualizar a cada build.
       serialize: (item) => {
         const path = new URL(item.url).pathname;
-        if (
+        if (postDates[path]) {
+          item.lastmod = new Date(`${postDates[path]}T00:00:00-03:00`);
+        } else if (
           path === '/' ||
-          path.startsWith('/blog/') ||
+          path === '/blog/' ||
           [
             '/companhia-para-viajar/',
             '/viagens-para-mulheres/',
-            '/companhia-feminina-para-sair/',
+            '/companhia-para-sair-goiania/',
             '/viajar-sozinha-mulher/',
+            '/grupo-para-viajar/',
+            '/viagem-em-grupo-mulheres-seguranca/',
           ].includes(path)
         ) {
-          item.lastmod = new Date('2026-10-04T00:00:00-03:00');
+          item.lastmod = new Date('2026-10-21T00:00:00-03:00');
         }
         return item;
       },

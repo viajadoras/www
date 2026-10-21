@@ -1,10 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import GuideLinks from '../components/GuideLinks.astro';
 
-const title =
-  'Companhia para viajar: mulheres com o mesmo destino | Viajadoras';
+const title = 'Companhia para viajar: amigas com o mesmo destino | Viajadoras';
 const description =
-  'Procura companhia para viajar? Ache mulheres indo para o mesmo destino e combine antes de reservar. App só para mulheres, selfie verificada pela equipe.';
+  'Procura companhia para viajar? Ache outras viajantes indo para o mesmo destino e combine antes de reservar. App só para mulheres, selfie verificada pela equipe.';
 ---
 
 <Base {title} {description} lang="pt-BR">
@@ -62,6 +62,11 @@ const description =
 
       <p class="mt-10 text-neutral-700">Vai viajar sozinha de qualquer jeito? Veja o <a href="/viajar-sozinha-mulher/" class="text-primary-700 underline underline-offset-4">guia para viajar sozinha</a> e o roteiro de <a href="/blog/primeira-viagem-sozinha-mulher/" class="text-primary-700 underline underline-offset-4">primeira viagem sozinha</a>. Já encontrou uma possível companhia? Use o <a href="/blog/checklist-antes-de-viajar-com-outra-mulher/" class="text-primary-700 underline underline-offset-4">checklist para conversar antes de reservar a viagem</a>.</p>
 
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold text-neutral-900">Guias para planejar a viagem com companhia</h2>
+        <GuideLinks categories={['Companhia para viajar', 'Planejamento de viagem']} class="mt-6" />
+      </section>
+
       <div class="mt-12 rounded-[2rem] border border-neutral-200 bg-white p-8">
         <h2 class="text-2xl font-bold text-neutral-900">
           Encontre grupos e comece pela conversa
@@ -80,7 +85,7 @@ const description =
             Baixar na App Store
           </a>
           <a
-            href="/companhia-feminina-para-sair/"
+            href="/companhia-para-sair-goiania/"
             class="rounded-full border border-neutral-300 px-6 py-3 text-center text-sm font-semibold text-neutral-900 transition hover:bg-neutral-50"
           >
             Começar por um rolê na minha cidade

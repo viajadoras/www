@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import GuideLinks from '../components/GuideLinks.astro';
 const title = 'Viagens para mulheres: sozinha, a dois ou em grupo | Viajadoras';
 const description =
   'Viagens para mulheres: sozinha, com amiga ou em grupo organizado? Compare os formatos e veja o que combinar antes de escolher sua próxima viagem.';
@@ -37,12 +38,16 @@ const description =
       </ol>
       <p class="mt-6 leading-relaxed text-neutral-700">Por exemplo: se você já reservou uma viagem solo, encontrar outra mulher para visitar um museu não exige mudar o resto do roteiro. Se prefere alguém organizando os deslocamentos, avalie uma oferta que descreva esse serviço claramente.</p>
     </section>
+    <section class="mt-12">
+      <h2 class="font-display text-3xl font-semibold">Guias para planejar cada formato</h2>
+      <GuideLinks categories={['Planejamento de viagem', 'Companhia para viajar']} class="mt-6" />
+    </section>
     <aside class="mt-12 rounded-3xl bg-secondary-100 p-7 sm:p-10">
       <h2 class="font-display text-3xl font-semibold">Onde o Viajadoras entra nessa escolha</h2>
       <p class="mt-5 max-w-3xl leading-relaxed text-neutral-700">O Viajadoras é um app gratuito só para mulheres, com selfie verificada pela equipe. Ele não vende pacotes de viagem: ajuda você a achar companhia para viajar, pedir dica a quem já foi e começar por rolês na sua cidade. A disponibilidade de grupos e encontros varia por região.</p>
       <div class="mt-6 flex flex-wrap gap-4">
         <a href="/companhia-para-viajar/" class="rounded-full bg-primary-700 px-6 py-3 font-semibold text-white">Procurar companhia para viajar</a>
-        <a href="/companhia-feminina-para-sair/" class="px-2 py-3 text-primary-700 underline">Começar por rolês na minha cidade</a>
+        <a href="/companhia-para-sair-goiania/" class="px-2 py-3 text-primary-700 underline">Começar por rolês na minha cidade</a>
         <a href="/blog/primeira-viagem-sozinha-mulher/" class="px-2 py-3 text-primary-700 underline">Primeira viagem sozinha</a>
         <a href="/blog/checklist-antes-de-viajar-com-outra-mulher/" class="px-2 py-3 text-primary-700 underline">Checklist antes de reservar</a>
       </div>

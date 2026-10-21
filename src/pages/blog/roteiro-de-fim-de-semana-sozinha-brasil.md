@@ -78,7 +78,7 @@ Viajar sozinha não é sinônimo de ficar isolada. Dá para combinar um passeio 
 
 ## Se der vontade de ter companhia
 
-Fim de semana sozinha e fim de semana acompanhada não são excludentes. Algumas mulheres começam sozinhas e depois levam a experiência para viagens em grupo. Outras preferem ir com alguém para partes do roteiro. No Viajadoras, mulheres de vários lugares, com selfie verificada pela equipe, conversam em grupos por destino e interesse, e o app é gratuito para usuárias. Veja também [viagens para mulheres](/viagens-para-mulheres/) e, se você mora em Goiânia, comece por [um rolê na cidade](/companhia-feminina-para-sair/) antes de planejar a estrada.
+Fim de semana sozinha e fim de semana acompanhada não são excludentes. Algumas mulheres começam sozinhas e depois levam a experiência para viagens em grupo. Outras preferem ir com alguém para partes do roteiro. No Viajadoras, mulheres de vários lugares, com selfie verificada pela equipe, conversam em grupos por destino e interesse, e o app é gratuito para usuárias. Veja também [viagens para mulheres](/viagens-para-mulheres/) e, se você mora em Goiânia, comece por [um rolê na cidade](/companhia-para-sair-goiania/) antes de planejar a estrada.
 
 ## Um último ajuste
 

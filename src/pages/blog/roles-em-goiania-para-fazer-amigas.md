@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: 'Rolês em Goiânia para fazer amigas: ideias e como montar'
-seoTitle: 'Rolês em Goiânia para fazer amigas'
+seoTitle: 'Rolês em Goiânia: ideias para sair e fazer amigas'
 description: 'Ideias de rolês e hobbies em grupo em Goiânia para fazer amigas, e como montar um encontro com data, lugar e horário que as pessoas topem.'
 category: Rolês na cidade
 date: '2026-10-09'
@@ -16,7 +16,7 @@ summary:
 
 Fazer amigas na vida adulta é menos sobre carisma e mais sobre repetição. Quase ninguém vira amiga em um único café. Vira quando se encontra de novo, no mesmo tipo de programa, com um assunto em comum. Por isso o rolê certo costuma ser um que dá para repetir.
 
-Este texto é um catálogo de ideias de rolês em grupo em Goiânia, com apenas locais que eu consegui verificar, e um passo a passo para transformar a ideia em um encontro com data e lugar. Se a sua dúvida é como convidar alguém e o que dizer, o guia de [companhia feminina para sair em Goiânia](/blog/companhia-feminina-para-sair-goiania/) cobre modelos de mensagem. Aqui o foco é o rolê em si.
+Este texto é um catálogo de ideias de rolês em grupo em Goiânia, com apenas locais que eu consegui verificar, e um passo a passo para transformar a ideia em um encontro com data e lugar. Se a sua dúvida é como convidar alguém e o que dizer, o guia de [amigas para sair em Goiânia](/blog/amigas-para-sair-goiania/) cobre modelos de mensagem. Aqui o foco é o rolê em si.
 
 ## Ideias de rolê para fazer amigas
 
@@ -81,7 +81,7 @@ Nenhum cuidado elimina todos os riscos, mas ajudam: avisar alguém de confiança
 
 Se ninguém da sua lista está livre, o Viajadoras é um app gratuito só para mulheres, em que as participantes passam por selfie verificada pela equipe. Tem rolês com data e lugar em Goiânia. A verificação é uma etapa de entrada, não garantia de como cada encontro vai ser.
 
-Veja como funciona em [companhia para sair em Goiânia](/companhia-para-sair-goiania/) e [companhia feminina para sair](/companhia-feminina-para-sair/). Se o rolê virar viagem, [companhia para viajar](/companhia-para-viajar/) é o próximo passo.
+Veja como funciona em [companhia para sair em Goiânia](/companhia-para-sair-goiania/). Se o rolê virar viagem, [companhia para viajar](/companhia-para-viajar/) é o próximo passo, e a [Chapada dos Veadeiros](/blog/chapada-dos-veadeiros-sozinha-ou-em-grupo/) é um bom primeiro destino em grupo saindo de Goiânia.
 
 ## Perguntas rápidas
 

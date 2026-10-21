@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: 'Como achar companhia para viajar sendo mulher: 6 passos'
-description: 'Quer companhia para viajar e não sabe por onde começar? 6 passos para achar uma parceira de viagem com o seu ritmo: onde procurar, o que perguntar e como testar.'
+title: 'Parceira de viagem: como achar uma amiga para viajar em 6 passos'
+description: 'Quer uma amiga para viajar e não sabe por onde começar? 6 passos para achar uma parceira de viagem com o seu ritmo: onde procurar, o que perguntar e como testar.'
 category: Companhia para viajar
 date: '2026-10-09'
 seoTitle: 'Como achar uma parceira de viagem: 6 passos'
@@ -52,7 +52,7 @@ Se alguma resposta incomodar, melhor saber agora.
 
 ## 5. Teste a convivência antes
 
-Antes de uma viagem longa, combine algo curto: um dia de passeio, uma trilha de meio período, um fim de semana na região. Dá para perceber como a outra pessoa lida com atraso, fila, cansaço e dúvida. Em Goiânia, por exemplo, um passeio de um dia perto da cidade já mostra bastante. Para começar por rolês na cidade, veja [companhia feminina para sair](/companhia-feminina-para-sair/).
+Antes de uma viagem longa, combine algo curto: um dia de passeio, uma trilha de meio período, um fim de semana na região. Dá para perceber como a outra pessoa lida com atraso, fila, cansaço e dúvida. Em Goiânia, por exemplo, um passeio de um dia perto da cidade já mostra bastante. Para começar por rolês na cidade, veja [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/).
 
 ## 6. Combine o essencial por escrito
 

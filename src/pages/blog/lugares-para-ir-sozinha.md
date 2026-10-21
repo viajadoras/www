@@ -105,7 +105,7 @@ Ninguém está prestando tanta atenção em você quanto você imagina. Mesmo as
 - **Saia quando quiser.** Ir embora no meio é permitido. Isso só vale como derrota se você tratar assim.
 - **Conte depois.** Mandar uma foto ou uma frase para uma amiga ("fui ao museu, adorei") deixa o programa mais divertido.
 
-Se o seu objetivo, além do programa, é conhecer gente, o guia de [como sair sozinha e conhecer mulheres](/blog/como-sair-sozinha-e-conhecer-mulheres/) mostra como puxar assunto e transformar conversa em convite.
+Se o seu objetivo, além do programa, é conhecer gente, o guia de [como sair sozinha e fazer amigas](/blog/como-sair-sozinha-e-fazer-amigas/) mostra como puxar assunto e transformar conversa em convite.
 
 ## Kit para sair sozinha
 
@@ -171,7 +171,7 @@ O Viajadoras é um app gratuito, só para mulheres, com selfie verificada pela e
 
 A verificação é um filtro de entrada, não garantia de como cada encontro vai ser. Por isso os cuidados acima continuam valendo: primeiro encontro em lugar público e alguém avisado.
 
-Para ver como funciona, veja [companhia feminina para sair](/companhia-feminina-para-sair/). Se você mora em Goiânia, o post [o que fazer em Goiânia sozinha](/blog/o-que-fazer-em-goiania-sozinha/) traz um roteiro por humor do dia, com exemplos de parque, museu, feira e comida.
+Para ver como funciona, veja [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/). Se você mora em Goiânia, o post [o que fazer em Goiânia sozinha](/blog/o-que-fazer-em-goiania-sozinha/) traz um roteiro por humor do dia, com exemplos de parque, museu, feira e comida.
 
 ## Por onde começar esta semana
 

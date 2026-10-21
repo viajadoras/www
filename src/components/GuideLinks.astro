@@ -1,0 +1,35 @@
+---
+import type { MarkdownInstance } from 'astro';
+
+// Lista de guias do blog por categoria, para as landings apontarem para todos os posts do tema.
+interface Props {
+  categories: string[];
+  limit?: number;
+  class?: string;
+}
+interface Article {
+  title: string;
+  description: string;
+  category: string;
+  date: string;
+}
+const { categories, limit, class: className } = Astro.props;
+const posts = Object.values(
+  import.meta.glob<MarkdownInstance<Article>>('../pages/blog/*.md', {
+    eager: true,
+  }),
+)
+  .filter((p) => categories.includes(p.frontmatter.category))
+  .sort(
+    (a, b) =>
+      categories.indexOf(a.frontmatter.category) -
+        categories.indexOf(b.frontmatter.category) ||
+      b.frontmatter.date.localeCompare(a.frontmatter.date),
+  )
+  .slice(0, limit);
+---
+<ul class:list={['space-y-4 leading-relaxed text-neutral-700', className]}>
+  {posts.map(({ frontmatter, url }) => (
+    <li><a href={`${url?.replace(/\/$/, '')}/`} class="font-semibold text-primary-700 underline underline-offset-4">{frontmatter.title}</a>. {frontmatter.description}</li>
+  ))}
+</ul>

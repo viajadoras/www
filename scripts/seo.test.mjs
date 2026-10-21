@@ -5,9 +5,9 @@ const dist = new URL('../dist/', import.meta.url);
 const html = (path) => readFile(new URL(path, dist), 'utf8');
 
 const newPosts = [
-  'companhia-feminina-para-sair-goiania',
+  'amigas-para-sair-goiania',
   'como-achar-companhia-para-viajar-mulher',
-  'como-sair-sozinha-e-conhecer-mulheres',
+  'como-sair-sozinha-e-fazer-amigas',
   'grupo-de-viagem-para-mulheres-como-montar',
   'viagens-para-mulheres-brasil-ideias-de-roteiro',
   'roteiro-de-fim-de-semana-sozinha-brasil',
@@ -27,7 +27,7 @@ const posts1019 = [
 test('sitemap preserva só páginas públicas, com canonical único e metadados', async () => {
   const sitemap = await html('sitemap-0.xml');
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  expect(urls.length).toBe(35);
+  expect(urls.length).toBe(34);
   expect(new Set(urls).size).toBe(urls.length);
   expect(urls.some((u) => /convite|404|obrigada/.test(u))).toBe(false);
   for (const url of urls) {
@@ -36,6 +36,22 @@ test('sitemap preserva só páginas públicas, com canonical único e metadados'
     expect(page).toContain(`rel="canonical" href="${url}"`);
     expect(page).toContain('name="description"');
     expect(page).not.toContain('noindex');
+    // Termos que atraem busca por acompanhante (Search Console, out/2026).
+    expect(page).not.toMatch(
+      /companhia feminina|conhecer mulheres|mulheres (de|para) companhia/i,
+    );
+  }
+  const blogLastmod = [
+    ...sitemap.matchAll(/<loc>[^<]+\/blog\/([^<]+)\/<\/loc><lastmod>([\d-]+)/g),
+  ];
+  expect(blogLastmod.length).toBe(22);
+  for (const [, slug, lastmod] of blogLastmod) {
+    const post = await readFile(
+      new URL(`../src/pages/blog/${slug}.md`, import.meta.url),
+      'utf8',
+    );
+    const updated = post.match(/^updated: '([\d-]+)'/m)?.[1];
+    expect(lastmod).toBe(updated ?? post.match(/^date: '([\d-]+)'/m)[1]);
   }
 });
 
@@ -43,6 +59,14 @@ test('404 e convite ficam fora do índice, sem alterar vínculos do app', async 
   expect(await html('404.html')).toContain('noindex');
   expect(await html('convite/index.html')).toContain('noindex');
   expect(await html('_redirects')).toContain('/obrigada/ / 301');
+  // URLs antigas que já tinham impressões no Google.
+  for (const line of [
+    '/companhia-feminina-para-sair/ /companhia-para-sair-goiania/ 301',
+    '/blog/companhia-feminina-para-sair-goiania/ /blog/amigas-para-sair-goiania/ 301',
+    '/blog/como-sair-sozinha-e-conhecer-mulheres/ /blog/como-sair-sozinha-e-fazer-amigas/ 301',
+  ]) {
+    expect(await html('_redirects')).toContain(line);
+  }
   expect(await html('.well-known/assetlinks.json')).toContain(
     'com.viajadoras.app',
   );

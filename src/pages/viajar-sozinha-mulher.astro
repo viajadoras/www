@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import GuideLinks from '../components/GuideLinks.astro';
 
 const title = 'Viajar sozinha sendo mulher: guia para começar | Viajadoras';
 const description =
@@ -47,11 +48,7 @@ const description =
           <h2 class="text-2xl font-bold text-neutral-900">
             Guias para ler antes de fechar a passagem
           </h2>
-          <ul class="mt-6 space-y-4 leading-relaxed text-neutral-700">
-            <li><a href="/blog/primeira-viagem-sozinha-mulher/" class="font-semibold text-primary-700 underline underline-offset-4">Primeira viagem sozinha: como se preparar e reduzir a insegurança</a>. Destino, hospedagem, chegada, transporte e contatos de emergência.</li>
-            <li><a href="/blog/viagem-a-trabalho-sozinha-dicas/" class="font-semibold text-primary-700 underline underline-offset-4">Viagem a trabalho sozinha</a>. Congresso, evento e o que fazer com o tempo livre na cidade.</li>
-            <li><a href="/blog/checklist-antes-de-viajar-com-outra-mulher/" class="font-semibold text-primary-700 underline underline-offset-4">Checklist para viajar com outra mulher</a>. Para quando você decidir dividir parte do roteiro.</li>
-          </ul>
+          <GuideLinks categories={['Viajar sozinha']} class="mt-6" />
 
           <h2 class="mt-10 text-2xl font-bold text-neutral-900">
             Onde o Viajadoras entra

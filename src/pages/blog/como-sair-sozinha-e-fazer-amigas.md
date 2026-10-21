@@ -1,15 +1,16 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: 'Como sair sozinha e conhecer mulheres para fazer amizade'
+title: 'Como sair sozinha e fazer amigas: lugares e jeitos de puxar assunto'
 description: 'Quer sair sozinha e voltar com amigas novas? Lugares que facilitam a conversa, jeitos de puxar assunto sem forçar e como virar o papo em um rolê marcado.'
 category: Rolês na cidade
 date: '2026-10-09'
 seoTitle: 'Como sair sozinha e fazer novas amigas'
-image: '/images/blog/como-sair-sozinha-e-conhecer-mulheres.jpg'
+updated: '2026-10-21'
+image: '/images/blog/como-sair-sozinha-e-fazer-amigas.jpg'
 imageAlt: 'Bússola simples apontando o caminho, ilustrando o primeiro passo para sair sozinha.'
 ---
 
-Muita gente procura "mulheres companhia" no Google querendo uma coisa bem simples: gente para dividir um café, uma exposição ou um fim de tarde. Amizade, conversa e programa. Se é isso que você procura, uma estratégia que funciona é sair sozinha, de propósito, para lugares onde conhecer gente é natural.
+Às vezes o que falta é bem simples: alguém para dividir um café, uma exposição ou um fim de tarde. Amizade, conversa e programa. Se é isso que você procura, uma estratégia que funciona é sair sozinha, de propósito, para lugares onde conhecer gente é natural.
 
 Parece contraditório, mas sair sozinha costuma abrir mais portas do que esperar alguém ficar livre.
 
@@ -92,6 +93,6 @@ Se você quer algo prático, tente este roteiro, ajustando ao seu tempo:
 
 Não é uma regra, e você pode ir mais devagar. A ideia é transformar a vontade vaga em passos pequenos que cabem na semana.
 
-## Achar mulheres que também querem sair
+## Achar amigas que também querem sair
 
-Se você prefere chegar ao rolê já sabendo que a outra pessoa também quer conhecer gente, o Viajadoras ajuda. O app é gratuito, as participantes são só mulheres e passam por selfie verificada pela equipe, com rolês com data e lugar em Goiânia. Veja o guia de [companhia feminina para sair](/companhia-feminina-para-sair/) e baixe o app para marcar o primeiro café.
+Se você prefere chegar ao rolê já sabendo que a outra pessoa também quer conhecer gente, o Viajadoras ajuda. O app é gratuito, as participantes são só mulheres e passam por selfie verificada pela equipe, com rolês com data e lugar em Goiânia. Veja o guia de [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/) e baixe o app para marcar o primeiro café.

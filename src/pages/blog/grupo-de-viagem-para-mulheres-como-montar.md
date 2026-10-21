@@ -82,7 +82,7 @@ Boas práticas: confirme a reserva diretamente com o hotel ou a companhia, pague
 - **Amigas e amigas de amigas:** é o caminho mais seguro, porque alguém já conhece cada uma.
 - **Atividades em comum:** trilha, corrida e fotografia reúnem pessoas com o mesmo ritmo.
 - **Apps para mulheres:** o Viajadoras é gratuito, tem só mulheres e selfie verificada pela equipe, e permite achar gente para viajar pelo Brasil e para sair em Goiânia. A verificação é uma camada de entrada, não garantia de como será a convivência. Por isso, converse antes.
-- **Rolês na cidade antes da viagem:** conviver um dia mostra muita coisa. Veja [companhia feminina para sair](/companhia-feminina-para-sair/).
+- **Rolês na cidade antes da viagem:** conviver um dia mostra muita coisa. Veja [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/).
 
 ## Faça um teste antes de uma viagem longa
 

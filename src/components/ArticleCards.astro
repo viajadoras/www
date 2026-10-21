@@ -4,7 +4,13 @@ const {
   heading = 'h2',
   limit,
   exclude,
-} = Astro.props as { heading?: 'h2' | 'h3'; limit?: number; exclude?: string };
+  category,
+} = Astro.props as {
+  heading?: 'h2' | 'h3';
+  limit?: number;
+  exclude?: string;
+  category?: string;
+};
 const normalized = (url?: string) => url?.replace(/\/$/, '');
 const Heading = heading;
 const travel = [
@@ -21,18 +27,27 @@ interface Article {
   imageAlt: string;
   tool?: string;
 }
-const posts = Object.values(
+const all = Object.values(
   import.meta.glob<MarkdownInstance<Article>>('../pages/blog/*.md', {
     eager: true,
   }),
-)
+).sort(
+  (a, b) =>
+    Number(travel.includes(b.frontmatter.category)) -
+      Number(travel.includes(a.frontmatter.category)) ||
+    b.frontmatter.date.localeCompare(a.frontmatter.date) ||
+    a.frontmatter.title.localeCompare(b.frontmatter.title),
+);
+// Em um post, mostra os vizinhos da mesma categoria a partir dele, em ciclo,
+// para que cada artigo receba link de outros e não só os mais recentes.
+const start = all.findIndex((p) => normalized(p.url) === normalized(exclude));
+const rotated =
+  start < 0 ? all : [...all.slice(start + 1), ...all.slice(0, start)];
+const posts = [
+  ...rotated.filter((p) => p.frontmatter.category === category),
+  ...rotated.filter((p) => p.frontmatter.category !== category),
+]
   .filter((p) => !exclude || normalized(p.url) !== normalized(exclude))
-  .sort(
-    (a, b) =>
-      Number(travel.includes(b.frontmatter.category)) -
-        Number(travel.includes(a.frontmatter.category)) ||
-      b.frontmatter.date.localeCompare(a.frontmatter.date),
-  )
   .slice(0, limit);
 ---
 <div class:list={["article-grid mt-8 grid gap-6 md:grid-cols-2", limit !== 2 && "lg:grid-cols-3"]}>

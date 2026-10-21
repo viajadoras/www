@@ -1,4 +1,5 @@
 import { afterEach, expect, test } from 'bun:test';
+import { readdirSync } from 'node:fs';
 import {
   deviceStoreUrl,
   inviteAppLink,
@@ -91,6 +92,14 @@ test('preserva a origem pública no caminho até a home sem coletar parâmetros 
     platform: 'ios',
     source: '/blog/como-fazer-amigas-em-uma-cidade-nova',
   });
+  // Toda landing pública precisa estar na lista, senão o clique vira "/".
+  const landings = readdirSync(new URL('../src/pages/', import.meta.url))
+    .filter((f) => f.endsWith('.astro'))
+    .map((f) => `/${f.replace('.astro', '')}`)
+    .filter((p) => !['/index', '/404', '/convite', '/acompanhar'].includes(p));
+  for (const page of landings) {
+    expect(storeClick(href, '/', `?origem=${page}/`)?.source).toBe(page);
+  }
   expect(storeClick(href, '/blog/artigo/', '?origem=/ajuda')).toEqual({
     platform: 'ios',
     source: '/blog/artigo',
