@@ -38,7 +38,7 @@ Nem todo "grupo de viagem" é a mesma coisa. Separar ajuda a saber o que cobrar.
 - **Apps só para mulheres.** O Viajadoras é gratuito, só tem mulheres e a equipe verifica a selfie no cadastro. Dá para achar companhia para viajar pelo Brasil e conversar antes de combinar. A verificação é uma camada de entrada, não garantia de como será a convivência.
 - **Rolês na cidade antes da viagem.** Conviver um dia mostra muita coisa sobre ritmo e jeito. Veja [rolês com outras mulheres em Goiânia](/companhia-para-sair-goiania/).
 
-Para um passo a passo de como definir o que você procura e testar a convivência, o texto [como achar companhia para viajar sendo mulher](/blog/como-achar-companhia-para-viajar-mulher/) detalha seis passos. Também há a página de [grupo para viajar](/grupo-para-viajar/), que explica como a Viajadoras entra nessa busca.
+Para um passo a passo de como definir o que você procura e testar a convivência, o texto [como achar companhia para viajar sendo mulher](/blog/como-achar-companhia-para-viajar-mulher/) detalha seis passos. Também há a página de [grupo para viajar](/grupo-para-viajar/), que explica como o Viajadoras entra nessa busca.
 
 ## Sinais de alerta em grupos abertos
 
@@ -130,7 +130,7 @@ Para propor um dia de teste a alguém que você acabou de conhecer:
 
 > Que tal a gente fazer um rolê de um dia antes de fechar a viagem? Pode ser um parque, um café e uma caminhada. Assim a gente vê se o ritmo combina, e cada uma decide com calma.
 
-Se o seu interesse é segurança em grupo, a página [viagem em grupo, mulheres e segurança](/viagem-em-grupo-mulheres-seguranca/) explica como a Viajadoras pensa o assunto, sem promessa de garantia.
+Se o seu interesse é segurança em grupo, a página [viagem em grupo, mulheres e segurança](/viagem-em-grupo-mulheres-seguranca/) explica como o Viajadoras pensa o assunto, sem promessa de garantia.
 
 ## E se for um grupo de mulheres?
 

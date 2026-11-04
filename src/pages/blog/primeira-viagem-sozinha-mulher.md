@@ -77,7 +77,7 @@ Se algo acontecer, você também pode procurar a equipe do local, da hospedagem 
 
 Blog e roteiro pronto ajudam, mas nada substitui a resposta de uma mulher que esteve no lugar há pouco tempo. Pergunte o que você realmente quer saber: qual bairro ela escolheria, se voltaria a pé do centro à noite, qual transporte funcionou, onde comer sozinha sem se sentir exposta.
 
-Na Viajadoras você pode pedir dica a mulheres que já foram ao seu destino. O app é só para mulheres, e a equipe verifica a selfie no cadastro. Com gente nova, vale o bom senso de sempre: primeiro encontro em lugar público e alguém avisado.
+No Viajadoras você pode pedir dica a mulheres que já foram ao seu destino. O app é só para mulheres, e a equipe verifica a selfie no cadastro. Com gente nova, vale o bom senso de sempre: primeiro encontro em lugar público e alguém avisado.
 
 ## E se o frio na barriga não passar?
 
@@ -87,7 +87,7 @@ Passa um pouco, e tudo bem. Algumas formas de baixar a tensão:
 - comece com uma viagem de um ou dois dias;
 - escolha um programa em grupo no meio do roteiro, como um passeio guiado ou uma caminhada, para ter companhia sem abrir mão da viagem.
 
-Se, no destino, você quiser companhia para um programa específico, veja como [encontrar companhia para viajar](/companhia-para-viajar/). E se quiser a visão geral da proposta, a página sobre [viajar sozinha](/viajar-sozinha-mulher/) resume como a Viajadoras entra nisso.
+Se, no destino, você quiser companhia para um programa específico, veja como [encontrar companhia para viajar](/companhia-para-viajar/). E se quiser a visão geral da proposta, a página sobre [viajar sozinha](/viajar-sozinha-mulher/) resume como o Viajadoras entra nisso.
 
 ## Perguntas frequentes
 

@@ -5,7 +5,7 @@ export type SiteFaq = {
 
 export const siteFaqs: SiteFaq[] = [
   {
-    question: 'O que é a Viajadoras?',
+    question: 'O que é o Viajadoras?',
     answer:
       'Um app gratuito só para mulheres que gostam de viajar. Você pede dica para quem já foi, acha companhia no destino e encontra rolês com data e lugar na sua cidade.',
   },
@@ -22,7 +22,7 @@ export const siteFaqs: SiteFaq[] = [
   {
     question: 'É um app de namoro?',
     answer:
-      'Não. A Viajadoras é uma comunidade de amizade e viagem só entre mulheres. Ninguém procura par: as conversas giram em torno de destinos, dicas e rolês com data e lugar.',
+      'Não. O Viajadoras é uma comunidade de amizade e viagem só entre mulheres. Ninguém procura par: as conversas giram em torno de destinos, dicas e rolês com data e lugar.',
   },
   {
     question: 'Preciso ter uma viagem marcada para usar?',
@@ -32,7 +32,7 @@ export const siteFaqs: SiteFaq[] = [
   {
     question: 'Tem rolê na minha cidade?',
     answer:
-      'Estamos começando por Goiânia, onde a Viajadoras prepara o primeiro encontro presencial. Em outras cidades, você pode criar o primeiro rolê e chamar suas amigas para o app.',
+      'Estamos começando por Goiânia, onde o Viajadoras prepara o primeiro encontro presencial. Em outras cidades, você pode criar o primeiro rolê e chamar suas amigas para o app.',
   },
   {
     question: 'É gratuito?',

@@ -73,7 +73,7 @@ Nem toda viagem a trabalho tem colega para jantar. Algumas formas de ter companh
 - **Mulheres da cidade:** pergunte o que fazer e onde ir a quem mora lá. Isso vale mais do que blog de turismo.
 - **Atividades em grupo:** passeio guiado, caminhada ou aula aberta têm horário marcado e um ponto de encontro.
 
-Na Viajadoras você pode pedir dica a mulheres que já estiveram na cidade e ver quem mais está indo para o mesmo destino. O app é só para mulheres, e a equipe verifica a selfie no cadastro. A disponibilidade de companhia depende de quem está no app em cada lugar e data, então vale tratar como um complemento. Mais sobre isso em [companhia para viajar](/companhia-para-viajar/). Se você mora em Goiânia, também há rolês na cidade por lá.
+No Viajadoras você pode pedir dica a mulheres que já estiveram na cidade e ver quem mais está indo para o mesmo destino. O app é só para mulheres, e a equipe verifica a selfie no cadastro. A disponibilidade de companhia depende de quem está no app em cada lugar e data, então vale tratar como um complemento. Mais sobre isso em [companhia para viajar](/companhia-para-viajar/). Se você mora em Goiânia, também há rolês na cidade por lá.
 
 ## Perguntas frequentes
 
