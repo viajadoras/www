@@ -288,10 +288,22 @@ import '../styles/global.css';
         const click = storeClick(link.href, window.location.pathname, window.location.search);
         if (!click) return;
         void recordStoreClick(click);
+        // Onde estava o botão: dobra inicial, meio ou fim da página (sem marcar cada CTA à mão).
+        const top = link.getBoundingClientRect().top + window.scrollY;
+        const posicao = link.closest('header')
+          ? 'cabecalho'
+          : link.closest('footer')
+            ? 'rodape'
+            : top < window.innerHeight
+              ? 'topo'
+              : top < document.documentElement.scrollHeight * 0.66
+                ? 'meio'
+                : 'fim';
         // PostHog, sem cookies nem dados pessoais. O Google Ads não recebe o evento: não há consentimento.
         window.posthog?.capture('store_click', {
           store: click.platform === 'ios' ? 'app' : 'play',
           origem: click.source,
+          posicao,
         });
       });
 
