@@ -2,7 +2,7 @@
 import { company, contactEmail } from '../data/site';
 import Base from '../layouts/Base.astro';
 
-const updatedAt = '15 de outubro de 2026';
+const updatedAt = '4 de novembro de 2026';
 const contactHref = `mailto:${contactEmail}`;
 ---
 <Base
@@ -121,7 +121,17 @@ const contactHref = `mailto:${contactEmail}`;
             </div>
 
             <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-              <h3 class="text-xl font-semibold text-neutral-900">3.5 Dados coletados no site</h3>
+              <h3 class="text-xl font-semibold text-neutral-900">3.5 Questionários no app</h3>
+              <p class="mt-4">
+                De vez em quando a equipe envia, por notificação, perguntas sobre o app e sobre suas viagens e passeios.
+                Responder é opcional, e dá para pular qualquer pergunta. As respostas ficam ligadas à sua conta, junto com
+                quando você recebeu, abriu e respondeu, e só a equipe da Viajadoras vê. Usamos para entender o que melhorar no produto.
+                Elas não aparecem no seu perfil e são apagadas quando você exclui a conta.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-neutral-900">3.6 Dados coletados no site</h3>
               <ul class="mt-4 ml-6 list-disc space-y-2">
                 <li>métricas agregadas de navegação e origem de tráfego;</li>
                 <li>dados de medição e campanha coletados por ferramentas como PostHog.</li>
