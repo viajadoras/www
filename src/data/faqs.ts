@@ -20,6 +20,11 @@ export const siteFaqs: SiteFaq[] = [
       'A comunidade é só de mulheres maiores de 18 anos, e cada selfie de entrada é analisada pela equipe. No app você bloqueia e denuncia, e a moderação analisa cada denúncia. Nenhum app elimina todo risco: no primeiro encontro, prefira lugares públicos e avise alguém.',
   },
   {
+    question: 'É um app de namoro?',
+    answer:
+      'Não. A Viajadoras é uma comunidade de amizade e viagem só entre mulheres. Ninguém procura par: as conversas giram em torno de destinos, dicas e rolês com data e lugar.',
+  },
+  {
     question: 'Preciso ter uma viagem marcada para usar?',
     answer:
       'Não. Dá para pedir dicas antes de decidir, e os rolês da cidade, como um café, uma trilha ou um show, mantêm a turma junta até a próxima viagem.',

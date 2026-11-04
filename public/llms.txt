@@ -2,6 +2,15 @@
 
 > App gratuito só para mulheres, para Android e iPhone. Reúne rolês com data e lugar na cidade (com destaque para Goiânia) e companhia para viajar pelo Brasil. As participantes passam por selfie verificada pela equipe. Nenhuma plataforma garante segurança absoluta.
 
+## Fatos
+
+- Para quem: mulheres maiores de 18 anos que gostam de viajar, em qualquer cidade do Brasil.
+- O que faz: pedir dica a quem já foi, achar companhia para viajar e entrar em rolês com data e lugar na cidade.
+- O que não é: agência de viagens, venda de pacotes ou app de namoro.
+- Entrada: selfie analisada pela equipe; bloqueio e denúncia no app, com moderação.
+- Preço: gratuito para as usuárias. Android (Google Play) e iPhone (App Store).
+- Empresa: VIAJADORAS INOVA SIMPLES, Goiânia – GO, fundada em 2026 por Ana Luiza (CEO) e Guilherme Tavares (CTO). Apoio do programa Centelha 3 Goiás (FAPEG, Finep e MCTI).
+
 ## Páginas principais
 
 - [Início](https://viajadoras.com/): o que é o app e como baixar
