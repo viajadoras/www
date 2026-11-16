@@ -35,11 +35,10 @@ export default defineConfig({
         const path = new URL(item.url).pathname;
         if (postDates[path]) {
           item.lastmod = new Date(`${postDates[path]}T00:00:00-03:00`);
+        } else if (['/', '/blog/', '/companhia-para-viajar/'].includes(path)) {
+          item.lastmod = new Date('2026-11-16T00:00:00-03:00');
         } else if (
-          path === '/' ||
-          path === '/blog/' ||
           [
-            '/companhia-para-viajar/',
             '/viagens-para-mulheres/',
             '/companhia-para-sair-goiania/',
             '/viajar-sozinha-mulher/',

@@ -1,6 +1,6 @@
 # Viajadoras
 
-> App gratuito só para mulheres, para Android e iPhone. Reúne rolês com data e lugar na cidade (com destaque para Goiânia) e companhia para viajar pelo Brasil. As participantes passam por selfie verificada pela equipe. Nenhuma plataforma garante segurança absoluta.
+> App gratuito de amizade e viagens só para mulheres, para Android e iPhone. Reúne companhia para viajar pelo Brasil, grupos para trocar dicas e rolês com data e lugar, com destaque para Goiânia. A entrada passa por selfie verificada pela equipe.
 
 ## Fatos
 
@@ -17,6 +17,7 @@
 - [Viajar sozinha sendo mulher](https://viajadoras.com/viajar-sozinha-mulher/)
 - [Viagens para mulheres](https://viajadoras.com/viagens-para-mulheres/)
 - [Companhia para viajar](https://viajadoras.com/companhia-para-viajar/)
+- [Conhecer outras viajadoras no destino](https://viajadoras.com/blog/como-conhecer-viajantes-no-destino/): companhia só para parte do roteiro, sem precisar viajar juntas desde a saída
 - [Rolês com outras mulheres em Goiânia](https://viajadoras.com/companhia-para-sair-goiania/)
 - [Grupo para viajar](https://viajadoras.com/grupo-para-viajar/)
 - [Viagem em grupo, mulheres e segurança](https://viajadoras.com/viagem-em-grupo-mulheres-seguranca/)

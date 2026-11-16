@@ -4,6 +4,7 @@ title: 'Parceira de viagem: como achar uma amiga para viajar em 6 passos'
 description: 'Quer uma amiga para viajar e não sabe por onde começar? 6 passos para achar uma parceira de viagem com o seu ritmo: onde procurar, o que perguntar e como testar.'
 category: Companhia para viajar
 date: '2026-10-09'
+updated: '2026-11-16'
 seoTitle: 'Como achar uma parceira de viagem: 6 passos'
 image: '/images/blog/como-achar-companhia-para-viajar-mulher.jpg'
 imageAlt: 'Duas amigas lado a lado sob um caminho pontilhado, ilustrando companhia para viajar.'
@@ -93,3 +94,5 @@ Ninguém é perfeita e conflito pequeno faz parte. O que importa é como a pesso
 ## Pronta para achar sua companhia?
 
 O Viajadoras é um app gratuito para mulheres que querem viajar e sair em boa companhia. Veja como funciona em [companhia para viajar](/companhia-para-viajar/) e baixe o app para conversar com outras mulheres antes de fechar o roteiro.
+
+Já tem passagem e prefere manter sua viagem independente? Veja [como conhecer outras viajadoras no destino](/blog/como-conhecer-viajantes-no-destino/) e combinar companhia só para um café ou passeio.

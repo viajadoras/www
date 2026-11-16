@@ -5,7 +5,7 @@ seoTitle: 'O que fazer em Goiânia sozinha'
 description: 'O que fazer em Goiânia sozinha? Roteiro por perfil, com parques, museus, mercados e comida goiana, dicas de cuidado e como achar companhia.'
 category: Rolês na cidade
 date: '2026-10-09'
-updated: '2026-10-09'
+updated: '2026-11-16'
 image: '/images/blog/o-que-fazer-em-goiania-sozinha.jpg'
 imageAlt: 'Mapa de rota com marcadores de parque, museu e mercado, ilustrando um roteiro em Goiânia.'
 summary:
@@ -14,15 +14,15 @@ summary:
   - 'Sozinha por escolha ou à procura de companhia, os dois dão certo.'
 ---
 
-Goiânia é uma cidade fácil de curtir sozinha, mas as buscas costumam devolver listas genéricas, escritas para qualquer pessoa. Aqui o recorte é outro: ideias para quem vai sozinha, organizadas pelo que você está a fim de fazer, com avisos honestos sobre o que vale conferir antes de sair de casa.
+Para sair sozinha em Goiânia, você pode começar por uma caminhada no parque, uma visita ao museu ou um café. Escolha uma região e um programa que caibam no seu tempo, já com a volta pensada. Abaixo, as ideias estão separadas por tipo de passeio.
 
-Um combinado: horário, preço e programação mudam com frequência. Quando eu não consegui confirmar um dado em fonte oficial, eu digo como conferir em vez de chutar.
+Quer dividir um desses passeios com outras mulheres? Veja [como procurar companhia para sair em Goiânia no Viajadoras](/companhia-para-sair-goiania/). Você também pode manter o passeio por sua conta e começar pela opção que mais combina com o seu dia. Confirme horários e programação nos canais de cada lugar antes de ir.
 
 ## Se você está com vontade de cultura
 
-**Centro Cultural Oscar Niemeyer.** É um espaço público ligado à Secretaria Estadual de Cultura de Goiás, com uma esplanada de 26 mil m² que recebe exposições, apresentações e atividades de lazer. A página oficial de turismo de Goiás indica entrada franca, mas não informa horário. O endereço é Av. Dep. Jamel Cecílio, km 1. Veja a programação e os horários nos canais do próprio centro antes de ir ([Turismo em Goiás](https://www.goiasturismo.go.gov.br/pt/atracoes/goiania/centro-cultural-oscar-niemeyer)).
+**Centro Cultural Oscar Niemeyer.** O complexo reúne espaços de exposições e apresentações. Escolha a atividade antes de sair e confira data, ingresso e horário no canal do evento; a programação de um espaço não vale automaticamente para os demais. O [cadastro no Mapa Goiano](https://mapagoiano.cultura.go.gov.br/espaco/729/) reúne informações do centro.
 
-**Museu Goiano Zoroastro Artiaga.** Fica na Praça Cívica, no Setor Central. O portal oficial de museus lista visitação de segunda a sexta, das 8h às 17h ([Visite Museus](https://visite.museus.gov.br/instituicoes/museu-goiano-zoroastro-artiaga/)). O governo de Goiás divulgou a reabertura do prédio, um marco art déco, após restauração ([Governo de Goiás](https://goias.gov.br/cultura/museu-goiano-zoroastro-artiaga-e-reinaugurado-apos-restauracao-e-abre-novo-ciclo-cultural-em-goiania/)). Museu muda horário em feriado, então confirme.
+**Museu Goiano Zoroastro Artiaga.** Fica na Praça Cívica, no Centro. Na consulta de 16/11/2026, a [Secretaria de Cultura de Goiás](https://goias.gov.br/cultura/telefones-enderecos-e-horarios-de-atendimento/) informa atendimento de terça a sexta, das 8h às 18h, e aos sábados, domingos e feriados, das 9h às 15h. Confirme a visita pelo telefone (62) 3201-4675 antes de sair, especialmente em feriados.
 
 ## Se o dia pede parque
 

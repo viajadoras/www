@@ -2,11 +2,18 @@ import { writeFile } from 'node:fs/promises';
 import sharp from 'sharp';
 
 const output = new URL('../public/images/blog/', import.meta.url);
+const selected = new Set(process.argv.slice(2));
 const W = '#fffaf5',
   D = '#d9baa1',
   B = '#946549',
   A = '#ac7755';
 const covers = [
+  {
+    slug: 'como-conhecer-viajantes-no-destino',
+    label: 'COMPANHIA NO DESTINO',
+    lines: ['Seu roteiro.', 'Um passeio juntas.'],
+    art: `<path d="M790 460q50-160 165-140m175 140q-15-155-120-140" fill="none" stroke="${B}" stroke-width="9" stroke-dasharray="5 17" stroke-linecap="round"/><circle cx="790" cy="460" r="15" fill="${A}"/><circle cx="1130" cy="460" r="15" fill="${A}"/><path d="M980 180a60 60 0 0 1 60 60c0 52-60 100-60 100s-60-48-60-100a60 60 0 0 1 60-60z" fill="${A}"/><circle cx="980" cy="240" r="22" fill="${W}"/><path d="M775 170h100v65h-40l-25 25v-25h-35zM1065 170h100v65h-35v25l-25-25h-40z" fill="${W}"/><path d="M795 195h60m230 0h60" stroke="${B}" stroke-width="7" stroke-linecap="round"/>`,
+  },
   {
     slug: 'amigas-para-sair-goiania',
     label: 'ROLÊS EM GOIÂNIA',
@@ -99,6 +106,7 @@ const covers = [
   },
 ];
 for (const { slug, label, lines, art } of covers) {
+  if (selected.size && !selected.has(slug)) continue;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f4ebe3"/><circle cx="995" cy="315" r="285" fill="#dec0aa"/><text x="70" y="105" font-family="Georgia,serif" font-size="30" fill="#332a25">Viajadoras</text><text x="70" y="235" font-family="Arial,sans-serif" font-size="19" font-weight="bold" letter-spacing="3" fill="#825134">${label}</text>${lines.map((l, i) => `<text x="70" y="${315 + i * 65}" font-family="Georgia,serif" font-size="43" fill="#332a25">${l}</text>`).join('')}<text x="70" y="535" font-family="Arial,sans-serif" font-size="21" fill="#825134">viajadoras.com/blog</text>${art}</svg>`;
   await writeFile(new URL(`${slug}.svg`, output), svg);
   await sharp(Buffer.from(svg))
@@ -163,6 +171,7 @@ const inline = [
   },
 ];
 for (const { name, art } of inline) {
+  if (selected.size && !selected.has(name)) continue;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img"><rect width="1200" height="630" fill="#f4ebe3"/><circle cx="600" cy="315" r="285" fill="#dec0aa" opacity=".45"/>${art}</svg>`;
   await writeFile(new URL(`${name}.svg`, output), svg);
 }

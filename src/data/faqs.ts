@@ -7,7 +7,7 @@ export const siteFaqs: SiteFaq[] = [
   {
     question: 'O que é o Viajadoras?',
     answer:
-      'Um app gratuito só para mulheres que gostam de viajar. Você pede dica para quem já foi, acha companhia no destino e encontra rolês com data e lugar na sua cidade.',
+      'Um app gratuito de amizade e viagens só para mulheres maiores de 18 anos. Você troca dicas em grupos, procura companhia para viajar pelo Brasil e combina rolês com data e lugar. Estamos começando os encontros por Goiânia. A entrada passa por selfie verificada pela equipe.',
   },
   {
     question: 'Serve para quem quer viajar sozinha?',

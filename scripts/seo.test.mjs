@@ -27,7 +27,7 @@ const posts1019 = [
 test('sitemap preserva só páginas públicas, com canonical único e metadados', async () => {
   const sitemap = await html('sitemap-0.xml');
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  expect(urls.length).toBe(34);
+  expect(urls.length).toBe(35);
   expect(new Set(urls).size).toBe(urls.length);
   expect(urls.some((u) => /convite|404|obrigada/.test(u))).toBe(false);
   for (const url of urls) {
@@ -44,7 +44,7 @@ test('sitemap preserva só páginas públicas, com canonical único e metadados'
   const blogLastmod = [
     ...sitemap.matchAll(/<loc>[^<]+\/blog\/([^<]+)\/<\/loc><lastmod>([\d-]+)/g),
   ];
-  expect(blogLastmod.length).toBe(22);
+  expect(blogLastmod.length).toBe(23);
   for (const [, slug, lastmod] of blogLastmod) {
     const post = await readFile(
       new URL(`../src/pages/blog/${slug}.md`, import.meta.url),
@@ -89,7 +89,9 @@ test('cada artigo tem capa própria, breadcrumb e acesso direto às duas lojas',
     ].map((m) => JSON.parse(m[1]));
     const article = schemas.find((s) => s['@type'] === 'BlogPosting');
     expect(article.datePublished).toBe(
-      posts1019.includes(folder.name)
+      folder.name === 'como-conhecer-viajantes-no-destino'
+        ? '2026-11-16'
+        : posts1019.includes(folder.name)
         ? '2026-10-19'
         : newPosts.includes(folder.name)
           ? '2026-10-09'

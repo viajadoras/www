@@ -5,7 +5,7 @@ seoTitle: 'Chapada dos Veadeiros sozinha ou em grupo'
 description: 'Chapada dos Veadeiros saindo de Goiânia: como ir, quando ir, o que confirmar no parque e como montar um grupo de mulheres para o fim de semana.'
 category: Viajar sozinha
 date: '2026-10-09'
-updated: '2026-10-09'
+updated: '2026-11-16'
 image: '/images/blog/chapada-dos-veadeiros-sozinha-ou-em-grupo.jpg'
 imageAlt: 'Montanhas e uma cachoeira com uma trilha pontilhada, ilustrando uma viagem à Chapada dos Veadeiros.'
 summary:
@@ -36,8 +36,8 @@ Segundo o site do parque, a seca vai aproximadamente de maio a outubro e as chuv
 
 Segundo a página oficial de visitação:
 
-- aberto diariamente, das 8h às 18h; acesso a pé das 8h às 12h, e a saída de todos os atrativos até as 18h;
-- o ingresso do público geral estava em R$ 49,00 e meia-entrada em R$ 24,50, válido apenas para a data comprada;
+- aberto diariamente, com acesso a pé em geral das 8h às 12h e saída dos atrativos até as 18h; a trilha Seriema tem entrada a pé até as 16h;
+- na consulta de 16/11/2026, ingresso do público geral a R$ 49,00 e meia-entrada a R$ 24,50, válido para a data comprada; transporte interno e acampamento são cobrados à parte;
 - as trilhas são autoguiadas, ou seja, a página não exige guia, mas proíbe sair do trajeto oficial, fumar e consumir bebida alcoólica.
 
 Isso pode mudar. Compre o ingresso pelo canal oficial e leia as regras do dia.
@@ -54,7 +54,7 @@ Muitas atrações ficam em propriedades privadas, cada uma com entrada, horário
 
 **Sozinha** funciona nas trilhas autoguiadas do parque, mas peça orientação ao chegar, avise a hospedagem do roteiro e do horário de retorno, e não saia do trajeto oficial. Para trilhas longas, a companhia de um guia credenciado faz diferença.
 
-**Em grupo de mulheres** divide transporte, custo de guia e hospedagem, e ninguém fica sem alguém quando o tempo vira. O ideal é um grupo pequeno, de 3 a 5 pessoas, para caber em um carro.
+**Em grupo de mulheres** permite combinar transporte e dividir despesas de guia ou hospedagem quando fizer sentido para todas. Um grupo de 3 a 5 pessoas pode facilitar a conversa e a logística. Confiram a lotação do veículo e os limites de cada participante; viajar em grupo não elimina os riscos de trilha e chuva.
 
 ## Como montar o grupo
 

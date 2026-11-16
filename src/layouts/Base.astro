@@ -294,6 +294,7 @@ import '../styles/global.css';
           store: click.platform === 'ios' ? 'app' : 'play',
           origem: click.source,
           posicao,
+          cta: link.closest<HTMLElement>('[data-cta]')?.dataset.cta ?? 'outro',
         });
       });
 

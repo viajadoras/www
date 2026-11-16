@@ -1,10 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
 import GuideLinks from '../components/GuideLinks.astro';
+import AppStoreBadges from '../components/AppStoreBadges.astro';
 
-const title = 'Companhia para viajar: amigas com o mesmo destino | Viajadoras';
+const title = 'Companhia para viajar: app gratuito para mulheres | Viajadoras';
 const description =
-  'Procura companhia para viajar? Ache outras viajantes indo para o mesmo destino e combine antes de reservar. App só para mulheres, selfie verificada pela equipe.';
+  'Encontre companhia para viajar no Viajadoras: app gratuito só para mulheres, com grupos, planos de viagem e selfie verificada pela equipe. Android e iPhone.';
 ---
 
 <Base {title} {description} lang="pt-BR">
@@ -12,16 +13,21 @@ const description =
     <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-          Antes de combinar
+          App gratuito só para mulheres
         </p>
         <h1 class="mt-4 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
-          Quer viajar e não tem com quem? Como encontrar companhia para viajar.
+          Companhia para viajar começa com uma conversa.
         </h1>
         <p class="mt-6 text-lg leading-relaxed text-neutral-600">
-          A melhor companhia de viagem não é só alguém disponível. É alguém com
-          ritmo, expectativa e jeito parecidos, com espaço para conversar antes
-          de reservar. Para muita mulher, a vontade de viajar existe; o que falta é a amiga com a mesma data e o mesmo destino.
+          Vai viajar sozinha e quer dividir um passeio com outra mulher? No
+          Viajadoras, você encontra uma comunidade para trocar dicas, apresentar
+          seu plano e procurar companhia para viajar pelo Brasil. Converse sobre
+          destino, datas, ritmo e orçamento antes de combinar.
         </p>
+        <p class="mt-4 text-neutral-700">Gratuito para Android e iPhone. Só para mulheres maiores de 18 anos, com selfie verificada pela equipe.</p>
+        <div data-cta="landing_viagem">
+          <AppStoreBadges class="mt-6 flex flex-wrap gap-4" imgClass="h-auto w-36" />
+        </div>
       </div>
 
       <div class="mt-12 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
@@ -45,7 +51,7 @@ const description =
           <div class="mt-6 space-y-5 leading-relaxed text-neutral-700">
             <p>No Viajadoras, só mulheres entram, com selfie verificada pela equipe. Comece pelos grupos ligados a um interesse ou à sua cidade. Veja se há conversas recentes e apresente a ideia da viagem sem divulgar documentos, reservas ou dados financeiros.</p>
             <p>Em vez de perguntar apenas “quem quer viajar?”, diga o destino ou tipo de passeio, o período aproximado e o que procura compartilhar. A disponibilidade de companhia depende das participantes; entrar no app não garante encontrar alguém para a mesma data.</p>
-            <p>Por exemplo: “Estou pensando em uma viagem curta em outubro e gostaria de conversar com quem gosta de caminhadas. Podemos trocar ideias sobre ritmo e orçamento antes de decidir?”. Adapte a proposta ao seu plano real.</p>
+            <p>Por exemplo: “Estou pensando em um fim de semana na Chapada dos Veadeiros e gostaria de conversar com quem gosta de caminhadas. Podemos trocar ideias sobre datas, ritmo e orçamento antes de decidir?”. Adapte a proposta ao seu plano real.</p>
             <p>Antes de assumir gastos, vocês podem conversar por vídeo ou combinar uma atividade curta em local público. Isso ajuda a alinhar expectativas, mas não comprova identidade nem elimina riscos. Mantenha autonomia para chegar, sair e decidir suas próprias reservas.</p>
           </div>
 
@@ -60,7 +66,7 @@ const description =
         </article>
       </div>
 
-      <p class="mt-10 text-neutral-700">Vai viajar sozinha de qualquer jeito? Veja o <a href="/viajar-sozinha-mulher/" class="text-primary-700 underline underline-offset-4">guia para viajar sozinha</a> e o roteiro de <a href="/blog/primeira-viagem-sozinha-mulher/" class="text-primary-700 underline underline-offset-4">primeira viagem sozinha</a>. Já encontrou uma possível companhia? Use o <a href="/blog/checklist-antes-de-viajar-com-outra-mulher/" class="text-primary-700 underline underline-offset-4">checklist para conversar antes de reservar a viagem</a>.</p>
+      <p class="mt-10 text-neutral-700">Vai manter a viagem independente e quer companhia só para parte dela? Veja <a href="/blog/como-conhecer-viajantes-no-destino/" class="text-primary-700 underline underline-offset-4">como encontrar outras viajadoras no destino</a>. Para se preparar, leia o roteiro de <a href="/blog/primeira-viagem-sozinha-mulher/" class="text-primary-700 underline underline-offset-4">primeira viagem sozinha</a>. Já encontrou uma possível companhia? Use o <a href="/blog/checklist-antes-de-viajar-com-outra-mulher/" class="text-primary-700 underline underline-offset-4">checklist para conversar antes de reservar a viagem</a>.</p>
 
       <section class="mt-12">
         <h2 class="text-2xl font-bold text-neutral-900">Guias para planejar a viagem com companhia</h2>

@@ -57,12 +57,12 @@ const guides = {
 const [ctaTitle, ctaBody] =
   category === 'Rolês na cidade'
     ? [
-        'Quer companhia para o próximo rolê?',
-        'No Viajadoras você acha rolês com data e lugar e conversa com o grupo antes de ir.',
+        'Gostou da ideia e quer companhia para ir?',
+        'Conheça o Viajadoras, uma comunidade de amizade e viagens. Em Goiânia, procure grupos e combine um rolê com data e lugar.',
       ]
     : [
         'Quer companhia nessa viagem?',
-        'No Viajadoras você pede dica a quem já foi e acha mulheres indo para o mesmo destino.',
+        'No Viajadoras você troca dicas em grupos e apresenta seu plano para outras mulheres. Comece pela conversa antes de combinar a viagem.',
       ];
 const displayDate = new Intl.DateTimeFormat('pt-BR', {
   dateStyle: 'long',
@@ -142,20 +142,13 @@ const breadcrumb = {
       <div class="story-main">
         {summary && <aside class="story-summary" aria-label="Pontos principais"><h2>Para levar com você</h2><ul>{summary.map(item => <li>{item}</li>)}</ul></aside>}
         {tool === 'split' ? <TripLedger /> : tool === 'invite' ? <BlogTool /> : null}
-        <div class="prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-a:text-primary-700 prose-a:underline-offset-4 prose-blockquote:font-normal prose-blockquote:not-italic story-copy"><slot /></div>
-        <aside class="story-inline-cta not-prose" aria-label="Baixar o app" data-inline-cta>
+        <aside class="story-inline-cta not-prose" aria-label="Baixar o app" data-cta="blog_inicio">
           <p class="story-inline-cta-title">{ctaTitle}</p>
           <p>{ctaBody} Gratuito, só para mulheres, com selfie verificada pela equipe.</p>
-          <a href="#baixar" data-download>Baixar o app</a>
+          <a href="#baixar" data-download>Baixar o app gratuito</a>
         </aside>
-        <script>
-          // Leva o convite para o meio do texto (antes do 3º subtítulo): no celular, pouca gente chega ao fim.
-          const cta = document.querySelector('[data-inline-cta]');
-          const headings = document.querySelectorAll('.story-copy > h2');
-          const target = headings[2] ?? headings[headings.length - 1];
-          if (cta && target) target.before(cta);
-        </script>
-        <aside id="baixar" aria-label="Conheça a comunidade" class="mt-12 rounded-3xl bg-secondary-100 p-6 sm:p-8">
+        <div class="prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-a:text-primary-700 prose-a:underline-offset-4 prose-blockquote:font-normal prose-blockquote:not-italic story-copy"><slot /></div>
+        <aside id="baixar" data-cta="blog_final" aria-label="Conheça a comunidade" class="mt-12 rounded-3xl bg-secondary-100 p-6 sm:p-8">
           <h2 class="font-display text-2xl font-semibold">Ache companhia para a viagem ou para o rolê</h2>
           <p class="mt-3 text-neutral-700">O Viajadoras é um app gratuito só para mulheres, com selfie verificada pela equipe. Você acha rolês com data e lugar, conversa antes e combina viagem com quem já conhece. A disponibilidade de grupos e encontros depende de cada região.</p>
           <AppStoreBadges class="mt-6 flex flex-wrap gap-4" imgClass="h-auto w-36" />

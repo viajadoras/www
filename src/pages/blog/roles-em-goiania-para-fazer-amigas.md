@@ -5,7 +5,7 @@ seoTitle: 'Rolês em Goiânia: ideias para sair e fazer amigas'
 description: 'Ideias de rolês e hobbies em grupo em Goiânia para fazer amigas, e como montar um encontro com data, lugar e horário que as pessoas topem.'
 category: Rolês na cidade
 date: '2026-10-09'
-updated: '2026-10-09'
+updated: '2026-11-16'
 image: '/images/blog/roles-em-goiania-para-fazer-amigas.jpg'
 imageAlt: 'Grupo de mulheres reunidas em volta de uma mesa com balões de conversa, ilustrando rolês em grupo.'
 summary:
@@ -14,9 +14,9 @@ summary:
   - 'Comece com um grupo de 3 a 5 pessoas e um lugar público e movimentado.'
 ---
 
-Fazer amigas na vida adulta é menos sobre carisma e mais sobre repetição. Quase ninguém vira amiga em um único café. Vira quando se encontra de novo, no mesmo tipo de programa, com um assunto em comum. Por isso o rolê certo costuma ser um que dá para repetir.
+Uma caminhada no parque, uma exposição ou um café podem ser o primeiro rolê com novas amigas em Goiânia. Escolha uma atividade curta, que você tenha vontade de repetir, e combine data, lugar e duração.
 
-Este texto é um catálogo de ideias de rolês em grupo em Goiânia, com apenas locais que eu consegui verificar, e um passo a passo para transformar a ideia em um encontro com data e lugar. Se a sua dúvida é como convidar alguém e o que dizer, o guia de [amigas para sair em Goiânia](/blog/amigas-para-sair-goiania/) cobre modelos de mensagem. Aqui o foco é o rolê em si.
+Aqui você encontra ideias de programas e um passo a passo para combinar. Se falta alguém para ir, veja [como funcionam os rolês no Viajadoras](/companhia-para-sair-goiania/), app gratuito de amizade e viagens só para mulheres. Para preparar a mensagem, o guia de [amigas para sair em Goiânia](/blog/amigas-para-sair-goiania/) inclui um convite para preencher.
 
 ## Ideias de rolê para fazer amigas
 
@@ -27,8 +27,8 @@ Este texto é um catálogo de ideias de rolês em grupo em Goiânia, com apenas 
 
 ### Para quem gosta de cultura
 
-- **Exposição ou passeio num espaço cultural.** O Centro Cultural Oscar Niemeyer tem entrada franca segundo a página oficial de turismo de Goiás ([Turismo em Goiás](https://www.goiasturismo.go.gov.br/pt/atracoes/goiania/centro-cultural-oscar-niemeyer)), mas o horário não aparece lá. Confira nos canais do centro.
-- **Museu na Praça Cívica.** O Museu Goiano Zoroastro Artiaga lista visitação de segunda a sexta, das 8h às 17h, no portal de museus ([Visite Museus](https://visite.museus.gov.br/instituicoes/museu-goiano-zoroastro-artiaga/)). Combine uma visita de manhã e um café depois para conversar.
+- **Exposição ou passeio num espaço cultural.** Consulte o [Centro Cultural Oscar Niemeyer no Mapa Goiano](https://mapagoiano.cultura.go.gov.br/espaco/729/) e escolha uma atividade. Confira horário e condições de entrada no canal do evento antes de convidar o grupo.
+- **Museu na Praça Cívica.** Na consulta de 16/11/2026, a [Secretaria de Cultura de Goiás](https://goias.gov.br/cultura/telefones-enderecos-e-horarios-de-atendimento/) informa que o Museu Zoroastro Artiaga funciona de terça a sexta, das 8h às 18h, e aos sábados, domingos e feriados, das 9h às 15h. Confirme pelo (62) 3201-4675 e combine um café depois da visita.
 
 ### Para quem gosta de mesa e conversa
 
