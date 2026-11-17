@@ -29,7 +29,7 @@ const pecas = [
     <div class="max-w-xl">
       <h1 id="abertura" class="text-balance font-display text-[clamp(2.35rem,4.5vw,4rem)] font-semibold leading-[1.06] text-primary-900">Um app gratuito de viagens e rolês só para mulheres</h1>
       <p class="mt-4 text-lg leading-relaxed">Vai viajar? Compartilhe seu roteiro. Está pela cidade? Convide outras viajadoras para um café, uma trilha ou um show.</p>
-      <div class="mt-5" data-cta="home_abertura"><AppStoreBadges class="flex flex-wrap items-center gap-3" imgClass="h-auto w-32 sm:w-36" /></div>
+      <div class="mt-6" data-cta="home_abertura"><AppStoreBadges class="lojas" imgClass="block w-full h-full object-cover" /></div>
     </div>
     <figure class="album">
       <div class="mosaico">
@@ -49,6 +49,25 @@ const pecas = [
 </section>
 
 <style>
+  [data-cta="home_abertura"] :global(.lojas) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .65rem;
+    max-width: 26rem;
+  }
+  [data-cta="home_abertura"] :global(.lojas a) {
+    display: block;
+    aspect-ratio: 3.15;
+    min-height: 44px;
+    overflow: hidden;
+    border: 1px solid #737373;
+    border-radius: .65rem;
+    background: #000;
+  }
+  [data-cta="home_abertura"] :global(.lojas a:focus-visible) {
+    outline: 3px solid var(--color-primary-700);
+    outline-offset: 3px;
+  }
   .album { width: 100%; min-width: 0; container-type: inline-size; }
   .mosaico {
     display: grid; gap: clamp(4px, .9cqw, 9px); grid-template-columns: repeat(12,minmax(0,1fr));
