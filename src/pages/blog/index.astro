@@ -33,8 +33,10 @@ const temas = [...new Set(Object.values(import.meta.glob<{frontmatter:{category:
       </div>
       <p id="resultado" role="status" class="mt-3 text-sm text-neutral-600"></p>
       <ArticleCards compact heading="h3" />
-      <button hidden id="mais" class="mt-4 rounded-full border border-primary-700 px-5 py-2 font-semibold text-primary-800">Mostrar mais artigos</button>
-      <button hidden id="limpar" class="mt-4 text-primary-800 underline">Limpar filtros</button>
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2 [&:has(button:not([hidden]))]:mt-4">
+        <button hidden id="mais" class="min-h-11 rounded-full border border-primary-700 px-5 py-2 font-semibold text-primary-800">Mostrar mais artigos</button>
+        <button hidden id="limpar" class="min-h-11 px-1 text-primary-800 underline underline-offset-4">Limpar filtros</button>
+      </div>
     </section>
     <nav aria-label="Guias do Viajadoras" class="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-secondary-300 pt-5 text-sm text-primary-800 underline">
       <a href="/viajar-sozinha-mulher/">Viajar sozinha</a><a href="/companhia-para-viajar/">Companhia para viajar</a><a href="/viagens-para-mulheres/">Viagens para mulheres</a><a href="/companhia-para-sair-goiania/">Rolês em Goiânia</a>
