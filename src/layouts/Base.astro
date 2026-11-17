@@ -134,56 +134,17 @@ import '../styles/global.css';
   </head>
   <body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
     <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-neutral-900 focus:shadow-lg">Pular para o conteúdo</a>
-    <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-[#F4EBE3]/95 backdrop-blur-sm">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between sm:h-18">
-          <a href="/" class="flex items-center gap-2 sm:gap-3" aria-label="Viajadoras, página inicial">
-            <div class="relative flex h-11 w-11 items-center justify-center sm:h-12 sm:w-12">
-              <div class="absolute inset-0 rounded-full bg-[#DEC0AA] shadow-[0_8px_18px_rgba(23,23,23,0.08)]"></div>
-              <img src="/images/logo-96.webp" alt="" width="96" height="130" class="relative z-10 h-10 w-10 object-contain filter-[drop-shadow(0_1px_1px_rgba(23,23,23,0.16))_drop-shadow(0_4px_12px_rgba(23,23,23,0.10))] sm:h-11 sm:w-11" />
-            </div>
-            <div class="flex flex-col">
-              <span class="font-display text-base font-semibold text-neutral-900 tracking-tight sm:text-[1.75rem]">Viajadoras</span>
-            </div>
-          </a>
-          <nav class="hidden lg:flex items-center gap-1" aria-label="Principal">
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#como-funciona">
-              Como funciona
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#roles">
-              Rolês
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/#confianca">
-              Confiança
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group" href="/sobre/">
-              Sobre nós
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
-            </a>
-          </nav>
-          <div class="flex items-center gap-1 sm:gap-4">
-            <a href="/ajuda/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Ajuda</a>
-            <a href="/blog/" class="rounded-md px-2 py-2 text-sm font-semibold text-neutral-800 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">Blog</a>
-            <a
-              href={downloadHref}
-              data-download
-              class="hidden rounded-full bg-primary-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-800 lg:inline-flex"
-            >
-              <span>Baixar o app</span>
-            </a>
-            <a
-              href={downloadHref}
-              data-download
-              class="rounded-full bg-primary-700 px-2 py-2 text-sm font-semibold text-white transition hover:bg-primary-800 lg:hidden"
-              aria-label="Baixar o app"
-            >
-              Baixar
-            </a>
-          </div>
-        </div>
+    <header class="sticky top-0 z-50 border-b border-secondary-200 bg-secondary-50">
+      <div class="container mx-auto flex min-h-14 items-center justify-between gap-2 px-4 sm:min-h-16 sm:px-6 lg:px-8">
+        <a href="/" class="flex items-center gap-1.5 sm:gap-2" aria-label="Viajadoras, página inicial">
+          <img src="/images/logo-96.webp" alt="" width="96" height="130" class="h-9 w-auto sm:h-10" />
+          <span class="font-display text-lg font-semibold tracking-tight text-primary-900 sm:text-2xl">Viajadoras</span>
+        </a>
+        <nav aria-label="Principal" class="flex items-center gap-3 text-sm font-semibold sm:gap-6">
+          <a class="hidden py-3 text-neutral-700 underline-offset-4 hover:underline sm:block" href="/#como-funciona">Como funciona</a>
+          <a class="py-3 text-neutral-700 underline-offset-4 hover:underline" href="/#roles">Rolês</a>
+          <a href={downloadHref} data-download class="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-primary-700 px-3 text-white hover:bg-primary-800 sm:px-5">Baixar o app</a>
+        </nav>
       </div>
     </header>
     <main id="conteudo">
