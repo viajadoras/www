@@ -18,10 +18,7 @@ export const company = {
   addressLocality: 'Goiânia',
   addressRegion: 'GO',
   addressCountry: 'BR',
-  founders: [
-    { name: 'Ana Luiza', jobTitle: 'CEO' },
-    { name: 'Guilherme Tavares', jobTitle: 'CTO' },
-  ],
+  founders: [{ name: 'Ana Luiza', jobTitle: 'CEO' }],
 };
 
 export const funding = {
