@@ -191,42 +191,16 @@ import '../styles/global.css';
     </main>
     <footer id="rodape" class="bg-secondary-100 py-6 text-neutral-700">
       <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-4 lg:grid-cols-[1fr_2.4fr] lg:gap-x-12 lg:gap-y-3">
-          <div class="lg:row-span-3">
+        <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
+          <div>
             <p class="font-display text-2xl font-semibold text-primary-900">Viajadoras</p>
-            <p class="mt-1 text-sm leading-5 text-neutral-600">App gratuito de viagens e rolês só para mulheres.</p>
-            <a class="mt-1 inline-block text-sm text-primary-800 underline-offset-4 hover:text-primary-800 hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
+            <a class="text-sm text-primary-800 underline-offset-4 hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
-          <div class="border-t border-secondary-200 pt-3 sm:grid sm:grid-cols-[7rem_1fr] sm:items-baseline sm:gap-4">
-            <h2 class="font-semibold uppercase tracking-wider text-primary-800 text-sm">Site</h2>
-            <nav class="mt-1 flex flex-wrap items-baseline gap-x-4 gap-y-1 sm:mt-0">
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/#como-funciona">Como funciona</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/#confianca">Confiança</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/#faq">FAQ</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/sobre/">Sobre nós</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/blog/">Blog</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/ajuda/">Central de ajuda</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href={downloadHref}>Baixar o app</a>
-            </nav>
-          </div>
-          <div class="border-t border-secondary-200 pt-3 sm:grid sm:grid-cols-[7rem_1fr] sm:items-baseline sm:gap-4">
-            <h2 class="font-semibold uppercase tracking-wider text-primary-800 text-sm">Guias</h2>
-            <nav class="mt-1 flex flex-wrap items-baseline gap-x-4 gap-y-1 sm:mt-0">
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/viajar-sozinha-mulher/">Viajar sozinha</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/viagens-para-mulheres/">Viagens para mulheres</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/companhia-para-viajar/">Companhia para viajar</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/companhia-para-sair-goiania/">Rolês em Goiânia</a>
-            </nav>
-          </div>
-          <div class="border-t border-secondary-200 pt-3 sm:grid sm:grid-cols-[7rem_1fr] sm:items-baseline sm:gap-4">
-            <h2 class="font-semibold uppercase tracking-wider text-primary-800 text-sm">Legal e redes</h2>
-            <nav class="mt-1 flex flex-wrap items-baseline gap-x-4 gap-y-1 sm:mt-0">
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/termos/">Termos de Uso</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/privacidade/">Privacidade</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/ajuda/#excluir-conta">Excluir minha conta</a>
-              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
-            </nav>
-          </div>
+          <nav aria-label="Contato e informações" class="flex flex-wrap gap-x-5 text-sm font-semibold text-primary-800 [&_a]:py-1 [&_a:hover]:underline">
+            <a href="/sobre/">Sobre nós</a>
+            <a href="/ajuda/">Central de ajuda</a>
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
+          </nav>
         </div>
         <div class="mt-5 flex flex-col gap-2 border-y border-secondary-300 py-2 text-sm text-neutral-700 md:flex-row md:items-center md:justify-between">
           <p class="max-w-sm">Projeto apoiado pelo programa {funding.program}: {funding.sponsors}.</p>
@@ -240,9 +214,13 @@ import '../styles/global.css';
             </a>
           </div>
         </div>
-        <div class="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1 text-center text-xs text-neutral-600">
-          <p>© {new Date().getFullYear()} Viajadoras. Todos os direitos reservados.</p>
-          <p>{company.legalName} · CNPJ {company.cnpj} · {company.addressLocality} – {company.addressRegion}</p>
+        <div class="mt-3 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 text-xs text-neutral-600">
+          <p>© {new Date().getFullYear()} {company.legalName} · CNPJ {company.cnpj} · {company.addressLocality} – {company.addressRegion}</p>
+          <nav aria-label="Privacidade e conta" class="flex flex-wrap gap-x-4 text-sm text-primary-800 [&_a]:py-1 [&_a:hover]:underline">
+            <a href="/privacidade/">Privacidade</a>
+            <a href="/termos/">Termos de uso</a>
+            <a href="/ajuda/#excluir-conta">Excluir minha conta</a>
+          </nav>
         </div>
       </div>
     </footer>
