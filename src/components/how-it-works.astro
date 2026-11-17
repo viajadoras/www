@@ -1,57 +1,22 @@
 ---
-const steps = [
-  {
-    label: 'Pergunte',
-    title: 'Fale com quem já foi',
-    description:
-      'Vai para um lugar novo? Pergunte nos grupos do app e chegue sabendo o que esperar. Nada de chegar no escuro.',
-    accent: 'border-primary/15 bg-primary-50/60',
-  },
-  {
-    label: 'Viaje',
-    title: 'Ache companhia no destino',
-    description:
-      'Veja quem vai para o mesmo lugar, divida um passeio ou um café por lá, ou monte seu plano e veja quem embarca.',
-    accent: 'border-teal-500/20 bg-teal-50/80',
-  },
-  {
-    label: 'Fique',
-    title: 'Siga junto entre uma viagem e outra',
-    description:
-      'Rolês com data e lugar na sua cidade: trilha, café, show. A amiga do sábado vira a companhia da próxima viagem.',
-    accent: 'border-lavender-500/20 bg-lavender-50/70',
-  },
+const usos = [
+  [
+    'Pergunte nos grupos',
+    'Vai chegar a uma cidade nova? Peça dicas de trajeto ou de hospedagem a quem já passou por lá.',
+  ],
+  [
+    'Compartilhe seu plano',
+    'Diga para onde vai e em quais datas. Outras viajadoras podem comentar e combinar um passeio com você.',
+  ],
+  [
+    'Combine um rolê',
+    'As próprias viajadoras podem marcar um café, uma feira ou uma trilha. A oferta depende de quem está na região.',
+  ],
 ];
 ---
-
-<section id="como-funciona" class="bg-neutral-50 py-16 lg:py-20">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-5xl">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="font-display text-4xl font-semibold leading-tight text-neutral-900 sm:text-[3.2rem]">
-          Do "será que eu vou?"
-          <span class="text-primary-700"> ao "vamos!"</span>
-        </h2>
-      </div>
-
-      <ol class="mt-12 grid gap-4 lg:grid-cols-3">
-        {steps.map((step, index) => (
-          <li class={`rounded-[2rem] border p-7 ${step.accent}`}>
-            <div class="flex items-center justify-between gap-4">
-              <span class="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-600">
-                {step.label}
-              </span>
-              <span class="font-display text-3xl text-neutral-400" aria-hidden="true">0{index + 1}</span>
-            </div>
-            <h3 class="mt-5 text-2xl font-semibold leading-tight text-neutral-900">
-              {step.title}
-            </h3>
-            <p class="mt-4 text-base leading-relaxed text-neutral-700">
-              {step.description}
-            </p>
-          </li>
-        ))}
-      </ol>
-    </div>
-  </div>
+<section id="como-funciona" class="container py-10 sm:py-14">
+  <h2 class="font-display text-3xl text-primary-900 sm:text-4xl">Como funciona o Viajadoras</h2>
+  <ul class="mt-6 grid gap-5 md:grid-cols-3 md:gap-8">
+    {usos.map(([titulo, descricao]) => <li class="border-t border-secondary-300 pt-3"><h3 class="text-lg font-semibold">{titulo}</h3><p class="mt-2 max-w-md leading-relaxed text-neutral-700">{descricao}</p></li>)}
+  </ul>
 </section>

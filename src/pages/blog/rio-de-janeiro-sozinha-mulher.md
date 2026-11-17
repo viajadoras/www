@@ -7,6 +7,9 @@ category: Viajar sozinha
 date: '2026-11-17'
 image: '/images/blog/rio-de-janeiro-sozinha-mulher.jpg'
 imageAlt: 'Morro à beira-mar, sol e trilho urbano estilizados, ilustrando um roteiro diurno no Rio de Janeiro.'
+cta:
+  - 'Quer combinar um passeio no Rio?'
+  - 'Publique as datas do seu plano para o Rio no Viajadoras e converse com outras viajadoras sobre um café ou uma caminhada na orla.'
 summary:
   - 'Organize o Rio por vizinhança e horário diurno: hospedagem perto do metrô economiza tempo e evita improviso.'
   - 'Combine programas abertos na orla com espaços estruturados, como CCBB Rio e Jardim Botânico.'

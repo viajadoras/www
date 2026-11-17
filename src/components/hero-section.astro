@@ -1,62 +1,33 @@
 ---
 import { Image } from 'astro:assets';
-import heroMainImg from '../assets/images/hero-main.png';
+import planos from '../assets/images/planos-demo.webp';
+import foto from '../assets/images/gallery/gallery-5.png';
 import AppStoreBadges from './AppStoreBadges.astro';
-
-const proofs = ['Só mulheres', 'Selfie verificada pela equipe', 'Gratuito'];
 ---
-
-<section class="relative overflow-hidden bg-neutral-50 py-12 lg:py-16">
-  <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12">
-    <div class="grid items-center gap-8 lg:grid-cols-[0.98fr_1.02fr] lg:gap-12">
-      <div class="max-w-xl">
-        <p class="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2 text-sm font-semibold text-neutral-700">
-          <span class="h-2 w-2 rounded-full bg-primary" aria-hidden="true"></span>
-          Viagens e rolês só de mulheres
-        </p>
-
-        <h1 class="mt-6 font-display text-[2.4rem] font-semibold leading-none tracking-tight text-neutral-900 sm:text-[3rem] lg:text-[3.45rem]">
-          Viaje sozinha
-          <span class="text-primary-700"> sem ficar sozinha.</span>
-        </h1>
-
-        <p class="mt-5 max-w-lg text-lg leading-relaxed text-neutral-700 sm:text-[1.15rem]">
-          Dica de quem já foi, companhia no destino e rolês na sua cidade com
-          outras mulheres de espírito viajante.
-        </p>
-
-        <ul class="mt-5 flex flex-wrap gap-3 text-sm font-semibold text-neutral-800">
-          {proofs.map((proof) => (
-            <li class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2">
-              <svg class="h-4 w-4 text-teal-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd" />
-              </svg>
-              {proof}
-            </li>
-          ))}
-        </ul>
-
-        <div class="mt-7">
-          <AppStoreBadges
-            class="flex flex-row flex-wrap items-center gap-3"
-            imgClass="h-auto w-36 sm:w-44"
-          />
-        </div>
-      </div>
-
-      <div class="relative">
-        <div class="overflow-hidden rounded-[2.25rem] border border-white/60 bg-white shadow-soft">
-          <Image
-            src={heroMainImg}
-            alt="Grupo de amigas sorrindo juntas em um mirante com vista para a cidade e o mar"
-            class="h-[340px] w-full object-cover object-[98%_top] sm:h-[390px] lg:h-[460px]"
-            widths={[400, 640, 800, 1024]}
-            sizes="(min-width: 1024px) 560px, calc(100vw - 2rem)"
-            loading="eager"
-            fetchpriority="high"
-          />
-        </div>
-      </div>
+<section id="para-quem" class="bg-secondary-50">
+  <div class="container grid items-center gap-6 py-8 sm:py-12 lg:grid-cols-2 lg:gap-14">
+    <div class="max-w-xl">
+      <p class="font-semibold text-primary-700">Viagens e rolês só de mulheres</p>
+      <h1 id="abertura" class="mt-3 text-balance font-display text-[clamp(2.35rem,4.5vw,4rem)] font-semibold leading-[1.06] text-primary-900">Vai viajar? Pergunte a quem já foi.</h1>
+      <p class="mt-4 text-lg leading-relaxed">Troque dicas, encontre uma parceira de viagem e combine um passeio na sua cidade. Dá para começar mesmo sem viagem marcada.</p>
+      <p class="mt-4 text-sm leading-relaxed text-neutral-700">App gratuito para mulheres maiores de 18 anos. A equipe analisa sua selfie antes de liberar a comunidade. <a href="/ajuda/#entrada" data-action="verificacao" class="font-semibold text-primary-800 underline underline-offset-4">Entenda a entrada</a>.</p>
+      <div class="mt-5" data-cta="home_abertura"><AppStoreBadges class="flex flex-wrap items-center gap-3" imgClass="h-auto w-32 sm:w-36" /></div>
     </div>
+    <figure class="relative isolate mx-auto w-full max-w-xl overflow-hidden rounded-3xl bg-secondary-200">
+      <Image src={foto} alt="" widths={[480,800,1120]} sizes="(min-width: 1024px) 540px, 100vw" class="absolute inset-0 -z-10 h-full w-full object-cover object-center" />
+      <div class="ml-auto mr-4 mt-4 w-[47%] max-w-60 overflow-hidden rounded-t-2xl border-x-4 border-t-4 border-neutral-900 bg-secondary-50 sm:mr-7 sm:mt-8">
+        <Image src={planos} alt="Tela de planos de viagem do app com destinos como Pirenópolis, Chapada dos Veadeiros e Rio de Janeiro." widths={[240,480,660]} sizes="(min-width: 768px) 240px, 45vw" loading="eager" class="w-full" />
+      </div>
+      <figcaption class="bg-secondary-100 px-4 py-2 text-xs text-neutral-700">Planos de viagem no app · dados de demonstração</figcaption>
+    </figure>
   </div>
 </section>
+
+<script>
+  // Variação exclusiva da prévia para sessões moderadas de compreensão.
+  if (['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) &&
+      new URLSearchParams(location.search).get('abertura') === 'passeio') {
+    const titulo = document.getElementById('abertura');
+    if (titulo) titulo.textContent = 'Encontre uma parceira para o próximo passeio.';
+  }
+</script>

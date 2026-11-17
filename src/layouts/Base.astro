@@ -132,18 +132,18 @@ import '../styles/global.css';
     {isHomepage && <FAQSchema />}
     <slot name="head" />
   </head>
-  <body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
+  <body data-site-metrics={noTracking ? undefined : "enabled"} class="bg-neutral-50 text-neutral-900 font-sans antialiased">
     <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-neutral-900 focus:shadow-lg">Pular para o conteúdo</a>
     <header class="sticky top-0 z-50 border-b border-secondary-200 bg-secondary-50">
       <div class="container mx-auto flex min-h-14 items-center justify-between gap-2 px-4 sm:min-h-16 sm:px-6 lg:px-8">
         <a href="/" class="flex items-center gap-1.5 sm:gap-2" aria-label="Viajadoras, página inicial">
-          <img src="/images/logo-96.webp" alt="" width="96" height="130" class="h-9 w-auto sm:h-10" />
+          <img src="/images/logo-fundo-claro.webp" alt="" width="105" height="144" class="h-9 w-auto sm:h-10" />
           <span class="font-display text-lg font-semibold tracking-tight text-primary-900 sm:text-2xl">Viajadoras</span>
         </a>
         <nav aria-label="Principal" class="flex items-center gap-3 text-sm font-semibold sm:gap-6">
           <a class="hidden py-3 text-neutral-700 underline-offset-4 hover:underline sm:block" href="/#como-funciona">Como funciona</a>
           <a class="py-3 text-neutral-700 underline-offset-4 hover:underline" href="/#roles">Rolês</a>
-          <a href={downloadHref} data-download class="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-primary-700 px-3 text-white hover:bg-primary-800 sm:px-5">Baixar o app</a>
+          <a href={downloadHref} data-cta="cabecalho" data-download class="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-primary-700 px-3 text-white hover:bg-primary-800 sm:px-5">Baixar o app</a>
         </nav>
       </div>
     </header>
@@ -160,6 +160,7 @@ import '../styles/global.css';
           <nav aria-label="Contato e informações" class="flex flex-wrap gap-x-5 text-sm font-semibold text-primary-800 [&_a]:py-1 [&_a:hover]:underline">
             <a href="/sobre/">Sobre nós</a>
             <a href="/ajuda/">Central de ajuda</a>
+            <a href="/parcerias/" data-action="parcerias">Parcerias</a>
             <a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
           </nav>
         </div>
@@ -203,15 +204,34 @@ import '../styles/global.css';
         });
       }
 
+      const production = ['viajadoras.com', 'www.viajadoras.com'].includes(location.hostname);
+      const preview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
+      function capture(event: string, properties: Record<string, string>) {
+        if (production) window.posthog?.capture(event, properties);
+        else if (preview) console.info('[Medição local]', event, properties);
+      }
+
       document.addEventListener('click', (event) => {
         if (event.defaultPrevented || !(event.target instanceof Element)) return;
-        if (!['viajadoras.com', 'www.viajadoras.com'].includes(window.location.hostname)) return;
-        if (window.location.pathname.startsWith('/acompanhar')) return;
+        if (!document.body.hasAttribute('data-site-metrics') || (!production && !preview)) return;
         const link = event.target.closest<HTMLAnchorElement>('a[href]');
         if (!link) return;
+        const action = link.dataset.action;
+        const section = link.closest('section[id]')?.id;
+        if (action) {
+          capture('site_action', {
+            acao: action,
+            pagina: location.pathname,
+            local: link.closest('footer') ? 'rodape' : section || 'conteudo',
+          });
+        }
         const click = storeClick(link.href, window.location.pathname, window.location.search);
         if (!click) return;
-        void recordStoreClick(click);
+        if (production) {
+          void recordStoreClick(click).then((falha) => {
+            if (falha) capture('store_click_error', { motivo: falha, loja: click.platform });
+          });
+        }
         // Onde estava o botão: dobra inicial, meio ou fim da página (sem marcar cada CTA à mão).
         const top = link.getBoundingClientRect().top + window.scrollY;
         const posicao = link.closest('header')
@@ -224,7 +244,7 @@ import '../styles/global.css';
                 ? 'meio'
                 : 'fim';
         // PostHog, sem cookies nem dados pessoais.
-        window.posthog?.capture('store_click', {
+        capture('store_click', {
           store: click.platform === 'ios' ? 'app' : 'play',
           origem: click.source,
           posicao,

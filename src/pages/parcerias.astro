@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import { contactEmail } from '../data/site';
+const formatos = [
+  {
+    nome: 'Receber um encontro',
+    texto:
+      'Você tem um café, uma livraria ou um estúdio? Conte onde fica, quantas pessoas cabem e em quais dias o espaço está disponível.',
+    assunto: 'Quero receber um encontro em Goiânia',
+    acao: 'Propor um espaço',
+    identificador: 'espaco',
+  },
+  {
+    nome: 'Conduzir uma atividade',
+    texto:
+      'Você organiza um clube de leitura, um passeio ou uma oficina? Conte o que as participantes vão fazer, onde e quanto tempo dura.',
+    assunto: 'Quero conduzir uma atividade em Goiânia',
+    acao: 'Propor uma atividade',
+    identificador: 'atividade',
+  },
+];
+---
+<Base title="Proponha um rolê em Goiânia | Viajadoras" description="Tem um espaço ou organiza atividades em Goiânia? Converse com a equipe do Viajadoras sobre um encontro para mulheres.">
+  <section class="bg-secondary-50">
+    <div class="container py-10 sm:py-16">
+      <p class="font-semibold text-primary-700">Parcerias em Goiânia</p>
+      <h1 class="mt-3 max-w-3xl font-display text-4xl leading-tight text-primary-900 sm:text-6xl">Vamos organizar um rolê juntas?</h1>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed">O Viajadoras reúne mulheres para trocar dicas de viagem e combinar passeios. Queremos conversar com espaços e organizadoras que queiram fazer um primeiro encontro com a comunidade.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2">
+        {formatos.map(f => <section class="border-t border-secondary-300 pt-5">
+          <h2 class="font-display text-2xl text-primary-900">{f.nome}</h2>
+          <p class="mt-2 max-w-lg leading-relaxed">{f.texto}</p>
+          <a href={`mailto:${contactEmail}?subject=${encodeURIComponent(f.assunto)}`} data-action={f.identificador} class="mt-4 inline-flex rounded-full bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">{f.acao} por e-mail</a>
+        </section>)}
+      </div>
+      <p class="mt-8 max-w-2xl leading-relaxed">A equipe e a organização combinam o formato, os custos, a acessibilidade, os convites e quem recebe as participantes. Se preferir, escreva para <a class="underline underline-offset-4" data-action="parceria_email" href={`mailto:${contactEmail}`}>{contactEmail}</a>.</p>
+    </div>
+  </section>
+</Base>

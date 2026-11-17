@@ -51,11 +51,12 @@ const companyData = [
           Para mulheres com espírito <em>viajante.</em>
         </h1>
         <p class="mt-6 max-w-lg text-lg leading-relaxed text-neutral-700">
-          O Viajadoras nasceu em Goiânia de uma vontade simples: que nenhuma mulher deixe de viajar por medo de ir sozinha.
+          Ana Luiza fundou o Viajadoras em Goiânia de uma vontade simples: que nenhuma mulher deixe de viajar por medo de ir sozinha.
         </p>
         <p class="mt-3 max-w-lg leading-relaxed text-neutral-700">
           No app, você pede dicas a quem já foi, encontra uma parceira de viagem e combina o próximo rolê na sua cidade.
         </p>
+        <a class="mt-3 inline-block py-1 text-sm font-semibold text-primary-800 underline underline-offset-4" href="/blog/pesquisa-mulheres-deixam-de-viajar-sozinhas-seguranca/">Por que a insegurança pesa na decisão de viajar</a>
         <AppStoreBadges class="mt-7 flex flex-wrap items-center gap-3" imgClass="h-auto w-32 sm:w-36" />
       </div>
       <Image src={passeio} alt="Três mulheres passeiam por uma rua de casas coloridas." widths={[480, 768, 1056]} sizes="(min-width: 1024px) 500px, 100vw" loading="eager" fetchpriority="high" class="aspect-[4/3] w-full rounded-t-[4rem] rounded-b-lg object-cover object-center sm:rounded-t-[6rem] lg:aspect-[1.12]" />
@@ -65,7 +66,7 @@ const companyData = [
   <section aria-labelledby="quem-faz" class="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:py-20">
     <div>
       <h2 id="quem-faz" class="font-display text-4xl text-primary-900">Quem fundou</h2>
-      <p class="mt-4 text-neutral-700">Fale com a equipe pelo e-mail<br /><a href={`mailto:${contactEmail}`} class="font-semibold text-primary-700 underline underline-offset-4">{contactEmail}</a>.</p>
+      <p class="mt-4 text-neutral-700">Ana Luiza cria os conteúdos do Viajadoras e participa das conversas com a comunidade. Fale com a equipe pelo e-mail<br /><a href={`mailto:${contactEmail}`} class="font-semibold text-primary-700 underline underline-offset-4">{contactEmail}</a>.</p>
     </div>
     <ul class="divide-y divide-secondary-200 border-y border-secondary-200">
       {company.founders.map((founder) => (
@@ -104,6 +105,8 @@ const companyData = [
         <a href={funding.finepUrl} target="_blank" rel="noopener noreferrer" class="mt-4 inline-block font-semibold text-primary-700 underline underline-offset-4">Conheça a Finep</a>
       </div>
     </section>
+
+    <p class="mt-5">Tem um espaço ou organiza atividades? <a href="/parcerias/" data-action="parcerias" class="font-semibold text-primary-800 underline underline-offset-4">Proponha um rolê em Goiânia</a>.</p>
 
     <section class="mt-14 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16" aria-labelledby="dados-empresa">
       <h2 id="dados-empresa" class="font-display text-3xl text-primary-900">Dados da empresa</h2>

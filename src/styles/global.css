@@ -334,3 +334,12 @@ body {
     animation-range: entry 0% cover 30%;
   }
 }
+
+/* Keep anchored sections and keyboard targets clear of the sticky header. */
+html {
+  scroll-padding-top: 4.5rem;
+}
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}

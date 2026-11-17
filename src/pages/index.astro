@@ -1,12 +1,12 @@
 ---
-import ArticleCards from '../components/ArticleCards.astro';
+import { Image } from 'astro:assets';
+import viagem from '../assets/images/rio-janeiro.webp';
 import CTASection from '../components/CTASection.astro';
 import FAQ from '../components/FAQ.astro';
 import Hero from '../components/hero-section.astro';
 import HowItWorks from '../components/how-it-works.astro';
 import Roles from '../components/Roles.astro';
 import Trust from '../components/Trust.astro';
-import UseCases from '../components/use-cases.astro';
 import Base from '../layouts/Base.astro';
 
 const title = 'Viajadoras | Companhia para viajar e rolês só com mulheres';
@@ -17,23 +17,17 @@ const description =
 <Base {title} {description} lang="pt-BR">
   <Hero />
 
-  <UseCases />
-
-  <HowItWorks />
-
-  <Trust />
-
   <Roles />
-
-  <section class="bg-secondary-50 py-16 lg:py-20" aria-labelledby="artigos-title">
-    <div class="container">
-    <h2 id="artigos-title" class="font-display text-3xl font-semibold sm:text-4xl">Uma ideia para a sua próxima viagem ou rolê</h2>
-    <p class="mt-4 max-w-2xl text-lg text-neutral-700">Guias para viajar sozinha ou com amigas, dividir os gastos e organizar o primeiro rolê do grupo.</p>
-    <ArticleCards heading="h3" limit={3} />
-    <a href="/blog/" class="mt-8 inline-block rounded-full border border-primary-700 px-6 py-3 font-semibold text-primary-700 hover:bg-primary-50">Ver o blog</a>
+  <HowItWorks />
+  <Trust />
+  <section class="container grid items-center gap-5 py-9 sm:grid-cols-[12rem_1fr] lg:py-12" aria-labelledby="guia-rio">
+    <Image src={viagem} alt="" widths={[240,480]} sizes="(min-width:640px) 192px, 100vw" class="h-32 w-full rounded-2xl object-cover" />
+    <div>
+      <p class="text-sm font-semibold text-primary-700">Guia de viagem</p>
+      <h2 id="guia-rio" class="mt-1 font-display text-2xl text-primary-900"><a href="/blog/rio-de-janeiro-sozinha-mulher/" class="hover:underline">Vai ao Rio sozinha? Veja como planejar os passeios.</a></h2>
+      <a href="/blog/" class="mt-2 inline-block py-1 text-primary-800 underline underline-offset-4">Todos os guias de viagem e rolês</a>
     </div>
   </section>
-
   <FAQ />
 
   <CTASection />

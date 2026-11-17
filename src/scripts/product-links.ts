@@ -59,6 +59,7 @@ export function storeClick(href: string, pathname: string, search = '') {
       '/grupo-para-viajar',
       '/viagem-em-grupo-mulheres-seguranca',
       '/sobre',
+      '/parcerias',
     ]);
     if (
       params.getAll('origem').length === 1 &&
@@ -89,9 +90,11 @@ export async function recordStoreClick(click: {
     );
     if (!response.ok) {
       console.warn('A medição do clique na loja não foi aceita.');
+      return String(response.status);
     }
   } catch {
     console.warn('Não foi possível medir o clique na loja.');
+    return 'rede';
   }
 }
 

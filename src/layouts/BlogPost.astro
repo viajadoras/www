@@ -20,6 +20,7 @@ interface Props {
     imageAlt: string;
     tool?: 'split' | 'invite';
     summary?: string[];
+    cta?: [string, string];
   };
 }
 
@@ -34,6 +35,7 @@ const {
   imageAlt,
   tool,
   summary,
+  cta,
 } = Astro.props.frontmatter;
 const headings = Astro.props.headings.filter((h) => h.depth === 2);
 const minutes = Math.max(
@@ -55,7 +57,8 @@ const guides = {
   ['/viagens-para-mulheres/', 'viagens para mulheres'],
 ];
 const [ctaTitle, ctaBody] =
-  category === 'Rolês na cidade'
+  cta ??
+  (category === 'Rolês na cidade'
     ? [
         'Gostou da ideia e quer companhia para ir?',
         'Conheça o Viajadoras, uma comunidade de amizade e viagens. Em Goiânia, procure grupos e combine um rolê com data e lugar.',
@@ -63,7 +66,7 @@ const [ctaTitle, ctaBody] =
     : [
         'Quer companhia nessa viagem?',
         'No Viajadoras você troca dicas em grupos e apresenta seu plano para outras mulheres. Comece pela conversa antes de combinar a viagem.',
-      ];
+      ]);
 const displayDate = new Intl.DateTimeFormat('pt-BR', {
   dateStyle: 'long',
   timeZone: 'UTC',

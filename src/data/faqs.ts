@@ -32,7 +32,7 @@ export const siteFaqs: SiteFaq[] = [
   {
     question: 'Tem rolê na minha cidade?',
     answer:
-      'Estamos começando por Goiânia, onde o Viajadoras prepara o primeiro encontro presencial. Em outras cidades, você pode criar o primeiro rolê e chamar suas amigas para o app.',
+      'Os encontros organizados pela equipe começam em Goiânia. Em qualquer cidade, as viajadoras podem criar rolês no app e convidar outras mulheres. A disponibilidade varia por região.',
   },
   {
     question: 'É gratuito?',
