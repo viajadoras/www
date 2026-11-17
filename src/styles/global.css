@@ -343,3 +343,9 @@ html {
   outline: 3px solid currentColor;
   outline-offset: 3px;
 }
+
+.site-menu-panel { max-height: calc(100dvh - 5rem); }
+@media (max-width: 47.99rem) {
+  #site-menu { position: static; }
+  .site-menu-panel { inset-inline: 1rem; width: auto; }
+}

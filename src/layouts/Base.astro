@@ -32,6 +32,16 @@ const structuredDataType =
 const canonicalBase = Astro.site ?? Astro.url;
 const canonicalPath = Astro.url.pathname.replace(/\/?$/, '/');
 const canonicalUrl = new URL(canonicalPath, canonicalBase).toString();
+const documentLinks = [
+  ['Central de ajuda', '/ajuda/'],
+  ['Privacidade', '/privacidade/'],
+  ['Termos de uso', '/termos/'],
+];
+const primaryLinks = [['Início', '/'], ['Blog', '/blog/'], ['Rolês', '/#roles']];
+const infoLinks = [['Sobre', '/sobre/'], ['Parcerias', '/parcerias/'], ...documentLinks];
+const current = (href: string) => canonicalPath === href ? 'page' :
+  href === '/blog/' && canonicalPath.startsWith('/blog/') ? 'location' : undefined;
+const isDocument = documentLinks.some(([, href]) => href === canonicalPath);
 const robotsContent = noindex
   ? 'noindex, nofollow, noarchive'
   : 'index, follow, max-image-preview:large';
@@ -140,14 +150,32 @@ import '../styles/global.css';
           <img src="/images/logo-fundo-claro.webp" alt="" width="105" height="144" class="h-9 w-auto sm:h-10" />
           <span class="font-display text-lg font-semibold tracking-tight text-primary-900 sm:text-2xl">Viajadoras</span>
         </a>
-        <nav aria-label="Principal" class="flex items-center gap-3 text-sm font-semibold sm:gap-6">
-          <a class="hidden py-3 text-neutral-700 underline-offset-4 hover:underline sm:block" href="/#como-funciona">Como funciona</a>
-          <a class="py-3 text-neutral-700 underline-offset-4 hover:underline" href="/#roles">Rolês</a>
+        <nav aria-label="Principal" class="flex items-center gap-1 text-sm font-semibold sm:gap-5">
+          {primaryLinks.map(([label, href]) => <a href={href} aria-current={current(href)} class="hidden py-3 underline-offset-4 hover:underline aria-[current]:underline md:inline-flex">{label}</a>)}
+          <details id="site-menu" class="relative">
+            <summary class="flex min-h-11 cursor-pointer list-none items-center gap-1 rounded-lg px-2 hover:bg-secondary-100 [&::-webkit-details-marker]:hidden">Menu <span aria-hidden="true">⌄</span></summary>
+            <div class="site-menu-panel absolute right-0 top-full z-50 mt-1 w-56 overflow-y-auto rounded-xl border border-secondary-200 bg-white p-2 shadow-lg">
+              {[...primaryLinks, ['Como funciona', '/#como-funciona'], ...infoLinks].map(([label,href]) =>
+                <a href={href} aria-current={current(href)} class:list={['block rounded-md px-3 py-2 hover:bg-secondary-100 focus-visible:bg-secondary-100 aria-[current]:bg-secondary-100', primaryLinks.some(([,url])=>url===href) && 'md:hidden']}>{label}</a>
+              )}
+            </div>
+          </details>
           <a href={downloadHref} data-cta="cabecalho" data-download class="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-primary-700 px-3 text-white hover:bg-primary-800 sm:px-5">Baixar o app</a>
         </nav>
       </div>
     </header>
     <main id="conteudo">
+      {(isDocument || canonicalPath === '/blog/') &&
+        <div class="container flex flex-wrap items-center justify-between gap-x-5 gap-y-2 pt-4 text-sm">
+          <nav aria-label="Localização" class="flex items-center gap-2 text-neutral-700">
+            <a href="/" class="text-primary-800 underline underline-offset-4">Início</a><span aria-hidden="true">/</span>
+            <span aria-current="page">{documentLinks.find(([,href]) => href === canonicalPath)?.[0] ?? 'Blog'}</span>
+          </nav>
+          {isDocument && <nav aria-label="Ajuda e documentos" class="flex flex-wrap gap-x-4">
+            {documentLinks.filter(([,href]) => href !== canonicalPath).map(([label,href]) => <a href={href} class="py-1 text-primary-800 underline underline-offset-4">{label}</a>)}
+          </nav>}
+        </div>}
+
       <slot />
     </main>
     <footer id="rodape" class="bg-secondary-100 py-6 text-neutral-700">
@@ -158,6 +186,8 @@ import '../styles/global.css';
             <a class="text-sm text-primary-800 underline-offset-4 hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
           <nav aria-label="Contato e informações" class="flex flex-wrap gap-x-5 text-sm font-semibold text-primary-800 [&_a]:py-1 [&_a:hover]:underline">
+            <a href="/">Início</a>
+            <a href="/blog/">Blog</a>
             <a href="/sobre/">Sobre nós</a>
             <a href="/ajuda/">Central de ajuda</a>
             <a href="/parcerias/" data-action="parcerias">Parcerias</a>
@@ -188,6 +218,22 @@ import '../styles/global.css';
     </footer>
     <script>
       import { deviceStoreUrl, recordStoreClick, storeClick } from '../scripts/product-links';
+
+      const menu = document.querySelector<HTMLDetailsElement>('#site-menu');
+      if (menu) {
+        document.addEventListener('click', (event) => {
+          if (event.target instanceof Element && (!menu.contains(event.target) || event.target.closest('a'))) menu.open = false;
+        });
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && menu.open) {
+            menu.open = false;
+            menu.querySelector('summary')?.focus();
+          }
+        });
+        menu.addEventListener('focusout', (event) => {
+          if (event.relatedTarget instanceof Node && !menu.contains(event.relatedTarget)) menu.open = false;
+        });
+      }
 
       declare global {
         interface Window {
