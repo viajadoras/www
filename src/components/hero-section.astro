@@ -7,10 +7,9 @@ import AppStoreBadges from './AppStoreBadges.astro';
 <section id="para-quem" class="bg-secondary-50">
   <div class="container grid items-center gap-6 py-8 sm:py-12 lg:grid-cols-2 lg:gap-14">
     <div class="max-w-xl">
-      <p class="font-semibold text-primary-700">Viagens e rolês só de mulheres</p>
-      <h1 id="abertura" class="mt-3 text-balance font-display text-[clamp(2.35rem,4.5vw,4rem)] font-semibold leading-[1.06] text-primary-900">Encontre uma parceira de viagem.</h1>
-      <p class="mt-4 text-lg leading-relaxed">Conte para onde vai e combine um passeio com outras viajadoras no destino. Ainda sem viagem marcada? Combine um café, uma trilha ou um show na sua cidade.</p>
-      <p class="mt-4 text-sm leading-relaxed text-neutral-700">App gratuito para mulheres maiores de 18 anos. A equipe analisa sua selfie antes de liberar a comunidade. <a href="/ajuda/#entrada" data-action="verificacao" class="font-semibold text-primary-800 underline underline-offset-4">Entenda a entrada</a>.</p>
+      <h1 id="abertura" class="text-balance font-display text-[clamp(2.35rem,4.5vw,4rem)] font-semibold leading-[1.06] text-primary-900">Um app de viagens e rolês só para mulheres</h1>
+      <p class="mt-4 text-lg leading-relaxed">Vai viajar? Compartilhe seu roteiro. Está pela cidade? Convide outras viajadoras para um café, uma trilha ou um show.</p>
+      <p class="mt-4 text-sm leading-relaxed text-neutral-700">Gratuito para mulheres a partir de 18 anos. A equipe verifica sua selfie antes de liberar o acesso à comunidade. <a href="/ajuda/#entrada" data-action="verificacao" class="font-semibold text-primary-800 underline underline-offset-4">Entenda a entrada</a>.</p>
       <div class="mt-5" data-cta="home_abertura"><AppStoreBadges class="flex flex-wrap items-center gap-3" imgClass="h-auto w-32 sm:w-36" /></div>
     </div>
     <figure class="relative isolate mx-auto w-full max-w-xl overflow-hidden rounded-3xl bg-secondary-200">
@@ -22,12 +21,3 @@ import AppStoreBadges from './AppStoreBadges.astro';
     </figure>
   </div>
 </section>
-
-<script>
-  // Variação exclusiva da prévia para sessões moderadas de compreensão.
-  if (['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) &&
-      new URLSearchParams(location.search).get('abertura') === 'passeio') {
-    const titulo = document.getElementById('abertura');
-    if (titulo) titulo.textContent = 'Encontre uma parceira para o próximo passeio.';
-  }
-</script>
