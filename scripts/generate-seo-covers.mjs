@@ -9,6 +9,24 @@ const W = '#fffaf5',
   A = '#ac7755';
 const covers = [
   {
+    slug: 'viajar-sozinha-no-reveillon-e-verao',
+    label: 'RÉVEILLON E FÉRIAS',
+    lines: ['Sua folga no mapa,', 'com ou sem turma.'],
+    art: `<rect x="785" y="235" width="210" height="205" rx="24" fill="${W}"/><path d="M785 295h210" stroke="${D}" stroke-width="10"/><path d="M830 212v42m120-42v42" stroke="${B}" stroke-width="12" stroke-linecap="round"/><text x="890" y="388" text-anchor="middle" font-family="Georgia,serif" font-size="68" fill="${A}">31</text><circle cx="1095" cy="215" r="52" fill="${A}"/><path d="M1095 132v-24m0 214v24m-83-131h-24m214 0h24" stroke="${A}" stroke-width="10" stroke-linecap="round"/><path d="M1015 430q60-45 135 0" fill="none" stroke="${B}" stroke-width="10" stroke-linecap="round"/>`,
+  },
+  {
+    slug: 'pirenopolis-e-bate-voltas-perto-de-goiania',
+    label: 'SAINDO DE GOIÂNIA',
+    lines: ['Pirenópolis, Goiás', 'e bate-voltas.'],
+    art: `<path d="M775 435l115-175 85 110 70-95 110 160z" fill="${W}"/><rect x="815" y="340" width="115" height="95" rx="8" fill="${D}"/><path d="M805 342l68-48 67 48z" fill="${B}"/><rect x="858" y="378" width="30" height="57" rx="14" fill="${W}"/><path d="M1045 300v135" stroke="${A}" stroke-width="20" stroke-linecap="round"/><path d="M790 470q160-40 340 0" fill="none" stroke="${B}" stroke-width="9" stroke-dasharray="5 16" stroke-linecap="round"/>`,
+  },
+  {
+    slug: 'rio-de-janeiro-sozinha-mulher',
+    label: 'RIO DE JANEIRO',
+    lines: ['Mar, metrô e', 'roteiro de dia.'],
+    art: `<path d="M775 425q75-190 150 0 65-130 130 0z" fill="${W}"/><circle cx="1095" cy="200" r="46" fill="${A}"/><path d="M775 452q85 26 170 0t185 0" fill="none" stroke="${B}" stroke-width="11" stroke-linecap="round"/><path d="M795 490q85 24 170 0t165 0" fill="none" stroke="${D}" stroke-width="9" stroke-linecap="round"/><path d="M850 285q120-55 215-20" fill="none" stroke="${B}" stroke-width="7" stroke-dasharray="4 14" stroke-linecap="round"/><rect x="945" y="255" width="36" height="26" rx="6" fill="${A}"/>`,
+  },
+  {
     slug: 'como-conhecer-viajantes-no-destino',
     label: 'COMPANHIA NO DESTINO',
     lines: ['Seu roteiro.', 'Um passeio juntas.'],

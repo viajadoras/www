@@ -5,6 +5,7 @@ seoTitle: 'Como conhecer outras viajadoras no destino'
 description: 'Vai viajar sozinha e quer companhia para um passeio? Veja como encontrar outras viajadoras no destino, combinar um primeiro encontro e manter seu roteiro independente.'
 category: Companhia para viajar
 date: '2026-11-16'
+updated: '2026-11-17'
 image: '/images/blog/como-conhecer-viajantes-no-destino.jpg'
 imageAlt: 'Dois caminhos de viagem chegando ao mesmo lugar, com balões de conversa.'
 summary:
@@ -53,6 +54,6 @@ Você pode mudar de ideia se a conversa incomodar ou se o plano mudar. Não prec
 
 Uma proposta pode ficar sem resposta porque as datas não coincidem ou porque o grupo ainda tem pouca atividade. Não comprometa uma reserva esperando uma confirmação que não veio.
 
-Tenha uma opção de passeio independente e confirme o funcionamento do lugar nos canais oficiais antes de sair. Se for sua primeira experiência, o guia de [primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/) ajuda a preparar o roteiro.
+Tenha uma opção de passeio independente e confirme o funcionamento do lugar nos canais oficiais antes de sair. Se for sua primeira experiência, o guia de [primeira viagem sozinha](/blog/primeira-viagem-sozinha-mulher/) ajuda a preparar o roteiro; para datas concorridas, veja também como se organizar para [viajar no Réveillon ou nas férias de verão](/blog/viajar-sozinha-no-reveillon-e-verao/).
 
 Mora em Goiânia e prefere começar antes de embarcar? Veja [como combinar rolês com outras mulheres na cidade](/companhia-para-sair-goiania/). Um café perto de casa também pode ser o início de uma conversa sobre a próxima viagem.

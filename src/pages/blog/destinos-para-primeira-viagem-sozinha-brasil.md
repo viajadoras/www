@@ -5,7 +5,7 @@ seoTitle: 'Destinos para a primeira viagem sozinha'
 description: 'Primeira viagem sozinha: critérios para escolher o destino no Brasil e cinco opções com prós e contras, de Curitiba a Bonito, com fontes oficiais.'
 category: Viajar sozinha
 date: '2026-10-19'
-updated: '2026-10-19'
+updated: '2026-11-17'
 image: '/images/blog/destinos-para-primeira-viagem-sozinha-brasil.jpg'
 imageAlt: 'Mapa do Brasil com cinco marcadores ligados por uma rota pontilhada, ilustrando destinos para a primeira viagem sozinha.'
 summary:
@@ -186,7 +186,7 @@ Para a agência ou guia, antes de pagar:
 
 Primeira viagem sozinha não precisa ser viagem isolada. Dá para combinar um passeio em grupo, um jantar com alguém que também está de passagem ou um dia com uma mulher que conhece o lugar. No Viajadoras, app gratuito só para mulheres e com selfie verificada pela equipe, você pode pedir dica a quem já foi ao destino e achar companhia para trechos da viagem. A verificação é uma camada de entrada, não garantia de como será a convivência, então converse antes e combine o primeiro encontro em lugar público.
 
-Veja também a página sobre [viajar sozinha sendo mulher](/viajar-sozinha-mulher/) e o guia de [companhia para viajar](/companhia-para-viajar/).
+Veja também a página sobre [viajar sozinha sendo mulher](/viajar-sozinha-mulher/), o guia de [companhia para viajar](/companhia-para-viajar/) e, se a vontade for capital com praia e metrô, o roteiro de [Rio de Janeiro sozinha](/blog/rio-de-janeiro-sozinha-mulher/).
 
 ## Perguntas rápidas
 

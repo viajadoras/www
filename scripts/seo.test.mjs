@@ -23,11 +23,16 @@ const posts1019 = [
   'grupos-de-viagem-para-quem-vai-sozinha',
   'destinos-para-primeira-viagem-sozinha-brasil',
 ];
+const posts1117 = [
+  'viajar-sozinha-no-reveillon-e-verao',
+  'pirenopolis-e-bate-voltas-perto-de-goiania',
+  'rio-de-janeiro-sozinha-mulher',
+];
 
 test('sitemap preserva só páginas públicas, com canonical único e metadados', async () => {
   const sitemap = await html('sitemap-0.xml');
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  expect(urls.length).toBe(35);
+  expect(urls.length).toBe(38);
   expect(new Set(urls).size).toBe(urls.length);
   expect(urls.some((u) => /convite|404|obrigada/.test(u))).toBe(false);
   for (const url of urls) {
@@ -44,7 +49,7 @@ test('sitemap preserva só páginas públicas, com canonical único e metadados'
   const blogLastmod = [
     ...sitemap.matchAll(/<loc>[^<]+\/blog\/([^<]+)\/<\/loc><lastmod>([\d-]+)/g),
   ];
-  expect(blogLastmod.length).toBe(23);
+  expect(blogLastmod.length).toBe(26);
   for (const [, slug, lastmod] of blogLastmod) {
     const post = await readFile(
       new URL(`../src/pages/blog/${slug}.md`, import.meta.url),
@@ -89,23 +94,25 @@ test('cada artigo tem capa própria, breadcrumb e acesso direto às duas lojas',
     ].map((m) => JSON.parse(m[1]));
     const article = schemas.find((s) => s['@type'] === 'BlogPosting');
     expect(article.datePublished).toBe(
-      folder.name === 'como-conhecer-viajantes-no-destino'
-        ? '2026-11-16'
-        : posts1019.includes(folder.name)
-        ? '2026-10-19'
-        : newPosts.includes(folder.name)
-          ? '2026-10-09'
-          : [
-                'primeira-viagem-sozinha-mulher',
-                'viagem-a-trabalho-sozinha-dicas',
-              ].includes(folder.name)
-            ? '2026-10-04'
-            : [
-                  'como-dividir-gastos-viagem-entre-amigas',
-                  'combinar-passeios-amigas-rotinas-diferentes',
-                ].includes(folder.name)
-              ? '2026-09-07'
-              : '2026-09-06',
+      posts1117.includes(folder.name)
+        ? '2026-11-17'
+        : folder.name === 'como-conhecer-viajantes-no-destino'
+          ? '2026-11-16'
+          : posts1019.includes(folder.name)
+            ? '2026-10-19'
+            : newPosts.includes(folder.name)
+              ? '2026-10-09'
+              : [
+                    'primeira-viagem-sozinha-mulher',
+                    'viagem-a-trabalho-sozinha-dicas',
+                  ].includes(folder.name)
+                ? '2026-10-04'
+                : [
+                      'como-dividir-gastos-viagem-entre-amigas',
+                      'combinar-passeios-amigas-rotinas-diferentes',
+                    ].includes(folder.name)
+                  ? '2026-09-07'
+                  : '2026-09-06',
     );
     expect(article.dateModified >= article.datePublished).toBe(true);
     expect(article.image.length).toBe(1);

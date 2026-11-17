@@ -35,7 +35,9 @@ export default defineConfig({
         const path = new URL(item.url).pathname;
         if (postDates[path]) {
           item.lastmod = new Date(`${postDates[path]}T00:00:00-03:00`);
-        } else if (['/', '/blog/', '/companhia-para-viajar/'].includes(path)) {
+        } else if (['/', '/blog/'].includes(path)) {
+          item.lastmod = new Date('2026-11-17T00:00:00-03:00');
+        } else if (path === '/companhia-para-viajar/') {
           item.lastmod = new Date('2026-11-16T00:00:00-03:00');
         } else if (
           [

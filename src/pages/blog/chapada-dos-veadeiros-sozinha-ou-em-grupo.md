@@ -5,7 +5,7 @@ seoTitle: 'Chapada dos Veadeiros sozinha ou em grupo'
 description: 'Chapada dos Veadeiros saindo de Goiânia: como ir, quando ir, o que confirmar no parque e como montar um grupo de mulheres para o fim de semana.'
 category: Viajar sozinha
 date: '2026-10-09'
-updated: '2026-11-16'
+updated: '2026-11-17'
 image: '/images/blog/chapada-dos-veadeiros-sozinha-ou-em-grupo.jpg'
 imageAlt: 'Montanhas e uma cachoeira com uma trilha pontilhada, ilustrando uma viagem à Chapada dos Veadeiros.'
 summary:
@@ -64,7 +64,7 @@ Muitas atrações ficam em propriedades privadas, cada uma com entrada, horário
 4. **Tenha uma pessoa de confiança em casa** com roteiro, hospedagem e horário de retorno.
 5. **Avise as regras de cuidado:** ninguém fica sozinha na trilha, ninguém sai do trajeto, todo mundo leva água, e se o tempo fechar o grupo volta junto.
 
-Se você ainda não tem o grupo, o texto sobre [como montar um grupo de viagem para mulheres](/blog/grupo-de-viagem-para-mulheres-como-montar/) ajuda a começar. O Viajadoras é um app gratuito só para mulheres, com selfie verificada pela equipe, onde você acha companhia para viajar pelo Brasil. A verificação é um filtro de entrada, não garantia de como cada viagem vai ser, então combine bem e converse antes. Veja também [companhia para viajar](/companhia-para-viajar/) e [grupo para viajar](/grupo-para-viajar/).
+Se você ainda não tem o grupo, o texto sobre [como montar um grupo de viagem para mulheres](/blog/grupo-de-viagem-para-mulheres-como-montar/) ajuda a começar. O Viajadoras é um app gratuito só para mulheres, com selfie verificada pela equipe, onde você acha companhia para viajar pelo Brasil. A verificação é um filtro de entrada, não garantia de como cada viagem vai ser, então combine bem e converse antes. Veja também [companhia para viajar](/companhia-para-viajar/), [grupo para viajar](/grupo-para-viajar/) e, se quiser testar uma estrada mais curta antes, [Pirenópolis e bate-voltas saindo de Goiânia](/blog/pirenopolis-e-bate-voltas-perto-de-goiania/).
 
 ## Um roteiro de fim de semana, em linhas gerais
 
