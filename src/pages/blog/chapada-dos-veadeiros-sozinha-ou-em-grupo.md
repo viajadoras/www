@@ -6,8 +6,8 @@ description: 'Chapada dos Veadeiros saindo de Goiânia: como ir, quando ir, o qu
 category: Viajar sozinha
 date: '2026-10-09'
 updated: '2026-11-17'
-image: '/images/blog/chapada-dos-veadeiros-sozinha-ou-em-grupo.jpg'
-imageAlt: 'Montanhas e uma cachoeira com uma trilha pontilhada, ilustrando uma viagem à Chapada dos Veadeiros.'
+image: '/images/blog/cenas/chapada-dos-veadeiros-sozinha-ou-em-grupo.jpg'
+imageAlt: 'Duas mulheres com mochilas leves caminham por uma trilha de cerrado na Chapada dos Veadeiros, paisagem aberta ao fundo.'
 summary:
   - 'De Goiânia, pense em fim de semana: são cerca de 430 km, segundo guias de viagem.'
   - 'Parque nacional e cachoeiras particulares têm regras diferentes: confirme cada uma.'

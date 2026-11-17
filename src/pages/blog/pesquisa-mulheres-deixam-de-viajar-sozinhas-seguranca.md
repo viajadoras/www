@@ -6,8 +6,8 @@ description: 'Pesquisa do Ministério do Turismo com a Unesco: 62% das mulheres 
 category: Viajar sozinha
 date: '2026-10-09'
 updated: '2026-10-09'
-image: '/images/blog/pesquisa-mulheres-deixam-de-viajar-sozinhas-seguranca.jpg'
-imageAlt: 'Gráfico de barras com um marcador de localização, ilustrando uma pesquisa sobre viagens de mulheres.'
+image: '/images/blog/cenas/pesquisa-mulheres-deixam-de-viajar-sozinhas-seguranca.jpg'
+imageAlt: 'Uma mulher observa a plataforma de embarque de um terminal brasileiro com uma mochila no ombro.'
 summary:
   - '62% das 2.712 entrevistadas já deixaram de viajar sozinhas por segurança.'
   - 'A pesquisa é do Ministério do Turismo com a Unesco, de 2025.'

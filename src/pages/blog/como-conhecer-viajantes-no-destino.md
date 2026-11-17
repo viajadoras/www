@@ -6,8 +6,8 @@ description: 'Vai viajar sozinha e quer companhia para um passeio? Veja como enc
 category: Companhia para viajar
 date: '2026-11-16'
 updated: '2026-11-17'
-image: '/images/blog/como-conhecer-viajantes-no-destino.jpg'
-imageAlt: 'Dois caminhos de viagem chegando ao mesmo lugar, com balões de conversa.'
+image: '/images/blog/cenas/como-conhecer-viajantes-no-destino.jpg'
+imageAlt: 'Três viajadoras conversam durante um passeio pelo centro histórico de Salvador.'
 summary:
   - 'Você pode viajar sozinha e combinar companhia só para um café ou passeio.'
   - 'Diga cidade, período e tipo de programa; preserve reservas e dados pessoais.'

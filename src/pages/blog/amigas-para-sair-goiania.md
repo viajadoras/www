@@ -6,8 +6,8 @@ category: Rolês na cidade
 date: '2026-10-09'
 seoTitle: 'Amigas para sair em Goiânia: onde encontrar'
 updated: '2026-10-21'
-image: '/images/blog/amigas-para-sair-goiania.jpg'
-imageAlt: 'Prédios de uma cidade com um marcador de localização, ilustrando rolês em Goiânia.'
+image: '/images/blog/cenas/amigas-para-sair-goiania.jpg'
+imageAlt: 'Três amigas adultas tomam caldo de cana em uma feira de Goiânia.'
 ---
 
 Sabe aquele fim de semana em que você quer sair, tem vontade de ir a algum lugar e ninguém está livre? Acontece com quem acabou de se mudar, com quem as amigas mudaram de rotina e com quem simplesmente quer conhecer gente nova. Não ter amigas para sair é mais comum do que parece, e dá para resolver sem drama.

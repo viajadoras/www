@@ -6,8 +6,8 @@ description: 'Ideias de rolês e hobbies em grupo em Goiânia para fazer amigas,
 category: Rolês na cidade
 date: '2026-10-09'
 updated: '2026-11-16'
-image: '/images/blog/roles-em-goiania-para-fazer-amigas.jpg'
-imageAlt: 'Grupo de mulheres reunidas em volta de uma mesa com balões de conversa, ilustrando rolês em grupo.'
+image: '/images/blog/cenas/roles-em-goiania-para-fazer-amigas.jpg'
+imageAlt: 'Um grupo de amigas faz um piquenique sob as árvores de um parque em Goiânia.'
 summary:
   - 'Amizade nasce da repetição: o mesmo rolê, com as mesmas pessoas, mais de uma vez.'
   - 'Um convite bom diz o quê, onde, quando e quanto dura.'

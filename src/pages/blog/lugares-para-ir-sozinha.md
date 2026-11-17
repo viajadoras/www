@@ -6,8 +6,8 @@ description: 'Lugares para ir sozinha: ideias de programa por tipo, como se sent
 category: Rolês na cidade
 date: '2026-10-19'
 updated: '2026-10-19'
-image: '/images/blog/lugares-para-ir-sozinha.jpg'
-imageAlt: 'Cadeira de mesa para uma pessoa com xícara, livro e um marcador de lugar, ilustrando programas para fazer sozinha.'
+image: '/images/blog/cenas/lugares-para-ir-sozinha.jpg'
+imageAlt: 'Uma mulher de cabelos brancos aprecia quadros em uma galeria de arte brasileira.'
 summary:
   - 'Comece por programa com hora de começar e de acabar: cinema, museu, aula avulsa, parque.'
   - 'Escolha lugar com movimento e deixe a volta combinada antes de sair.'
@@ -28,7 +28,7 @@ Quem está começando costuma acertar com programas que têm três coisas:
 
 Depois você vai aumentando a dose: um jantar, um show, uma viagem curta.
 
-<figure class="story-figure"><img src="/images/blog/lugares-para-ir-sozinha-programas.svg" alt="Quatro cartões com ícones de cinema, quadro de museu, xícara de café sobre livros e uma árvore de parque, cada um com uma linha de começo e fim." width="1200" height="630" loading="lazy"><figcaption>Cinema, museu, café com livro e parque: quatro programas que têm começo e fim combinados.</figcaption></figure>
+<figure class="story-figure"><img src="/images/blog/cenas/lugares-para-ir-sozinha-programas.jpg" alt="Uma mulher escolhe uma sessão na entrada de um cinema de rua brasileiro." width="1200" height="630" loading="lazy"><figcaption>Cinema, museu, café com livro e parque: quatro programas que têm começo e fim combinados.</figcaption></figure>
 
 ### Os programas lado a lado
 
@@ -109,7 +109,7 @@ Se o seu objetivo, além do programa, é conhecer gente, o guia de [como sair so
 
 ## Kit para sair sozinha
 
-<figure class="story-figure"><img src="/images/blog/lugares-para-ir-sozinha-kit.svg" alt="Bolsa de ombro cercada por um livro, uma garrafa, um celular com bateria e fones de ouvido." width="1200" height="630" loading="lazy"><figcaption>Uma bolsa com o básico: algo para fazer, água, celular carregado e fone.</figcaption></figure>
+<figure class="story-figure"><img src="/images/blog/cenas/lugares-para-ir-sozinha-kit.jpg" alt="Vista de cima de uma bolsa aberta, livro, garrafa de água, celular e fones sobre uma mesa." width="1200" height="630" loading="lazy"><figcaption>Uma bolsa com o básico: algo para fazer, água, celular carregado e fone.</figcaption></figure>
 
 Salve ou imprima, e confira antes de sair:
 

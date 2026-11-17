@@ -6,8 +6,8 @@ category: Viajar sozinha
 date: '2026-10-09'
 updated: '2026-10-09'
 seoTitle: 'Mala e documentos para viajar: checklist'
-image: '/images/blog/mala-e-documentos-viagem-mulher-checklist.jpg'
-imageAlt: 'Mala com marca de verificação e passaporte, ilustrando o checklist de mala e documentos.'
+image: '/images/blog/cenas/mala-e-documentos-viagem-mulher-checklist.jpg'
+imageAlt: 'Uma viajadora organiza uma mala aberta e coloca uma carteira de documentos no bolso de mão.'
 ---
 
 Mala boa é a que você consegue carregar sozinha, abrir no escuro e fechar sem sentar em cima. Documento bem guardado é o que você acha em dois minutos e que não depende de uma única bolsa. Este checklist é sobre isso: bagagem e papelada, para qualquer viagem.

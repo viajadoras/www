@@ -6,8 +6,8 @@ category: Viajar sozinha
 date: '2026-10-04'
 updated: '2026-10-04'
 seoTitle: 'Viagem a trabalho sozinha: dicas para mulheres'
-image: '/images/blog/viagem-a-trabalho-sozinha-dicas.jpg'
-imageAlt: 'Crachá de evento, mala de mão e um pequeno mapa da cidade, ilustrando uma viagem a trabalho sozinha.'
+image: '/images/blog/cenas/viagem-a-trabalho-sozinha-dicas.jpg'
+imageAlt: 'Uma profissional brasileira com notebook e mala de rodinhas chega ao saguão de um hotel.'
 ---
 
 Congresso em outra cidade, feira, visita a cliente, curso. Muita mulher viaja a trabalho sozinha, e quase ninguém conversa sobre o que muda quando o compromisso termina às 18h e você ainda tem a noite inteira num lugar desconhecido.

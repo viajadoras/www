@@ -6,8 +6,8 @@ category: Viajar sozinha
 date: '2026-10-04'
 updated: '2026-10-04'
 seoTitle: 'Primeira viagem sozinha: guia passo a passo'
-image: '/images/blog/primeira-viagem-sozinha-mulher.jpg'
-imageAlt: 'Mala e mapa dobrado ao lado de um marcador de destino, ilustrando o preparo de uma primeira viagem sozinha.'
+image: '/images/blog/cenas/primeira-viagem-sozinha-mulher.jpg'
+imageAlt: 'Uma jovem adulta com uma mala pequena observa pela janela a paisagem durante uma viagem de ônibus.'
 ---
 
 Se a ideia de fazer a primeira viagem sozinha te dá um frio na barriga, você está em boa companhia. Em pesquisa do Ministério do Turismo com a Unesco, 62% das 2.712 mulheres ouvidas disseram já ter deixado de viajar sozinhas por questões de segurança ([Agência Brasil](https://agenciabrasil.ebc.com.br/geral/noticia/2026-03/inseguranca-e-barreira-para-62-das-mulheres-viajarem-sozinhas)). A mesma pesquisa mostra que 41,8% já viajaram sozinhas, e entre as que nunca foram, 59% querem tentar nos próximos dois anos ([Ministério do Turismo](https://www.gov.br/turismo/pt-br/assuntos/noticias/ministerio-do-turismo-lanca-guia-inedito-para-mulheres-que-viajam-sozinhas-e-revela-o-perfil-das-viajantes-brasileiras)).

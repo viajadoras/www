@@ -6,8 +6,8 @@ category: Rolês na cidade
 date: '2026-10-09'
 seoTitle: 'Como sair sozinha e fazer novas amigas'
 updated: '2026-10-21'
-image: '/images/blog/como-sair-sozinha-e-fazer-amigas.jpg'
-imageAlt: 'Bússola simples apontando o caminho, ilustrando o primeiro passo para sair sozinha.'
+image: '/images/blog/cenas/como-sair-sozinha-e-fazer-amigas.jpg'
+imageAlt: 'Duas mulheres conversam enquanto escolhem livros num sebo de bairro.'
 ---
 
 Às vezes o que falta é bem simples: alguém para dividir um café, uma exposição ou um fim de tarde. Amizade, conversa e programa. Se é isso que você procura, uma estratégia que funciona é sair sozinha, de propósito, para lugares onde conhecer gente é natural.

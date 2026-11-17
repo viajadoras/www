@@ -6,8 +6,8 @@ description: 'Primeira viagem sozinha: critérios para escolher o destino no Bra
 category: Viajar sozinha
 date: '2026-10-19'
 updated: '2026-11-17'
-image: '/images/blog/destinos-para-primeira-viagem-sozinha-brasil.jpg'
-imageAlt: 'Mapa do Brasil com cinco marcadores ligados por uma rota pontilhada, ilustrando destinos para a primeira viagem sozinha.'
+image: '/images/blog/cenas/destinos-para-primeira-viagem-sozinha-brasil.jpg'
+imageAlt: 'Uma viajadora com mochila passeia por uma ladeira de Ouro Preto com casario colonial.'
 summary:
   - 'Para a primeira vez, escolha pela facilidade: chegada simples, passeio organizado, viagem curta.'
   - 'Curitiba, Foz do Iguaçu, Bonito, Ouro Preto e Chapada dos Veadeiros têm pontos fortes e pegadinhas diferentes.'
@@ -152,7 +152,7 @@ E se nenhum desses combina com você, a lógica é a mesma: transporte fácil, p
 
 ## Para ir mais tranquila
 
-<figure class="story-figure"><img src="/images/blog/destinos-para-primeira-viagem-sozinha-brasil-chegada.svg" alt="Ônibus a caminho de uma hospedagem, com sol no céu e um marcador de lugar sobre o telhado." width="1200" height="630" loading="lazy"><figcaption>Chegar de dia, com o caminho até a hospedagem já decidido, tira metade da tensão da primeira viagem.</figcaption></figure>
+<figure class="story-figure"><img src="/images/blog/cenas/destinos-para-primeira-viagem-sozinha-brasil-chegada.jpg" alt="Uma viajadora de mochila desce de um ônibus urbano à luz do dia diante de uma rua com pousadas." width="1200" height="630" loading="lazy"><figcaption>Chegar de dia, com o caminho até a hospedagem já decidido, tira metade da tensão da primeira viagem.</figcaption></figure>
 
 Um checklist para imprimir ou salvar no celular:
 

@@ -6,8 +6,8 @@ description: 'O que fazer em Goiânia sozinha? Roteiro por perfil, com parques, 
 category: Rolês na cidade
 date: '2026-10-09'
 updated: '2026-11-16'
-image: '/images/blog/o-que-fazer-em-goiania-sozinha.jpg'
-imageAlt: 'Mapa de rota com marcadores de parque, museu e mercado, ilustrando um roteiro em Goiânia.'
+image: '/images/blog/cenas/o-que-fazer-em-goiania-sozinha.jpg'
+imageAlt: 'Uma mulher passeia pelo lago arborizado de um parque urbano em Goiânia.'
 summary:
   - 'Escolha o roteiro pelo seu humor do dia: cultura, parque, feira ou comida.'
   - 'Horários mudam: confirme no canal oficial de cada lugar antes de sair.'

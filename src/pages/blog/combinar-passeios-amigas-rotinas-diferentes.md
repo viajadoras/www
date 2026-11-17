@@ -5,8 +5,8 @@ seoTitle: 'Amigas sem tempo? Como marcar um rolê que acontece'
 description: 'Grupo de amigas que nunca consegue marcar nada? Um convite com data, lugar e duração que dá para responder em segundos, e o que fazer quando ninguém pode.'
 category: Rolês na cidade
 date: '2026-09-07'
-image: '/images/blog/combinar-passeios-amigas-rotinas-diferentes.jpg'
-imageAlt: 'Calendário e xícara ilustrados para um encontro que cabe na rotina'
+image: '/images/blog/cenas/combinar-passeios-amigas-rotinas-diferentes.jpg'
+imageAlt: 'Duas amigas conversam em um café com um tablet aberto sobre a mesa.'
 tool: 'invite'
 summary:
   - 'Prefira um convite com lugar, horário e duração.'

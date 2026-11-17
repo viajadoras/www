@@ -5,8 +5,8 @@ seoTitle: 'Pirenópolis e bate-voltas saindo de Goiânia'
 description: 'Quer sair de Goiânia no fim de semana? Compare Pirenópolis, Cidade de Goiás e Salto do Itiquira para ir sozinha ou em grupo de mulheres, com dados oficiais.'
 category: Viajar sozinha
 date: '2026-11-17'
-image: '/images/blog/pirenopolis-e-bate-voltas-perto-de-goiania.jpg'
-imageAlt: 'Casario colonial, serra e cachoeira ligados por uma estrada pontilhada a partir de Goiânia.'
+image: '/images/blog/cenas/pirenopolis-e-bate-voltas-perto-de-goiania.jpg'
+imageAlt: 'Duas mulheres caminham por uma rua de pedra entre casas históricas de Pirenópolis.'
 summary:
   - 'Pirenópolis e Cidade de Goiás funcionam bem a pé no centro histórico; cachoeiras e parques pedem carro ou traslado.'
   - 'De novembro a abril chove mais no Cerrado: confirme risco de cabeça-d’água antes de entrar em qualquer trilha.'

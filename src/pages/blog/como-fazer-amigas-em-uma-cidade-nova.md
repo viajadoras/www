@@ -6,8 +6,8 @@ category: Rolês na cidade
 date: '2026-09-06'
 updated: '2026-09-07'
 seoTitle: 'Como fazer amigas em uma cidade nova'
-image: '/images/blog/como-fazer-amigas-em-uma-cidade-nova.jpg'
-imageAlt: 'Duas xícaras e um convite para conhecer novas amigas na cidade.'
+image: '/images/blog/cenas/como-fazer-amigas-em-uma-cidade-nova.jpg'
+imageAlt: 'Uma mulher recém-chegada conversa com outra participante em uma oficina de cerâmica.'
 ---
 
 Chegar a uma cidade sem uma rede próxima pode deixar até um passeio simples difícil de combinar. Um ponto de partida é escolher uma atividade que você já gostaria de fazer e procurar outras mulheres interessadas nela.

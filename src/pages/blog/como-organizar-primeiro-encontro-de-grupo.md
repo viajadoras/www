@@ -6,8 +6,8 @@ category: Rolês na cidade
 date: '2026-09-06'
 updated: '2026-09-07'
 seoTitle: 'Como organizar o primeiro encontro de grupo'
-image: '/images/blog/como-organizar-primeiro-encontro-de-grupo.jpg'
-imageAlt: 'Um calendário, um ponto de encontro e os combinados de um grupo.'
+image: '/images/blog/cenas/como-organizar-primeiro-encontro-de-grupo.jpg'
+imageAlt: 'Uma mulher recebe três participantes para um encontro em um café com varanda.'
 ---
 
 O primeiro encontro de um grupo precisa de uma proposta que as participantes consigam entender e decidir se querem acompanhar. Comece com uma atividade simples, em vez de tentar preencher um dia inteiro.

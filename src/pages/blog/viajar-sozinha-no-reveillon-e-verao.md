@@ -5,8 +5,8 @@ seoTitle: 'Viajar sozinha no Réveillon e férias de verão'
 description: 'Quer viajar no Réveillon ou nas férias de janeiro e ninguém tem a mesma data? Veja 3 formatos possíveis, cuidados antes do Pix na reserva e como achar companhia.'
 category: Companhia para viajar
 date: '2026-11-17'
-image: '/images/blog/viajar-sozinha-no-reveillon-e-verao.jpg'
-imageAlt: 'Calendário de fim de ano ao lado de um sol e marcadores de rota, ilustrando viagem de Réveillon e férias.'
+image: '/images/blog/cenas/viajar-sozinha-no-reveillon-e-verao.jpg'
+imageAlt: 'Uma viajadora adulta contempla os fogos de réveillon na orla brasileira junto de outras pessoas.'
 summary:
   - 'Você não precisa desistir das férias porque as amigas não têm a mesma folga: escolha o formato antes do destino.'
   - 'Alta temporada concentra golpes de hospedagem falsa: confira CNPJ no Pix e o Cadastur antes de transferir.'

@@ -6,8 +6,8 @@ description: 'Grupos de viagem para pessoas sozinhas: como achar, o que pergunta
 category: Planejamento de viagem
 date: '2026-10-19'
 updated: '2026-10-19'
-image: '/images/blog/grupos-de-viagem-para-quem-vai-sozinha.jpg'
-imageAlt: 'Balão de conversa com um aviso de atenção ao lado de um cartão de pagamento, ilustrando cuidados com grupos de viagem.'
+image: '/images/blog/cenas/grupos-de-viagem-para-quem-vai-sozinha.jpg'
+imageAlt: 'Uma viajadora com mochila cumprimenta um pequeno grupo de mulheres ao lado de uma van de passeio.'
 summary:
   - 'Grupo de viagem funciona quando alguém responde por reserva, contrato e dinheiro com nome e documento.'
   - 'Pressa para pagar, conta de pessoa física e reserva que ninguém mostra são sinais para esperar.'
@@ -62,7 +62,7 @@ Nenhum desses sinais prova golpe sozinho, e um golpe bem feito pode não mostrar
 
 Mande por escrito e guarde as respostas. Quem organiza de verdade responde sem irritação. Dá para copiar esta lista para o celular e marcar item por item.
 
-<figure class="story-figure"><img src="/images/blog/grupos-de-viagem-para-quem-vai-sozinha-antes-de-pagar.svg" alt="Três cartões em sequência: um documento com selo de aprovado, um escudo com marca de verificado e um cartão de pagamento." width="1200" height="630" loading="lazy"><figcaption>A ordem importa: primeiro contrato, depois a checagem da empresa, só então o pagamento.</figcaption></figure>
+<figure class="story-figure"><img src="/images/blog/cenas/grupos-de-viagem-para-quem-vai-sozinha-antes-de-pagar.jpg" alt="Uma viajadora lê um contrato de passeio em papel antes de pagar, cartão guardado ao lado." width="1200" height="630" loading="lazy"><figcaption>A ordem importa: primeiro contrato, depois a checagem da empresa, só então o pagamento.</figcaption></figure>
 
 <ul class="story-checklist">
 <li><strong>Quem é a empresa ou a pessoa responsável?</strong> Nome completo, CNPJ (se houver), endereço e telefone fixo ou comercial.</li>

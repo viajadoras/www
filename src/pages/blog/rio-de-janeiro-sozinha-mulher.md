@@ -5,8 +5,8 @@ seoTitle: 'Rio de Janeiro sozinha: dicas e roteiro para mulheres'
 description: 'Vai viajar para o Rio de Janeiro sozinha? Veja programas diurnos fáceis de encaixar, como usar metrô e VLT, cuidados práticos e como achar companhia no destino.'
 category: Viajar sozinha
 date: '2026-11-17'
-image: '/images/blog/rio-de-janeiro-sozinha-mulher.jpg'
-imageAlt: 'Morro à beira-mar, sol e trilho urbano estilizados, ilustrando um roteiro diurno no Rio de Janeiro.'
+image: '/images/blog/cenas/rio-de-janeiro-sozinha-mulher.jpg'
+imageAlt: 'Uma viajadora caminha no calçadão da praia de Botafogo, com o Pão de Açúcar ao fundo.'
 cta:
   - 'Quer combinar um passeio no Rio?'
   - 'Publique as datas do seu plano para o Rio no Viajadoras e converse com outras viajadoras sobre um café ou uma caminhada na orla.'

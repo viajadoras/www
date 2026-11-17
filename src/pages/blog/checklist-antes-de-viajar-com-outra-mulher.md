@@ -6,8 +6,8 @@ category: Companhia para viajar
 date: '2026-09-06'
 updated: '2026-09-07'
 seoTitle: 'Viajar com uma amiga: checklist antes de reservar'
-image: '/images/blog/checklist-antes-de-viajar-com-outra-mulher.jpg'
-imageAlt: 'Uma lista de combinados antes de viajar: orçamento, hospedagem e autonomia.'
+image: '/images/blog/cenas/checklist-antes-de-viajar-com-outra-mulher.jpg'
+imageAlt: 'Duas amigas de gerações diferentes conferem juntas uma lista de papel ao lado das mochilas.'
 ---
 
 Antes de comprar uma passagem ou dividir uma reserva, vale descobrir como cada uma imagina a viagem. Gostar do mesmo destino é um começo; horários, dinheiro e convivência também entram na escolha.

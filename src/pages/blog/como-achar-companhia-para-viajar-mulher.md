@@ -6,8 +6,8 @@ category: Companhia para viajar
 date: '2026-10-09'
 updated: '2026-11-16'
 seoTitle: 'Como achar uma parceira de viagem: 6 passos'
-image: '/images/blog/como-achar-companhia-para-viajar-mulher.jpg'
-imageAlt: 'Duas amigas lado a lado sob um caminho pontilhado, ilustrando companhia para viajar.'
+image: '/images/blog/cenas/como-achar-companhia-para-viajar-mulher.jpg'
+imageAlt: 'Duas viajadoras com malas conversam em um banco de rodoviária brasileira.'
 ---
 
 Você tem a vontade, tem o destino na cabeça e falta uma coisa: com quem ir. Quem procura companhia para viajar costuma esbarrar em um ciclo conhecido. As amigas topam "um dia", mas não têm data. Quando alguém tem data, não tem dinheiro. Quando tem os dois, o destino é outro.

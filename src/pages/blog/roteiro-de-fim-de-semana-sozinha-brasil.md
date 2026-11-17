@@ -6,8 +6,8 @@ category: Viajar sozinha
 date: '2026-10-09'
 updated: '2026-10-09'
 seoTitle: 'Roteiro de fim de semana sozinha pelo Brasil'
-image: '/images/blog/roteiro-de-fim-de-semana-sozinha-brasil.jpg'
-imageAlt: 'Sol, calendário e mala pequena, ilustrando um fim de semana de viagem sozinha.'
+image: '/images/blog/cenas/roteiro-de-fim-de-semana-sozinha-brasil.jpg'
+imageAlt: 'Uma mulher chega com uma pequena bolsa de fim de semana a uma pousada brasileira com jardim.'
 ---
 
 Fim de semana é a maneira mais leve de testar viajar sozinha. São dois ou três dias, pouca burocracia, nenhuma necessidade de pedir férias e uma volta que já está no calendário. Se a vontade existe e a coragem ainda está se organizando, esse formato ajuda bastante.
