@@ -344,8 +344,24 @@ html {
   outline-offset: 3px;
 }
 
-.site-menu-panel { max-height: calc(100dvh - 5rem); }
-@media (max-width: 47.99rem) {
-  #site-menu { position: static; }
-  .site-menu-panel { inset-inline: 1rem; width: auto; }
+.header-layout {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 1.5rem;
+  min-height: 4rem;
+}
+.header-links { display: flex; justify-content: flex-end; gap: .5rem; }
+.header-links a {
+  display: grid; place-items: center; min-height: 44px; padding-inline: .75rem;
+  font-size: .875rem; font-weight: 600; text-underline-offset: .35em;
+}
+.header-links a:hover, .header-links a[aria-current] { color: var(--color-primary-800); text-decoration: underline; }
+@media (max-width: 42rem) {
+  .site-header { top: -3.25rem; }
+  .header-layout { grid-template-columns: 1fr auto; grid-template-rows: 3.25rem auto; }
+  .header-download { grid-area: 1 / 2; }
+  .header-links { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; border-top: 1px solid var(--color-secondary-200); gap: 0; }
+  .header-links a { flex: 1; }
+  html { scroll-padding-top: 3.25rem; }
 }
