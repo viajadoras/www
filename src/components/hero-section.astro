@@ -3,8 +3,16 @@ import { Image } from 'astro:assets';
 import feira from '../assets/images/abertura/feira.webp';
 import chapada from '../assets/images/abertura/chapada.webp';
 import olinda from '../assets/images/abertura/olinda.webp';
-import planos from '../assets/images/planos-demo.webp';
+import encontro from '../assets/images/abertura/app-evento.webp';
+import comunidades from '../assets/images/abertura/app-comunidades.webp';
+import planos from '../assets/images/abertura/app-planos.webp';
 import AppStoreBadges from './AppStoreBadges.astro';
+
+const cenas = [
+  { foto: feira, alt: 'Três amigas conversam na feira em Goiânia.', tela: encontro, nome: 'Encontros' },
+  { foto: chapada, alt: 'Duas viajadoras em uma trilha na Chapada dos Veadeiros.', tela: comunidades, nome: 'Comunidades' },
+  { foto: olinda, alt: 'Uma viajadora passeia pelas ruas coloridas de Olinda.', tela: planos, nome: 'Planos de viagem' },
+];
 ---
 <section id="para-quem" class="bg-secondary-50">
   <div class="container grid items-center gap-6 py-8 sm:py-12 lg:grid-cols-2 lg:gap-14">
@@ -14,16 +22,51 @@ import AppStoreBadges from './AppStoreBadges.astro';
       <p class="mt-4 text-sm leading-relaxed text-neutral-700">Gratuito para mulheres a partir de 18 anos. A equipe verifica sua selfie antes de liberar o acesso à comunidade. <a href="/ajuda/#entrada" data-action="verificacao" class="font-semibold text-primary-800 underline underline-offset-4">Entenda a entrada</a>.</p>
       <div class="mt-5" data-cta="home_abertura"><AppStoreBadges class="flex flex-wrap items-center gap-3" imgClass="h-auto w-32 sm:w-36" /></div>
     </div>
-    <div class="mx-auto grid w-full max-w-xl grid-cols-[3fr_2fr] items-stretch gap-2 sm:gap-3">
-      <div class="grid min-w-0 grid-cols-2 gap-2 sm:gap-3">
-        <Image src={feira} alt="Três amigas conversam em uma feira de frutas." widths={[320, 480, 720]} sizes="(min-width: 640px) 340px, 56vw" loading="eager" fetchpriority="high" class="col-span-2 block h-auto w-full rounded-2xl" />
-        <Image src={chapada} alt="Duas viajadoras de mochila na Chapada dos Veadeiros." widths={[160, 320, 480]} sizes="(min-width: 640px) 168px, 27vw" loading="eager" class="h-full w-full rounded-xl object-cover" />
-        <Image src={olinda} alt="Uma viajadora passeia entre as casas coloridas de Olinda." widths={[160, 320, 480]} sizes="(min-width: 640px) 168px, 27vw" loading="eager" class="h-full w-full rounded-xl object-cover" />
+    <figure class="album">
+      <div class="mosaico">
+        {cenas.map(({ foto, alt, tela, nome }, index) => (
+          <a class="cena" href={tela.src} aria-label={`Ampliar tela de demonstração: ${nome}`}>
+            <Image src={foto} alt={alt} widths={[240, 420, 720]} sizes="(min-width: 640px) 330px, 56vw" class="lugar" loading="eager" fetchpriority={index === 0 ? 'high' : 'auto'} />
+            <div class="amostra">
+              <Image src={tela} alt="" widths={[260, 440, 660]} sizes="(min-width: 640px) 240px, 45vw" class="tela" loading="eager" />
+            </div>
+            <span class="legenda">{nome}<span aria-hidden="true">↗</span></span>
+          </a>
+        ))}
       </div>
-      <figure class="flex min-w-0 flex-col items-center justify-center gap-2 rounded-2xl bg-secondary-200 p-2 sm:p-3">
-        <Image src={planos} alt="Tela do Viajadoras com busca por destino e lista de planos de viagem." widths={[220, 440, 660]} sizes="(min-width: 640px) 200px, 34vw" loading="eager" class="h-auto w-full rounded-xl border border-neutral-300" />
-        <figcaption class="text-center text-xs text-neutral-700">Planos de viagem · demonstração</figcaption>
-      </figure>
-    </div>
+      <figcaption class="mt-2 text-right text-xs text-neutral-600">Telas do app com dados de demonstração</figcaption>
+    </figure>
   </div>
 </section>
+
+<style>
+  .album { width: 100%; max-width: 37rem; margin-inline: auto; }
+  .mosaico { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+  .cena {
+    position: relative; display: grid; isolation: isolate; overflow: hidden;
+    grid-template-rows: auto auto auto; container-type: inline-size;
+    border-radius: 1rem; background: var(--color-teal-100); color: var(--color-teal-900);
+  }
+  .cena:last-child { background: var(--color-lavender-100); color: var(--color-lavender-900); }
+  .lugar { display: block; width: 100%; aspect-ratio: 1.95; object-fit: cover; object-position: center 31%; }
+  .amostra { position: relative; margin: -6% 7% 0; height: 48cqw; }
+  .tela {
+    position: absolute; width: 100%; max-width: none; height: auto; top: -11cqw;
+    border-radius: .75rem; box-shadow: 0 0 0 2px #fff, 0 4px 12px #24170828;
+  }
+  .amostra { overflow: hidden; border-radius: .65rem .65rem 0 0; }
+  .legenda {
+    position: relative; display: flex; justify-content: space-between; align-items: center;
+    padding: .42rem 8%; font-size: clamp(.78rem, 5.3cqw, .95rem); font-weight: 700;
+  }
+  .cena:first-child {
+    grid-column: 1 / -1; grid-template-columns: 58% 42%; grid-template-rows: 1fr auto;
+    background: var(--color-primary-100); color: var(--color-primary-900);
+  }
+  .cena:first-child .lugar { grid-row: span 2; height: 100%; aspect-ratio: 1.6; object-position: center; }
+  .cena:first-child .amostra { margin: 8% 10% 0 6%; height: auto; transform: rotate(2deg); }
+  .cena:first-child .tela { top: -4.8cqw; }
+  .cena:first-child .legenda { font-size: clamp(.8rem, 3.4cqw, 1.05rem); }
+  .cena:focus-visible { outline: 3px solid var(--color-primary-700); outline-offset: 2px; }
+  .cena:hover .legenda { text-decoration: underline; }
+</style>
