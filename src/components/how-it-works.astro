@@ -1,22 +1,16 @@
 ---
 const usos = [
-  [
-    'Pergunte nos grupos',
-    'Vai chegar a uma cidade nova? Peça dicas de trajeto ou de hospedagem a quem já passou por lá.',
-  ],
-  [
-    'Compartilhe seu plano',
-    'Diga para onde vai e em quais datas. Outras viajadoras podem comentar e combinar um passeio com você.',
-  ],
-  [
-    'Combine um rolê',
-    'As próprias viajadoras podem marcar um café, uma feira ou uma trilha. A oferta depende de quem está na região.',
-  ],
+  { titulo: 'Compartilhe um plano', texto: 'Escolha o destino e as datas da viagem.', icone: 'M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z M9 3v15m6-12v15' },
+  { titulo: 'Entre em um grupo', texto: 'Troque dicas com quem já passou por lá.', icone: 'M21 11a8 8 0 0 1-8 8H8l-5 3 1-6a8 8 0 1 1 17-5z' },
+  { titulo: 'Marque um rolê', texto: 'Convide as viajadoras da região para sair.', icone: 'M3 8h13v6a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z M16 9h2a3 3 0 0 1 0 6h-2 M2 22h17 M7 2v3m4-3v3' },
 ];
 ---
-<section id="como-funciona" class="container py-10 sm:py-14">
-  <h2 class="font-display text-3xl text-primary-900 sm:text-4xl">Como funciona o Viajadoras</h2>
-  <ul class="mt-6 grid gap-5 md:grid-cols-3 md:gap-8">
-    {usos.map(([titulo, descricao]) => <li class="border-t border-secondary-300 pt-3"><h3 class="text-lg font-semibold">{titulo}</h3><p class="mt-2 max-w-md leading-relaxed text-neutral-700">{descricao}</p></li>)}
+<section id="como-funciona" class="container py-8 sm:py-12">
+  <h2 class="font-display text-3xl text-primary-900">Como funciona</h2>
+  <ul class="mt-5 grid gap-5 md:grid-cols-3">
+    {usos.map(({titulo,texto,icone}) => <li class="flex items-center gap-3">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="size-12 shrink-0 rounded-2xl bg-primary-100 p-3 text-primary-800"><path d={icone} /></svg>
+      <div><h3 class="font-semibold">{titulo}</h3><p class="text-sm text-neutral-700">{texto}</p></div>
+    </li>)}
   </ul>
 </section>

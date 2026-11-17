@@ -8,30 +8,40 @@ import comunidades from '../assets/images/abertura/app-comunidades.webp';
 import planos from '../assets/images/abertura/app-planos.webp';
 import AppStoreBadges from './AppStoreBadges.astro';
 
-const cenas = [
-  { foto: feira, alt: 'Três amigas conversam na feira em Goiânia.', tela: encontro, nome: 'Encontros' },
-  { foto: chapada, alt: 'Duas viajadoras em uma trilha na Chapada dos Veadeiros.', tela: comunidades, nome: 'Comunidades' },
-  { foto: olinda, alt: 'Uma viajadora passeia pelas ruas coloridas de Olinda.', tela: planos, nome: 'Planos de viagem' },
+import jovens from '../assets/images/abertura/jovens.webp';
+import cafe from '../assets/images/abertura/cafe.webp';
+import barco from '../assets/images/abertura/rio-negro.webp';
+
+const pecas = [
+  { id: 'barco', src: barco, alt: 'Cinco mulheres de diferentes gerações passeiam de barco no Rio Negro.' },
+  { id: 'encontro', src: encontro, nome: 'Encontros' },
+  { id: 'cafe', src: cafe, alt: 'Uma viajadora de cabelos brancos toma café em São Luís.' },
+  { id: 'chapada', src: chapada, alt: 'Duas amigas observam a paisagem da Chapada dos Veadeiros.' },
+  { id: 'comunidades', src: comunidades, nome: 'Comunidades' },
+  { id: 'feira', src: feira, alt: 'Três amigas conversam em uma feira de Goiânia.' },
+  { id: 'jovens', src: jovens, alt: 'Quatro jovens adultas visitam uma banca de livros e discos em São Paulo.' },
+  { id: 'olinda', src: olinda, alt: 'Uma viajadora passeia pelas ruas de Olinda.' },
+  { id: 'planos', src: planos, nome: 'Planos de viagem' },
 ];
 ---
 <section id="para-quem" class="bg-secondary-50">
-  <div class="container grid items-center gap-6 py-8 sm:py-12 lg:grid-cols-2 lg:gap-14">
+  <div class="container grid items-center gap-6 py-8 sm:py-12 lg:grid-cols-[0.8fr_1.35fr] lg:gap-9">
     <div class="max-w-xl">
-      <h1 id="abertura" class="text-balance font-display text-[clamp(2.35rem,4.5vw,4rem)] font-semibold leading-[1.06] text-primary-900">Um app de viagens e rolês só para mulheres</h1>
+      <h1 id="abertura" class="text-balance font-display text-[clamp(2.35rem,4.5vw,4rem)] font-semibold leading-[1.06] text-primary-900">Um app gratuito de viagens e rolês só para mulheres</h1>
       <p class="mt-4 text-lg leading-relaxed">Vai viajar? Compartilhe seu roteiro. Está pela cidade? Convide outras viajadoras para um café, uma trilha ou um show.</p>
-      <p class="mt-4 text-sm leading-relaxed text-neutral-700">Gratuito para mulheres a partir de 18 anos. A equipe verifica sua selfie antes de liberar o acesso à comunidade. <a href="/ajuda/#entrada" data-action="verificacao" class="font-semibold text-primary-800 underline underline-offset-4">Entenda a entrada</a>.</p>
+      <p class="mt-4 text-sm leading-relaxed text-neutral-700">A partir dos 18 anos. A equipe verifica sua selfie antes de liberar o acesso à comunidade. <a href="/ajuda/#entrada" data-action="verificacao" class="font-semibold text-primary-800 underline underline-offset-4">Entenda a entrada</a>.</p>
       <div class="mt-5" data-cta="home_abertura"><AppStoreBadges class="flex flex-wrap items-center gap-3" imgClass="h-auto w-32 sm:w-36" /></div>
     </div>
     <figure class="album">
       <div class="mosaico">
-        {cenas.map(({ foto, alt, tela, nome }, index) => (
-          <a class="cena" href={tela.src} aria-label={`Ampliar tela de demonstração: ${nome}`}>
-            <Image src={foto} alt={alt} widths={[240, 420, 720]} sizes="(min-width: 640px) 330px, 56vw" class="lugar" loading="eager" fetchpriority={index === 0 ? 'high' : 'auto'} />
-            <div class="amostra">
-              <Image src={tela} alt="" widths={[260, 440, 660]} sizes="(min-width: 640px) 240px, 45vw" class="tela" loading="eager" />
-            </div>
+        {pecas.map(({ id, src, alt, nome }, i) => nome ? (
+          <a class="amostra" style={`grid-area:${id}`} href={src.src} aria-label={`Ampliar tela de demonstração: ${nome}`}>
             <span class="legenda">{nome}<span aria-hidden="true">↗</span></span>
+            <div class="recorte"><Image src={src} alt="" widths={[260, 440]} sizes="220px" loading="eager" /></div>
           </a>
+        ) : (
+          <Image src={src} alt={alt ?? ''} widths={[280, 480, 720]} sizes="(min-width: 640px) 320px, 78vw"
+            class="foto" style={`grid-area:${id}`} loading="eager" fetchpriority={i === 0 ? 'high' : 'auto'} />
         ))}
       </div>
       <figcaption class="mt-2 text-right text-xs text-neutral-600">Telas do app com dados de demonstração</figcaption>
@@ -40,33 +50,30 @@ const cenas = [
 </section>
 
 <style>
-  .album { width: 100%; max-width: 37rem; margin-inline: auto; }
-  .mosaico { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
-  .cena {
-    position: relative; display: grid; isolation: isolate; overflow: hidden;
-    grid-template-rows: auto auto auto; container-type: inline-size;
-    border-radius: 1rem; background: var(--color-teal-100); color: var(--color-teal-900);
+  .album { width: 100%; min-width: 0; container-type: inline-size; }
+  .mosaico {
+    display: grid; gap: clamp(4px, .9cqw, 9px); grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-auto-rows: 23cqw; border-radius: 1.4rem; overflow: hidden;
+    grid-template-areas:
+      "barco barco barco barco barco encontro encontro encontro cafe cafe cafe cafe"
+      "chapada chapada chapada comunidades comunidades comunidades comunidades feira feira feira feira feira"
+      "jovens jovens jovens jovens jovens olinda olinda olinda planos planos planos planos";
   }
-  .cena:last-child { background: var(--color-lavender-100); color: var(--color-lavender-900); }
-  .lugar { display: block; width: 100%; aspect-ratio: 1.95; object-fit: cover; object-position: center 31%; }
-  .amostra { position: relative; margin: -6% 7% 0; height: 48cqw; }
-  .tela {
-    position: absolute; width: 100%; max-width: none; height: auto; top: -11cqw;
-    border-radius: .75rem; box-shadow: 0 0 0 2px #fff, 0 4px 12px #24170828;
+  .foto { width: 100%; height: 100%; object-fit: cover; object-position: center 36%; border-radius: .45rem; }
+  .amostra { display: flex; flex-direction: column; overflow: hidden; padding: 5% 6% 0; border-radius: .45rem; background: var(--color-primary-100); color: var(--color-primary-900); }
+  .amostra:nth-child(5) { background: var(--color-teal-100); color: var(--color-teal-900); }
+  .amostra:last-child { background: var(--color-lavender-100); color: var(--color-lavender-900); }
+  .legenda { display: flex; align-items: center; justify-content: space-between; gap: .15rem; padding-bottom: .25rem; font-size: clamp(.74rem,2.1cqw,1rem); font-weight: 700; }
+  .recorte { border-radius: .5rem .5rem 0 0; overflow: hidden; }
+  .recorte img { width: 100%; height: auto; margin-top: -13%; }
+  .amostra:hover .legenda { text-decoration: underline; }
+  .amostra:focus-visible { outline: 3px solid var(--color-primary-700); outline-offset: -3px; }
+  @container (max-width: 32rem) {
+    .mosaico { grid-template-columns: repeat(6, minmax(0,1fr)); grid-auto-rows: 30cqw; grid-template-areas:
+      "barco barco barco barco encontro encontro"
+      "cafe cafe cafe feira feira feira"
+      "comunidades comunidades chapada chapada olinda olinda"
+      "jovens jovens jovens jovens planos planos"; }
+    .legenda { font-size: clamp(.64rem,3cqw,.84rem); }
   }
-  .amostra { overflow: hidden; border-radius: .65rem .65rem 0 0; }
-  .legenda {
-    position: relative; display: flex; justify-content: space-between; align-items: center;
-    padding: .42rem 8%; font-size: clamp(.78rem, 5.3cqw, .95rem); font-weight: 700;
-  }
-  .cena:first-child {
-    grid-column: 1 / -1; grid-template-columns: 58% 42%; grid-template-rows: 1fr auto;
-    background: var(--color-primary-100); color: var(--color-primary-900);
-  }
-  .cena:first-child .lugar { grid-row: span 2; height: 100%; aspect-ratio: 1.6; object-position: center; }
-  .cena:first-child .amostra { margin: 8% 10% 0 6%; height: auto; transform: rotate(2deg); }
-  .cena:first-child .tela { top: -4.8cqw; }
-  .cena:first-child .legenda { font-size: clamp(.8rem, 3.4cqw, 1.05rem); }
-  .cena:focus-visible { outline: 3px solid var(--color-primary-700); outline-offset: 2px; }
-  .cena:hover .legenda { text-decoration: underline; }
 </style>
