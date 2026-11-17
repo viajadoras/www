@@ -14,14 +14,14 @@ import barco from '../assets/images/abertura/rio-negro.webp';
 
 const pecas = [
   { id: 'barco', src: barco, alt: 'Cinco mulheres de diferentes gerações passeiam de barco no Rio Negro.' },
-  { id: 'encontro', src: encontro, nome: 'Encontros' },
+  { id: 'planos', src: planos, nome: 'Planos de viagem' },
   { id: 'cafe', src: cafe, alt: 'Uma viajadora de cabelos brancos toma café em São Luís.' },
   { id: 'chapada', src: chapada, alt: 'Duas amigas observam a paisagem da Chapada dos Veadeiros.' },
   { id: 'comunidades', src: comunidades, nome: 'Comunidades' },
   { id: 'feira', src: feira, alt: 'Três amigas conversam em uma feira de Goiânia.' },
   { id: 'jovens', src: jovens, alt: 'Quatro jovens adultas visitam uma banca de livros e discos em São Paulo.' },
   { id: 'olinda', src: olinda, alt: 'Uma viajadora passeia pelas ruas de Olinda.' },
-  { id: 'planos', src: planos, nome: 'Planos de viagem' },
+  { id: 'encontro', src: encontro, nome: 'Encontros' },
 ];
 ---
 <section id="para-quem" class="bg-secondary-50">
@@ -55,9 +55,9 @@ const pecas = [
     display: grid; gap: clamp(4px, .9cqw, 9px); grid-template-columns: repeat(12,minmax(0,1fr));
     grid-auto-rows: 23cqw; border-radius: 1.4rem; overflow: hidden;
     grid-template-areas:
-      "barco barco barco barco barco encontro encontro encontro cafe cafe cafe cafe"
+      "barco barco barco barco barco planos planos planos cafe cafe cafe cafe"
       "chapada chapada chapada comunidades comunidades comunidades comunidades feira feira feira feira feira"
-      "jovens jovens jovens jovens jovens olinda olinda olinda planos planos planos planos";
+      "jovens jovens jovens jovens jovens olinda olinda olinda encontro encontro encontro encontro";
   }
   .foto { width: 100%; height: 100%; object-fit: cover; object-position: center 36%; border-radius: .45rem; }
   .amostra { display: flex; flex-direction: column; overflow: hidden; padding: 5% 6% 0; border-radius: .45rem; background: var(--color-primary-100); color: var(--color-primary-900); }
@@ -70,10 +70,10 @@ const pecas = [
   .amostra:focus-visible { outline: 3px solid var(--color-primary-700); outline-offset: -3px; }
   @container (max-width: 32rem) {
     .mosaico { grid-template-columns: repeat(6, minmax(0,1fr)); grid-auto-rows: 30cqw; grid-template-areas:
-      "barco barco barco barco encontro encontro"
+      "barco barco barco barco planos planos"
       "cafe cafe cafe feira feira feira"
       "comunidades comunidades chapada chapada olinda olinda"
-      "jovens jovens jovens jovens planos planos"; }
+      "jovens jovens jovens jovens encontro encontro"; }
     .legenda { font-size: clamp(.64rem,3cqw,.84rem); }
   }
 </style>
