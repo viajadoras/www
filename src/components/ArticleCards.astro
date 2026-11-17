@@ -5,7 +5,9 @@ const {
   limit,
   exclude,
   category,
+  compact = false,
 } = Astro.props as {
+  compact?: boolean;
   heading?: 'h2' | 'h3';
   limit?: number;
   exclude?: string;
@@ -50,6 +52,18 @@ const posts = [
   .filter((p) => !exclude || normalized(p.url) !== normalized(exclude))
   .slice(0, limit);
 ---
+{compact ? (
+  <div class="mt-4 grid gap-x-8 md:grid-cols-2">
+    {posts.map(({ frontmatter: f, url }) => (
+      <article data-blog-card data-category={f.category} data-search={f.description} class="border-t border-secondary-300">
+        <a href={`${normalized(url)}/`} class="group flex items-center gap-4 py-4">
+          <img src={f.image} alt="" width="1200" height="630" loading="lazy" class="h-20 w-24 shrink-0 rounded-xl object-cover sm:w-32" />
+          <div><p class="text-xs font-semibold text-primary-700">{f.category}</p><Heading class="mt-1 font-display text-lg leading-tight group-hover:underline">{f.title}</Heading></div>
+        </a>
+      </article>
+    ))}
+  </div>
+) : (
 <div class:list={["article-grid mt-8 grid gap-6 md:grid-cols-2", limit !== 2 && "lg:grid-cols-3"]}>
   {posts.map(({ frontmatter, url }) => (
     <article class="flex flex-col overflow-hidden rounded-3xl border border-neutral-200 bg-white">
@@ -66,3 +80,5 @@ const posts = [
     </article>
   ))}
 </div>
+
+)}

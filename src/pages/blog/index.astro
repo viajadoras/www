@@ -1,19 +1,103 @@
 ---
 import ArticleCards from '../../components/ArticleCards.astro';
 import Base from '../../layouts/Base.astro';
----
+import { frontmatter as rioGuide } from './rio-de-janeiro-sozinha-mulher.md';
+import { frontmatter as cidade } from './amigas-para-sair-goiania.md';
+import { frontmatter as gastos } from './como-dividir-gastos-viagem-entre-amigas.md';
 
+const destaques = [
+  { guia: rioGuide, href: '/blog/rio-de-janeiro-sozinha-mulher/', titulo: 'Um roteiro para curtir o Rio sozinha' },
+  { guia: cidade, href: '/blog/amigas-para-sair-goiania/', titulo: 'Onde fazer amigas em Goiânia' },
+  { guia: gastos, href: '/blog/como-dividir-gastos-viagem-entre-amigas/', titulo: 'Como dividir os gastos da viagem' },
+];
+const temas = [...new Set(Object.values(import.meta.glob<{frontmatter:{category:string}}>('./*.md',{ eager:true })).map(p => p.frontmatter.category))].sort();
+---
 <Base title="Blog Viajadoras | Viajar sozinha, companhia para viajar e rolês" description="Guias para mulheres que querem viajar sozinha ou com amigas, combinar a viagem e sair mais na cidade. Dicas práticas, checklists e ferramentas.">
-  <section class="container py-12 sm:py-20">
-    <div class="max-w-3xl">
-      <p class="text-sm font-semibold text-primary-700">Blog Viajadoras</p>
-      <h1 class="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">Viajar sozinha, com amigas e sair mais.</h1>
-      <p class="mt-6 text-lg leading-relaxed text-neutral-600">Guias para tirar a viagem do papel, achar companhia e dividir os gastos, e também ideias para sair mais na sua cidade. Explore os guias, organize os gastos da viagem ou monte um convite do seu jeito.</p>
+  <section class="container pb-12 pt-6 sm:pt-9">
+    <h1 class="font-display text-4xl font-semibold text-primary-900 sm:text-5xl">Blog do Viajadoras</h1>
+    <div id="destaques" class="mt-5 grid gap-2 sm:grid-cols-[1.3fr_1fr]">
+      {destaques.map(({guia,href,titulo},i) => <a href={href} class:list={['destaque group',i===0 && 'principal']}>
+        <img src={guia.image} alt="" width="1200" height="630" loading={i===0?'eager':'lazy'}/>
+        <div><span>{guia.category}</span><h2>{titulo}</h2></div>
+      </a>)}
     </div>
-    <ArticleCards />
-    <aside class="mt-12 max-w-3xl border-t border-neutral-200 pt-8">
-      <h2 class="font-display text-2xl font-semibold">Por onde começar?</h2>
-      <p class="mt-4 text-neutral-700">Veja o guia para <a href="/viajar-sozinha-mulher/" class="text-primary-700 underline underline-offset-4">viajar sozinha</a>, como achar <a href="/companhia-para-viajar/" class="text-primary-700 underline underline-offset-4">companhia para viajar</a>, os formatos de <a href="/viagens-para-mulheres/" class="text-primary-700 underline underline-offset-4">viagens para mulheres</a> e os <a href="/companhia-para-sair-goiania/" class="text-primary-700 underline underline-offset-4">rolês em Goiânia</a>.</p>
-    </aside>
+    <section aria-labelledby="explorar" class="mt-8">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h2 id="explorar" class="font-display text-3xl text-primary-900">Explore os artigos</h2>
+        <label data-controls hidden class="w-full sm:w-80"><span class="sr-only">Buscar artigos por assunto ou destino</span>
+          <input id="busca" type="search" placeholder="Buscar assunto ou destino" class="w-full rounded-full border border-secondary-400 bg-white px-4 py-2.5" />
+        </label>
+      </div>
+      <div data-controls hidden class="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filtrar por tema">
+        {['Todos', ...temas].map((label,i)=><button type="button" data-topic={i?label:''} aria-pressed={i===0} class="tema">{label}</button>)}
+      </div>
+      <p id="resultado" role="status" class="mt-3 text-sm text-neutral-600"></p>
+      <ArticleCards compact heading="h3" />
+      <button hidden id="mais" class="mt-4 rounded-full border border-primary-700 px-5 py-2 font-semibold text-primary-800">Mostrar mais artigos</button>
+      <button hidden id="limpar" class="mt-4 text-primary-800 underline">Limpar filtros</button>
+    </section>
+    <nav aria-label="Guias do Viajadoras" class="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-secondary-300 pt-5 text-sm text-primary-800 underline">
+      <a href="/viajar-sozinha-mulher/">Viajar sozinha</a><a href="/companhia-para-viajar/">Companhia para viajar</a><a href="/viagens-para-mulheres/">Viagens para mulheres</a><a href="/companhia-para-sair-goiania/">Rolês em Goiânia</a>
+    </nav>
   </section>
 </Base>
+<style>
+  [hidden] { display:none !important; }
+  .destaque { position:relative; isolation:isolate; overflow:hidden; border-radius:1rem; min-height:7rem; display:flex; align-items:end; color:white; background:#33212d; }
+  .destaque img,.destaque::before { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 36%; z-index:-2; }
+  .destaque::before { content:''; z-index:-1; background:linear-gradient(0deg,#231612ed,transparent 95%); }
+  .destaque div { padding:1rem; }
+  .destaque span { font-size:.75rem; font-weight:600; }
+  .destaque h2 { font:600 1.32rem/1.1 var(--font-display); }
+  .destaque:hover h2 { text-decoration:underline; }
+  .principal { min-height:12rem; }
+  @media(min-width:640px){.principal { grid-row:span 2; }.principal h2 {font-size:2rem;}.principal div {padding:1.4rem;} }
+  .tema { padding:.48rem .85rem; border:1px solid var(--color-secondary-300); border-radius:2rem; font-size:.875rem; }
+  .tema[aria-pressed=true] { color:white; background:var(--color-primary-800); border-color:transparent; }
+</style>
+<script>
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-blog-card]')];
+  const busca = document.querySelector<HTMLInputElement>('#busca')!;
+  const temas = [...document.querySelectorAll<HTMLButtonElement>('[data-topic]')];
+  const mais = document.querySelector<HTMLButtonElement>('#mais')!;
+  const limpar = document.querySelector<HTMLButtonElement>('#limpar')!;
+  const status = document.querySelector<HTMLElement>('#resultado')!;
+  const normal = (s:string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
+  const params = new URLSearchParams(location.hash.slice(1));
+  let tema = temas.some(b => b.dataset.topic === params.get('tema')) ? params.get('tema')! : '';
+  let limite = Math.min(cards.length, Math.max(6, Number(params.get('n')) || 6));
+  busca.value = params.get('q') ?? '';
+  function render(save:boolean) {
+    const termos = normal(busca.value).trim().split(/\s+/).filter(Boolean);
+    const match = cards.filter(c => {
+      const texto = normal(c.textContent + ' ' + c.dataset.search);
+      return (!tema || c.dataset.category === tema) && termos.every(t=>texto.includes(t));
+    });
+    const visible = new Set(match.slice(0,limite));
+    cards.forEach(c => {c.hidden = !visible.has(c);});
+    temas.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.topic === tema)));
+    mais.hidden = visible.size >= match.length;
+    limpar.hidden = !tema && !busca.value;
+    status.textContent = match.length ? `Mostrando ${visible.size} de ${match.length} ${match.length === 1 ? 'artigo' : 'artigos'}.` : 'Nenhum artigo encontrado. Tente outro assunto ou destino.';
+    if(save) {
+      const url = new URL(location.href);
+      const state = new URLSearchParams();
+      if (busca.value) state.set('q',busca.value);
+      if (tema) state.set('tema',tema);
+      if (limite>6) state.set('n',String(limite));
+      url.hash = state.toString();
+      history.replaceState(history.state,'',url);
+    }
+  }
+  function filtrar() { limite=6; render(true); }
+  temas.forEach(b=>b.addEventListener('click',()=>{tema=b.dataset.topic!;filtrar();}));
+  busca.addEventListener('input',filtrar);
+  limpar.addEventListener('click',()=>{tema='';busca.value='';filtrar();busca.focus();});
+  mais.addEventListener('click',()=>{
+    const anteriores=new Set(cards.filter(c=>!c.hidden));
+    limite+=6;render(true);
+    cards.find(c=>!c.hidden && !anteriores.has(c))?.querySelector('a')?.focus();
+  });
+  document.querySelectorAll<HTMLElement>('[data-controls]').forEach(el=>el.hidden=false);
+  render(false);
+</script>
