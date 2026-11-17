@@ -190,64 +190,64 @@ import '../styles/global.css';
     <main id="conteudo">
       <slot />
     </main>
-    <footer class="bg-neutral-900 py-16 text-neutral-100">
+    <footer id="rodape" class="bg-secondary-100 py-16 text-neutral-700">
       <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_0.8fr]">
           <div>
-            <p class="text-lg font-bold text-white">Viajadoras</p>
-            <p class="mt-2 text-sm leading-6 text-neutral-400">Viagens e rolês só de mulheres. Dica de quem já foi, companhia no destino e selfie verificada pela equipe.</p>
-            <p class="mt-4 text-sm leading-6 text-neutral-400">App gratuito para Android e iPhone, feito em {company.addressLocality} – {company.addressRegion}.</p>
-            <a class="mt-2 inline-block text-sm text-neutral-300 underline-offset-4 hover:text-primary hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
+            <p class="font-display text-2xl font-semibold text-primary-900">Viajadoras</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-600">Viagens e rolês só de mulheres. Dica de quem já foi, companhia no destino e selfie verificada pela equipe.</p>
+            <p class="mt-4 text-sm leading-6 text-neutral-600">App gratuito para Android e iPhone, feito em {company.addressLocality} – {company.addressRegion}.</p>
+            <a class="mt-2 inline-block text-sm text-primary-800 underline-offset-4 hover:text-primary-800 hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
           <div>
-            <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Site</h2>
+            <h2 class="font-semibold uppercase tracking-wider text-primary-800 text-sm">Site</h2>
             <nav class="mt-4 flex flex-col gap-2">
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#como-funciona">Como funciona</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#confianca">Confiança</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/#faq">FAQ</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/sobre/">Sobre nós</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/blog/">Blog</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda/">Central de ajuda</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href={downloadHref}>Baixar o app</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/#como-funciona">Como funciona</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/#confianca">Confiança</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/#faq">FAQ</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/sobre/">Sobre nós</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/blog/">Blog</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/ajuda/">Central de ajuda</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href={downloadHref}>Baixar o app</a>
             </nav>
           </div>
           <div>
-            <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Guias</h2>
+            <h2 class="font-semibold uppercase tracking-wider text-primary-800 text-sm">Guias</h2>
             <nav class="mt-4 flex flex-col gap-2">
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viajar-sozinha-mulher/">Viajar sozinha</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/viagens-para-mulheres/">Viagens para mulheres</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-para-viajar/">Companhia para viajar</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/companhia-para-sair-goiania/">Rolês em Goiânia</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/viajar-sozinha-mulher/">Viajar sozinha</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/viagens-para-mulheres/">Viagens para mulheres</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/companhia-para-viajar/">Companhia para viajar</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/companhia-para-sair-goiania/">Rolês em Goiânia</a>
             </nav>
           </div>
           <div>
-            <h2 class="font-semibold uppercase tracking-wider text-white text-sm">Legal e redes</h2>
+            <h2 class="font-semibold uppercase tracking-wider text-primary-800 text-sm">Legal e redes</h2>
             <nav class="mt-4 flex flex-col gap-2">
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/termos/">Termos de Uso</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/privacidade/">Privacidade</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href="/ajuda/#excluir-conta">Excluir minha conta</a>
-              <a class="text-neutral-400 hover:text-primary transition-colors text-sm" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/termos/">Termos de Uso</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/privacidade/">Privacidade</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href="/ajuda/#excluir-conta">Excluir minha conta</a>
+              <a class="text-neutral-600 hover:text-primary-800 transition-colors text-sm" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
             </nav>
             <div class="mt-4">
-              <a class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 text-neutral-400 transition-all hover:bg-primary hover:text-white" href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary-200 text-primary-800 transition-colors hover:bg-primary-700 hover:text-white" href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <IconInstagram class="h-5 w-5" />
               </a>
             </div>
           </div>
         </div>
-        <div class="mt-12 flex flex-col gap-5 rounded-2xl bg-white px-6 py-5 text-sm text-neutral-700 md:flex-row md:items-center md:justify-between">
+        <div class="mt-12 flex flex-col gap-5 border-y border-secondary-300 py-6 text-sm text-neutral-700 md:flex-row md:items-center md:justify-between">
           <p class="max-w-sm">Projeto apoiado pelo programa {funding.program}: {funding.sponsors}.</p>
-          <div class="flex flex-wrap items-center gap-x-5 gap-y-3">
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-3 bg-secondary-100 sm:gap-x-6">
             <a href="/sobre/#apoio" class="rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">
               <img src="/images/apoio/centelha-projeto-aprovado.webp" alt="Centelha MCTI — Projeto aprovado na 3ª edição" width="480" height="480" loading="lazy" class="h-auto w-28" />
             </a>
-            <img src="/images/apoio/fapeg.png" alt="FAPEG, Fundação de Amparo à Pesquisa do Estado de Goiás" width="331" height="121" loading="lazy" class="h-10 w-auto" />
+            <img src="/images/apoio/fapeg.png" alt="FAPEG, Fundação de Amparo à Pesquisa do Estado de Goiás" width="331" height="121" loading="lazy" class="h-8 w-auto mix-blend-multiply sm:h-10" />
             <a href={funding.finepUrl} target="_blank" rel="noopener noreferrer" class="rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-700">
-              <img src="/images/apoio/finep.png" alt="Finep, Inovação e Pesquisa. Abre o portal da Finep" width="275" height="170" loading="lazy" class="h-12 w-auto" />
+              <img src="/images/apoio/finep.png" alt="Finep, Inovação e Pesquisa. Abre o portal da Finep" width="275" height="170" loading="lazy" class="h-11 w-auto sm:h-12" />
             </a>
           </div>
         </div>
-        <div class="mt-8 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-400">
+        <div class="mt-6 text-center text-sm text-neutral-600">
           <p>© {new Date().getFullYear()} Viajadoras. Todos os direitos reservados.</p>
           <p class="mt-2">{company.legalName} · CNPJ {company.cnpj} · {company.addressLocality} – {company.addressRegion}</p>
         </div>

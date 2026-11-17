@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import passeio from '../assets/images/gallery/gallery-5.png';
 import AppStoreBadges from '../components/AppStoreBadges.astro';
 import { company, contactEmail, funding } from '../data/site';
 import Base from '../layouts/Base.astro';
@@ -41,73 +43,78 @@ const companyData = [
 ---
 
 <Base {title} {description} lang="pt-BR" structuredDataType="about">
-  <section class="bg-neutral-50 py-16 lg:py-24">
-    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">Sobre nós</p>
-        <h1 class="mt-4 font-display text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
-          Para mulheres com espírito viajante.
+  <section class="overflow-hidden bg-secondary-50">
+    <div class="mx-auto grid max-w-6xl items-center gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[1fr_0.93fr] lg:gap-16 lg:py-20">
+      <div>
+        <p class="text-sm font-semibold text-primary-700">Sobre o Viajadoras</p>
+        <h1 class="mt-4 max-w-xl font-display text-[clamp(2.8rem,5.2vw,4.75rem)] leading-[1.04] tracking-tight text-primary-900">
+          Para mulheres com espírito <em>viajante.</em>
         </h1>
-        <p class="mt-6 text-lg leading-relaxed text-neutral-700">
-          O Viajadoras é um app gratuito, só para mulheres, para pedir dica a
-          quem já foi, achar companhia para viajar e encontrar rolês com data e
-          lugar na sua cidade. Nasceu em Goiânia de uma vontade simples: que
-          nenhuma mulher deixe de viajar por medo de ir sozinha.
+        <p class="mt-6 max-w-lg text-lg leading-relaxed text-neutral-700">
+          O Viajadoras nasceu em Goiânia de uma vontade simples: que nenhuma mulher deixe de viajar por medo de ir sozinha.
         </p>
-        <AppStoreBadges class="mt-8 flex flex-row flex-wrap items-center gap-3" imgClass="h-auto w-36 sm:w-44" />
-      </div>
-
-      <section class="mt-16" aria-labelledby="o-que-oferece">
-        <h2 id="o-que-oferece" class="text-2xl font-bold text-neutral-900">O que o app oferece</h2>
-        <ul class="mt-6 grid gap-4 sm:grid-cols-2">
-          {features.map(([name, text]) => (
-            <li class="rounded-3xl bg-white p-6 ring-1 ring-neutral-200">
-              <h3 class="text-lg font-semibold text-neutral-900">{name}</h3>
-              <p class="mt-2 leading-relaxed text-neutral-700">{text}</p>
-            </li>
-          ))}
-        </ul>
-        <p class="mt-6 text-neutral-700">
-          O Viajadoras não é agência de viagens, não vende pacotes e não é app de namoro. O app é
-          gratuito para as usuárias. Saiba mais na <a href="/ajuda/" class="font-semibold text-primary-700 underline">central de ajuda</a>.
+        <p class="mt-3 max-w-lg leading-relaxed text-neutral-700">
+          No app, você pede dicas a quem já foi, encontra uma parceira de viagem e combina o próximo rolê na sua cidade.
         </p>
-      </section>
-
-      <div class="mt-16 grid gap-8 lg:grid-cols-2">
-        <section class="rounded-[2rem] bg-white p-8 ring-1 ring-neutral-200" aria-labelledby="quem-faz">
-          <h2 id="quem-faz" class="text-2xl font-bold text-neutral-900">Quem fundou</h2>
-          <ul class="mt-6 space-y-3 text-neutral-700">
-            {company.founders.map((founder) => (
-              <li><strong class="text-neutral-900">{founder.name}</strong> · {founder.jobTitle}</li>
-            ))}
-          </ul>
-          <p class="mt-6 text-neutral-700">
-            Fale com a equipe em <a href={`mailto:${contactEmail}`} class="font-semibold text-primary-700 underline">{contactEmail}</a>.
-          </p>
-        </section>
-
-        <section class="rounded-[2rem] bg-secondary-100 p-8" aria-labelledby="apoio">
-          <h2 id="apoio" class="scroll-mt-24 text-2xl font-bold text-neutral-900">Quem apoia</h2>
-          <img src="/images/apoio/centelha-projeto-aprovado.webp" alt="Centelha MCTI — Projeto aprovado na 3ª edição" width="480" height="480" loading="lazy" class="mt-5 h-auto w-40 max-w-full" />
-          <p class="mt-6 leading-relaxed text-neutral-700">
-            O projeto “Viajadoras – Vai Segura!” foi selecionado no programa{' '}
-            {funding.program} e recebe apoio financeiro da {funding.sponsors}.
-          </p>
-          <a href={funding.finepUrl} target="_blank" rel="noopener noreferrer" class="mt-6 inline-block rounded-full border border-primary-700 px-5 py-2 font-semibold text-primary-800 hover:bg-primary-50">Conheça a Finep</a>
-        </section>
+        <AppStoreBadges class="mt-7 flex flex-wrap items-center gap-3" imgClass="h-auto w-32 sm:w-36" />
       </div>
-
-      <section class="mt-16" aria-labelledby="dados-empresa">
-        <h2 id="dados-empresa" class="text-2xl font-bold text-neutral-900">Dados da empresa</h2>
-        <dl class="mt-6 divide-y divide-neutral-200 rounded-[2rem] bg-white px-8 ring-1 ring-neutral-200">
-          {companyData.map(([label, value]) => (
-            <div class="grid gap-1 py-4 sm:grid-cols-[14rem_1fr]">
-              <dt class="font-semibold text-neutral-900">{label}</dt>
-              <dd class="text-neutral-700">{value}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <Image src={passeio} alt="Três mulheres passeiam por uma rua de casas coloridas." widths={[480, 768, 1056]} sizes="(min-width: 1024px) 500px, 100vw" loading="eager" fetchpriority="high" class="aspect-[4/3] w-full rounded-t-[4rem] rounded-b-lg object-cover object-center sm:rounded-t-[6rem] lg:aspect-[1.12]" />
     </div>
   </section>
+
+  <section aria-labelledby="quem-faz" class="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:py-20">
+    <div>
+      <h2 id="quem-faz" class="font-display text-4xl text-primary-900">Quem fundou</h2>
+      <p class="mt-4 text-neutral-700">Fale com a equipe pelo e-mail<br /><a href={`mailto:${contactEmail}`} class="font-semibold text-primary-700 underline underline-offset-4">{contactEmail}</a>.</p>
+    </div>
+    <ul class="divide-y divide-secondary-200 border-y border-secondary-200">
+      {company.founders.map((founder) => (
+        <li class="flex items-baseline justify-between gap-4 py-4">
+          <span class="font-display text-2xl text-neutral-900 sm:text-3xl">{founder.name}</span>
+          <span class="text-sm text-neutral-600">{founder.jobTitle}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="o-que-oferece" class="bg-teal-900 text-white">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:py-20">
+      <div>
+        <h2 id="o-que-oferece" class="max-w-sm font-display text-4xl leading-tight sm:text-5xl">O que dá para fazer no app</h2>
+        <p class="mt-5 max-w-sm leading-relaxed text-teal-100">O app é gratuito. O Viajadoras não é agência de viagens, não vende pacotes e não é app de namoro.</p>
+        <a href="/ajuda/" class="mt-5 inline-block underline underline-offset-4">Central de ajuda</a>
+      </div>
+      <ul class="grid gap-7 sm:grid-cols-2">
+        {features.map(([name, text]) => (
+          <li class="border-t border-teal-600 pt-4">
+            <h3 class="text-lg font-semibold">{name}</h3>
+            <p class="mt-2 leading-relaxed text-teal-100">{text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:py-20">
+    <section aria-labelledby="titulo-apoio" id="apoio" class="grid scroll-mt-24 items-center gap-6 rounded-2xl bg-secondary-100 p-6 sm:grid-cols-[auto_1fr] sm:gap-10 sm:p-10">
+      <img src="/images/apoio/centelha-projeto-aprovado.webp" alt="Centelha MCTI — Projeto aprovado na 3ª edição" width="480" height="480" loading="lazy" class="h-auto w-32 sm:w-40" />
+      <div>
+        <h2 id="titulo-apoio" class="font-display text-3xl text-primary-900 sm:text-4xl">Quem apoia</h2>
+        <p class="mt-3 max-w-2xl leading-relaxed text-neutral-700">O projeto “Viajadoras – Vai Segura!” foi selecionado no programa {funding.program} e recebe apoio financeiro da {funding.sponsors}.</p>
+        <a href={funding.finepUrl} target="_blank" rel="noopener noreferrer" class="mt-4 inline-block font-semibold text-primary-700 underline underline-offset-4">Conheça a Finep</a>
+      </div>
+    </section>
+
+    <section class="mt-14 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16" aria-labelledby="dados-empresa">
+      <h2 id="dados-empresa" class="font-display text-3xl text-primary-900">Dados da empresa</h2>
+      <dl class="divide-y divide-secondary-200 border-y border-secondary-200">
+        {companyData.map(([label, value]) => (
+          <div class="grid gap-1 py-3 text-sm sm:grid-cols-[9rem_1fr] sm:gap-4">
+            <dt class="font-semibold text-neutral-800">{label}</dt>
+            <dd class="text-neutral-700">{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  </div>
 </Base>
