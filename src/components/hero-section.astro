@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import planos from '../assets/images/planos-demo.webp';
-import foto from '../assets/images/gallery/gallery-5.png';
+import foto from '../assets/images/hero-main.png';
 import AppStoreBadges from './AppStoreBadges.astro';
 ---
 <section id="para-quem" class="bg-secondary-50">
@@ -12,12 +11,14 @@ import AppStoreBadges from './AppStoreBadges.astro';
       <p class="mt-4 text-sm leading-relaxed text-neutral-700">Gratuito para mulheres a partir de 18 anos. A equipe verifica sua selfie antes de liberar o acesso à comunidade. <a href="/ajuda/#entrada" data-action="verificacao" class="font-semibold text-primary-800 underline underline-offset-4">Entenda a entrada</a>.</p>
       <div class="mt-5" data-cta="home_abertura"><AppStoreBadges class="flex flex-wrap items-center gap-3" imgClass="h-auto w-32 sm:w-36" /></div>
     </div>
-    <figure class="relative isolate mx-auto w-full max-w-xl overflow-hidden rounded-3xl bg-secondary-200">
-      <Image src={foto} alt="" widths={[480,800,1120]} sizes="(min-width: 1024px) 540px, 100vw" class="absolute inset-0 -z-10 h-full w-full object-cover object-center" />
-      <div class="ml-auto mr-4 mt-4 w-[47%] max-w-60 overflow-hidden rounded-t-2xl border-x-4 border-t-4 border-neutral-900 bg-secondary-50 sm:mr-7 sm:mt-8">
-        <Image src={planos} alt="Tela de planos de viagem do app com destinos como Pirenópolis, Chapada dos Veadeiros e Rio de Janeiro." widths={[240,480,660]} sizes="(min-width: 768px) 240px, 45vw" loading="eager" class="w-full" />
-      </div>
-      <figcaption class="bg-secondary-100 px-4 py-2 text-xs text-neutral-700">Planos de viagem no app · dados de demonstração</figcaption>
-    </figure>
+    <Image
+      src={foto}
+      alt="Quatro viajadoras juntas em um mirante, com a cidade e o mar ao fundo."
+      widths={[384, 576, 768, 1024]}
+      sizes="(min-width: 1024px) 46vw, (min-width: 640px) 576px, 100vw"
+      loading="eager"
+      fetchpriority="high"
+      class="mx-auto block h-auto w-full max-w-xl rounded-3xl"
+    />
   </div>
 </section>
